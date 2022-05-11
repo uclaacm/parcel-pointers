@@ -1,4 +1,4 @@
-import TeachLALogo from '../../../assets/teach-la-logo.svg';
+import TeachLALogo from '../../assets/teach-la-logo.svg';
 function Footer(): JSX.Element {
   return (
     <div id="footer">

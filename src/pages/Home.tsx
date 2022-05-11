@@ -1,8 +1,9 @@
-import AppWrapper from './shared/AppWrapper';
-import { HeaderSections } from './shared/globalTypes';
+import { FC } from 'react';
+import AppWrapper from '../components/AppWrapper';
+import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 
-function App(): JSX.Element {
+const Home: FC = () => {
   return (
     <div>
       <AppWrapper section={HeaderSections.DEFAULT_SECTION}>
@@ -10,6 +11,6 @@ function App(): JSX.Element {
       </AppWrapper>
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
