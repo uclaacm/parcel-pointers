@@ -1,4 +1,4 @@
-import { HeaderSections } from '../globalTypes';
+import { HeaderSections } from '../../types/globalTypes';
 
 /**
  * We can use our enum as the specified type that our HeaderProps recieves

@@ -1,7 +1,7 @@
-import { HeaderSections } from '../globalTypes';
+import { HeaderSections } from '../../types/globalTypes';
 import Footer from './Footer';
 import Header from './Header';
-import '../../../styles/AppWrapper.scss';
+import '../../styles/AppWrapper.scss';
 
 export interface AppWrapperProps {
   section: HeaderSections;
