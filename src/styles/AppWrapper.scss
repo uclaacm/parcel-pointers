@@ -27,12 +27,12 @@ $header-height: 8vh;
     height: 100%;  
   }
 
-  .debug { 
-    height: 100%;
-    display: flex;
+  .debug {
     align-items: center;
-    justify-content: center;
     color: gray;
+    display: flex; 
+    height: 100%;
+    justify-content: center;
 
   }
 }

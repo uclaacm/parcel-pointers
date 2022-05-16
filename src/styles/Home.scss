@@ -8,24 +8,28 @@ $description: 20px;
 $header-height: 8vh;
 
 
+
 // General Layout
 //=======================================
 #layout {
+    display: flex;
     margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
     min-height: calc(100vh - 2 * #{$layout-wsize});
-    display: flex;
 
 
 }
+
+p { margin: 0; }
+
 // Columns
 //=======================================
 #col-1 {
-    margin-right: 10.56%;
-    margin-top: 6.94%;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
+    margin-right: 10.56%;
+    margin-top: 6.94%;
 
     #title {
     
@@ -33,22 +37,17 @@ $header-height: 8vh;
     }
 
     #description {
-        text-align: left;
         font-size: $description;
+        text-align: left;
     }
 
     #start-button {
+        margin-top: 4.8%;
         border: 1px solid black;
-        padding: 9px 70px;
-        font-size: $description;
-
-        border: 1px solid #000000;
         border-radius: 10px;
         cursor: pointer;
-
-        p {
-            margin: 0;
-        }
+        font-size: $description;
+        padding: 9px 70px;
     }
 }
 
