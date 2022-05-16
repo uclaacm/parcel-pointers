@@ -1,0 +1,60 @@
+// Variables
+//=======================================
+$layout-wsize: 10.56%;
+$layout-htsize: 14.45%;
+$layout-hbsize: 16.25%;
+$header-1: 50px;
+$description: 20px;
+$header-height: 8vh;
+
+
+// General Layout
+//=======================================
+#layout {
+    margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
+    min-height: calc(100vh - 2 * #{$layout-wsize});
+    display: flex;
+
+
+}
+// Columns
+//=======================================
+#col-1 {
+    margin-right: 10.56%;
+    margin-top: 6.94%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    #title {
+    
+       font-size: $header-1;
+    }
+
+    #description {
+        text-align: left;
+        font-size: $description;
+    }
+
+    #start-button {
+        border: 1px solid black;
+        padding: 9px 70px;
+        font-size: $description;
+
+        border: 1px solid #000000;
+        border-radius: 10px;
+        cursor: pointer;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+#col-2 {
+    .pp-wrapper {
+        margin-right: 3.024%;
+
+    }
+}
