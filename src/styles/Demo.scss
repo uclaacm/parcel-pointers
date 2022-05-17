@@ -1,0 +1,33 @@
+// Variables
+//=======================================
+$layout-wsize: 10.56%;
+$layout-htsize: 14.45%;
+$layout-hbsize: 16.25%;
+$header-1: 50px;
+$description: 20px;
+$header-height: 8vh;
+
+// General Layout
+//=======================================
+#layout {
+  display: flex;
+  flex-direction: column;
+  margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
+  min-height: calc(100vh - 2 * #{$layout-wsize});
+
+  .header {
+      font-size: $header-1;
+  }
+
+  .description {
+      font-size: $description;
+  }
+
+  #inbox-wrapper {
+      margin: 2rem;
+  }
+}
+
+p {
+  margin: 0;
+}
