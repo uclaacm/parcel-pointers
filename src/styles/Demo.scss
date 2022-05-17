@@ -16,15 +16,15 @@ $header-height: 8vh;
   min-height: calc(100vh - 2 * #{$layout-wsize});
 
   .header {
-      font-size: $header-1;
+    font-size: $header-1;
   }
 
   .description {
-      font-size: $description;
+    font-size: $description;
   }
 
   #inbox-wrapper {
-      margin: 2rem;
+    margin: 2rem;
   }
 }
 

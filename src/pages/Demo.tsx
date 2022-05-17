@@ -17,10 +17,10 @@ const Demo: FC = () => {
           </p>
 
           <div id="inbox-wrapper">
-            <AlertInbox section_no={1}/>
+            <AlertInbox section_no={1} />
           </div>
         </div>
-    </AppWrapper>
+      </AppWrapper>
     </div>
   );
 };
