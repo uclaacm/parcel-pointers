@@ -1,10 +1,10 @@
-import Button from "./Button";
-import Popup from "./Popup";
+import React, { useState } from 'react';
+import Button from './Button';
+import Popup from './Popup';
 import '../../styles/AlertInbox.scss';
-import React, { useState } from "react";
 
 export interface AlertInboxProps {
-  section_no: number; 
+  section_no: number;
   children?: JSX.Element | string;
 }
 
@@ -14,8 +14,8 @@ export default function AlertInboxProps(props: AlertInboxProps): JSX.Element {
     const openPopup = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.preventDefault();
         setPopup(!popup);
-    }
-    const closePopup = () => { setPopup(false); }
+    };
+    const closePopup = () => { setPopup(false); };
   return (
     <div>
         <Button onClick={openPopup} color="primary">
@@ -27,7 +27,7 @@ export default function AlertInboxProps(props: AlertInboxProps): JSX.Element {
             onClose={closePopup}
             show={popup}
             title="This is a generic popup."
-        
+
         >
             <div>
                 <h1>Section {props.section_no}</h1>

@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
-import AlertInbox from "../components/AlertInbox";
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
