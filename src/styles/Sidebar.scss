@@ -1,0 +1,48 @@
+#Sidebar {
+  background-color: green;
+  height: 100%; /* 100% Full-height */
+  left: 0; // position from left
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  position: fixed; /* Stay in place */
+  top: 0; //position from top
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  width: 0; /* 0 width - change this with JavaScript */
+  z-index: 1; /* Stay on top */
+
+  a {
+    color: #000;
+    display: block;
+    font-size: 25px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: #f1f1f1;
+  }
+
+  #closebtn {
+    font-size: 36px;
+    margin-left: 50px;
+    position: relative;
+    right: 5px;
+    top: 0;
+  }
+}
+
+.openbtn {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  left: 0;
+  padding: 10px 15px;
+  position: fixed;
+  transition: 0.5s;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
