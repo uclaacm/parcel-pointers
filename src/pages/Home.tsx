@@ -4,6 +4,9 @@ import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Home.scss';
 
+// testing branch
+// ignore
+
 const Home: FC = () => {
   return (
     <div>
