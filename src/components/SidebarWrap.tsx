@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Sidebar from './Sidebar';
 import '../styles/Sidebar.scss';
 
-const SideBarWrap = () => {
+const SideBarWrap = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div>
