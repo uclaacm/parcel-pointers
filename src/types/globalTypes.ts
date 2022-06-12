@@ -3,7 +3,8 @@
   things of your choosing!
 */
 export enum HeaderSections {
-  DEFAULT_SECTION = 'defaultSection',
-  SECONDARY_SECTION = 'secondarySection',
-  TERTIARY_SECTION = 'tertiarySection',
+  LANDING_SECTION = 'landingSection',
+  TITLE_SECTION = 'titleSection',
+  LEARNING_SECTION = 'learningSection',
+  CODE_SECTION = 'codeSection',
 }

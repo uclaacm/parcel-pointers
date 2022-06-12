@@ -5,7 +5,7 @@ $header-height: 8vh;
 // AppWrapper
 //=======================================
 #app-wrapper {
-  background-color: #cef3b7;
+  background-color: white;
   margin: $header-height 0 $header-height 0;
   min-height: calc(100vh - 2 * #{$header-height});
 }
@@ -15,12 +15,25 @@ $header-height: 8vh;
 #header {
   align-items: center;
   background-color: white;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  border-bottom: 1px solid rgb(201, 201, 201);
+  // filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   height: $header-height;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
+
+  .nav {
+    height: 100%;
+  }
+
+  .debug {
+    align-items: center;
+    color: gray;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
 }
 
 // Footer
