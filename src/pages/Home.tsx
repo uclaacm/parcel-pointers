@@ -9,9 +9,9 @@ const Home: FC = () => {
   return (
     <div>
       <AppWrapper section={HeaderSections.TITLE_SECTION}>
-        <SideBarWrap></SideBarWrap>
         <div id="layout">
           <div id="col-1">
+            <SideBarWrap></SideBarWrap>
             <h1 id="title">Parcel Pointers</h1>
             <p id="description">
               Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do
