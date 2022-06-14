@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import SideBarWrap from '../components/SidebarWrap';
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Home.scss';
@@ -10,6 +11,7 @@ const Home: FC = () => {
       <AppWrapper section={HeaderSections.TITLE_SECTION}>
         <div id="layout">
           <div id="col-1">
+            <SideBarWrap></SideBarWrap>
             <h1 id="title">Parcel Pointers</h1>
             <p id="description">
               Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do
