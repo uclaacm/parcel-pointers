@@ -2936,9 +2936,9 @@ core-js@^2.4.0, core-js@^2.5.0:
   version "2.6.12"
   resolved "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
 
-core-js@^3.22.3:
-  version "3.22.3"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.22.3.tgz"
+core-js@^3.23.3:
+  version "3.23.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.23.3.tgz#3b977612b15da6da0c9cc4aec487e8d24f371112"
 
 core-util-is@~1.0.0:
   version "1.0.3"
