@@ -1665,9 +1665,9 @@ acorn@^7.0.0, acorn@^7.4.0:
   version "7.4.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz"
 
-acorn@^8.4.1:
-  version "8.7.0"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-8.7.0.tgz"
+acorn@^8.7.1:
+  version "8.8.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.0.tgz#88c0187620435c7f6015803f5539dae05a9dbea8"
 
 ajv-formats@^2.1.1:
   version "2.1.1"
@@ -2629,17 +2629,7 @@ browserslist@^3.2.6:
     caniuse-lite "^1.0.30000844"
     electron-to-chromium "^1.3.47"
 
-browserslist@^4.14.5, browserslist@^4.20.2:
-  version "4.20.3"
-  resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.20.3.tgz"
-  dependencies:
-    caniuse-lite "^1.0.30001332"
-    electron-to-chromium "^1.4.118"
-    escalade "^3.1.1"
-    node-releases "^2.0.3"
-    picocolors "^1.0.0"
-
-browserslist@^4.21.1:
+browserslist@^4.14.5, browserslist@^4.20.2, browserslist@^4.21.1:
   version "4.21.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.1.tgz#c9b9b0a54c7607e8dc3e01a0d311727188011a00"
   dependencies:
@@ -2723,10 +2713,6 @@ camelcase@^5.3.1:
 caniuse-lite@^1.0.30000844:
   version "1.0.30001301"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001301.tgz"
-
-caniuse-lite@^1.0.30001332:
-  version "1.0.30001334"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001334.tgz"
 
 caniuse-lite@^1.0.30001359:
   version "1.0.30001364"
@@ -3283,10 +3269,6 @@ electron-to-chromium@^1.3.47:
   version "1.4.53"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.53.tgz"
 
-electron-to-chromium@^1.4.118:
-  version "1.4.129"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.129.tgz"
-
 electron-to-chromium@^1.4.172:
   version "1.4.185"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.185.tgz#3432d7944f1c5fe20664bb45d9cced2151405ce2"
@@ -3319,7 +3301,7 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz"
 
-enhanced-resolve@^5.0.0, enhanced-resolve@^5.9.3:
+enhanced-resolve@^5.0.0, enhanced-resolve@^5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.10.0.tgz#0dc579c3bb2a1032e357ac45b8f3a6f3ad4fb1e6"
   dependencies:
@@ -4970,10 +4952,6 @@ no-case@^3.0.4:
 node-forge@^1:
   version "1.3.1"
   resolved "https://registry.npmjs.org/node-forge/-/node-forge-1.3.1.tgz"
-
-node-releases@^2.0.3:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.4.tgz"
 
 node-releases@^2.0.5:
   version "2.0.6"
@@ -6669,9 +6647,9 @@ vm-browserify@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
 
-watchpack@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.3.1.tgz"
+watchpack@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.4.0.tgz#fa33032374962c78113f93c7f2fb4c54c9862a5d"
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
@@ -6785,20 +6763,20 @@ webpack-sources@^3.2.3:
   version "3.2.3"
   resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
 
-webpack@^5.73.0:
-  version "5.73.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.73.0.tgz#bbd17738f8a53ee5760ea2f59dce7f3431d35d38"
+webpack@^5.74.0:
+  version "5.74.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.74.0.tgz#02a5dac19a17e0bb47093f2be67c695102a55980"
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^0.0.51"
     "@webassemblyjs/ast" "1.11.1"
     "@webassemblyjs/wasm-edit" "1.11.1"
     "@webassemblyjs/wasm-parser" "1.11.1"
-    acorn "^8.4.1"
+    acorn "^8.7.1"
     acorn-import-assertions "^1.7.6"
     browserslist "^4.14.5"
     chrome-trace-event "^1.0.2"
-    enhanced-resolve "^5.9.3"
+    enhanced-resolve "^5.10.0"
     es-module-lexer "^0.9.0"
     eslint-scope "5.1.1"
     events "^3.2.0"
@@ -6811,7 +6789,7 @@ webpack@^5.73.0:
     schema-utils "^3.1.0"
     tapable "^2.1.1"
     terser-webpack-plugin "^5.1.3"
-    watchpack "^2.3.1"
+    watchpack "^2.4.0"
     webpack-sources "^3.2.3"
 
 websocket-driver@>=0.5.1, websocket-driver@^0.7.4:
