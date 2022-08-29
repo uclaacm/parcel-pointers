@@ -8,9 +8,9 @@ import '../styles/Demo.scss';
 
 const Demo: FC = () => {
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
-  const nums1 = nums.slice(0,24);
-  const nums2 = nums.slice(24,48);
-  const nums3 = nums.slice(48,72);
+  const nums1 = nums.slice(0, 24);
+  const nums2 = nums.slice(24, 48);
+  const nums3 = nums.slice(48, 72);
   return (
     <div>
       <AppWrapper section={HeaderSections.LEARNING_SECTION}>

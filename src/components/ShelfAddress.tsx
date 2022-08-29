@@ -24,7 +24,15 @@ export default function SomeButton(num: { num: number }): JSX.Element {
             fill={correct ? 'lime' : '#C4C4C4'}
             stroke="black"
           />
-          <text x="49%" y="49%" fontFamily="Verdana" fontSize="20" fill="black" dominantBaseline="middle" textAnchor="middle">
+          <text
+            x="49%"
+            y="49%"
+            fontFamily="Verdana"
+            fontSize="20"
+            fill="black"
+            dominantBaseline="middle"
+            textAnchor="middle"
+          >
             {num.num}
           </text>
         </g>
