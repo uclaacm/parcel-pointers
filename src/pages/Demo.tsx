@@ -7,16 +7,28 @@ import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
 
 const Demo: FC = () => {
-  const nums = Array.from({length: 24}, (_, index) => index + 1);
+  const nums = Array.from({ length: 72 }, (_, index) => index + 1);
+  const nums1 = nums.slice(0,24);
+  const nums2 = nums.slice(24,48);
+  const nums3 = nums.slice(48,72);
   return (
     <div>
       <AppWrapper section={HeaderSections.LEARNING_SECTION}>
         <div id="layout">
           <h1 className="header">Demo</h1>
           <p className="description">
-            {nums.map(num =>
-              <ShelfAddress num = {num}></ShelfAddress>
-            )}
+            {nums1.map((num) => (
+              <ShelfAddress key={null} num={num}></ShelfAddress>
+            ))}
+            <br></br>
+            {nums2.map((num) => (
+              <ShelfAddress key={null} num={num}></ShelfAddress>
+            ))}
+            <br></br>
+            {nums3.map((num) => (
+              <ShelfAddress key={null} num={num}></ShelfAddress>
+            ))}
+            <br></br>
             The main animation slide, where we have the shelves of boxes and the
             robot.
           </p>

@@ -1,8 +1,12 @@
-.Address{
-    height: 400 px;
-    width: 400 px;
-    border: black;
-    background-color: none;
-    background: none;
+.address {
+  background: none;
+  background-color: none;
+  border: none;
+  border-radius: 0;
+  padding: 0 0;
+  transition-duration: 0.4s;
+}
 
+.address:hover{
+    background-color: green;
 }
