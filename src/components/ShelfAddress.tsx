@@ -21,7 +21,7 @@ export default function SomeButton(num: { num: number }): JSX.Element {
             y="1.44511"
             width="38.3946"
             height="38.3946"
-            fill={correct ? 'lime' : '#C4C4C4'}
+            fill={correct ? 'green' : '#C4C4C4'}
             stroke="black"
           />
           <text
