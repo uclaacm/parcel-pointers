@@ -5,7 +5,7 @@ export interface BoxProps {
   num: number;
 }
 
-// The letter is the letter that is put on the box and 
+// The letter is the letter that is put on the box and
 // the number is the width of the box in terms of the number of addresses
 export default function Box(props: BoxProps): JSX.Element {
   const handleClick = () => {
