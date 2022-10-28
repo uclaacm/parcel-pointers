@@ -8,9 +8,6 @@ export interface BoxProps {
 // The letter is the letter that is put on the box and
 // the number is the width of the box in terms of the number of addresses
 export default function Box(props: BoxProps): JSX.Element {
-  const handleClick = () => {
-    window.alert('box clicked!');
-  };
   let image;
   switch (props.num) {
     case 1:
@@ -358,8 +355,8 @@ export default function Box(props: BoxProps): JSX.Element {
       break;
   }
   return (
-    <button className="box" onClick={handleClick}>
+    <div className="box">
       {image}
-    </button>
+    </div>
   );
 }
