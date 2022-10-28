@@ -7,6 +7,12 @@ $header-1: 50px;
 $description: 20px;
 $header-height: 8vh;
 
+// Background
+//=======================================
+#background {
+  background-size: 100%;
+  display: flex;
+}
 // General Layout
 //=======================================
 #layout {
