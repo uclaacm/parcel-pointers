@@ -1,20 +1,20 @@
 // Variables
 //=======================================
-$header-height: 8vh;
+$header-height: 5vh;
 
 // AppWrapper
 //=======================================
 #app-wrapper {
   background-color: white;
   margin: $header-height 0 $header-height 0;
-  min-height: calc(100vh - 2 * #{$header-height});
+  min-height: calc(100vh - #{$header-height});
 }
 
 // Header
 //=======================================
 #header {
   align-items: center;
-  background-color: white;
+  background: #5d71a7;
   border-bottom: 1px solid rgb(201, 201, 201);
   // filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   height: $header-height;
@@ -29,7 +29,7 @@ $header-height: 8vh;
 
   .debug {
     align-items: center;
-    color: gray;
+    color: white;
     display: flex;
     height: 100%;
     justify-content: center;
