@@ -354,9 +354,5 @@ export default function Box(props: BoxProps): JSX.Element {
       );
       break;
   }
-  return (
-    <div className="box">
-      {image}
-    </div>
-  );
+  return <div className="box">{image}</div>;
 }
