@@ -13,9 +13,7 @@ export default function Header(props: HeaderProps): JSX.Element {
     <div id="header">
       <SideBarWrap></SideBarWrap>
       <nav className="nav">
-        <div className="debug">
-          {props.section}
-        </div>
+        <div className="debug">{props.section}</div>
         {/* This is an example of using interfaces and enums! */}
       </nav>
     </div>
