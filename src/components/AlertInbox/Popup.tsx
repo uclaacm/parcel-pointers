@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Close from '../../../public/Close.png';
 
 export interface PopupProps {
   title: string;
@@ -30,6 +31,11 @@ function Popup(props: PopupProps): JSX.Element {
       <div className="popup">
         <h2>{props.title}</h2>
         <div className="content">{props.children}</div>
+        <button
+          className="close-button"
+          style={{ backgroundImage: `url(${Close})` }}
+          onClick={handleClose}
+        ></button>
         <div className="close" onClick={handleClose}>
           let&apos;s go!
         </div>
