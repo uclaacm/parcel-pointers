@@ -1,9 +1,9 @@
 import { FC } from 'react';
+import LeftLadder from '../../public/LeftLadder.png';
+import Pipi from '../../public/Pipi.png';
+import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
-import Pipi from '../../public/Pipi.png';
-import LeftLadder from '../../public/LeftLadder.png';
-import RightLadder from '../../public/RightLadder.png';
 import Box from '../components/Box';
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
