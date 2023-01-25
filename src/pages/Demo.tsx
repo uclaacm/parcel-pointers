@@ -21,9 +21,9 @@ const Demo: FC = () => {
           <Box letter="d" num={4}></Box>
           <Box letter="e" num={5}></Box>
           <Box letter="f" num={6}></Box>
-          <img className = "Pipi" src = {Pipi} alt = "Pipi"></img>
-          <img className = "ladder" src = {LeftLadder} alt = "LeftLadder"></img>
-          <img className = "ladder" src = {RightLadder} alt = "RightLadder"></img>
+          <img className="pipi" src={Pipi} alt="Pipi"></img>
+          <img className="ladder" src={LeftLadder} alt="LeftLadder"></img>
+          <img className="ladder" src={RightLadder} alt="RightLadder"></img>
           <div id="inbox-wrapper">
             <AlertInbox section_no={1} />
           </div>
