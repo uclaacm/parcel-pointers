@@ -1,6 +1,9 @@
 import { FC } from 'react';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
+import Pipi from '../../public/Pipi.png';
+import LeftLadder from '../../public/LeftLadder.png';
+import RightLadder from '../../public/RightLadder.png';
 import Box from '../components/Box';
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
@@ -18,6 +21,9 @@ const Demo: FC = () => {
           <Box letter="d" num={4}></Box>
           <Box letter="e" num={5}></Box>
           <Box letter="f" num={6}></Box>
+          <img className = "Pipi" src = {Pipi} alt = "Pipi"></img>
+          <img className = "ladder" src = {LeftLadder} alt = "LeftLadder"></img>
+          <img className = "ladder" src = {RightLadder} alt = "RightLadder"></img>
           <div id="inbox-wrapper">
             <AlertInbox section_no={1} />
           </div>
