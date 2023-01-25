@@ -3,6 +3,7 @@ import Demo from './pages/Demo';
 import Error404 from './pages/Error404';
 import Home from './pages/Home';
 import Lesson1 from './pages/Lesson1';
+import Lesson3 from './pages/Lesson3';
 
 function App(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ function App(): JSX.Element {
           <Route path="/" element={<Home />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/lesson-1" element={<Lesson1 />} />
+          <Route path="/lesson-3" element={<Lesson3 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
