@@ -1,3 +1,4 @@
+@import "./global.scss";
 // Variables
 //=======================================
 $layout-wsize: 10.56%;
@@ -45,12 +46,31 @@ p {
   }
 
   #start-button {
-    border: 1px solid black;
+    /* Button */
+    position: relative;
+    top: 25px;
+
+    height: 47px;
+    width: 215px;
     border-radius: 10px;
-    cursor: pointer;
-    font-size: $description;
-    margin-top: 4.8%;
-    padding: 9px 70px;
+    border: 0;
+    background: $accent-1-color;
+
+    /* Text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #start-button:hover {
+    background: $primary-2-color;
+  }
+
+  #button-text {
+    font-family: $niramit;
+    font-size: 22px;
+    position: relative;
+    top: -3px;
   }
 }
 
