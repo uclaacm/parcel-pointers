@@ -1,4 +1,4 @@
-@import "./global.scss";
+@import "./global";
 // Variables
 //=======================================
 $layout-wsize: 10.56%;
@@ -46,20 +46,20 @@ p {
   }
 
   #start-button {
-    /* Button */
-    position: relative;
-    top: 25px;
-
-    height: 47px;
-    width: 215px;
-    border-radius: 10px;
-    border: 0;
+    align-items: center;
     background: $accent-1-color;
+    border: 0;
+    border-radius: 10px;
 
     /* Text */
     display: flex;
+
+    height: 47px;
     justify-content: center;
-    align-items: center;
+    /* Button */
+    position: relative;
+    top: 25px;
+    width: 215px;
   }
 
   #start-button:hover {
