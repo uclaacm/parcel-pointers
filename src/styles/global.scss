@@ -1,14 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niramit&family=Play&display=swap');
 
-@font-face {
-  font-family: 'Westwood Sans';
-  src: local('Westwood Sans'),
-    url('../assets/WestwoodSans-Regular.ttf') format('truetype');
+// Font Variables
+$play: 'Play', sans-serif;
+$niramit: 'Niramit', sans-serif;
+
+// Color Variables
+$text-color: #121538;
+$primary-1-color: #5D71A7;
+$primary-2-color: #8596BE;
+$accent-1-color: #FEC900;
+$accent-2-color: #72D670;
+$accent-3-color: #FE5353;
+
+
+title {
+  font-family: $play;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #121538;
+}
+
+h1 {
+  font-family: $play;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #141A4F;
+}
+
+h2 {
+  font-family: $play;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #141A4F;
+}
+
+label {
+  font-family: $play;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: #8596BE;
 }
 
 body {
-  font-family: 'Inter', 'Poppins', 'Helvetica Neue', 'Helvetica', sans-serif;
-  margin: 0;
-  text-align: center;
+  font-family: $niramit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  color: #0E112E;
 }
