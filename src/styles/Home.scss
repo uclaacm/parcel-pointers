@@ -50,13 +50,10 @@ p {
     background: $accent-1-color;
     border: 0;
     border-radius: 10px;
-
-    /* Text */
+    cursor: pointer;
     display: flex;
-
     height: 47px;
     justify-content: center;
-    /* Button */
     position: relative;
     top: 25px;
     width: 215px;
