@@ -17,12 +17,6 @@ const Demo: FC = () => {
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div id="layout">
           <p className="description">
-            <Box letter="a" num={1}></Box>
-            <Box letter="b" num={2}></Box>
-            <Box letter="c" num={3}></Box>
-            <Box letter="d" num={4}></Box>
-            <Box letter="e" num={5}></Box>
-            <Box letter="f" num={6}></Box>
             {nums1.map((num) => (
               <ShelfAddress key={null} num={num}></ShelfAddress>
             ))}
@@ -36,6 +30,13 @@ const Demo: FC = () => {
             ))}
             <br></br>
           </p>
+          <h1 className="header">Demo</h1>
+          <Box letter="a" num={1} conf={false}></Box>
+          <Box letter="b" num={2} conf={true}></Box>
+          <Box letter="c" num={3} conf={false}></Box>
+          <Box letter="d" num={4} conf={false}></Box>
+          <Box letter="e" num={5} conf={false}></Box>
+          <Box letter="f" num={6} conf={false}></Box>
           <div id="inbox-wrapper">
             <AlertInbox section_no={1} />
           </div>
