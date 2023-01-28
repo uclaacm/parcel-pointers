@@ -1,14 +1,23 @@
 import '../styles/Box.scss';
+import {useRef, useState, useEffect} from 'react';
+import React from 'react';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 export interface BoxProps {
   letter: string;
   num: number;
+  conf: boolean;
 }
+
 
 // The letter is the letter that is put on the box and
 // the number is the width of the box in terms of the number of addresses
 export default function Box(props: BoxProps): JSX.Element {
   let image;
+  let confetti;
+  const [isExploding, setIsExploding] = React.useState(props.conf);
+
+
   switch (props.num) {
     case 1:
       image = (
@@ -58,6 +67,19 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+
+      confetti = (
+        <div className="confetti a">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={40}
+          height={1000}
+          width={300}
+        />}
+      </div>
+      )
       break;
     case 2:
       image = (
@@ -107,6 +129,17 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+      confetti = (
+        <div className="confetti b">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={100}
+          height={1000}
+          width={300}
+        />}
+      </div>)
       break;
     case 3:
       image = (
@@ -156,6 +189,17 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+      confetti = (
+        <div className="confetti c">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={100}
+          height={1000}
+          width={300}
+        />}
+      </div>);
       break;
     case 4:
       image = (
@@ -205,6 +249,17 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+      confetti = (
+        <div className="confetti d">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={100}
+          height={1000}
+          width={300}
+        />}
+      </div>);
       break;
     case 5:
       image = (
@@ -254,6 +309,17 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+      confetti = (
+        <div className="confetti e">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={100}
+          height={1000}
+          width={300}
+        />}
+      </div>);
       break;
     case 6:
       image = (
@@ -303,6 +369,17 @@ export default function Box(props: BoxProps): JSX.Element {
           />
         </svg>
       );
+      confetti = (
+        <div className="confetti f">
+        {isExploding && 
+        <ConfettiExplosion 
+          force={0.4}
+          duration={2000}
+          particleCount={100}
+          height={1000}
+          width={300}
+        />}
+      </div>);
       break;
     default:
       image = (
@@ -354,5 +431,11 @@ export default function Box(props: BoxProps): JSX.Element {
       );
       break;
   }
-  return <div className="box">{image}</div>;
+  
+  return (
+    <div className="parent">
+      {confetti}
+      <div className="box">{image}</div>
+    </div>
+  )
 }
