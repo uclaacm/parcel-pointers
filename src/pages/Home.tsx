@@ -22,9 +22,12 @@ const Home: FC = () => {
                 enim ad minim vernian, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <div id="start-button">
-                <p className="text">let&apos;s go!</p>
-              </div>
+              <button
+                id="start-button"
+                onClick={() => (window.location.href = '/lesson-1')}
+              >
+                <p id="button-text">Let&apos;s go!</p>
+              </button>
             </div>
             <div id="col-2">
               <div className="pp-wrapper">
