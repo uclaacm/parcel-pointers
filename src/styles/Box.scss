@@ -1,5 +1,38 @@
+.parent {
+  position: relative;
+}
+
 .box {
   align-items: end;
   display: flex;
   margin: 10px;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+}
+
+.a {
+  left: 20px;
+}
+
+.b {
+  left: 40px;
+}
+
+.c {
+  left: 55px;
+}
+
+.d {
+  left: 70px;
+}
+
+.e {
+  left: 90px;
+}
+
+.f {
+  left: 110px;
 }
