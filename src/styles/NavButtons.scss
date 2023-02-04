@@ -8,42 +8,36 @@ $header-1: 50px;
 $description: 20px;
 $header-height: 8vh;
 
-.previous
-{
-    bottom: 8vh;
-    left: 40px;
-    position: absolute;
+.previous {
+  bottom: 8vh;
+  left: 40px;
+  position: absolute;
 
-    &-text
-    {
-        bottom: 8.5vh;
-        color: #121538;
-        font-family: 'Play';
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        left: 70px;
-        line-height: 28px;
-        position: absolute;
-    }
+  &-text {
+    bottom: 8.5vh;
+    color: #121538;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    left: 70px;
+    line-height: 28px;
+    position: absolute;
+  }
 }
 
-.next
-{
-    bottom: 8vh;
-    position: absolute;
-    right: 40px;
+.next {
+  bottom: 8vh;
+  position: absolute;
+  right: 40px;
 
-    &-text
-    {
-        bottom: 8.5vh;
-        color: #121538;
-        font-family: 'Play';
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 28px;
-        position: absolute;
-        right: 75px;
-    }
+  &-text {
+    bottom: 8.5vh;
+    color: #121538;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    position: absolute;
+    right: 75px;
+  }
 }
