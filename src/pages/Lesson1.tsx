@@ -3,6 +3,7 @@ import PipiBox from '../../public/PipiBox.png';
 import AppWrapper from '../components/AppWrapper';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson1.scss';
+import NavButtons from '../components/NavButtons';
 
 const Lesson1: FC = () => {
   return (
