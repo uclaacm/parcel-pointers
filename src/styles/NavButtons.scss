@@ -10,37 +10,40 @@ $header-height: 8vh;
 
 .previous
 {
-    position: absolute;
     bottom: 8vh;
     left: 40px;
+    position: absolute;
+
     &-text
     {
-        position: absolute;
+        bottom: 8.5vh;
+        color: #121538;
         font-family: 'Play';
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
-        color: #121538;
         left: 70px;
-        bottom: 8.5vh;
+        line-height: 28px;
+        position: absolute;
     }
 }
+
 .next
 {
-    position: absolute;
     bottom: 8vh;
+    position: absolute;
     right: 40px;
+
     &-text
     {
-        right: 75px;
-        position: absolute;
+        bottom: 8.5vh;
+        color: #121538;
         font-family: 'Play';
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
         line-height: 28px;
-        color: #121538;
-        bottom: 8.5vh;
+        position: absolute;
+        right: 75px;
     }
 }
