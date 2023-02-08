@@ -9,8 +9,7 @@ const Home: FC = () => {
   return (
     <div>
       <AppWrapper section={HeaderSections.TITLE_SECTION}>
-        <div 
-          id="container">
+        <div id="container">
           <div
             id="background"
             style={{ backgroundImage: `url(${LandingBackground})` }}
