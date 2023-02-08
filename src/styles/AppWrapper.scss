@@ -6,7 +6,7 @@ $header-height: 5vh;
 //=======================================
 #app-wrapper {
   background-color: white;
-  margin: $header-height 0 $header-height 0;
+  // margin: $header-height 0 $header-height 0;
   min-height: calc(100vh - #{$header-height});
 }
 
