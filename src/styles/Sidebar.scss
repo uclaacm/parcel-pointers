@@ -1,5 +1,7 @@
+@import "./global";
+
 #Sidebar {
-  background-color: green;
+  background-color: white;
   height: 100%; /* 100% Full-height */
   left: 0; // position from left
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -32,7 +34,7 @@
   }
 
   .dropdown-container {
-    background-color: #3b9244;
+    // background-color: white;
     display: none;
     padding-left: 8px;
     transition: 0.5s;
@@ -53,7 +55,7 @@
 }
 
 .openbtn {
-  background-color: green;
+  background-color: $primary-1-color;
   color: white;
   cursor: pointer;
   font-size: 20px;
@@ -64,5 +66,5 @@
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color: white;
 }

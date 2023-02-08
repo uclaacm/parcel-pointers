@@ -1,10 +1,20 @@
 import '../styles/Sidebar.scss';
-import { useState } from 'react';
+import { SetStateAction, useState, Dispatch } from 'react';
 
-export default function Sidebar(showMenu: { showMenu: boolean }): JSX.Element {
+// interface SidebarProps {
+//   showMenu: {showMenu: boolean};
+//   setShowMenu?: Dispatch<SetStateAction<boolean>>;
+// }
+
+export default function Sidebar(props: { showMenu: boolean, setShowMenu: Dispatch<SetStateAction<boolean>> }): JSX.Element {
   const [dropDown, setDropDown] = useState(false);
   return (
-    <div id="Sidebar" style={{ width: showMenu.showMenu ? 250 : 0 }}>
+    <div id="Sidebar" style={{ width: props.showMenu ? 250 : 0 }}>
+      <button 
+        id="sidebar"
+        onClick={() => props.setShowMenu(false)}
+      >X</button>
+      <h2>Parcel Pointers</h2>
       <a href="/">Home</a>
       <a href="/demo">Demo</a>
       <button className="dropdown-btn" onClick={() => setDropDown(!dropDown)}>
