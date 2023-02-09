@@ -1,70 +1,67 @@
-@import "./global";
-@import "./AppWrapper";
+@import './global';
+@import './AppWrapper';
 
 $padding-h: 35px;
 $padding-v: 55px;
 $sidebar-width: 357px;
 
-#Sidebar {
+.sidebar {
   background-color: white;
-  height: 100%; /* 100% Full-height */
+  height: 100%; // 100% Full-height
   left: 0; // position from left
-  overflow-x: hidden; /* Disable horizontal scroll */
-  position: fixed; /* Stay in place */
+  overflow-x: hidden; // Disable horizontal scroll
+  position: fixed; // Stay in place
   top: 0; //position from top
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  width: 0; /* 0 width - change this with JavaScript */
-  z-index: 1; /* Stay on top */
+  transition: 0.5s; // 0.5 second transition effect to slide in the sidebar
+  width: 0; // 0 width - change this with JavaScript
+  z-index: 1; // Stay on top
+}
 
-  .sidebar-container {
-    padding: $padding-v $padding-v $padding-h $padding-h;
-  }
+.sidebar-header {
+  padding: $padding-v $padding-v $padding-h $padding-h;
+  position: relative;
+  transition: 0.3s;
+}
 
-  .title {
-    @extend h2;
-    cursor: pointer;
-  }
+.dropdown-header {
+  color: $text-color;
+  cursor: pointer;
+  display: block;
+  font-family: $play;
+  font-size: 24px;
+  padding-left: $padding-h;
+  padding-right: $padding-h;
+  text-align: left;
+  transition: 0.3s;
+}
 
-  .dropdown-header {
-    color: $text-color;
-    font-family: $play;
-    cursor: pointer;
-    display: block;
-    font-size: 24px;
-    text-align: left;
-    transition: 0.3s;
-  }
+// .dropdown-header span:hover {
+//   // background-color: rgba(254, 201, 0, 0.3);
+//   cursor: pointer;
+// }
 
-  .dropdown-header span:hover {
-    cursor: pointer;
-    background-color: rgba(254, 201, 0, 0.3);
-    // color: $primary-1-color;
-  }
+.dropdown-children {
+  // color: inherit;
+  font-family: $play;
+  font-size: 20px;
+  padding-left: 33px;
+  // text-decoration: inherit;
+  transition: 0.5s;
+}
 
-  .dropdown-children {
-    color: inherit;
-    text-decoration: inherit;
-    font-family: $play;
-    font-size: 20px;
-    padding-left: 33px;
-    transition: 0.5s;
-  }
+.close-btn {
+  background-color: transparent;
+  border: 0;
+  // font-size: 36px;
+  color: $text-color;
+  cursor: pointer;
+  padding: 0;
+  padding-top: 7px;
+  position: relative;
+}
 
-  .close-btn {
-    // font-size: 36px;
-    color: $text-color;
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    padding-top: 7px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .close-btn:hover {
-    color: $primary-1-color;
-  }
-
+.close-btn:hover {
+  color: $primary-1-color;
 }
 
 .openbtn {
@@ -73,9 +70,9 @@ $sidebar-width: 357px;
   color: white;
   cursor: pointer;
   font-size: 20px;
+  height: $header-height;
   left: 0;
   padding: 10px 15px;
   position: fixed;
   transition: 0.5s;
-  height: $header-height;
 }
