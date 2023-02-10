@@ -4,11 +4,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SetStateAction, useState, Dispatch } from 'react';
 
-// TODO: fix vertical alignment of headers
-// TODO: fix active dropdown
-// TODO: fix dropdown children spacing
-// TODO: fix text animation, weird rn
-// TODO: remove <a> styling for links
+// TODO: fix dropdown children animation
 
 interface sidebarProps {
   showMenu: boolean;
@@ -23,27 +19,29 @@ interface dropdownProps {
 function Dropdown(props: dropdownProps): JSX.Element {
   const [expand, setExpand] = useState(false);
   return (
-    <div style={{ backgroundOrigin: 'content-box' }}>
+    <div>
       <div
         className="dropdown-header"
         onClick={() => setExpand(!expand)}
         style={{
           cursor: 'pointer',
           backgroundColor: expand ? '#FEC9004D' : 'transparent',
+          marginBottom: '8px',
         }}
       >
         <span
           style={{
             display: 'flex',
             justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
           <div>{props.title}</div>
           <div>
             {!expand ? (
-              <ExpandMoreIcon fontSize="large" />
+              <ExpandMoreIcon fontSize="large" style={{ paddingTop: '5px' }} />
             ) : (
-              <ExpandLessIcon fontSize="large" />
+              <ExpandLessIcon fontSize="large" style={{ paddingTop: '5px' }} />
             )}
           </div>
         </span>
@@ -54,7 +52,7 @@ function Dropdown(props: dropdownProps): JSX.Element {
       >
         {props.list.map(function (elem, index) {
           return (
-            <div key={index}>
+            <div key={index} style={{ marginBottom: '14px' }}>
               <a href={elem.link}>{elem.name}</a>
               <br />
             </div>
@@ -95,10 +93,18 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: '#example-3',
     },
   ];
+  const hiddenX = -357;
+  const showX = 0;
 
   return (
-    <div className="sidebar" style={{ width: props.showMenu ? 357 : 0 }}>
-      {/* <div className="sidebar-container"> */}
+    <div
+      className="sidebar"
+      style={{
+        transform: props.showMenu
+          ? `translate(${showX}px)`
+          : `translate(${hiddenX}px)`,
+      }}
+    >
       <span
         className="sidebar-header"
         style={{
@@ -115,6 +121,5 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Examples" list={exampleList} />
     </div>
-    // </div>
   );
 }

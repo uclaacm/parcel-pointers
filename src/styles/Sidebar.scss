@@ -13,12 +13,14 @@ $sidebar-width: 357px;
   position: fixed; // Stay in place
   top: 0; //position from top
   transition: 0.5s; // 0.5 second transition effect to slide in the sidebar
-  width: 0; // 0 width - change this with JavaScript
+  width: 357px; // 0 width - change this with JavaScript
   z-index: 1; // Stay on top
 }
 
 .sidebar-header {
-  padding: $padding-v $padding-v $padding-h $padding-h;
+  padding-left: $padding-h;
+  padding-right: $padding-h;
+  padding-top: $padding-v;
   position: relative;
   transition: 0.3s;
 }
@@ -35,18 +37,14 @@ $sidebar-width: 357px;
   transition: 0.3s;
 }
 
-// .dropdown-header span:hover {
-//   // background-color: rgba(254, 201, 0, 0.3);
-//   cursor: pointer;
-// }
-
-.dropdown-children {
-  // color: inherit;
+.dropdown-children a {
+  color: $text-color;
   font-family: $play;
   font-size: 20px;
-  padding-left: 33px;
-  // text-decoration: inherit;
-  transition: 0.5s;
+  padding-left: 68px;
+  position: relative;
+  text-decoration: none;
+  // animation: growDown 300ms ease-in-out forwards
 }
 
 .close-btn {
