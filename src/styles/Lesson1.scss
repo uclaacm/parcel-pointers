@@ -1,7 +1,12 @@
 @import './global';
 
+// Variables
+//=======================================
+$layout-wsize: 10.56%;
+$layout-spacing: 5%;
+
 .header {
-  margin: 5% 10% 0%;
+  margin: $layout-spacing $layout-wsize 0%;
 }
 
 .content {
@@ -12,18 +17,11 @@
   font-weight: 400;
   justify-content: center;
   line-height: 29px;
-  margin: 2% 10% 5%;
+  margin: 2% $layout-wsize $layout-spacing;
 }
 
 .pipi {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.letter {
-  left: 54.8%;
-  position: absolute;
-  top: 46.5%;
-  z-index: 1;
 }
