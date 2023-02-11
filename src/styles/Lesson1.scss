@@ -1,7 +1,7 @@
 @import './global';
 
-.header{
-    margin: 5% 10% 0% 10%;
+.header {
+  margin: 5% 10% 0%;
 }
 
 .content {
@@ -12,7 +12,7 @@
   font-weight: 400;
   justify-content: center;
   line-height: 29px;
-  margin: 2% 10% 5% 10%;
+  margin: 2% 10% 5%;
 }
 
 .pipi {
@@ -21,9 +21,9 @@
   margin-right: auto;
 }
 
-.letter{
-    position: absolute;
-    left: 54.8%;
-    top: 46.5%;
-    z-index: 1;
+.letter {
+  left: 54.8%;
+  position: absolute;
+  top: 46.5%;
+  z-index: 1;
 }

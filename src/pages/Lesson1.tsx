@@ -9,7 +9,7 @@ const Lesson1: FC = () => {
     <>
       <AppWrapper section={HeaderSections.LESSON_1}>
         <div>
-          <h1 className = "header">What are Memory Addresses?</h1>
+          <h1 className="header">What are Memory Addresses?</h1>
           <p className="content">
             As you can see from the example, our warehouse had a bunch of
             labeled shelves, and there were some boxes on each of the shelves.
