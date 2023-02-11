@@ -5,6 +5,6 @@ $layout-htsize: 100px;
 $layout-hbsize: 50px;
 
 #lesson {
-    margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
-    min-height: calc(100vh - 2 * #{$layout-wsize});
+  margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
+  min-height: calc(100vh - 2 * #{$layout-wsize});
 }
