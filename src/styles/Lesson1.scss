@@ -1,0 +1,29 @@
+@import './global';
+
+.header{
+    margin: 5% 10% 0% 10%;
+}
+
+.content {
+  color: $text-color;
+  font-family: $niramit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 29px;
+  margin: 2% 10% 5% 10%;
+}
+
+.pipi {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letter{
+    position: absolute;
+    left: 54.8%;
+    top: 46.5%;
+    z-index: 1;
+}
