@@ -66,31 +66,51 @@ function Dropdown(props: dropdownProps): JSX.Element {
 export default function Sidebar(props: sidebarProps): JSX.Element {
   const lessonList = [
     {
-      name: 'Lesson 1',
-      link: '#lesson-1',
+      name: '1. What are memory addresses?',
+      link: '/lesson-1',
     },
     {
-      name: 'Lesson 2',
-      link: '#lesson-2',
+      name: '2. Introducing pointers',
+      link: '/lesson-2',
     },
     {
-      name: 'Lesson 3',
-      link: '#lesson-3',
+      name: '3. Assigning a value to pointers',
+      link: '/lesson-3',
+    },
+    {
+      name: '4. Dereferencing pointers',
+      link: '/lesson-4',
+    },
+    {
+      name: '5. Reassigning the value pointed to',
+      link: '/lesson-5',
+    },
+    {
+      name: '6. Reassigning pointers',
+      link: '/lesson-6',
+    },
+    {
+      name: '7. Arrays and pointer arithmetic',
+      link: '/lesson-7',
+    },
+    {
+      name: '8. References vs pointers',
+      link: '/lesson-8',
     },
   ];
 
-  const exampleList = [
+  const exerciseList = [
     {
-      name: 'Example 1',
-      link: '#example-1',
+      name: '1. Exercise 1',
+      link: '/exercise-1',
     },
     {
-      name: 'Example 2',
-      link: '#example-2',
+      name: '2. Exercise 2',
+      link: '/exercise-2',
     },
     {
-      name: 'Example 3',
-      link: '#example-3',
+      name: '3. Exercise 3',
+      link: '/exercise-3',
     },
   ];
   const hiddenX = -357;
@@ -119,7 +139,7 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
         </button>
       </span>
       <Dropdown title="Lessons" list={lessonList} />
-      <Dropdown title="Examples" list={exampleList} />
+      <Dropdown title="Exercises" list={exerciseList} />
     </div>
   );
 }
