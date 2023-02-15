@@ -15,8 +15,8 @@ export default function Sidebar(showMenu: { showMenu: boolean }): JSX.Element {
         style={{ display: dropDown ? 'block' : 'none' }}
       >
         <a href="/lesson-1">Lesson 1</a>
-        <a href="#">Lesson 2</a>
-        <a href="#">Lesson 3</a>
+        <a href="/lesson-2">Lesson 2</a>
+        <a href="/lesson-3">Lesson 3</a>
       </div>
       <a href="/Error">Error</a>
     </div>
