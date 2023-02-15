@@ -24,10 +24,10 @@ function Dropdown(props: dropdownProps): JSX.Element {
         onClick={() => setExpand(!expand)}
         style={{ backgroundColor: expand ? '#FEC9004D' : 'transparent' }}
       >
-        <div 
-          className='dropdown-header-selected'
-          style={{ visibility: expand ? "visible" : "hidden"}}
-        > </div>
+        <div
+          className="dropdown-header-selected"
+          style={{ visibility: expand ? 'visible' : 'hidden' }}
+        />
         <span>
           <div>{props.title}</div>
           <div>
@@ -118,16 +118,26 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       }}
     >
       <span className="sidebar-header">
-        <h2><a href="/">Parcel Pointers</a></h2>
+        <h2>
+          <a href="/">Parcel Pointers</a>
+        </h2>
         <button className="close-btn" onClick={() => props.setShowMenu(false)}>
           <CloseIcon fontSize="large" />
         </button>
       </span>
-      <div className='dropdown-header'><a href='/pointer-motivation'>Why Pointers?</a></div>
+      <div className="dropdown-header">
+        <a href="/pointer-motivation">Why Pointers?</a>
+      </div>
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
-      <div className='dropdown-header'><a href='/demo'>Demo</a></div> {/* TODO: delete me before production! */}
-      <div className='dropdown-header'><a href='/error'>Error</a></div> {/* TODO: delete me before production! */}
+      <div className="dropdown-header">
+        <a href="/demo">Demo</a>
+      </div>{' '}
+      {/* TODO: delete me before production! */}
+      <div className="dropdown-header">
+        <a href="/error">Error</a>
+      </div>{' '}
+      {/* TODO: delete me before production! */}
     </div>
   );
 }
