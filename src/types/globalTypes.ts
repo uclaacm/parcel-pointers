@@ -7,4 +7,5 @@ export enum HeaderSections {
   TITLE_SECTION = 'titleSection',
   LEARNING_SECTION = 'learningSection',
   CODE_SECTION = 'codeSection',
+  LESSON_1 = 'Lesson 1',
 }
