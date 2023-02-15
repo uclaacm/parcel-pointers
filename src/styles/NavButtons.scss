@@ -9,42 +9,46 @@ $description: 20px;
 $header-height: 8vh;
 
 .previous {
-  display: flex;
+  background: none;
+  border: none;
   bottom: 8vh;
+  display: flex;
   left: 40px;
   position: absolute;
-  border: none;
-  background: none;
+
   &-text {
-    display: inline;
     color: #121538;
+    display: inline;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     position: relative;
     top: 2px;
   }
+
   &:hover{
     cursor: pointer;
   }
 }
 
 .next {
-  display: flex;
+  background: none;
+  border: none;
   bottom: 8vh;
+  display: flex;
   position: absolute;
   right: 40px;
-  border: none;
-  background: none;
+
   &-text {
-    display: inline;
     color: #121538;
+    display: inline;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     position: relative;
     top: 2px;
   }
+
   &:hover{
     cursor: pointer;
   }
