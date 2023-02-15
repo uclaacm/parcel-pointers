@@ -10,7 +10,7 @@ $header-height: 8vh;
 
 .previous {
   background: none;
-  border: none;
+  border: 0;
   bottom: 8vh;
   display: flex;
   left: 40px;
@@ -32,7 +32,7 @@ $header-height: 8vh;
 
 .next {
   background: none;
-  border: none;
+  border: 0;
   bottom: 8vh;
   display: flex;
   position: absolute;
