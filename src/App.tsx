@@ -3,9 +3,9 @@ import Demo from './pages/Demo';
 import Error404 from './pages/Error404';
 import Home from './pages/Home';
 import Lesson1 from './pages/Lesson1';
-import PointerMotivation from './pages/PointerMotivation';
 import Lesson2 from './pages/Lesson2';
 import Lesson3 from './pages/Lesson3';
+import PointerMotivation from './pages/PointerMotivation';
 
 function App(): JSX.Element {
   return (
