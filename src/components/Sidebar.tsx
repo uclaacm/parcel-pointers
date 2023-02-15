@@ -1,10 +1,9 @@
 import '../styles/Sidebar.scss';
+import '../styles/global.scss';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SetStateAction, useState, Dispatch } from 'react';
-
-// TODO: fix dropdown children animation
 
 interface sidebarProps {
   showMenu: boolean;
@@ -23,19 +22,13 @@ function Dropdown(props: dropdownProps): JSX.Element {
       <div
         className="dropdown-header"
         onClick={() => setExpand(!expand)}
-        style={{
-          cursor: 'pointer',
-          backgroundColor: expand ? '#FEC9004D' : 'transparent',
-          marginBottom: '8px',
-        }}
+        style={{ backgroundColor: expand ? '#FEC9004D' : 'transparent' }}
       >
-        <span
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
+        <div 
+          className='dropdown-header-selected'
+          style={{ visibility: expand ? "visible" : "hidden"}}
+        > </div>
+        <span>
           <div>{props.title}</div>
           <div>
             {!expand ? (
@@ -98,7 +91,6 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: '/lesson-8',
     },
   ];
-
   const exerciseList = [
     {
       name: '1. Exercise 1',
@@ -125,21 +117,17 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
           : `translate(${hiddenX}px)`,
       }}
     >
-      <span
-        className="sidebar-header"
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          paddingBottom: 35,
-        }}
-      >
-        <h2 style={{ cursor: 'pointer' }}>Parcel Pointers</h2>
+      <span className="sidebar-header">
+        <h2><a href="/">Parcel Pointers</a></h2>
         <button className="close-btn" onClick={() => props.setShowMenu(false)}>
           <CloseIcon fontSize="large" />
         </button>
       </span>
+      <div className='dropdown-header'><a href='/pointer-motivation'>Why Pointers?</a></div>
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
+      <div className='dropdown-header'><a href='/demo'>Demo</a></div> {/* TODO: delete me before production! */}
+      <div className='dropdown-header'><a href='/error'>Error</a></div> {/* TODO: delete me before production! */}
     </div>
   );
 }

@@ -23,6 +23,15 @@ $sidebar-width: 357px;
   padding-top: $padding-v;
   position: relative;
   transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+
+  a {
+    color: $text-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 
 .dropdown-header {
@@ -35,6 +44,28 @@ $sidebar-width: 357px;
   padding-right: $padding-h;
   text-align: left;
   transition: 0.3s;
+  margin-bottom: 8px;
+  height: 47px;
+
+  span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: $text-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &-selected {
+    background-color: $accent-1-color;
+    width: 7px;
+    position: absolute;
+    left: 0px;
+    height: inherit;
+  }
 }
 
 .dropdown-children a {
@@ -44,22 +75,16 @@ $sidebar-width: 357px;
   padding-left: 50px;
   position: relative;
   text-decoration: none;
-  // animation: growDown 300ms ease-in-out forwards
 }
 
 .close-btn {
   background-color: transparent;
   border: 0;
-  // font-size: 36px;
-  color: $text-color;
+  color: $primary-1-color;
   cursor: pointer;
   padding: 0;
   padding-top: 7px;
   position: relative;
-}
-
-.close-btn:hover {
-  color: $primary-1-color;
 }
 
 .openbtn {
