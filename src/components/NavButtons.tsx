@@ -9,13 +9,19 @@ export default function NavButtons(props: NavProps): JSX.Element {
   const pageSelect = ['/', '/demo', '/lesson-1', '/lesson-2', '/lesson-3'];
   return (
     <div>
-      <button onClick={() =>window.location.href=pageSelect[props.page - 1]} className="previous">
-        <ArrowBackIosNewIcon fontSize='large' />
+      <button
+        onClick={() => (window.location.href = pageSelect[props.page - 1])}
+        className="previous"
+      >
+        <ArrowBackIosNewIcon fontSize="large" />
         <span className="previous-text">Previous</span>
       </button>
-      <button onClick={() =>window.location.href=pageSelect[props.page + 1]} className="next">
+      <button
+        onClick={() => (window.location.href = pageSelect[props.page + 1])}
+        className="next"
+      >
         <span className="next-text">Next</span>
-        <ArrowForwardIosIcon fontSize='large' />
+        <ArrowForwardIosIcon fontSize="large" />
       </button>
     </div>
   );
