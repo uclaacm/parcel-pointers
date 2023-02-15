@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import Arrow from '../../public/Arrow.png';
+import LeftLadder from '../../public/LeftLadder.png';
+import Pipi from '../../public/Pipi.png';
+import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
@@ -316,6 +319,9 @@ const Demo: FC = () => {
           <Box letter="d" num={4} conf={false}></Box>
           <Box letter="e" num={5} conf={false}></Box>
           <Box letter="f" num={6} conf={false}></Box>
+          <img className="pipi" src={Pipi} alt="Pipi"></img>
+          <img className="ladder" src={LeftLadder} alt="LeftLadder"></img>
+          <img className="ladder" src={RightLadder} alt="RightLadder"></img>
           <div id="inbox-wrapper">
             <AlertInbox header="Hey Pipi, the Box is at address 12!">
               {Popup}
