@@ -3,7 +3,7 @@ import '../styles/global.scss';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { SetStateAction, useState, Dispatch, useRef, useEffect, RefObject } from 'react';
+import { SetStateAction, useState, Dispatch, useRef, useEffect } from 'react';
 
 interface sidebarProps {
   showMenu: boolean;
@@ -112,13 +112,17 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
   // Close the menu if clicked on outside of Sidebar
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (props.showMenu == true && wrapperRef.current && !wrapperRef.current.contains(event.target as Element)) {
+      if (
+        props.showMenu == true &&
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Element)
+      ) {
         props.setShowMenu(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside); // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside); // Bind the event listener
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside); // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside); // Unbind the event listener on clean up
     };
   }, [wrapperRef, props.showMenu]);
 
@@ -145,13 +149,13 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       </div>
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
+      {/* TODO: delete Demo and Error links before production! */}
       <div className="dropdown-header">
-        <a href="/demo">Demo</a>{/* TODO: delete me before production! */}
+        <a href="/demo">Demo</a>
       </div>
       <div className="dropdown-header">
-        <a href="/error">Error</a>{/* TODO: delete me before production! */}
+        <a href="/error">Error</a>
       </div>
-
     </div>
   );
 }
