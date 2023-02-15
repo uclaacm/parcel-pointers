@@ -1,13 +1,18 @@
 import { FC } from 'react';
+<<<<<<< HEAD
 import PipiBox from '../../public/PipiBox.png';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson1.scss';
+=======
+import NavButtons from '../components/NavButtons';
+>>>>>>> f5ec2f0e4d2175824e247d2a0474934d9db2c8e9
 
 const Lesson1: FC = () => {
   return (
     <>
+<<<<<<< HEAD
       <AppWrapper section={HeaderSections.LESSON_1}>
         <div>
           <h1 className="header">What are Memory Addresses?</h1>
@@ -43,6 +48,14 @@ const Lesson1: FC = () => {
           <NavButtons page={2} />
         </div>
       </AppWrapper>
+=======
+      <h1>Lesson 1</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus
+        lacus at consequat rutrum.
+      </p>
+      <NavButtons page={2}></NavButtons>
+>>>>>>> f5ec2f0e4d2175824e247d2a0474934d9db2c8e9
     </>
   );
 };

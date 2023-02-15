@@ -5,7 +5,10 @@ import Home from './pages/Home';
 import Lesson1 from './pages/Lesson1';
 import Lesson2 from './pages/Lesson2';
 import Lesson3 from './pages/Lesson3';
+<<<<<<< HEAD
 import PointerMotivation from './pages/PointerMotivation';
+=======
+>>>>>>> f5ec2f0e4d2175824e247d2a0474934d9db2c8e9
 
 function App(): JSX.Element {
   return (
