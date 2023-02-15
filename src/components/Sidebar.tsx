@@ -3,7 +3,7 @@ import '../styles/global.scss';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { SetStateAction, useState, Dispatch } from 'react';
+import { SetStateAction, useState, Dispatch, useRef, useEffect, RefObject } from 'react';
 
 interface sidebarProps {
   showMenu: boolean;
@@ -107,9 +107,24 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
   ];
   const hiddenX = -357;
   const showX = 0;
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Close the menu if clicked on outside of Sidebar
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (props.showMenu == true && wrapperRef.current && !wrapperRef.current.contains(event.target as Element)) {
+        props.setShowMenu(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside); // Bind the event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside); // Unbind the event listener on clean up
+    };
+  }, [wrapperRef, props.showMenu]);
 
   return (
     <div
+      ref={wrapperRef}
       className="sidebar"
       style={{
         transform: props.showMenu
@@ -131,13 +146,12 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
       <div className="dropdown-header">
-        <a href="/demo">Demo</a>
-      </div>{' '}
-      {/* TODO: delete me before production! */}
+        <a href="/demo">Demo</a>{/* TODO: delete me before production! */}
+      </div>
       <div className="dropdown-header">
-        <a href="/error">Error</a>
-      </div>{' '}
-      {/* TODO: delete me before production! */}
+        <a href="/error">Error</a>{/* TODO: delete me before production! */}
+      </div>
+
     </div>
   );
 }
