@@ -24,7 +24,7 @@ const Demo: FC = () => {
           </div>
         </div>
       </AppWrapper>
-      <NavButtons page={1}></NavButtons>
+      <NavButtons page={2}></NavButtons>
     </div>
   );
 };

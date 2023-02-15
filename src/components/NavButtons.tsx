@@ -6,7 +6,14 @@ export interface NavProps {
 }
 
 export default function NavButtons(props: NavProps): JSX.Element {
-  const pageSelect = ['/', '/demo', '/lesson-1', '/lesson-2', '/lesson-3'];
+  const pageSelect = [
+    '/',
+    '/pointer-motivation',
+    '/demo',
+    '/lesson-1',
+    '/lesson-2',
+    '/lesson-3',
+  ];
   return (
     <div>
       <button
