@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import PipiBox from '../../public/PipiBox.png';
 import AppWrapper from '../components/AppWrapper';
+import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson1.scss';
 
@@ -39,6 +40,7 @@ const Lesson1: FC = () => {
             variable is stored in memory, and we want a way of keeping track of
             that. This is where pointers come in!
           </p>
+          <NavButtons page={3} />
         </div>
       </AppWrapper>
     </>

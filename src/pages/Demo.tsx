@@ -6,6 +6,7 @@ import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
 import ShelfAddress from '../components/ShelfAddress';
+import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
@@ -48,6 +49,7 @@ const Demo: FC = () => {
           </div>
         </div>
       </AppWrapper>
+      <NavButtons page={2}></NavButtons>
     </div>
   );
 };
