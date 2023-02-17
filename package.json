@@ -13,7 +13,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.9",
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.6",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
