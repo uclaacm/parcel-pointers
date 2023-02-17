@@ -1,0 +1,59 @@
+@import './global';
+// Variables
+//=======================================
+$layout-wsize: 10.56%;
+$layout-htsize: 14.45%;
+$layout-hbsize: 16.25%;
+$header-1: 50px;
+$description: 20px;
+$header-height: 8vh;
+
+.previous {
+  background: none;
+  border: 0;
+  bottom: 8vh;
+  color: $primary-1-color;
+  display: flex;
+  left: 40px;
+  position: absolute;
+
+  &-text {
+    color: $text-color;
+    font-family: $play;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    left: 13px;
+    position: relative;
+    top: 2px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.next {
+  background: none;
+  border: 0;
+  bottom: 8vh;
+  color: $primary-1-color;
+  display: flex;
+  position: absolute;
+  right: 40px;
+
+  &-text {
+    color: $text-color;
+    font-family: $play;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    right: 13px;
+    top: 2px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
