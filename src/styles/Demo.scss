@@ -20,10 +20,23 @@ $header-height: 8vh;
 
   .description {
     font-size: $description;
+    width: 100%;
   }
 
   #inbox-wrapper {
     margin: 2rem;
+  }
+
+  .pipi {
+    height: 70px;
+    object-fit: cover;
+    width: 50px;
+  }
+
+  .ladder {
+    height: 200px;
+    object-fit: cover;
+    width: 50px;
   }
 }
 
