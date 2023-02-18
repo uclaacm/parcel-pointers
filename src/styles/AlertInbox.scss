@@ -104,7 +104,7 @@ $color-urgent: red;
 
   #start-button {
     align-items: center;
-    background: $accent-1-color;
+    background: $primary-2-color;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
@@ -113,10 +113,6 @@ $color-urgent: red;
     justify-content: center;
     position: relative;
     width: 215px;
-  }
-
-  #start-button:hover {
-    background: $primary-2-color;
   }
 
   #button-text {
