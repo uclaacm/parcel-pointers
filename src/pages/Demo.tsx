@@ -306,7 +306,7 @@ const Demo: FC = () => {
           />
         </svg>
         <img src={Arrow} alt="Arrow"></img>
-        <Box letter="i" num={3} conf = {false}></Box>
+        <Box letter="i" num={3} conf={false}></Box>
       </div>
     </div>
   );
