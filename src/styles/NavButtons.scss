@@ -11,11 +11,11 @@ $header-height: 8vh;
 .previous {
   background: none;
   border: 0;
-  bottom: 8vh;
+  bottom: 6vh;
   color: $primary-1-color;
   display: flex;
   left: 40px;
-  position: absolute;
+  position: fixed;
 
   &-text {
     color: $text-color;
@@ -36,10 +36,10 @@ $header-height: 8vh;
 .next {
   background: none;
   border: 0;
-  bottom: 8vh;
+  bottom: 6vh;
   color: $primary-1-color;
   display: flex;
-  position: absolute;
+  position: fixed;
   right: 40px;
 
   &-text {
