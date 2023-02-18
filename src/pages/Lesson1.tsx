@@ -4,14 +4,15 @@ import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson1.scss';
+import '../styles/PageWrapper.scss';
 
 const Lesson1: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_1}>
-        <div>
-          <h1 className="header">What are Memory Addresses?</h1>
-          <p className="content">
+        <div className="page-wrapper">
+          <h1>What are Memory Addresses?</h1>
+          <p>
             As you can see from the example, our warehouse had a bunch of
             labeled shelves, and there were some boxes on each of the shelves.
             Our helpful little robot friend was tasked with finding a particular
@@ -27,8 +28,10 @@ const Lesson1: FC = () => {
             you didn&apos;t know what their address was! For the same reasons,
             the memory in your computer is also labeled with addresses.
           </p>
-          <img src={PipiBox} className="pipi"></img>
-          <p className="content">
+          <div className="diagram">
+            <img src={PipiBox} className="pipi"></img>
+          </div>
+          <p>
             Every time your program creates a variable, it places the variable
             somewhere in memory, and keeps track of the address so it can find
             the variable again the next time you need to use it. This is all
