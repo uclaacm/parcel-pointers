@@ -36,12 +36,9 @@ function Popup(props: PopupProps): JSX.Element {
           style={{ backgroundImage: `url(${Close})` }}
           onClick={handleClose}
         ></button>
-        <button
-          id="start-button"
-          onClick={handleClose}
-        >
-        <p id="button-text">Let&apos;s go!</p>
-      </button>
+        <button id="start-button" onClick={handleClose}>
+          <p id="button-text">Let&apos;s go!</p>
+        </button>
       </div>
     </div>
   );
