@@ -1,3 +1,4 @@
+@import './global';
 // Variables
 //=======================================
 $button-height: 0.5rem;
@@ -99,6 +100,29 @@ $color-urgent: red;
 
   .close-button:hover {
     cursor: pointer;
+  }
+
+  #start-button {
+    align-items: center;
+    background: $accent-1-color;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 47px;
+    justify-content: center;
+    position: relative;
+    width: 215px;
+  }
+
+  #start-button:hover {
+    background: $primary-2-color;
+  }
+  #button-text{
+    font-family: $niramit;
+    font-size: 20px;
+    position: relative;
+    top: -3px;
   }
 
   .content {

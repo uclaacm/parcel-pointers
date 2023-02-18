@@ -22,6 +22,11 @@ $header-height: 8vh;
     font-size: $description;
   }
 
+  .address-wrapper{
+    justify-content: center;
+    display: flex;
+  }
+
   #inbox-wrapper {
     margin: 2rem;
   }

@@ -13,7 +13,7 @@ import '../styles/Demo.scss';
 const Demo: FC = () => {
   const Popup = (
     <div>
-      <div>
+      <div className = "address-wrapper">
         <svg
           width="234"
           height="83"
