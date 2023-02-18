@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/PointerMotivation.scss';
 
@@ -20,6 +21,7 @@ const PointerMotivation: FC = () => {
             future, let&apos;s see what they are and how they work! Our little
             friend PiPi is going to be your guide through this learning lab
           </p>
+          <NavButtons page={1} />
         </div>
       </AppWrapper>
     </div>
