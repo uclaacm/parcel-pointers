@@ -18,6 +18,10 @@ $layout-spacing: 5%;
   justify-content: center;
   line-height: 29px;
   margin: 2% $layout-wsize $layout-spacing;
+  // adjust for small screens
+  @media screen and (max-width: 1500px) {
+    margin: 2% 100px $layout-spacing 150px;
+  }
 }
 
 .pipi {
