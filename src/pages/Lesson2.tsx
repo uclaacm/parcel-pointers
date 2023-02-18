@@ -2,37 +2,67 @@ import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
-// import '../styles/Lesson2.scss';
-import "../styles/Lesson.scss";
+import EastIcon from '@mui/icons-material/East';
+import '../styles/Lesson2.scss';
+import "../styles/PageWrapper.scss";
+
+interface TypeDiagramProps {
+  first: String;
+  second: String;
+}
+
+function TypeDiagram(props: TypeDiagramProps): JSX.Element {
+  return (
+    <>
+      <span className='type-diagram'>
+        <h2>{props.first}</h2>
+        <EastIcon fontSize="large" />
+        <h2 className='type-diagram-boxed'>{props.second}</h2>
+      </span>
+    </>
+  );
+}
 
 const Lesson2: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_2}>
-        <div className='lesson'>
+        <div className='page-wrapper'>
           <h1>Introducing Pointers</h1>
           <p>
-            In our example, Pipi wanted to go to a box but he didn`&apos;`t know
+            In our example, Pipi wanted to go to a box but he didn&apos;t know
             where to find it. You passed along a piece of paper with a helpful
             little note on it, telling Pipi the address of the box he was
             looking for. This is basically what a pointer does! A pointer is a
             variable that stores a memory address.
           </p>
           <p>
-            In C++, you`&apos;`ve learned that there are different types of
+            In C++, you&apos;ve learned that there are different types of
             variables, which are basically just containers for storing a
             particular kind of value. An int variable can store an integer, a
             char variable can store a character, a boolean can store true/false,
             etc.
           </p>
-          <div className="diagram">insert diagram</div>
+          <div className="diagram">
+            <span className='type-diagram-container'>
+              <TypeDiagram first="int" second="integer" />
+              <TypeDiagram first="char" second="character" />
+              <TypeDiagram first="bool" second="boolean" />
+            </span>
+
+          </div>
           <p>
             A pointer variable, like all other variables, is also just a
             container that stores a particular value. A pointer is special
             though because it stores memory addresses - in particular, we use it
             to store the memory address of another variable.
           </p>
-          <div className="diagram">insert diagram</div>
+          <div className="diagram">
+            <span className='type-diagram-container'>
+              <TypeDiagram first="pointer" second="memory address" />
+            </span>
+
+          </div>
           <p>
             If we create an int variable, we know that this value gets stored at
             a particular address somewhere in memory. Sometimes it is useful for

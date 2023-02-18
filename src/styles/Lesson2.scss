@@ -1,0 +1,25 @@
+@import "./global.scss";
+
+// Type Diagram
+//=======================================
+.type-diagram {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    h2 {
+        font-size: 26px;
+    }
+
+    &-boxed {
+        border-radius: 5px;
+        background: $accent-1-color;
+        padding: 12px 20px;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+}

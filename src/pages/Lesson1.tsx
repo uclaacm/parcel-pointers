@@ -4,13 +4,13 @@ import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson1.scss';
-import '../styles/Lesson.scss';
+import '../styles/PageWrapper.scss';
 
 const Lesson1: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_1}>
-        <div className='lesson'>
+        <div className='page-wrapper'>
           <h1>What are Memory Addresses?</h1>
           <p>
             As you can see from the example, our warehouse had a bunch of

@@ -3,9 +3,10 @@
 $layout-wspacing: 10.56%;
 $layout-hspacing: 13vh;
 
-// Lesson
+// Page Wrapper
+//    * used for any text pages
 //=======================================
-.lesson {
+.page-wrapper {
     margin: $layout-hspacing $layout-wspacing;
     // margin: 2% $layout-wsize $layout-spacing;
     // // adjust for small screens
