@@ -1,15 +1,48 @@
 import { FC } from 'react';
+import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
+import { HeaderSections } from '../types/globalTypes';
+// import '../styles/Lesson2.scss';
+import "../styles/Lesson.scss";
 
 const Lesson2: FC = () => {
   return (
     <>
-      <h1>Lesson 2</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus
-        lacus at consequat rutrum.
-      </p>
-      <NavButtons page={4}></NavButtons>
+      <AppWrapper section={HeaderSections.LESSON_2}>
+        <div className='lesson'>
+          <h1>Introducing Pointers</h1>
+          <p>
+            In our example, Pipi wanted to go to a box but he didn`&apos;`t know
+            where to find it. You passed along a piece of paper with a helpful
+            little note on it, telling Pipi the address of the box he was
+            looking for. This is basically what a pointer does! A pointer is a
+            variable that stores a memory address.
+          </p>
+          <p>
+            In C++, you`&apos;`ve learned that there are different types of
+            variables, which are basically just containers for storing a
+            particular kind of value. An int variable can store an integer, a
+            char variable can store a character, a boolean can store true/false,
+            etc.
+          </p>
+          <div className="diagram">insert diagram</div>
+          <p>
+            A pointer variable, like all other variables, is also just a
+            container that stores a particular value. A pointer is special
+            though because it stores memory addresses - in particular, we use it
+            to store the memory address of another variable.
+          </p>
+          <div className="diagram">insert diagram</div>
+          <p>
+            If we create an int variable, we know that this value gets stored at
+            a particular address somewhere in memory. Sometimes it is useful for
+            us to know where in memory this is - and so to keep track of this
+            address, we can just get this address and store it in our pointer
+            variable!
+          </p>
+          <NavButtons page={4}></NavButtons>
+        </div>
+      </AppWrapper>
     </>
   );
 };
