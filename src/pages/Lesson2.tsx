@@ -1,23 +1,23 @@
+import EastIcon from '@mui/icons-material/East';
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
-import EastIcon from '@mui/icons-material/East';
 import '../styles/Lesson2.scss';
-import "../styles/PageWrapper.scss";
+import '../styles/PageWrapper.scss';
 
 interface TypeDiagramProps {
-  first: String;
-  second: String;
+  first: string;
+  second: string;
 }
 
 function TypeDiagram(props: TypeDiagramProps): JSX.Element {
   return (
     <>
-      <span className='type-diagram'>
+      <span className="type-diagram">
         <h2>{props.first}</h2>
         <EastIcon fontSize="large" />
-        <h2 className='type-diagram-boxed'>{props.second}</h2>
+        <h2 className="type-diagram-boxed">{props.second}</h2>
       </span>
     </>
   );
@@ -27,7 +27,7 @@ const Lesson2: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_2}>
-        <div className='page-wrapper'>
+        <div className="page-wrapper">
           <h1>Introducing Pointers</h1>
           <p>
             In our example, Pipi wanted to go to a box but he didn&apos;t know
@@ -44,12 +44,11 @@ const Lesson2: FC = () => {
             etc.
           </p>
           <div className="diagram">
-            <span className='type-diagram-container'>
+            <span className="type-diagram-container">
               <TypeDiagram first="int" second="integer" />
               <TypeDiagram first="char" second="character" />
               <TypeDiagram first="bool" second="boolean" />
             </span>
-
           </div>
           <p>
             A pointer variable, like all other variables, is also just a
@@ -58,10 +57,9 @@ const Lesson2: FC = () => {
             to store the memory address of another variable.
           </p>
           <div className="diagram">
-            <span className='type-diagram-container'>
+            <span className="type-diagram-container">
               <TypeDiagram first="pointer" second="memory address" />
             </span>
-
           </div>
           <p>
             If we create an int variable, we know that this value gets stored at

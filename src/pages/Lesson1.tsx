@@ -10,7 +10,7 @@ const Lesson1: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_1}>
-        <div className='page-wrapper'>
+        <div className="page-wrapper">
           <h1>What are Memory Addresses?</h1>
           <p>
             As you can see from the example, our warehouse had a bunch of
