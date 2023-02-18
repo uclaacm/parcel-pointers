@@ -1,5 +1,5 @@
-import Header from './Header';
 import { HeaderSections } from '../../types/globalTypes';
+import Header from './Header';
 import '../../styles/AppWrapper.scss';
 
 export interface AppWrapperProps {
