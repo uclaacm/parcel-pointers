@@ -23,6 +23,11 @@ $header-height: 8vh;
     width: 100%;
   }
 
+  .address-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   #inbox-wrapper {
     margin: 2rem;
   }

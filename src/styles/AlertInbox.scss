@@ -1,3 +1,4 @@
+@import './global';
 // Variables
 //=======================================
 $button-height: 0.5rem;
@@ -54,44 +55,91 @@ $color-urgent: red;
   flex-direction: column;
   justify-content: center;
   margin: $header-height 0 $header-height 0;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   transition: all 5s ease-in-out;
-  width: 30%;
-}
+  width: 35%;
 
-.popup h2 {
-  color: #333;
-  margin-top: 0;
-}
+  h2 {
+    color: #333;
+    margin-top: 0;
+  }
 
-.popup .close {
-  background-color: rgb(174, 174, 174);
-  border-radius: 5px;
-  color: black;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 0.5rem;
-  right: 6px;
-  text-decoration: none;
+  .close {
+    background-color: rgb(174, 174, 174);
+    border-radius: 5px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 0.5rem;
+    right: 6px;
+    text-decoration: none;
 
-  top: 2px;
-  transition: all 200ms;
-  width: 15rem;
-}
+    top: 2px;
+    transition: all 200ms;
+    width: 15rem;
+  }
 
-.popup .close:hover {
-  color: #000;
-  cursor: pointer;
-}
+  .close:hover {
+    color: #000;
+    cursor: pointer;
+  }
 
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
+  .close-button {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+  }
 
-@media screen and (max-width: 700px) {
-  .popup {
+  .close-button:hover {
+    cursor: pointer;
+  }
+
+  #start-button {
+    align-items: center;
+    background: $primary-2-color;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 47px;
+    justify-content: center;
+    position: relative;
+    width: 215px;
+  }
+
+  #button-text {
+    font-family: $niramit;
+    font-size: 20px;
+    position: relative;
+    top: -3px;
+  }
+
+  .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 700px) {
     width: 70%;
+  }
+
+  .pipi-to-box-wrapper {
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+
+  img {
+    margin: 40px;
+    max-height: 20px;
+    max-width: 100px;
   }
 }
