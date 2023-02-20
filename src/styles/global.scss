@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niramit&family=Play&display=swap');
 
 // Font Variables
@@ -47,6 +46,7 @@ label {
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
+  display: block; // no inline styling
 }
 
 body {

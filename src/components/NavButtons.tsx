@@ -11,7 +11,8 @@ export default function NavButtons(props: NavProps): JSX.Element {
     '/pointer-motivation',
     '/demo',
     '/lesson-1',
-    '/lesson-2',
+    '/lesson-2-1',
+    '/lesson-2-2',
     '/lesson-3',
   ];
   return (

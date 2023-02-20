@@ -23,7 +23,7 @@ function TypeDiagram(props: TypeDiagramProps): JSX.Element {
   );
 }
 
-const Lesson2: FC = () => {
+const Lesson2_1: FC = () => {
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_2}>
@@ -75,4 +75,4 @@ const Lesson2: FC = () => {
   );
 };
 
-export default Lesson2;
+export default Lesson2_1;

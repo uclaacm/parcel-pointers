@@ -9,7 +9,7 @@ const Lesson3: FC = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus
         lacus at consequat rutrum.
       </p>
-      <NavButtons page={5}></NavButtons>
+      <NavButtons page={6}></NavButtons>
     </>
   );
 };

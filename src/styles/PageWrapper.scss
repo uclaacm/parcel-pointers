@@ -15,11 +15,19 @@ $layout-hspacing: 13vh;
   // }
 
   // creates spacing between two p tags
-  p + p {
+  p+p {
     padding-top: 5vh;
   }
 
   .diagram {
     padding: 8vh 0;
+  }
+
+  h2 {
+    padding-top: 5vh;
+  }
+
+  label {
+    padding-top: 5vh;
   }
 }
