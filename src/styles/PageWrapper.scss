@@ -21,7 +21,15 @@ $layout-hspacing: 13vh;
     padding-top: 5vh;
   }
 
-  .diagram {
+  h2 + .diagram {
+    padding: 4vh 0;
+  }
+
+  label + .diagram {
+    padding: 4vh 0;
+  }
+
+  p + .diagram {
     padding: 8vh 0;
   }
 

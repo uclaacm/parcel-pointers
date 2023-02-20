@@ -1,7 +1,7 @@
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import cpp from 'react-syntax-highlighter/dist/esm/languages/hljs/cpp';
 import atomOneLightCustom from '../styles/Terminal/atom-one-light-custom';
-import "../styles/Terminal/Terminal.scss"
+import '../styles/Terminal/Terminal.scss';
 
 export interface TerminalProps {
   code: string;
@@ -14,11 +14,11 @@ export default function Terminal(props: TerminalProps): JSX.Element {
     <div className="terminal">
       <SyntaxHighlighter
         language="cpp"
-        style={atomOneLightCustom} 
+        style={atomOneLightCustom}
         wrapLines={true}
       >
         {props.code}
       </SyntaxHighlighter>
-      </div>
+    </div>
   );
 }
