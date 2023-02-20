@@ -15,9 +15,11 @@ function TypeDiagram(props: TypeDiagramProps): JSX.Element {
   return (
     <>
       <span className="type-diagram">
-        <h2>{props.first}</h2>
+        <h2 style={{ paddingTop: '0' }}>{props.first}</h2>
         <EastIcon fontSize="large" />
-        <h2 className="type-diagram-boxed">{props.second}</h2>
+        <h2 className="type-diagram-boxed" style={{ paddingTop: '12px' }}>
+          {props.second}
+        </h2>
       </span>
     </>
   );

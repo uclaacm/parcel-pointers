@@ -8,6 +8,7 @@ $niramit: 'Niramit', sans-serif;
 $text-color: #121538;
 $primary-1-color: #5d71a7;
 $primary-2-color: #8596be;
+$primary-3-color: rgba(133, 150, 190, 0.3);
 $accent-1-color: #fec900;
 $accent-2-color: #72d670;
 $accent-3-color: #fe5353;
@@ -41,12 +42,12 @@ h2 {
 
 label {
   color: #8596be;
+  display: block; // no inline styling
   font-family: $play;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  display: block; // no inline styling
 }
 
 body {
