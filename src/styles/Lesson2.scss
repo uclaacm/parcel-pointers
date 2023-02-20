@@ -1,0 +1,25 @@
+@import './global';
+
+// Type Diagram
+//=======================================
+.type-diagram {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+
+  h2 {
+    font-size: 26px;
+  }
+
+  &-boxed {
+    background: $accent-1-color;
+    border-radius: 5px;
+    padding: 12px 20px;
+  }
+
+  &-container {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+  }
+}

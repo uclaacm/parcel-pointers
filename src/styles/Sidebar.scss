@@ -1,68 +1,101 @@
-#Sidebar {
-  background-color: green;
-  height: 100%; /* 100% Full-height */
+@import './global';
+@import './AppWrapper';
+
+$padding-h: 35px;
+$padding-v: 55px;
+$sidebar-width: 357px;
+
+.sidebar {
+  background-color: white;
+  height: 100%; // 100% Full-height
   left: 0; // position from left
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  position: fixed; /* Stay in place */
+  overflow-x: hidden; // Disable horizontal scroll
+  position: fixed; // Stay in place
   top: 0; //position from top
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  width: 0; /* 0 width - change this with JavaScript */
-  z-index: 1; /* Stay on top */
+  transition: 0.5s; // 0.5 second transition effect to slide in the sidebar
+  width: 357px; // 0 width - change this with JavaScript
+  z-index: 1; // Stay on top
+}
 
-  a,
-  .dropdown-btn {
-    background: none;
-    border-style: none;
-    color: #000;
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+  padding-left: $padding-h;
+  padding-right: $padding-h;
+  padding-top: $padding-v;
+  position: relative;
+  transition: 0.3s;
+
+  a {
+    color: $text-color;
     cursor: pointer;
-    display: block;
-    font-size: 27px;
-    outline: none;
-    padding: 8px 8px 8px 32px;
-    text-align: left;
     text-decoration: none;
-    transition: 0.3s;
-    width: 100%;
-  }
-
-  a:hover,
-  .dropdown-btn:hover {
-    color: #f1f1f1;
-  }
-
-  .dropdown-container {
-    background-color: #3b9244;
-    display: none;
-    padding-left: 8px;
-    transition: 0.5s;
-  }
-
-  .fa-caret-down {
-    float: right;
-    padding-right: 8px;
-  }
-
-  #closebtn {
-    font-size: 36px;
-    margin-left: 50px;
-    position: relative;
-    right: 5px;
-    top: 0;
   }
 }
 
+.dropdown-header {
+  color: $text-color;
+  cursor: pointer;
+  display: block;
+  font-family: $play;
+  font-size: 24px;
+  height: 47px;
+  margin-bottom: 8px;
+  padding-left: $padding-h;
+  padding-right: $padding-h;
+  text-align: left;
+  transition: 0.3s;
+
+  span {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    color: $text-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &-selected {
+    background-color: $accent-1-color;
+    height: inherit;
+    left: 0;
+    position: absolute;
+    width: 7px;
+  }
+}
+
+.dropdown-children a {
+  color: $text-color;
+  font-family: $play;
+  font-size: 18px;
+  padding-left: 50px;
+  position: relative;
+  text-decoration: none;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: 0;
+  color: $primary-1-color;
+  cursor: pointer;
+  padding: 0;
+  padding-top: 7px;
+  position: relative;
+}
+
 .openbtn {
-  background-color: green;
+  background-color: $primary-1-color;
+  border: 0;
   color: white;
   cursor: pointer;
   font-size: 20px;
+  height: $header-height;
   left: 0;
   padding: 10px 15px;
   position: fixed;
   transition: 0.5s;
-}
-
-.openbtn:hover {
-  background-color: #444;
 }
