@@ -10,7 +10,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
     <>
       <span className="fill-arrow-container">
         <div className="fill-arrow">
-          <div className="fill-arrow-svg" style={{ clipPath: 'url(#arrow)' }}>
+          <div className="fill-arrow-background" style={{ clipPath: 'url(#arrow)' }}>
             <svg
               width="415"
               height="121"
@@ -48,7 +48,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
           <p id="box-text">{props.text1}</p>
         </div>
         <div className="fill-arrow">
-          <div className="fill-arrow-svg" style={{ clipPath: 'url(#box)' }}>
+          <div className="fill-arrow-background" style={{ clipPath: 'url(#box)' }}>
             <svg
               width="250"
               height="117"
@@ -74,7 +74,6 @@ function FillArrow(props: FillArrowProps): JSX.Element {
                 width="246"
                 height="113"
                 rx="3"
-                // fill="#FEC900"
                 stroke="#797E87"
                 strokeWidth="4"
               />

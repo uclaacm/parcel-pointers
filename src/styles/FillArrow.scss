@@ -14,20 +14,15 @@
   font-size: 28px;
   font-weight: 700px;
   justify-content: center;
-  position: relative;
 }
 
 .fill-arrow-border {
-  // top: 0;
-  // left: 0;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 
-.fill-arrow-svg {
+.fill-arrow-background {
   background-color: $accent-1-color;
-  // top: 0;
-  // left: 0;
   position: absolute;
 }
 
