@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import FillArrow from '../components/FillArrow';
 import NavButtons from '../components/NavButtons';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson2.scss';
 import '../styles/PageWrapper.scss';
-import FillArrow from '../components/FillArrow';
 
 const code1 = `
   int* intPointer;
