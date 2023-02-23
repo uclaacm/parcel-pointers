@@ -1,43 +1,43 @@
 @import './global';
 
 .fill-arrow-container {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .fill-arrow {
-    align-items: center;
-    color: $text-color;
-    font-family: $play;
-    font-size: 28px;
-    font-weight: 700px;
-    justify-content: center;
-    position: relative;
-    display: flex;
+  align-items: center;
+  color: $text-color;
+  display: flex;
+  font-family: $play;
+  font-size: 28px;
+  font-weight: 700px;
+  justify-content: center;
+  position: relative;
 }
 
 .fill-arrow-border {
-    // top: 0;
-    // left: 0;
-    position: absolute;
-    z-index: 1;
+  // top: 0;
+  // left: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .fill-arrow-svg {
-    // top: 0;
-    // left: 0;
-    position: absolute;
-    background-color: $accent-1-color;
+  background-color: $accent-1-color;
+  // top: 0;
+  // left: 0;
+  position: absolute;
 }
 
 #arrow-text {
-    position: absolute;
-    z-index: 2;
+  position: absolute;
+  z-index: 2;
 }
 
 #box-text {
-    position: absolute;
-    transform: translate(-80px);
-    z-index: 2;
+  position: absolute;
+  transform: translate(-80px);
+  z-index: 2;
 }
