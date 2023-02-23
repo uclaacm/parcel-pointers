@@ -1,0 +1,35 @@
+@import "./global";
+
+.fill-arrow-container{
+    gap: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+.fill-arrow {
+    font-family: $play;
+    font-size: 28px;
+    font-weight: 700px;
+    color: $text-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fill-arrow-svg {
+    position: relative;
+    z-index: 1;
+    // background-color: aqua;
+}
+
+#arrow-text {
+    position: absolute;
+    z-index: 2;
+
+}
+
+#box-text {
+    position: absolute;
+    transform: translate(-80px);
+    z-index: 2;
+}

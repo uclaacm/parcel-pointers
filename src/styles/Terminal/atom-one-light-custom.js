@@ -4,7 +4,7 @@ export default {
     overflowX: 'auto',
     padding: '0.5em',
     color: '121538', // "#383a42"
-    background: 'rgba(133, 150, 190, 0.15)', // "#fafafa"
+    background: 'rgba(133, 150, 190, 0.13)', // "#fafafa"
   },
   'hljs-comment': {
     color: '#a0a1a7',

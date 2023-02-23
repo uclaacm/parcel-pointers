@@ -5,6 +5,7 @@ import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Lesson2.scss';
 import '../styles/PageWrapper.scss';
+import FillArrow from '../components/FillArrow';
 
 const code1 = `
   int* intPointer;
@@ -28,7 +29,9 @@ const Lesson2_2: FC = () => {
             &quot;points&quot; to where the other variable is located. This is
             where the name pointer comes from!
           </p>
-          <div className="diagram"></div>
+          <div className="diagram">
+            <FillArrow text1='pointer' text2='variable'/>
+          </div>
           <p>
             In C++, pointers don&apos;t just want to hold a memory address -
             they&apos;d also like to know what kind of variable they are
