@@ -36,7 +36,9 @@ const Lesson2_2: FC = () => {
             In C++, pointers don&apos;t just want to hold a memory address -
             they&apos;d also like to know what kind of variable they are
             pointing to. This is why we end up with different types of pointers
-            - int pointers, float pointers, char pointers, etc
+            - <span className="code">int</span> pointers,{' '}
+            <span className="code">float</span> pointers,{' '}
+            <span className="code">char</span> pointers, etc.
           </p>
           <h2>Creating a Pointer</h2>
           <p>

@@ -1,13 +1,13 @@
 import '../styles/NavButtons.scss';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { PageNumbers } from '../types/globalTypes';
+import { PageOrder } from '../types/globalTypes';
 export interface NavProps {
   page: number;
 }
 
 export default function NavButtons(props: NavProps): JSX.Element {
-  const pageSelect = PageNumbers;
+  const pageSelect = PageOrder;
   return (
     <div>
       <button

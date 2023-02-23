@@ -30,7 +30,8 @@ export enum PageURLs {
   EXERCISE_3 = '/exercise_3',
 }
 
-export enum PageNumbers {
+// order navigated by NavButtons component
+export enum PageOrder {
   '/',
   '/pointer-motivation',
   '/demo',

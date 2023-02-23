@@ -41,9 +41,10 @@ const Lesson2_1: FC = () => {
           <p>
             In C++, you&apos;ve learned that there are different types of
             variables, which are basically just containers for storing a
-            particular kind of value. An int variable can store an integer, a
-            char variable can store a character, a boolean can store true/false,
-            etc.
+            particular kind of value. An <span className="code">int</span>{' '}
+            variable can store an integer, a <span className="code">char</span>{' '}
+            variable can store a character, a <span className="code">bool</span>{' '}
+            can store true/false, etc.
           </p>
           <div className="diagram">
             <span className="type-diagram-container">
@@ -64,11 +65,11 @@ const Lesson2_1: FC = () => {
             </span>
           </div>
           <p>
-            If we create an int variable, we know that this value gets stored at
-            a particular address somewhere in memory. Sometimes it is useful for
-            us to know where in memory this is - and so to keep track of this
-            address, we can just get this address and store it in our pointer
-            variable!
+            If we create an <span className="code">int</span> variable, we know
+            that this value gets stored at a particular address somewhere in
+            memory. Sometimes it is useful for us to know where in memory this
+            is - and so to keep track of this address, we can just get this
+            address and store it in our pointer variable!
           </p>
           <NavButtons page={4}></NavButtons>
         </div>
