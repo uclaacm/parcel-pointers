@@ -30,7 +30,7 @@ const Lesson2_2: FC = () => {
             where the name pointer comes from!
           </p>
           <div className="diagram">
-            <FillArrow text1='pointer' text2='variable'/>
+            <FillArrow text1="pointer" text2="variable" />
           </div>
           <p>
             In C++, pointers don&apos;t just want to hold a memory address -

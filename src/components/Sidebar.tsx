@@ -81,7 +81,7 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
     },
     {
       name: '6. Reassigning pointers',
-      link: PageURLs.LESSON_6
+      link: PageURLs.LESSON_6,
     },
     {
       name: '7. Arrays and pointer arithmetic',

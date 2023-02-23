@@ -1,31 +1,39 @@
-@import "./global";
+@import './global';
 
-.fill-arrow-container{
-    gap: 10px;
+.fill-arrow-container {
     display: flex;
-    justify-content:center;
+    gap: 10px;
+    justify-content: center;
 }
 
 .fill-arrow {
+    align-items: center;
+    color: $text-color;
     font-family: $play;
     font-size: 28px;
     font-weight: 700px;
-    color: $text-color;
-    display: inline-flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.fill-arrow-border {
+    // top: 0;
+    // left: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .fill-arrow-svg {
-    position: relative;
-    z-index: 1;
-    // background-color: aqua;
+    // top: 0;
+    // left: 0;
+    position: absolute;
+    background-color: $accent-1-color;
 }
 
 #arrow-text {
     position: absolute;
     z-index: 2;
-
 }
 
 #box-text {
