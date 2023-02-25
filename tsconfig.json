@@ -20,9 +20,5 @@
     "incremental": true,
     "typeRoots": ["./node_modules/@types", "./custom_typing"]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "./src/styles/Terminal/atom-one-light-custom.js"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"]
 }
