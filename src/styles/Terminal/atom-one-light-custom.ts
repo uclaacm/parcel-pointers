@@ -1,5 +1,6 @@
 export default {
-  hljs: {
+  /* eslint-disable-next-line */
+  'hljs': {
     display: 'block',
     overflowX: 'auto',
     padding: '0.5em',
