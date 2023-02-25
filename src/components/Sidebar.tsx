@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SetStateAction, useState, Dispatch, useRef, useEffect } from 'react';
+import { PageURLs } from '../types/globalTypes';
 
 interface sidebarProps {
   showMenu: boolean;
@@ -60,49 +61,49 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
   const lessonList = [
     {
       name: '1. What are memory addresses?',
-      link: '/lesson-1',
+      link: PageURLs.LESSON_1,
     },
     {
       name: '2. Introducing pointers',
-      link: '/lesson-2',
+      link: PageURLs.LESSON_2,
     },
     {
       name: '3. Assigning a value to pointers',
-      link: '/lesson-3',
+      link: PageURLs.LESSON_3,
     },
     {
       name: '4. Dereferencing pointers',
-      link: '/lesson-4',
+      link: PageURLs.LESSON_4,
     },
     {
       name: '5. Reassigning the value pointed to',
-      link: '/lesson-5',
+      link: PageURLs.LESSON_5,
     },
     {
       name: '6. Reassigning pointers',
-      link: '/lesson-6',
+      link: PageURLs.LESSON_6,
     },
     {
       name: '7. Arrays and pointer arithmetic',
-      link: '/lesson-7',
+      link: PageURLs.LESSON_7,
     },
     {
       name: '8. References vs pointers',
-      link: '/lesson-8',
+      link: PageURLs.LESSON_8,
     },
   ];
   const exerciseList = [
     {
       name: '1. Exercise 1',
-      link: '/exercise-1',
+      link: PageURLs.EXERCISE_1,
     },
     {
       name: '2. Exercise 2',
-      link: '/exercise-2',
+      link: PageURLs.EXERCISE_2,
     },
     {
       name: '3. Exercise 3',
-      link: '/exercise-3',
+      link: PageURLs.EXERCISE_3,
     },
   ];
   const hiddenX = -357;
@@ -145,13 +146,13 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
         </button>
       </span>
       <div className="dropdown-header">
-        <a href="/pointer-motivation">Why Pointers?</a>
+        <a href={PageURLs.POINTER_MOTIVATION}>Why Pointers?</a>
       </div>
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
       {/* TODO: delete Demo and Error links before production! */}
       <div className="dropdown-header">
-        <a href="/demo">Demo</a>
+        <a href={PageURLs.DEMO}>Demo</a>
       </div>
       <div className="dropdown-header">
         <a href="/error">Error</a>
