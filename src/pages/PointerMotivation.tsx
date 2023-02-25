@@ -6,7 +6,7 @@ import { HeaderSections } from '../types/globalTypes';
 const PointerMotivation: FC = () => {
   return (
     <div>
-      <AppWrapper section={HeaderSections.TITLE_SECTION}>
+      <AppWrapper section={HeaderSections.POINTER_MOTIVATION}>
         <div className="page-wrapper">
           <h1>Why Pointers?</h1>
           <p>

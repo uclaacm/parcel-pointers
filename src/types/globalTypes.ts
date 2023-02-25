@@ -8,6 +8,7 @@ export enum HeaderSections {
   LEARNING_SECTION = 'learningSection',
   CODE_SECTION = 'codeSection',
   DEMO_SECTION = 'Demo',
+  POINTER_MOTIVATION = "Why Pointers?",
   LESSON_1 = 'Lesson 1',
   LESSON_2 = 'Lesson 2',
   LESSON_3 = 'Lesson 3',
