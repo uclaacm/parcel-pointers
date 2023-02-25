@@ -15,7 +15,7 @@ const PointerMotivation: FC = () => {
             through to see the many different ways they can be helpful:
           </p>
           <div className="diagram">
-            {/* insert slide show and prev/next buttons */}
+            {/* TODO: insert slide show */}
           </div>
           <p>
             Now that we know pointers are actually gonna be useful in the
