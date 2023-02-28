@@ -6,6 +6,7 @@ export default {
     padding: '0.5em',
     color: '121538', // "#383a42"
     background: 'rgba(133, 150, 190, 0.13)', // "#fafafa"
+    fontSize: '21px',
   },
   'hljs-comment': {
     color: '#a0a1a7',

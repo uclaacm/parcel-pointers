@@ -16,30 +16,64 @@ $layout-hspacing: 13vh;
   //   margin: 2% 100px $layout-hspacing 150px;
   // }
 
+  // p
+  //=======================================
   // creates spacing between two p tags
   p + p {
     padding-top: 3vh;
-  }
-
-  h2 + .diagram {
-    padding: 4vh 0;
-  }
-
-  label + .diagram {
-    padding: 4vh 0;
   }
 
   p + .diagram {
     padding: 6vh 0;
   }
 
-  h2 {
-    padding-top: 5vh;
+  // h1
+  //=======================================
+
+  h1 + .diagram {
+    padding: 4vh 0;
   }
+
+  .diagram + h1 {
+    padding: 0;
+  }
+
+  // label
+  //=======================================
 
   label {
     padding-top: 5vh;
   }
+
+  label + p {
+    padding-top: 3vh;
+  }
+
+  label + .diagram {
+    padding: 4vh 0;
+  }
+
+  .diagram + label {
+    padding: 0;
+  }
+
+  // h2
+  //=======================================
+
+  h2 {
+    padding-top: 5vh;
+  }
+
+  h2 + .diagram {
+    padding: 4vh 0;
+  }
+
+  .diagram + h2 {
+    padding: 0;
+  }
+
+  // code
+  //=======================================
 
   .code {
     background: $primary-3-color;
