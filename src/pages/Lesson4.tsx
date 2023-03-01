@@ -2,6 +2,7 @@ import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
 import FillArrow from '../components/FillArrow';
 import NavButtons from '../components/NavButtons';
+import Note from '../components/Note';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
 
@@ -63,42 +64,48 @@ const Lesson4: FC = () => {
             two very different things. Why would the creators of C++ do that? If
             we knew the answer we would tell you.
           </p>
-          <h2>Note</h2>
-          <p>
-            Since <span className="code">*</span> has two meanings when it comes
-            to pointers, you just have to be really careful. Really try and make
-            sure you understand what the code is doing and use context clues to
-            infer the meaning of <span className="code">*</span>. In general, if
-            you see <span className="code">*</span> between a variable type and
-            a variable name, that means a new pointer variable is being declared
-            and created. If you see <span className="code">*</span> before a
-            variable name but there is no variable type, that means you are
-            dereferencing an existing pointer getting the value stored at that
-            address. For example,
-          </p>
-          <label>Declaring a new pointer variable:</label>
-          <p>
-            The <span className="code">*</span> appears between a variable type
-            and a variable name - we must be declaring a new pointer variable.
-          </p>
           <div className="diagram">
-            <Terminal code={code2} />
+            <Note title="Note">
+              <p>
+                Since <span className="code">*</span> has two meanings when it
+                comes to pointers, you just have to be really careful. Really
+                try and make sure you understand what the code is doing and use
+                context clues to infer the meaning of{' '}
+                <span className="code">*</span>. In general, if you see{' '}
+                <span className="code">*</span> between a variable type and a
+                variable name, that means a new pointer variable is being
+                declared and created. If you see <span className="code">*</span>{' '}
+                before a variable name but there is no variable type, that means
+                you are dereferencing an existing pointer getting the value
+                stored at that address. For example,
+              </p>
+              <label>Declaring a new pointer variable:</label>
+              <p>
+                The <span className="code">*</span> appears between a variable
+                type and a variable name - we must be declaring a new pointer
+                variable.
+              </p>
+              <div className="diagram">
+                <Terminal code={code2} />
+              </div>
+              <label>Dereferencing a pointer:</label>
+              <p>
+                The <span className="code">*</span> appears before a variable
+                name with no variable type - we must be dereferencing a pointer
+                variable.
+              </p>
+              <div className="diagram">
+                <Terminal code={code3} />
+              </div>
+              <p>
+                Another tip is that if we are declaring a pointer variable, it
+                can only appear on the left side of an{' '}
+                <span className="code">=</span> statement, never on the right
+                side. If it appears on the right side, we know that we are
+                dereferencing a pointer.
+              </p>
+            </Note>
           </div>
-          <label>Dereferencing a pointer:</label>
-          <p>
-            The <span className="code">*</span> appears before a variable name
-            with no variable type - we must be dereferencing a pointer variable.
-          </p>
-          <div className="diagram">
-            <Terminal code={code3} />
-          </div>
-          <h2>Tips</h2>
-          <p>
-            Another tip is that if we are declaring a pointer variable, it can
-            only appear on the left side of an <span className="code">=</span>{' '}
-            statement, never on the right side. If it appears on the right side,
-            we know that we are dereferencing a pointer.
-          </p>
           <NavButtons page={7}></NavButtons>
         </div>
       </AppWrapper>
