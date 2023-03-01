@@ -1,0 +1,20 @@
+@import './global';
+
+.note {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 46px;
+}
+
+.title {
+  align-items: center;
+  display: inline-flex;
+  gap: 21px;
+  justify-content: center;
+  margin-bottom: 4vh;
+
+  h1 {
+    color: $primary-1-color;
+    margin: 0;
+  }
+}
