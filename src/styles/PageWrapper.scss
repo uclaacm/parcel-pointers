@@ -9,7 +9,10 @@ $layout-hspacing: 13vh;
 //    * used for any text pages
 //=======================================
 .page-wrapper {
-  margin: $layout-hspacing $layout-wspacing;
+  margin-bottom: $layout-hspacing * 2;
+  margin-left: $layout-wspacing;
+  margin-right: $layout-wspacing;
+  margin-top: $layout-hspacing;
   // margin: 2% $layout-wsize $layout-spacing;
   // // adjust for small screens
   // @media screen and (max-width: 1500px) {

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
 import FillArrow from '../components/FillArrow';
 import NavButtons from '../components/NavButtons';
+import Note from '../components/Note';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
 
@@ -69,23 +70,28 @@ const Lesson3: FC = () => {
             Or it&apos;s like searching on Google for the address of a
             restaurant you want to go to.
           </p>
-          <h2>Note</h2>
-          <p>
-            If you try to print out the value of a memory address using{' '}
-            <span className="code">cout</span>, you might see that the value
-            looks something like: <span className="code">0x7ffde45c9a54</span>
-          </p>
-          <p>
-            Don&apos;t be alarmed by this - this is an actual memory address in
-            your computer! Since your computer&apos;s memory is huge, the
-            addresses get to be very large numbers, and these numbers can be
-            really long. To represent large numbers in a more compact way,
-            computers use a numbering system called hexadecimal. You can tell
-            that this is a hexadecimal number because the address begins with{' '}
-            <span className="code">0x</span> at the front, and among the numbers
-            you will also find the letters A-F. You&apos;ll learn more about
-            this in a later class!
-          </p>
+          <div className="diagram">
+            <Note title="Note">
+              <p>
+                If you try to print out the value of a memory address using{' '}
+                <span className="code">cout</span>, you might see that the value
+                looks something like:{' '}
+                <span className="code">0x7ffde45c9a54</span>
+              </p>
+              <p>
+                Don&apos;t be alarmed by this - this is an actual memory address
+                in your computer! Since your computer&apos;s memory is huge, the
+                addresses get to be very large numbers, and these numbers can be
+                really long. To represent large numbers in a more compact way,
+                computers use a numbering system called hexadecimal. You can
+                tell that this is a hexadecimal number because the address
+                begins with <span className="code">0x</span> at the front, and
+                among the numbers you will also find the letters A-F.
+                You&apos;ll learn more about this in a later class!
+              </p>
+            </Note>
+          </div>
+
           <NavButtons page={6}></NavButtons>
         </div>
       </AppWrapper>
