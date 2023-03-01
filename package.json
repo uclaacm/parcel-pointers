@@ -23,7 +23,7 @@
     "react": "^18.2.0",
     "react-confetti-explosion": "^1.5.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.8.2",
     "react-syntax-highlighter": "^15.5.0",
     "stylelint-config-prettier": "^9.0.3"
   },
