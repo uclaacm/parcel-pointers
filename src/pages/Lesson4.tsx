@@ -34,7 +34,6 @@ const Lesson4: FC = () => {
             be really useful if there were a way for us to find out what value
             is stored there. And you guessed it, there is!
           </p>
-          <label>Boxed Syntax Notation:</label>
           <div className="diagram">
             <Terminal code={code1} />
           </div>
