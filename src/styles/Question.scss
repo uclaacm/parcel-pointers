@@ -3,17 +3,61 @@
 .question {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
   padding: 30px;
 }
 
-.question-text-wrapper {
+.question-container-wrapper {
   align-items: center;
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 21px;
 }
 
 .icon {
   padding-right: 21px;
+}
+
+.check-button {
+  align-items: center;
+  background: $primary-1-color;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  position: relative;
+  // top: 25px;
+  width: 100px;
+}
+
+.check-button:hover {
+  background: $accent-1-color;
+  .check-button-text {
+    color: $text-color;
+  }
+}
+
+.check-button-text {
+  font-family: $niramit;
+  font-size: 18px;
+  position: relative;
+  top: -3px;
+  color: white;
+}
+
+.correct-text {
+  padding-top: 20px;
+  color: $accent-2-color;
+}
+
+.incorrect-text {
+  padding-top: 20px;
+  color: $accent-3-color;
 }
