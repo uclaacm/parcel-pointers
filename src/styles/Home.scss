@@ -11,23 +11,17 @@ $header-height: 8vh;
 // Background
 //=======================================
 #container {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
-}
-
-#background {
   animation: scroll 500s linear infinite;
   background-position: 0 0;
   background-repeat: repeat;
   background-size: 100vh 100vw;
   display: flex;
-  height: 100vh;
+  height: 100%;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 }
 
@@ -35,8 +29,8 @@ $header-height: 8vh;
 //=======================================
 #layout {
   display: flex;
-  // margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
-  // min-height: calc(100vh - 2 * #{$layout-wsize});
+  min-height: calc(100vh - 2 * #{$layout-wsize});
+  padding: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
   z-index: 2;
 }
 
