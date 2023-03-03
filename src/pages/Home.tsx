@@ -26,7 +26,7 @@ const Home: FC = () => {
               </p>
               <button
                 id="start-button"
-                onClick={() => (window.location.href = '/lesson-1')}
+                onClick={() => (window.location.href = '/pointer-motivation')}
               >
                 <p id="button-text">Let&apos;s go!</p>
               </button>

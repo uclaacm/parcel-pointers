@@ -1,0 +1,19 @@
+@import './global';
+
+.question {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.question-text-wrapper {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.icon {
+  padding-right: 21px;
+}

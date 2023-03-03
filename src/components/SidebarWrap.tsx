@@ -9,11 +9,11 @@ const SideBarWrap = (): JSX.Element => {
       <button
         className="openbtn"
         onClick={() => setShowMenu(!showMenu)}
-        style={{ left: showMenu ? 250 : 0 }}
+        id="sidebar"
       >
         ☰
       </button>
-      <Sidebar showMenu={showMenu}></Sidebar>
+      <Sidebar showMenu={showMenu} setShowMenu={setShowMenu}></Sidebar>
     </div>
   );
 };
