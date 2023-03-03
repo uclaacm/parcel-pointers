@@ -5,8 +5,8 @@ import Pipi from '../../public/Pipi.png';
 import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
-import Dropdown from '../components/Dropdown';
 import Box from '../components/Box';
+import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
 import ShelfAddress from '../components/ShelfAddress';
 import { HeaderSections } from '../types/globalTypes';
@@ -320,10 +320,10 @@ const Demo: FC = () => {
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div id="layout">
           <Dropdown options={[
-            {id: 1, name: "1", displayName: "1"}, 
-            {id: 2, name: "2", displayName: "2"}, 
-            {id: 3, name: "3", displayName: "3"}]}/>
-            
+            {id: 1, name: '1', displayName: '1'},
+            {id: 2, name: '2', displayName: '2'},
+            {id: 3, name: '3', displayName: '3'}]}/>
+
           <p className="description">
             {nums1.map((num) => (
               <ShelfAddress key={null} num={num}></ShelfAddress>
