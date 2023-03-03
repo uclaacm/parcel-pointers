@@ -12,36 +12,34 @@ interface QuestionProps {
 }
 
 function Question(props: QuestionProps): JSX.Element {
-  const [correct, setCorrect] = useState(false);
+  const [correct, setCorrect] = useState(false); // eslint-disable-line
   const [expand, setExpand] = useState(false);
 
   return (
     <div className="question">
-      <div className='question-container-wrapper'>
+      <div className="question-container-wrapper">
         <div className="question-wrapper">
           <CheckCircleIcon
             fontSize="large"
             className="icon"
             style={correct ? { color: '#31A74B' } : { color: '#817F7F' }}
           />
-          <div className='question-text-wrapper'>
-            {props.children}
-          </div>
+          <div className="question-text-wrapper">{props.children}</div>
         </div>
-        <div className='question-wrapper'>
+        <div className="question-wrapper">
           {correct ? (
             expand ? (
               <div onClick={() => setExpand(!expand)}>
-                <ExpandLessIcon fontSize='large' />
+                <ExpandLessIcon fontSize="large" />
               </div>
             ) : (
               <div onClick={() => setExpand(!expand)}>
-                <ExpandMoreIcon fontSize='large' />
+                <ExpandMoreIcon fontSize="large" />
               </div>
             )
           ) : (
             <button
-              className='check-button'
+              className="check-button"
               onClick={() => {
                 // TODO: check input and set correct accordingly
                 // setCorrect(!correct); // comment this line to check incorrect text
@@ -55,12 +53,13 @@ function Question(props: QuestionProps): JSX.Element {
       </div>
       {expand ? (
         correct ? (
-          <p className='correct-text'>{props.correct}</p>
+          <p className="correct-text">{props.correct}</p>
         ) : (
-          <p className='incorrect-text'>{props.incorrect}</p>
+          <p className="incorrect-text">{props.incorrect}</p>
         )
-      ) : ('')}
-
+      ) : (
+        ''
+      )}
     </div>
   );
 }
