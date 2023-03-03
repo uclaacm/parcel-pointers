@@ -1,7 +1,7 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useState } from 'react';
 import '../styles/Question.scss';
 
 interface QuestionProps {
@@ -22,7 +22,7 @@ function Question(props: QuestionProps): JSX.Element {
           <CheckCircleIcon
             fontSize="large"
             className="icon"
-            style={correct ? { color: "#31A74B" } : { color: "#817F7F" }}
+            style={correct ? { color: '#31A74B' } : { color: '#817F7F' }}
           />
           <div className='question-text-wrapper'>
             {props.children}
@@ -59,8 +59,8 @@ function Question(props: QuestionProps): JSX.Element {
         ) : (
           <p className='incorrect-text'>{props.incorrect}</p>
         )
-      ) : ("")}
-      
+      ) : ('')}
+
     </div>
   );
 }

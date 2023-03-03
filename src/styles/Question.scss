@@ -39,25 +39,26 @@
 
 .check-button:hover {
   background: $accent-1-color;
+
   .check-button-text {
     color: $text-color;
   }
 }
 
 .check-button-text {
+  color: white;
   font-family: $niramit;
   font-size: 18px;
   position: relative;
   top: -3px;
-  color: white;
 }
 
 .correct-text {
-  padding-top: 20px;
   color: $accent-2-color;
+  padding-top: 20px;
 }
 
 .incorrect-text {
-  padding-top: 20px;
   color: $accent-3-color;
+  padding-top: 20px;
 }
