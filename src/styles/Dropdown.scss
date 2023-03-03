@@ -1,126 +1,125 @@
 @import './global';
 
-
 .selectdiv {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    font-family: "Niramit";
+  font-family: $niramit;
+  position: relative;
 
-    li { list-style-type: none; }
+  li {
+    list-style-type: none;
+  }
 
-    .filler {
-        color: #121538;
-        padding: 0px 12px;
-    }
+  .filler {
+    color: #121538;
+    padding: 0 12px;
+  }
 
-    .default {
-        color: gray;
-        padding: 0px 12px;
-    }
+  .default {
+    color: gray;
+    padding: 0 12px;
+  }
 
-    .select {
+  .select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-        // Disable default styling
-        border: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+    background: #f0efef;
 
-        display: block;
-        float: right;
-        
-        min-width: 111px;
-        height: 33px;
+    border-radius: 5px 5px 0 0;
+    color: #121538;
 
-        border-radius: 5px 5px 0 0;
+    cursor: pointer;
 
-        background: #F0EFEF;
-        color: #121538;
+    display: block;
+    float: right;
 
-        font-family: "Niramit";
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 29px;
-        letter-spacing: 0em;
-        text-align: left;
-        -ms-word-break: normal;
-        word-break: normal;
+    font-family: $niramit;
+    font-size: 22px;
+    font-weight: 400;
+    height: 33px;
+    letter-spacing: 0;
+    line-height: 29px;
 
-        cursor: pointer;
+    min-width: 111px;
+    text-align: left;
 
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
-    }
+    -ms-word-break: normal;
+    word-break: normal;
+  }
 }
 
 .options {
-    display: flex;
-    flex-direction: column;
-        
-    background: #F0EFEF;
-    color: #121538;
+  animation: fade 0.15s linear forwards;
 
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-    border-radius: 0 0 5px 5px;
-    
-    min-width: 111px;
-    z-index: 2;  
-    animation: fade 0.15s linear forwards;
+  background: #f0efef;
 
-    .option {
-        padding: 0px 12px;
-        cursor: pointer;
-    }
-    .option:hover {
-        background-color: #FFE581;
-    }
-    
-    .option.selected {
-        background-color: #d4d4d480;
-        color: gray;
-        cursor: not-allowed; 
-    }
+  border-radius: 0 0 5px 5px;
+  color: #121538;
+  display: flex;
+  flex-direction: column;
 
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 29px;
+
+  min-width: 111px;
+  text-align: center;
+  z-index: 2;
+
+  .option {
+    cursor: pointer;
+    padding: 0 12px;
+  }
+
+  .option:hover {
+    background-color: #ffe581;
+  }
+
+  .option.selected {
+    background-color: #d4d4d480;
+    color: gray;
+    cursor: not-allowed;
+  }
 }
 
 .options.hidden {
-    display: none;
+  display: none;
 }
 
 .arrow {
-    position: absolute;
-    right: 0;
-    height: 33px;
-    padding-right: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 33px;
+  justify-content: center;
+  padding-right: 12px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }
 
 // animations
 @keyframes fade {
-    from {
-      opacity: 0.2;
-      visibility: hidden;
-      transform: translateY(-10px);
-    }
-    to { 
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0.2;
+    transform: translateY(-10px);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
 }

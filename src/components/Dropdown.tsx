@@ -1,15 +1,14 @@
 import '../styles/Dropdown.scss';
 import { useState } from 'react';
 
-
 export interface Value {
-    id: number;
-    name: string;
-    displayName: string;
+  id: number;
+  name: string;
+  displayName: string;
 }
 
 export interface DropdownProps {
-    options: Value[];
+  options: Value[];
 }
 
 /**
@@ -30,27 +29,51 @@ export interface DropdownProps {
  *
  */
 export default function Dropdown(props: DropdownProps): JSX.Element {
+  const [value, setValue] = useState({
+    id: -1,
+    name: 'null',
+    displayName: 'Select',
+  });
+  const [showOptions, setShowOptions] = useState(false);
 
-    const [value, setValue] = useState({id: -1, name: 'null', displayName: 'Select'});
-    const [showOptions, setShowOptions] = useState(false);
-
-    const selectOption = (newValue: Value) => {
-        setValue(newValue);
-        setShowOptions(false);
-    };
-    return (
-        <div className="selectdiv">
-            <div onClick={() => setShowOptions(!showOptions)} className="select">
-                <li className={'filler ' + ((value.id == -1) ? 'default': '')}> {value.displayName} </li>
-            </div>
-            <div className="arrow">
-                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 1L7 7L0.999999 1" stroke="#868686" strokeLinecap="round"/>
-                </svg>
-            </div>
-            <div className={'options ' + (!showOptions ? 'hidden': '')}>
-                {props.options.map(({id, name, displayName}, index) => <span key={index} onClick={() => selectOption({id, name, displayName})} className={'option ' + ((value.name == name) && 'selected')}>{displayName}</span>)}
-            </div>
-        </div>
-    );
+  const selectOption = (newValue: Value) => {
+    setValue(newValue);
+    setShowOptions(false);
+  };
+  return (
+    <div className="selectdiv">
+      <div onClick={() => setShowOptions(!showOptions)} className="select">
+        <li className={'filler ' + (value.id == -1 ? 'default' : '')}>
+          {' '}
+          {value.displayName}{' '}
+        </li>
+      </div>
+      <div className="arrow">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13 1L7 7L0.999999 1"
+            stroke="#868686"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+      <div className={'options ' + (!showOptions ? 'hidden' : '')}>
+        {props.options.map(({ id, name, displayName }, index) => (
+          <span
+            key={index}
+            onClick={() => selectOption({ id, name, displayName })}
+            className={'option ' + (value.name == name && 'selected')}
+          >
+            {displayName}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 }

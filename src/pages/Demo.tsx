@@ -319,10 +319,13 @@ const Demo: FC = () => {
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div id="layout">
-          <Dropdown options={[
-            {id: 1, name: '1', displayName: '1'},
-            {id: 2, name: '2', displayName: '2'},
-            {id: 3, name: '3', displayName: '3'}]}/>
+          <Dropdown
+            options={[
+              { id: 1, name: '1', displayName: '1' },
+              { id: 2, name: '2', displayName: '2' },
+              { id: 3, name: '3', displayName: '3' },
+            ]}
+          />
 
           <p className="description">
             {nums1.map((num) => (
