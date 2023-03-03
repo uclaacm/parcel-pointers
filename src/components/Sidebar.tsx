@@ -94,7 +94,7 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
   ];
   const exerciseList = [
     {
-      name: '1. Exercise 1',
+      name: '1. Memory Addresses',
       link: PageURLs.EXERCISE_1,
     },
     {
