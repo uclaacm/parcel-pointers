@@ -25,6 +25,7 @@ $header-height: 8vh;
   z-index: 1;
 }
 
+
 // General Layout
 //=======================================
 #layout {
@@ -86,6 +87,16 @@ p {
 #col-2 {
   .pp-wrapper {
     margin-right: 3.024%;
+  }
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
   }
 }
 
