@@ -23,7 +23,6 @@ const Exercise1: FC = () => {
           </h3>
           <div className="questions">
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
@@ -33,7 +32,6 @@ const Exercise1: FC = () => {
               </p>
             </Question>
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
@@ -49,7 +47,6 @@ const Exercise1: FC = () => {
           </h3>
           <div className="questions">
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
@@ -59,7 +56,6 @@ const Exercise1: FC = () => {
               </p>
             </Question>
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >

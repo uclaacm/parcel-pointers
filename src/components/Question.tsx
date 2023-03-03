@@ -6,7 +6,6 @@ import '../styles/Question.scss';
 
 interface QuestionProps {
   children?: JSX.Element | JSX.Element[];
-  complete: boolean;
   correct: string;
   incorrect: string;
 }
