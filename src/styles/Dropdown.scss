@@ -1,0 +1,126 @@
+@import './global';
+
+
+.selectdiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Niramit";
+
+    li { list-style-type: none; }
+
+    .filler {
+        color: #121538;
+        padding: 0px 12px;
+    }
+
+    .default {
+        color: gray;
+        padding: 0px 12px;
+    }
+
+    .select {
+
+        // Disable default styling
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        display: block;
+        float: right;
+        
+        min-width: 111px;
+        height: 33px;
+
+        border-radius: 5px 5px 0 0;
+
+        background: #F0EFEF;
+        color: #121538;
+
+        font-family: "Niramit";
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        -ms-word-break: normal;
+        word-break: normal;
+
+        cursor: pointer;
+
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+        
+    background: #F0EFEF;
+    color: #121538;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+    border-radius: 0 0 5px 5px;
+    
+    min-width: 111px;
+    z-index: 2;  
+    animation: fade 0.15s linear forwards;
+
+    .option {
+        padding: 0px 12px;
+        cursor: pointer;
+    }
+    .option:hover {
+        background-color: #FFE581;
+    }
+    
+    .option.selected {
+        background-color: #d4d4d480;
+        color: gray;
+        cursor: not-allowed; 
+    }
+
+}
+
+.options.hidden {
+    display: none;
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    height: 33px;
+    padding-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+// animations
+@keyframes fade {
+    from {
+      opacity: 0.2;
+      visibility: hidden;
+      transform: translateY(-10px);
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+}
