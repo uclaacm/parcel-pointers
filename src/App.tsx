@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Demo from './pages/Demo';
 import Error404 from './pages/Error404';
+import Exercise1 from './pages/Exercise1';
 import Home from './pages/Home';
 import Lesson1 from './pages/Lesson1';
 import Lesson2_1 from './pages/Lesson2_1';
@@ -21,6 +22,7 @@ function App(): JSX.Element {
           <Route path="/lesson-2-1" element={<Lesson2_1 />} />
           <Route path="/lesson-2-2" element={<Lesson2_2 />} />
           <Route path="/lesson-3" element={<Lesson3 />} />
+          <Route path="/exercise-1" element={<Exercise1 />} />
           <Route path="/lesson-4" element={<Lesson4 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

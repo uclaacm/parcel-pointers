@@ -67,4 +67,23 @@ $layout-hspacing: 13vh;
     font-size: 20px;
     padding: 0 5px;
   }
+
+  .highlight {
+    align-items: center;
+    background: $accent-1-color;
+    border-radius: 5px;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    padding: 3px 12px;
+    text-align: center;
+  }
+
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 3vh;
+  }
 }
