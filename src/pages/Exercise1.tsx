@@ -69,8 +69,8 @@ const Exercise1: FC = () => {
               </p>
             </Question>
           </div>
-          {/*TODO later: change index back to 12*/ }
-          <NavButtons page={8}></NavButtons> 
+          {/*TODO later: change index back to 12*/}
+          <NavButtons page={8}></NavButtons>
         </div>
       </AppWrapper>
     </>
