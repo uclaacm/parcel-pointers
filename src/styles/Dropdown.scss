@@ -1,0 +1,125 @@
+@import './global';
+
+.selectdiv {
+  display: flex;
+  flex-direction: column;
+
+  font-family: $niramit;
+  position: relative;
+
+  li {
+    list-style-type: none;
+  }
+
+  .filler {
+    color: #121538;
+    padding: 0 12px;
+  }
+
+  .default {
+    color: gray;
+    padding: 0 12px;
+  }
+
+  .select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: #f0efef;
+
+    border-radius: 5px 5px 0 0;
+    color: #121538;
+
+    cursor: pointer;
+
+    display: block;
+    float: right;
+
+    font-family: $niramit;
+    font-size: 22px;
+    font-weight: 400;
+    height: 33px;
+    letter-spacing: 0;
+    line-height: 29px;
+
+    min-width: 111px;
+    text-align: left;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+}
+
+.options {
+  animation: fade 0.15s linear forwards;
+
+  background: #f0efef;
+
+  border-radius: 0 0 5px 5px;
+  color: #121538;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 29px;
+
+  min-width: 111px;
+  text-align: center;
+  z-index: 2;
+
+  .option {
+    cursor: pointer;
+    padding: 0 12px;
+  }
+
+  .option:hover {
+    background-color: #ffe581;
+  }
+
+  .option.selected {
+    background-color: #d4d4d480;
+    color: gray;
+    cursor: not-allowed;
+  }
+}
+
+.options.hidden {
+  display: none;
+}
+
+.arrow {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 33px;
+  justify-content: center;
+  padding-right: 12px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+// animations
+@keyframes fade {
+  from {
+    opacity: 0.2;
+    transform: translateY(-10px);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
