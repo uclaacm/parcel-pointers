@@ -13,6 +13,7 @@ export enum HeaderSections {
   LESSON_2 = 'Lesson 2',
   LESSON_3 = 'Lesson 3',
   EXERCISE_1 = 'Exercise 1',
+  LESSON_4 = 'Lesson 4',
 }
 
 // lessons and exercises may have multiple pages, this is their starting URL

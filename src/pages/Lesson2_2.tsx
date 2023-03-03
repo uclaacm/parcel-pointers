@@ -57,7 +57,6 @@ const Lesson2_2: FC = () => {
             <span className="code">*</span> in between the variable type and the
             variable name.
           </p>
-          <label>Boxed Syntax Notation:</label>
           <div className="diagram">
             <Terminal code={code2} />
           </div>
