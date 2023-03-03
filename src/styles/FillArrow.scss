@@ -1,0 +1,40 @@
+@import './global';
+
+.fill-arrow-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fill-arrow {
+  align-items: center;
+  color: $text-color;
+  display: flex;
+  font-family: $play;
+  font-size: 28px;
+  font-weight: 700px;
+  justify-content: center;
+}
+
+.fill-arrow-border {
+  position: relative;
+  z-index: 1;
+}
+
+// TODO: animate the background of this class
+// https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
+.fill-arrow-background {
+  background-color: $accent-1-color;
+  position: absolute;
+}
+
+#arrow-text {
+  position: absolute;
+  z-index: 2;
+}
+
+#box-text {
+  position: absolute;
+  transform: translate(-80px);
+  z-index: 2;
+}

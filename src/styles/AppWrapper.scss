@@ -1,12 +1,12 @@
 // Variables
 //=======================================
-$header-height: 5vh;
+$header-height: 50px;
 
 // AppWrapper
 //=======================================
 #app-wrapper {
   background-color: white;
-  // margin: $header-height 0 $header-height 0;
+  margin: $header-height 0 0 0;
   min-height: calc(100vh - #{$header-height});
 }
 
