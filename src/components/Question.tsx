@@ -12,7 +12,7 @@ interface QuestionProps {
 }
 
 function Question(props: QuestionProps): JSX.Element {
-  const [correct, setCorrect] = useState(false); // eslint-disable-line
+  const [correct, setCorrect] = useState(false);
   const [expand, setExpand] = useState(false);
 
   return (
@@ -42,7 +42,7 @@ function Question(props: QuestionProps): JSX.Element {
               className="check-button"
               onClick={() => {
                 // TODO: check input and set correct accordingly
-                // setCorrect(!correct); // comment this line to check incorrect text
+                setCorrect(!correct); // comment this line to check incorrect text
                 setExpand(true);
               }}
             >
