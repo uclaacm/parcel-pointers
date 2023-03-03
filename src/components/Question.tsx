@@ -30,11 +30,11 @@ function Question(props: QuestionProps): JSX.Element {
           {correct ? (
             expand ? (
               <div onClick={() => setExpand(!expand)}>
-                <ExpandLessIcon fontSize="large" />
+                <ExpandLessIcon fontSize="large" style={{cursor:"pointer"}}/>
               </div>
             ) : (
               <div onClick={() => setExpand(!expand)}>
-                <ExpandMoreIcon fontSize="large" />
+                <ExpandMoreIcon fontSize="large" style={{cursor:"pointer"}}/>
               </div>
             )
           ) : (
