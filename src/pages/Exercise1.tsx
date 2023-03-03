@@ -17,11 +17,15 @@ const Exercise1: FC = () => {
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
           <div className="diagram">{/* TODO: insert diagram here */}</div>
-          <h3> {/* TODO: FIX, font-size: 30px, line-height: 39px */}
+          <h3>
+            {' '}
+            {/* TODO: FIX, font-size: 30px, line-height: 39px */}
             Let&apos;s say Pipi wants to go to{' '}
-            <span className="highlight">Box B</span>{/* TODO: B lowercase, no period*/}.
+            <span className="highlight">Box B</span>
+            {/* TODO: B lowercase, no period*/}.
           </h3>
-          <div className="questions">{/* TODO: Missing lightbulb SVG (green/red) */}
+          <div className="questions">
+            {/* TODO: Missing lightbulb SVG (green/red) */}
             <Question
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."

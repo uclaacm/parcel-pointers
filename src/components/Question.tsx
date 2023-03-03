@@ -43,8 +43,8 @@ function Question(props: QuestionProps): JSX.Element {
               </div>
             )
           ) : (
-            <button 
-              className="check-button" 
+            <button
+              className="check-button"
               onClick={() => {
                 // TODO: check input and set correct accordingly
                 setCorrect(!correct); // comment this line to check incorrect text
