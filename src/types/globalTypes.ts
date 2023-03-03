@@ -12,6 +12,7 @@ export enum HeaderSections {
   LESSON_1 = 'Lesson 1',
   LESSON_2 = 'Lesson 2',
   LESSON_3 = 'Lesson 3',
+  LESSON_4 = 'Lesson 4',
 }
 
 // lessons and exercises may have multiple pages, this is their starting URL
@@ -41,4 +42,5 @@ export enum PageOrder {
   '/lesson-2-1',
   '/lesson-2-2',
   '/lesson-3',
+  '/lesson-4',
 }
