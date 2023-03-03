@@ -29,9 +29,9 @@ export enum PageURLs {
   LESSON_6 = '/lesson-6',
   LESSON_7 = '/lesson-7',
   LESSON_8 = '/lesson-8',
-  EXERCISE_1 = '/exercise_1',
-  EXERCISE_2 = '/exercise_2',
-  EXERCISE_3 = '/exercise_3',
+  EXERCISE_1 = '/exercise-1',
+  EXERCISE_2 = '/exercise-2',
+  EXERCISE_3 = '/exercise-3',
 }
 
 // order navigated by NavButtons component
@@ -44,9 +44,9 @@ export enum PageOrder {
   '/lesson-2-2',
   '/lesson-3',
   '/lesson-4',
-  '/lesson-5',
+  /*'/lesson-5',
   '/lesson-6',
   '/lesson-7',
-  '/lesson-8',
+  '/lesson-8', */
   '/exercise-1',
 }
