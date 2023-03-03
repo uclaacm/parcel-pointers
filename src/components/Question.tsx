@@ -44,13 +44,14 @@ function Question(props: QuestionProps): JSX.Element {
             )
           ) : (
             <button 
-              className="check-button" {/* TODO: check is lowercase, fix center padding*/}
+              className="check-button" 
               onClick={() => {
                 // TODO: check input and set correct accordingly
                 setCorrect(!correct); // comment this line to check incorrect text
                 setExpand(true);
               }}
             >
+              {/* TODO: check is lowercase, fix center padding*/}
               <p className="check-button-text">Check</p>
             </button>
           )}
