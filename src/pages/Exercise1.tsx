@@ -3,7 +3,7 @@ import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import Question from '../components/Question';
 import { HeaderSections } from '../types/globalTypes';
-import "../styles/Exercise1.scss";
+import '../styles/Exercise1.scss';
 
 const Exercise1Diagram: FC = () => {
   return (
@@ -701,7 +701,9 @@ const Exercise1: FC = () => {
           </p>
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
-          <div className="exercise-1-diagram diagram"><Exercise1Diagram/></div>
+          <div className="exercise-1-diagram diagram">
+            <Exercise1Diagram />
+          </div>
           <h2>
             {' '}
             Let&apos;s say Pipi wants to go to{' '}
