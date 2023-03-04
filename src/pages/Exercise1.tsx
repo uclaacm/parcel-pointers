@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ExcerciseDiagram from '../../public/Excercise1Diagram.png';
+import Excercise1Diagram from '../../public/Excercise1Diagram.png';
 import AppWrapper from '../components/AppWrapper';
 import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
@@ -20,7 +20,7 @@ const Exercise1: FC = () => {
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
           <div className="exercise-1-diagram diagram">
-            <img src={ExcerciseDiagram} alt="Excercise Diagram" />
+            <img src={Excercise1Diagram} alt="Excercise 1 Diagram" />
           </div>
           <h2>
             {' '}
