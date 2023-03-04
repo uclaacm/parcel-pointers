@@ -9,11 +9,10 @@ const Home: FC = () => {
   return (
     <div>
       <AppWrapper section={HeaderSections.TITLE_SECTION}>
-        <div id="container">
-          <div
-            id="background"
-            style={{ backgroundImage: `url(${LandingBackground})` }}
-          ></div>
+        <div
+          id="container"
+          style={{ backgroundImage: `url(${LandingBackground})` }}
+        >
           <div id="layout">
             <div id="col-1">
               <h1 id="title">Parcel Pointers</h1>

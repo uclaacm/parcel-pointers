@@ -11,8 +11,8 @@ $header-height: 8vh;
 //=======================================
 #layout {
   display: flex;
-  margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
   min-height: calc(100vh - 2 * #{$layout-wsize});
+  padding: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
 
   .header {
     font-size: $header-1;
