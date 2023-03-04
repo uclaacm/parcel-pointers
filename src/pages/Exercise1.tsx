@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import ExcerciseDiagram from '../../public/Excercise1Diagram.png';
 import AppWrapper from '../components/AppWrapper';
 import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
 import Question from '../components/Question';
 import { HeaderSections } from '../types/globalTypes';
-import ExcerciseDiagram from '../../public/Excercise1Diagram.png'
 import '../styles/Exercise1.scss';
 
 const Exercise1: FC = () => {
