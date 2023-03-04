@@ -18,18 +18,18 @@ const Exercise1: FC = () => {
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
           <div className="diagram">{/* TODO: insert diagram here */}</div>
-          <h3>
+          <h2>
+            {' '}
             Let&apos;s say Pipi wants to go to{' '}
-            <span className="highlight">Box B</span>.
-          </h3>
+            <span className="highlight">Box b</span>
+          </h2>
           <div className="questions">
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                The address of the Box B is{' '}
+                The address of the Box b is{' '}
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -43,7 +43,6 @@ const Exercise1: FC = () => {
               </p>
             </Question>
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
@@ -58,22 +57,21 @@ const Exercise1: FC = () => {
                     ]}
                   />
                 </span>{' '}
-                addresses from her current position to get to Box B.
+                addresses from her current position to get to Box b.
               </p>
             </Question>
           </div>
-          <h3>
+          <h2>
             What if Pipi now wants to go to{' '}
-            <span className="highlight">Box E</span> from her current position?
-          </h3>
+            <span className="highlight">Box e</span> from her current position?
+          </h2>
           <div className="questions">
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                The address of the Box E is{' '}
+                The address of the Box e is{' '}
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -87,7 +85,6 @@ const Exercise1: FC = () => {
               </p>
             </Question>
             <Question
-              complete={false}
               correct="Correct! Now Pipi needs to..."
               incorrect="Not quite. Think about ... Please try again."
             >
@@ -102,7 +99,7 @@ const Exercise1: FC = () => {
                     ]}
                   />
                 </span>{' '}
-                addresses from her current position to get to Box E.
+                addresses from her current position to get to Box e.
               </p>
             </Question>
           </div>
