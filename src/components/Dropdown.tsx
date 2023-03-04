@@ -1,5 +1,5 @@
 import '../styles/Dropdown.scss';
-import { SetStateAction, useState, Dispatch, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export interface Value {
   id: number;
@@ -10,12 +10,11 @@ export interface Value {
 export interface DropdownProps {
   options: Value[];
   correctAnswer: boolean[];
-  setCorrectAnswer: Dispatch<SetStateAction<boolean>>;
   index: number;
 }
 
 // ids of current choices
-const answer_key = [2, 2, 3, 3]; // will likely need to refactor this in the future
+const answer_key = [3, 2, 3, 2]; // will likely need to refactor this in the future
 
 /**
  * Creates a selectable dropdown for a list of available options.
