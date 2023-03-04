@@ -8,6 +8,8 @@ interface QuestionProps {
   children?: JSX.Element | JSX.Element[];
   correct: string;
   incorrect: string;
+  correct_answer: boolean[];
+  index: number;
 }
 
 function Question(props: QuestionProps): JSX.Element {
@@ -46,8 +48,7 @@ function Question(props: QuestionProps): JSX.Element {
             <button
               className="check-button"
               onClick={() => {
-                // TODO: check input and set correct accordingly
-                setCorrect(!correct); // comment this line to check incorrect text
+                if (props.correct_answer[props.index]) setCorrect(!correct);
                 setExpand(true);
               }}
             >

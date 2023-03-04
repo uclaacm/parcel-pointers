@@ -1,5 +1,5 @@
 import '../styles/Dropdown.scss';
-import { useState } from 'react';
+import { SetStateAction, useState, Dispatch, useEffect } from 'react';
 
 export interface Value {
   id: number;
@@ -9,7 +9,13 @@ export interface Value {
 
 export interface DropdownProps {
   options: Value[];
+  correctAnswer: boolean[];
+  setCorrectAnswer: Dispatch<SetStateAction<boolean>>;
+  index: number;
 }
+
+// ids of current choices
+const answer_key = [2, 2, 3, 3]; // will likely need to refactor this in the future
 
 /**
  * Creates a selectable dropdown for a list of available options.
@@ -40,6 +46,17 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
     setValue(newValue);
     setShowOptions(false);
   };
+  useEffect(() => {
+    const checkAnswer = (id: number, index: number) => {
+      if (id == answer_key[index]) {
+        props.correctAnswer[index] = true;
+      } else {
+        props.correctAnswer[index] = false;
+      }
+    };
+    checkAnswer(value.id, props.index);
+  }, [value, props.correctAnswer]);
+
   return (
     <div className="selectdiv">
       <div onClick={() => setShowOptions(!showOptions)} className="select">

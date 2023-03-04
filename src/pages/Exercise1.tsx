@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import AppWrapper from '../components/AppWrapper';
 import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
@@ -6,6 +6,12 @@ import Question from '../components/Question';
 import { HeaderSections } from '../types/globalTypes';
 
 const Exercise1: FC = () => {
+  const [correctAnswer, setCorrectAnswer] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]);
   return (
     <>
       <AppWrapper section={HeaderSections.EXERCISE_1}>
@@ -25,8 +31,10 @@ const Exercise1: FC = () => {
           </h2>
           <div className="questions">
             <Question
-              correct="Correct! Now Pipi needs to..."
-              incorrect="Not quite. Think about ... Please try again."
+              correct="Correct! This is the first address for box b, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much he needs to move to get there."
+              incorrect="Not Quite. Remember that pointers start with the first address of a variable, so we want to start with the first adress of box b. Please try again."
+              correct_answer={correctAnswer}
+              index={0}
             >
               <p className="question-text">
                 The address of the Box b is{' '}
@@ -38,23 +46,31 @@ const Exercise1: FC = () => {
                       { id: 3, name: '12', displayName: '12' },
                       { id: 4, name: '13', displayName: '13' },
                     ]}
+                    correctAnswer={correctAnswer}
+                    setCorrectAnswer={setCorrectAnswer}
+                    index={0}
                   />
                 </span>
               </p>
             </Question>
             <Question
-              correct="Correct! Now Pipi needs to..."
-              incorrect="Not quite. Think about ... Please try again."
+              correct="Correct! Pipi needs to move from address 3 to address 11. Now Pipi needs to go to a different box."
+              incorrect="Not Quite. Pipi needs to move from address 3 to address 11. Please try again."
+              correct_answer={correctAnswer}
+              index={1}
             >
               <p className="question-text">
                 Pipi needs to move{' '}
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
+                      { id: 1, name: '8', displayName: '8' },
+                      { id: 2, name: '9', displayName: '9' },
+                      { id: 3, name: '10', displayName: '10' },
                     ]}
+                    correctAnswer={correctAnswer}
+                    setCorrectAnswer={setCorrectAnswer}
+                    index={1}
                   />
                 </span>{' '}
                 addresses from her current position to get to Box b.
@@ -67,8 +83,10 @@ const Exercise1: FC = () => {
           </h2>
           <div className="questions">
             <Question
-              correct="Correct! Now Pipi needs to..."
-              incorrect="Not quite. Think about ... Please try again."
+              correct="Correct! This is the first address for box e, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much he needs to move to get there."
+              incorrect="Not Quite. Remember that pointers start with the first address of a variable, so we want to start with the first adress of box b. Please try again."
+              correct_answer={correctAnswer}
+              index={2}
             >
               <p className="question-text">
                 The address of the Box e is{' '}
@@ -80,23 +98,31 @@ const Exercise1: FC = () => {
                       { id: 3, name: '22', displayName: '22' },
                       { id: 4, name: '23', displayName: '23' },
                     ]}
+                    correctAnswer={correctAnswer}
+                    setCorrectAnswer={setCorrectAnswer}
+                    index={2}
                   />
                 </span>
               </p>
             </Question>
             <Question
-              correct="Correct! Now Pipi needs to..."
-              incorrect="Not quite. Think about ... Please try again."
+              correct="Correct! Pipi needs to move from address 11 to address 22. Thanks to you, Pipi found all of the boxes correctly!"
+              incorrect="Not Quite. Pipi needs to move from address 11 to address 22. Please try again."
+              correct_answer={correctAnswer}
+              index={3}
             >
               <p className="question-text">
                 Pipi needs to move{' '}
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
+                      { id: 1, name: '9', displayName: '9' },
+                      { id: 2, name: '10', displayName: '10' },
+                      { id: 3, name: '11', displayName: '11' },
                     ]}
+                    correctAnswer={correctAnswer}
+                    setCorrectAnswer={setCorrectAnswer}
+                    index={3}
                   />
                 </span>{' '}
                 addresses from her current position to get to Box e.
