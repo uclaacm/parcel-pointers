@@ -1,9 +1,11 @@
 import { FC } from 'react';
+import Excercise1Diagram from '../../public/Excercise1Diagram.png';
 import AppWrapper from '../components/AppWrapper';
 import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
 import Question from '../components/Question';
 import { HeaderSections } from '../types/globalTypes';
+import '../styles/Exercise1.scss';
 
 const Exercise1: FC = () => {
   return (
@@ -13,11 +15,13 @@ const Exercise1: FC = () => {
           <h1>Memory Addresses</h1>
           <p>
             Pipi has forgotten the address of the boxes in the warehouse! Help
-            her find the correct addresses by answering the following questions.
+            his find the correct addresses by answering the following questions.
           </p>
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
-          <div className="diagram">{/* TODO: insert diagram here */}</div>
+          <div className="exercise-1-diagram diagram">
+            <img src={Excercise1Diagram} alt="Excercise 1 Diagram" />
+          </div>
           <h2>
             {' '}
             Let&apos;s say Pipi wants to go to{' '}
@@ -59,13 +63,13 @@ const Exercise1: FC = () => {
                     />
                   </span>
                 </span>{' '}
-                addresses from her current position to get to Box b.
+                addresses from his current position to get to Box b.
               </p>
             </Question>
           </div>
           <h2>
             What if Pipi now wants to go to{' '}
-            <span className="highlight">Box e</span> from her current position?
+            <span className="highlight">Box e</span> from his current position?
           </h2>
           <div className="questions">
             <Question
@@ -103,7 +107,7 @@ const Exercise1: FC = () => {
                     />
                   </span>
                 </span>{' '}
-                addresses from her current position to get to Box e.
+                addresses from his current position to get to Box e.
               </p>
             </Question>
           </div>
