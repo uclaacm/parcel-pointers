@@ -29,7 +29,7 @@ const Exercise1: FC = () => {
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                The address of the Box B is{' '}
+                The address of the Box B is&nbsp;
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -49,14 +49,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 Pipi needs to move{' '}
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
-                    ]}
-                  />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box B.
               </p>
@@ -73,7 +75,7 @@ const Exercise1: FC = () => {
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                The address of the Box E is{' '}
+                The address of the Box E is&nbsp;
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -93,14 +95,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 Pipi needs to move{' '}
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
-                    ]}
-                  />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box E.
               </p>
