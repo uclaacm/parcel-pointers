@@ -48,14 +48,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 Pipi needs to move{' '}
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
-                    ]}
-                  />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box b.
               </p>
@@ -90,14 +92,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 Pipi needs to move{' '}
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '7', displayName: '7' },
-                      { id: 2, name: '8', displayName: '8' },
-                      { id: 3, name: '9', displayName: '9' },
-                    ]}
-                  />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box e.
               </p>
