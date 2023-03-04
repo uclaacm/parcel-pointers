@@ -41,7 +41,7 @@
   font-family: $niramit;
   font-size: 18px;
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 
 .check-button:hover {
@@ -54,10 +54,17 @@
 
 .correct-text {
   color: $accent-2-color;
-  padding-top: 20px;
 }
 
 .incorrect-text {
   color: $accent-3-color;
+}
+
+.feedback-text {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  padding-left: 58px;
   padding-top: 20px;
 }
