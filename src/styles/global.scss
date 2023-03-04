@@ -16,6 +16,11 @@ $accent-1-color: #fec900;
 $accent-2-color: #31a74b;
 $accent-3-color: #a80000;
 
+html,
+body {
+  margin: 0;
+}
+
 title {
   color: $text-color;
   font-family: $play;
