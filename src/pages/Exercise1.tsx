@@ -61,17 +61,19 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 Pipi needs to move{' '}
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '8', displayName: '8' },
-                      { id: 2, name: '9', displayName: '9' },
-                      { id: 3, name: '10', displayName: '10' },
-                    ]}
-                    correctAnswer={correctAnswer}
-                    setCorrectAnswer={setCorrectAnswer}
-                    index={1}
-                  />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                      correctAnswer={correctAnswer}
+                      setCorrectAnswer={setCorrectAnswer}
+                      index={1}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box b.
               </p>
@@ -124,6 +126,19 @@ const Exercise1: FC = () => {
                     setCorrectAnswer={setCorrectAnswer}
                     index={3}
                   />
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                        correctAnswer={correctAnswer}
+                        setCorrectAnswer={setCorrectAnswer}
+                        index={3}
+                      ]}
+                    />
+                  </span>
                 </span>{' '}
                 addresses from her current position to get to Box e.
               </p>
