@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
 import Question from '../components/Question';
 import { HeaderSections } from '../types/globalTypes';
@@ -716,7 +717,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box b is{' '}
-                <span>{/* TODO: insert dropdown*/}</span>
+                <span className="dropdown-wrapper">
+                  <Dropdown
+                    options={[
+                      { id: 1, name: '10', displayName: '10' },
+                      { id: 2, name: '11', displayName: '11' },
+                      { id: 3, name: '12', displayName: '12' },
+                      { id: 4, name: '13', displayName: '13' },
+                    ]}
+                  />
+                </span>
               </p>
             </Question>
             <Question
@@ -724,7 +734,18 @@ const Exercise1: FC = () => {
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                Pipi needs to move <span>{/* TODO: insert dropdown*/}</span>{' '}
+                Pipi needs to move{' '}
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
+                </span>{' '}
                 addresses from his current position to get to Box b.
               </p>
             </Question>
@@ -740,7 +761,16 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box e is{' '}
-                <span>{/* TODO: insert dropdown*/}</span>
+                <span className="dropdown-wrapper">
+                  <Dropdown
+                    options={[
+                      { id: 1, name: '20', displayName: '20' },
+                      { id: 2, name: '21', displayName: '21' },
+                      { id: 3, name: '22', displayName: '22' },
+                      { id: 4, name: '23', displayName: '23' },
+                    ]}
+                  />
+                </span>
               </p>
             </Question>
             <Question
@@ -748,7 +778,18 @@ const Exercise1: FC = () => {
               incorrect="Not quite. Think about ... Please try again."
             >
               <p className="question-text">
-                Pipi needs to move <span>{/* TODO: insert dropdown*/}</span>{' '}
+                Pipi needs to move{' '}
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '7', displayName: '7' },
+                        { id: 2, name: '8', displayName: '8' },
+                        { id: 3, name: '9', displayName: '9' },
+                      ]}
+                    />
+                  </span>
+                </span>{' '}
                 addresses from his current position to get to Box e.
               </p>
             </Question>
