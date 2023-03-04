@@ -126,6 +126,7 @@ const Exercise1: FC = () => {
                     setCorrectAnswer={setCorrectAnswer}
                     index={3}
                   />
+                </span>
                 <span className="dropdown-between-text-wrapper">
                   <span className="dropdown-wrapper">
                     <Dropdown
@@ -133,10 +134,10 @@ const Exercise1: FC = () => {
                         { id: 1, name: '7', displayName: '7' },
                         { id: 2, name: '8', displayName: '8' },
                         { id: 3, name: '9', displayName: '9' },
-                        correctAnswer={correctAnswer}
-                        setCorrectAnswer={setCorrectAnswer}
-                        index={3}
                       ]}
+                      correctAnswer={correctAnswer}
+                      setCorrectAnswer={setCorrectAnswer}
+                      index={3}
                     />
                   </span>
                 </span>{' '}
