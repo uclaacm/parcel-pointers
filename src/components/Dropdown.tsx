@@ -14,7 +14,7 @@ export interface DropdownProps {
 }
 
 // ids of current choices
-const answer_key = [3, 2, 3, 2]; // will likely need to refactor this in the future
+const answer_key = [2, 3, 3, 2]; // will likely need to refactor this in the future
 
 /**
  * Creates a selectable dropdown for a list of available options.
