@@ -10,16 +10,28 @@ $header-height: 8vh;
 
 // Background
 //=======================================
-#background {
-  background-size: 100%;
+#container {
+  animation: scroll 500s linear infinite;
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: 100vh 100vw;
   display: flex;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
+
 // General Layout
 //=======================================
 #layout {
   display: flex;
-  margin: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
   min-height: calc(100vh - 2 * #{$layout-wsize});
+  padding: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
+  z-index: 2;
 }
 
 p {
@@ -74,5 +86,25 @@ p {
 #col-2 {
   .pp-wrapper {
     margin-right: 3.024%;
+  }
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
   }
 }
