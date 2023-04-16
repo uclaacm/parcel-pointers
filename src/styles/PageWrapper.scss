@@ -1,0 +1,84 @@
+@import './global';
+
+// Variables
+//=======================================
+$layout-wspacing: 10.56%;
+$layout-hspacing: 13vh;
+
+// Page Wrapper
+//    * used for any text pages
+//=======================================
+.page-wrapper {
+  margin-bottom: $layout-hspacing * 2;
+  margin-left: $layout-wspacing;
+  margin-right: $layout-wspacing;
+  margin-top: $layout-hspacing;
+
+  // p
+  //=======================================
+  // creates spacing between two p tags
+  p + p {
+    padding-top: 3vh;
+  }
+
+  p + .diagram {
+    padding: 6vh 0;
+  }
+
+  // h1
+  //=======================================
+
+  h1 + .diagram {
+    padding: 4vh 0;
+  }
+
+  .diagram + h1 {
+    padding: 0;
+  }
+
+  // h2
+  //=======================================
+
+  h2 {
+    padding-top: 5vh;
+  }
+
+  h2 + .diagram {
+    padding: 4vh 0;
+  }
+
+  .diagram + h2 {
+    padding: 0;
+  }
+
+  // code
+  //=======================================
+
+  .code {
+    background: $primary-3-color;
+    border-radius: 5px;
+    display: inline-flex;
+    font-family: $courier;
+    font-size: 20px;
+    padding: 0 5px;
+  }
+
+  .highlight {
+    align-items: center;
+    background: $accent-1-color;
+    border-radius: 5px;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    padding: 3px 12px;
+    text-align: center;
+  }
+
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 3vh;
+  }
+}

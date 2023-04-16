@@ -4,7 +4,7 @@ import Popup from './Popup';
 import '../../styles/AlertInbox.scss';
 
 export interface AlertInboxProps {
-  section_no: number;
+  header: string;
   children?: JSX.Element | string;
 }
 
@@ -33,10 +33,8 @@ export default function AlertInboxProps(props: AlertInboxProps): JSX.Element {
           />
         </svg>
       </Button>
-      <Popup onClose={closePopup} show={popup} title="This is a generic popup.">
-        <div>
-          <h1>Section {props.section_no}</h1>
-        </div>
+      <Popup onClose={closePopup} show={popup} title={props.header}>
+        {props.children}
       </Popup>
     </div>
   );
