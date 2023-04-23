@@ -76,7 +76,7 @@ const Lesson4: FC = () => {
                 declared and created. If you see <span className="code">*</span>{' '}
                 before a variable name but there is no variable type, that means
                 you are dereferencing an existing pointer getting the value
-                stored at that address. For example,
+                stored at that address. For example, da
               </p>
               <label>Declaring a new pointer variable:</label>
               <p>
