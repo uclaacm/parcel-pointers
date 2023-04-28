@@ -1,0 +1,45 @@
+@import './global';
+// Variables
+//=======================================
+$side-margins: 0%;
+$bottom-margin: 35%;
+$header-1: 50px;
+$description: 20px;
+$header-height: 8vh;
+$default-height: 15vh;
+
+.slideshow{
+  display: flex;
+  justify-content: center;
+  padding: $default-height;
+  position:relative;
+
+  .left {
+    background: none;
+    border: 0;
+    bottom: $bottom-margin;
+    left: $side-margins;
+    position: absolute;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .right {
+    background: none;
+    border: 0;
+    bottom: $bottom-margin;
+    position: absolute;
+    right: $side-margins;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .indicator {
+    bottom: 5%;
+    position: absolute;
+  }
+}

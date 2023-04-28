@@ -1,9 +1,15 @@
 import { FC } from 'react';
+import Pipi from '../../public/Pipi.png';
+import Slideshow from '../../public/Slideshow.png';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
+import SlideShow from '../components/SlideShow';
 import { HeaderSections } from '../types/globalTypes';
 
 const PointerMotivation: FC = () => {
+  const imageArray = [];
+  imageArray.push(<img src={Pipi}/>);
+  imageArray.push(<img src={Slideshow}/>);
   return (
     <div>
       <AppWrapper section={HeaderSections.POINTER_MOTIVATION}>
@@ -14,7 +20,7 @@ const PointerMotivation: FC = () => {
             annoying to learn, pointers are actually really useful. Click
             through to see the many different ways they can be helpful:
           </p>
-          <div className="diagram">{/* TODO: insert slide show */}</div>
+          <SlideShow images={imageArray}/>
           <p>
             Now that we know pointers are actually gonna be useful in the
             future, let&apos;s see what they are and how they work! Our little
