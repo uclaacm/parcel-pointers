@@ -22,24 +22,6 @@ What's this? This is a template repository that sets up a few minor systems for 
 
 This project is Parcel Pointers - a Teach LA learning lab for teaching students all about pointers for CS 31/32!
 
-## Things You Should Do (and then delete this section)
-
-Thanks for using our template! We hope this makes your life developing significantly easier.
-
-Things you should do **after using this as a template**:
-
-- [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [ ] set up [Netlify](https://www.netlify.com/) for this app - talk to jiin (`@doubleiis02`) if you need access to the Teach LA Netlify team.
-- [ ] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [ ] in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.
-- [ ] _only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).
-- [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
-- [ ] update the README badges for the GitHub Actions and Netlify with the correct links!
-- [ ] update and delete this documentation!
-- [ ] update `public/index.html` to have a description and title
-- [ ] update `public/favicon.svg` and `public/favaicon512.png` as needed
-- [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
-
 ## Development Setup
 
 We'll use a really common Node.js project workflow + Yarn!
