@@ -1,10 +1,27 @@
-import { useState } from 'react';
+import { useState, SetStateAction, Dispatch } from 'react';
 import '../styles/ShelfAddress.scss';
 
-export default function SomeButton(num: { num: number }): JSX.Element {
-  const [correct, setCorrect] = useState(false);
-  const handleClick = () => {
-    setCorrect(true);
+interface ShelfAddressProps {
+  num: number;
+  handleCorrect: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
+  const [color, setColor] = useState('#C4C4C4');
+  function timeout(delay: number) {
+    return new Promise((res) => setTimeout(res, delay));
+  }
+
+  const handleClick = async () => {
+    if (color != '#C4C4C4') return;
+    if (props.num == 15) {
+      props.handleCorrect(true);
+      setColor('green');
+      await timeout(2500);
+      props.handleCorrect(false);
+    } else {
+      setColor('red');
+    }
   };
   return (
     <button className={'address'} onClick={handleClick}>
@@ -21,7 +38,7 @@ export default function SomeButton(num: { num: number }): JSX.Element {
             y="1.44511"
             width="38.3946"
             height="38.3946"
-            fill={correct ? 'green' : '#C4C4C4'}
+            fill={color}
             stroke="black"
           />
           <text
@@ -33,7 +50,7 @@ export default function SomeButton(num: { num: number }): JSX.Element {
             dominantBaseline="middle"
             textAnchor="middle"
           >
-            {num.num}
+            {props.num}
           </text>
         </g>
       </svg>
