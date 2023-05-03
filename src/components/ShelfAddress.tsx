@@ -8,17 +8,11 @@ interface ShelfAddressProps {
 
 export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
   const [color, setColor] = useState('#C4C4C4');
-  function timeout(delay: number) {
-    return new Promise((res) => setTimeout(res, delay));
-  }
-
   const handleClick = async () => {
     if (color != '#C4C4C4') return;
     if (props.num == 15) {
       props.handleCorrect(true);
       setColor('green');
-      await timeout(2500);
-      props.handleCorrect(false);
     } else {
       setColor('red');
     }
