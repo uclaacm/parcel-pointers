@@ -20,25 +20,7 @@ What's this? This is a template repository that sets up a few minor systems for 
 
 ## Overview
 
-... explain what your project is here! What technology you used, who made it, and what it was for!
-
-## Things You Should Do (and then delete this section)
-
-Thanks for using our template! We hope this makes your life developing significantly easier.
-
-Things you should do **after using this as a template**:
-
-- [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [ ] set up [Netlify](https://www.netlify.com/) for this app - talk to jiin (`@doubleiis02`) if you need access to the Teach LA Netlify team.
-- [ ] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [ ] in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.
-- [ ] _only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).
-- [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
-- [ ] update the README badges for the GitHub Actions and Netlify with the correct links!
-- [ ] update and delete this documentation!
-- [ ] update `public/index.html` to have a description and title
-- [ ] update `public/favicon.svg` and `public/favaicon512.png` as needed
-- [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
+This project is Parcel Pointers - a Teach LA learning lab for teaching students all about pointers for CS 31/32!
 
 ## Development Setup
 
@@ -98,11 +80,14 @@ Here's a quick guide on how to get started.
 
 1. Either make a new branch or a fork of this repository. `main` is a protected branch, **so you cannot push to it**.
 2. Follow the instructions in "Development Setup" above. If you're on a fork, replace the URL with the fork's URL; if you're on a different branch, check it out using `git checkout`.
+   a. For branch naming, you can generally use `(issue number)_(change)` to keep track of which branch corresponds to which ticket! For example for implenting a slideshow, I would use `30_slideshow`.
+   b. For commit messages, it does not need to be detailed- a short, general description of changes made works!
 3. Beep boop away!
 4. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
 6. Make a [pull request](https://github.com/uclaacm/parcel-pointers/pulls) with your changes, and let someone on your project team know.
    a. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
+   b. Link your pull request to its corresponding ticket by replacing the comment with the issue number after # sign at the top!
 7. If your code passes code review, then we can **squash and merge** it into `main`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
 ## Helpful Commands
