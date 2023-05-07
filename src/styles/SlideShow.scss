@@ -5,12 +5,17 @@ $side-margins: 0%;
 $bottom-margin: 35%;
 $top-padding: 7vh;
 $bottom-padding: 10vh;
+$img-height: 400px;
 
 .slideshow {
-  display: flex;
-  justify-content: center;
   padding: $top-padding 0 $bottom-padding;
   position: relative;
+  display: flex;
+  height: $img-height;
+  img {
+    height: inherit;
+  }
+  justify-content: center;
 }
 
 .left {
