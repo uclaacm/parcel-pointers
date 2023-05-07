@@ -8,14 +8,15 @@ $bottom-padding: 10vh;
 $img-height: 400px;
 
 .slideshow {
-  padding: $top-padding 0 $bottom-padding;
-  position: relative;
   display: flex;
   height: $img-height;
+  justify-content: center;
+  padding: $top-padding 0 $bottom-padding;
+  position: relative;
+
   img {
     height: inherit;
   }
-  justify-content: center;
 }
 
 .left {
