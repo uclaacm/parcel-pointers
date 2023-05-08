@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/PageWrapper.scss';
-import CompareCode from '../components/CompareCode';
 
 const Lesson5: FC = () => {
   const code1 = `
