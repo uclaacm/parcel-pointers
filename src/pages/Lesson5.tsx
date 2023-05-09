@@ -1,12 +1,21 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';
 import { HeaderSections } from '../types/globalTypes';
-import '../styles/Lesson1.scss';
 import '../styles/PageWrapper.scss';
 
 const Lesson5: FC = () => {
+  const code1 = `
+  int x = 3;
+  x = 5;
+  `;
+  const code2 = `
+  int myVariable = 3;
+  int* myPointer = &myVariable;
+  *myPointer = 5;
+  `;
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_5}>
@@ -19,7 +28,14 @@ const Lesson5: FC = () => {
             box stored at a particular address, and then modifying the contents
             inside that box.
           </p>
-
+          <div className="diagram">
+            <CompareCode
+              code1={code1}
+              caption1="Normal Reassignment"
+              code2={code2}
+              caption2="Pointer Reassignment"
+            />
+          </div>
           <p>
             In the above code snippet, we start by creating a variable called
             <strong>myVariable</strong>, and we give it a value of 3. In the
