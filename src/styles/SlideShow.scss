@@ -1,0 +1,49 @@
+@import './global';
+// Variables
+//=======================================
+$side-margins: 0%;
+$bottom-margin: 35%;
+$top-padding: 7vh;
+$bottom-padding: 10vh;
+$img-height: 400px;
+
+.slideshow {
+  display: flex;
+  height: $img-height;
+  justify-content: center;
+  padding: $top-padding 0 $bottom-padding;
+  position: relative;
+
+  img {
+    height: inherit;
+  }
+}
+
+.left {
+  background: none;
+  border: 0;
+  bottom: $bottom-margin;
+  left: $side-margins;
+  position: absolute;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.right {
+  background: none;
+  border: 0;
+  bottom: $bottom-margin;
+  position: absolute;
+  right: $side-margins;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.indicator {
+  bottom: 7%;
+  position: absolute;
+}
