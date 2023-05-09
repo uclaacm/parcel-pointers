@@ -68,9 +68,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={40}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
@@ -130,9 +130,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={100}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
@@ -192,9 +192,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={100}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
@@ -254,9 +254,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={100}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
@@ -316,9 +316,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={100}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
@@ -378,9 +378,9 @@ export default function Box(props: BoxProps): JSX.Element {
           {props.conf && (
             <ConfettiExplosion
               force={0.4}
-              duration={2000}
+              duration={5000}
               particleCount={100}
-              height={1000}
+              height={document.documentElement.offsetHeight}
               width={300}
             />
           )}
