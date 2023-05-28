@@ -320,6 +320,7 @@ const Demo: FC = () => {
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div className="page-wrapper">
+          <HintBox text="Try counting the number of boxes PiPi has to visit." />
           <HintBox text="This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol." />
           {/* <Dropdown
             options={[

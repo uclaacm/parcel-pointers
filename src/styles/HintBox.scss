@@ -1,14 +1,19 @@
 @import './global';
 
+.hintbox-container {
+  display: flex;
+  justify-content: end;
+}
+
 .hintbox {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row-reverse;
   padding: 17px;
-  position: relative;
-  z-index: 9999;
+  z-index: 2;
 }
 
 .hintbox-title-text {
@@ -23,14 +28,17 @@
   align-items: center;
   display: flex;
   gap: 21px;
+  order: 2;
 }
 
 .hintbox-text {
   align-items: center;
   display: flex;
+  flex-grow: 1;
   font-size: large;
   gap: 40px;
   max-width: 0;
+  order: 1;
   overflow: hidden;
   transition: all 0.5s;
   white-space: nowrap;
@@ -40,7 +48,7 @@
   align-items: center;
   display: flex;
   gap: 40px;
-  max-width: 70vw;
+  max-width: 67vw;
   transition: all 0.5s;
   width: auto;
 }
