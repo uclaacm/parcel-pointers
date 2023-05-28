@@ -6,7 +6,8 @@ import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
-import Dropdown from '../components/Dropdown';
+// import Dropdown from '../components/Dropdown';
+import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
 import ShelfAddress from '../components/ShelfAddress';
 import { HeaderSections } from '../types/globalTypes';
@@ -318,14 +319,15 @@ const Demo: FC = () => {
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
-        <div id="layout">
-          <Dropdown
+        <div className="page-wrapper">
+          <HintBox text="This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol." />
+          {/* <Dropdown
             options={[
               { id: 1, name: '1', displayName: '1' },
               { id: 2, name: '2', displayName: '2' },
               { id: 3, name: '3', displayName: '3' },
             ]}
-          />
+          /> */}
 
           <p className="description">
             {nums1.map((num) => (

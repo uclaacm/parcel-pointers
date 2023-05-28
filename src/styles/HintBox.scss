@@ -1,0 +1,46 @@
+@import './global';
+
+.hintbox {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 17px;
+  position: relative;
+  z-index: 9999;
+}
+
+.hintbox-title-text {
+  color: $primary-1-color;
+  font-family: $play;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.hintbox-title {
+  align-items: center;
+  display: flex;
+  gap: 21px;
+}
+
+.hintbox-text {
+  align-items: center;
+  display: flex;
+  font-size: large;
+  gap: 40px;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  white-space: nowrap;
+}
+
+.hintbox-text.show {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+  max-width: 70vw;
+  transition: all 0.5s;
+  width: auto;
+}
