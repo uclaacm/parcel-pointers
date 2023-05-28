@@ -1,0 +1,28 @@
+@import './global';
+
+.compare {
+  display: table;
+  margin: 15px 0;
+  padding: 5px;
+  width: 100%;
+
+  .left {
+    float: left;
+    left: 10%;
+    margin: auto;
+    position: relative;
+    width: 35%;
+  }
+
+  .right {
+    float: right;
+    margin: 10 0 10 50px;
+    position: relative;
+    right: 10%;
+    width: 35%;
+  }
+}
+
+.caption {
+  color: $primary-1-color;
+}
