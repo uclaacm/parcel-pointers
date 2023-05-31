@@ -39,16 +39,31 @@
   gap: 40px;
   max-width: 0;
   order: 1;
-  overflow: auto;
-  transition: all 0.5s;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
   white-space: nowrap;
 }
 
+@mixin hide-scroll {
+  @keyframes hide-scroll {
+    from {
+      overflow: hidden;
+    }
+
+    to {
+      overflow: hidden;
+    }
+  }
+  animation-duration: 1s;
+  animation-name: hide-scroll;
+  transition: 0.7s ease-in-out;
+}
+
 .hintbox-text.show {
+  @include hide-scroll();
   align-items: center;
   display: flex;
   gap: 40px;
   max-width: 67vw;
-  transition: all 0.5s;
-  width: auto;
+  overflow: auto;
 }
