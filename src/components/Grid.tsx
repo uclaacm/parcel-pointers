@@ -33,7 +33,6 @@ export default function Grid(props: GridProps): JSX.Element {
           ></ShelfAddress>
         ))}
       </div>
-      `
     </div>
   );
 }

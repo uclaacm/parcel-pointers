@@ -10,7 +10,7 @@ export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
   const [color, setColor] = useState('#C4C4C4');
   const handleClick = async () => {
     if (color != '#C4C4C4') return;
-    if (props.num == 15) {
+    if (props.num == 42) {
       props.handleCorrect(true);
       setColor('green');
     } else {

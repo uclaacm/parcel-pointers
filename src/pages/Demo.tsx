@@ -316,7 +316,9 @@ const Demo: FC = () => {
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
   const nums3 = nums.slice(48, 72);
-  const itemSpaceArray1 = [3, 1, 2, 3, 4, 5, 6];
+  const itemSpaceArray1 = [6, 3, 2, 2, 2, 3, 4, 1, 3];
+  const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
+  const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
@@ -329,35 +331,49 @@ const Demo: FC = () => {
             size={40}
             handleCorrect={setConfetti}
           >
+            <img className="pipi" src={Pipi} alt="Pipi"></img>
+            <Box letter="a" num={3} conf={false}></Box>
             <div></div>
-            <Box letter="a" num={1} conf={confetti}></Box>
-            {confetti ? (
-              <Box letter="b" num={2} conf={true}></Box>
-            ) : (
-              <Box letter="b" num={2} conf={false}></Box>
-            )}
+            <Box letter="b" num={2} conf={false}></Box>
+            <div></div>
             <Box letter="c" num={3} conf={false}></Box>
             <Box letter="d" num={4} conf={false}></Box>
-            <Box letter="e" num={5} conf={false}></Box>
-            <Box letter="f" num={6} conf={false}></Box>
+            <div></div>
+            <Box letter="e" num={2} conf={false}></Box>
           </Grid>
           <Grid
             addressNums={nums2}
-            itemSpaceArray={itemSpaceArray1}
+            itemSpaceArray={itemSpaceArray2}
             size={40}
             handleCorrect={setConfetti}
-          ></Grid>
+          >
+            <Box letter="f" num={5} conf={false}></Box>
+            <div></div>
+            <Box letter="g" num={6} conf={false}></Box>
+            <Box letter="h" num={2} conf={false}></Box>
+            <div></div>
+            <Box letter="i" num={4} conf={confetti}></Box>
+            <Box letter="j" num={1} conf={confetti}></Box>
+          </Grid>
           <Grid
             addressNums={nums3}
-            itemSpaceArray={itemSpaceArray1}
+            itemSpaceArray={itemSpaceArray3}
             size={40}
             handleCorrect={setConfetti}
-          ></Grid>
+          >
+            <div></div>
+            <Box letter="k" num={5} conf={false}></Box>
+            <div></div>
+            <Box letter="l" num={4} conf={false}></Box>
+            <Box letter="m" num={1} conf={false}></Box>
+            <Box letter="n" num={3} conf={false}></Box>
+            <div></div>
+            <Box letter="o" num={4} conf={false}></Box>
+          </Grid>
           <p className="description">
             <br></br>
           </p>
           <h1 className="header">Demo</h1>
-          <img className="pipi" src={Pipi} alt="Pipi"></img>
           <img className="ladder" src={LeftLadder} alt="LeftLadder"></img>
           <img className="ladder" src={RightLadder} alt="RightLadder"></img>
           <div id="inbox-wrapper">
