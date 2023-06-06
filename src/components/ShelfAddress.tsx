@@ -20,24 +20,24 @@ export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
   return (
     <button className={'address'} onClick={handleClick}>
       <svg
-        width="41"
-        height="41"
-        viewBox="0 0 41 41"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g>
           <rect
-            x="1.26489"
-            y="1.44511"
-            width="38.3946"
-            height="38.3946"
+            x="1.3"
+            y="1.3"
+            width="38"
+            height="38"
             fill={color}
             stroke="black"
           />
           <text
-            x="49%"
-            y="49%"
+            x="50%"
+            y="60%"
             fontFamily="Verdana"
             fontSize="20"
             fill="black"

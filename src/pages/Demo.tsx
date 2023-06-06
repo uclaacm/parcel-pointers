@@ -6,9 +6,9 @@ import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
+import Grid from '../components/Grid';
 import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
-import ShelfAddress from '../components/ShelfAddress';
 import { HeaderSections } from '../types/globalTypes';
 import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
@@ -316,49 +316,31 @@ const Demo: FC = () => {
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
   const nums3 = nums.slice(48, 72);
+  const itemSpaceArray1 = [3, 1, 2, 3, 4, 5, 6];
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div className="page-wrapper">
           <HintBox text="Try counting the number of boxes PiPi has to visit." />
           <HintBox text="This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol." />
+          <Grid addressNums={nums1} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}>
+            <div></div>
+            <Box letter="a" num={1} conf={confetti}></Box>
+            {confetti ? (
+              <Box letter="b" num={2} conf={true}></Box>
+            ) : (
+              <Box letter="b" num={2} conf={false}></Box>
+            )}
+            <Box letter="c" num={3} conf={false}></Box>
+            <Box letter="d" num={4} conf={false}></Box>
+            <Box letter="e" num={5} conf={false}></Box>
+            <Box letter="f" num={6} conf={false}></Box></Grid>
+          <Grid addressNums={nums2} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}></Grid>
+          <Grid addressNums={nums3} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}></Grid>
           <p className="description">
-            {nums1.map((num) => (
-              <ShelfAddress
-                key={null}
-                num={num}
-                handleCorrect={setConfetti}
-              ></ShelfAddress>
-            ))}
-            <br></br>
-            {nums2.map((num) => (
-              <ShelfAddress
-                key={null}
-                num={num}
-                handleCorrect={setConfetti}
-              ></ShelfAddress>
-            ))}
-            <br></br>
-            {nums3.map((num) => (
-              <ShelfAddress
-                key={null}
-                num={num}
-                handleCorrect={setConfetti}
-              ></ShelfAddress>
-            ))}
             <br></br>
           </p>
           <h1 className="header">Demo</h1>
-          <Box letter="a" num={1} conf={confetti}></Box>
-          {confetti ? (
-            <Box letter="b" num={2} conf={true}></Box>
-          ) : (
-            <Box letter="b" num={2} conf={false}></Box>
-          )}
-          <Box letter="c" num={3} conf={false}></Box>
-          <Box letter="d" num={4} conf={false}></Box>
-          <Box letter="e" num={5} conf={false}></Box>
-          <Box letter="f" num={6} conf={false}></Box>
           <img className="pipi" src={Pipi} alt="Pipi"></img>
           <img className="ladder" src={LeftLadder} alt="LeftLadder"></img>
           <img className="ladder" src={RightLadder} alt="RightLadder"></img>

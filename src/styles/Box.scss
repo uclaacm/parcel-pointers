@@ -3,9 +3,10 @@
 }
 
 .box {
-  align-items: end;
   display: flex;
-  margin: 10px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
 }
 
 .confetti {
