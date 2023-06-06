@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 import ShelfAddress from './ShelfAddress';
 
 export interface GridProps {
-  size: number
+  size: number;
   addressNums: number[];
   itemSpaceArray: number[];
   handleCorrect: Dispatch<SetStateAction<boolean>>;
@@ -11,20 +11,20 @@ export interface GridProps {
 }
 
 export default function Grid(props: GridProps): JSX.Element {
-  const itemArray = props.itemSpaceArray.map((i)=>`${i*props.size}px`);
+  const itemArray = props.itemSpaceArray.map((i) => `${i * props.size}px`);
   const shelfArray = Array(props.addressNums.length).fill(`${props.size}px`);
   const itemStyles = {
-    gridTemplateColumns: itemArray.join(' ')
+    gridTemplateColumns: itemArray.join(' '),
   };
   const shelfStyles = {
-    gridTemplateColumns: shelfArray.join(' ')
+    gridTemplateColumns: shelfArray.join(' '),
   };
   return (
     <>
-      <div className= 'item-container' style={{...itemStyles}}>
+      <div className="item-container" style={{ ...itemStyles }}>
         {props.children}
       </div>
-      <div className="item-container" style={{...shelfStyles}}>
+      <div className="item-container" style={{ ...shelfStyles }}>
         {props.addressNums.map((num) => (
           <ShelfAddress
             key={null}
@@ -32,7 +32,8 @@ export default function Grid(props: GridProps): JSX.Element {
             handleCorrect={props.handleCorrect}
           ></ShelfAddress>
         ))}
-      </div>`
+      </div>
+      `
     </>
   );
 }

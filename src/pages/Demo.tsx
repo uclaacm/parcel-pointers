@@ -323,7 +323,12 @@ const Demo: FC = () => {
         <div className="page-wrapper">
           <HintBox text="Try counting the number of boxes PiPi has to visit." />
           <HintBox text="This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol." />
-          <Grid addressNums={nums1} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}>
+          <Grid
+            addressNums={nums1}
+            itemSpaceArray={itemSpaceArray1}
+            size={40}
+            handleCorrect={setConfetti}
+          >
             <div></div>
             <Box letter="a" num={1} conf={confetti}></Box>
             {confetti ? (
@@ -334,9 +339,20 @@ const Demo: FC = () => {
             <Box letter="c" num={3} conf={false}></Box>
             <Box letter="d" num={4} conf={false}></Box>
             <Box letter="e" num={5} conf={false}></Box>
-            <Box letter="f" num={6} conf={false}></Box></Grid>
-          <Grid addressNums={nums2} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}></Grid>
-          <Grid addressNums={nums3} itemSpaceArray = {itemSpaceArray1} size={40} handleCorrect={setConfetti}></Grid>
+            <Box letter="f" num={6} conf={false}></Box>
+          </Grid>
+          <Grid
+            addressNums={nums2}
+            itemSpaceArray={itemSpaceArray1}
+            size={40}
+            handleCorrect={setConfetti}
+          ></Grid>
+          <Grid
+            addressNums={nums3}
+            itemSpaceArray={itemSpaceArray1}
+            size={40}
+            handleCorrect={setConfetti}
+          ></Grid>
           <p className="description">
             <br></br>
           </p>
