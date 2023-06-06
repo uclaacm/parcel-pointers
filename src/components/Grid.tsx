@@ -20,7 +20,7 @@ export default function Grid(props: GridProps): JSX.Element {
     gridTemplateColumns: shelfArray.join(' '),
   };
   return (
-    <>
+    <div className="grid-container">
       <div className="item-container" style={{ ...itemStyles }}>
         {props.children}
       </div>
@@ -34,6 +34,6 @@ export default function Grid(props: GridProps): JSX.Element {
         ))}
       </div>
       `
-    </>
+    </div>
   );
 }
