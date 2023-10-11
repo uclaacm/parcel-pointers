@@ -27,13 +27,12 @@ const Lesson4: FC = () => {
             <FillArrow text1="myPointer" text2="myVariable" />
           </div>
           <p>
-            test
-            Now you might be wondering, what good will knowing an address do?
-            And you&apos;re right - most of the time, we don&apos;t care about
-            the actual value of the address itself, we care about the value
-            stored at that address. So if we are just given an address, it would
-            be really useful if there were a way for us to find out what value
-            is stored there. And you guessed it, there is!
+            test Now you might be wondering, what good will knowing an address
+            do? And you&apos;re right - most of the time, we don&apos;t care
+            about the actual value of the address itself, we care about the
+            value stored at that address. So if we are just given an address, it
+            would be really useful if there were a way for us to find out what
+            value is stored there. And you guessed it, there is!
           </p>
           <div className="diagram">
             <Terminal code={code1} />
