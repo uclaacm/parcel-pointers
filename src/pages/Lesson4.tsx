@@ -27,6 +27,7 @@ const Lesson4: FC = () => {
             <FillArrow text1="myPointer" text2="myVariable" />
           </div>
           <p>
+            test
             Now you might be wondering, what good will knowing an address do?
             And you&apos;re right - most of the time, we don&apos;t care about
             the actual value of the address itself, we care about the value
