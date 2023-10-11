@@ -5,10 +5,10 @@ title: 'Feature: '
 labels: feature
 ---
 
---What feature needs to be created?--
+<!--What feature needs to be created?-->
 
---Make sure to add any relevant links/screenshots!--
+<!--Make sure to add any relevant links/screenshots!-->
 
 ---
 
-This is a :rocket: Feature Request
+This is a Feature Request
