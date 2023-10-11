@@ -1,22 +1,14 @@
 ---
 name: "\U0001F680 Feature Request"
 about: Requesting a new feature
-title: '🚀 Feature: '
+title: 'Feature: '
 labels: feature
 ---
 
-<!-- short description of the feature -->
+<!--What feature needs to be created?-->
 
-### Use Case
-
-<!-- why do you need this feature? -->
-
-### Proposed Solution
-
-<!-- Please include prototype/sketch/reference implementation: -->
-
-- [ ] :wave: I may be able to implement this feature request
+<!--Make sure to add any relevant links/screenshots!-->
 
 ---
 
-This is a :rocket: Feature Request
+This is a Feature Request
