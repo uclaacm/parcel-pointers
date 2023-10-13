@@ -18,7 +18,6 @@ function Popup(props: PopupProps): JSX.Element {
   };
 
   useEffect(() => {
-    console.log('here');
     setShow(props.show);
   }, [props.show]);
 
