@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Close from '../../../public/Close.png';
 
 export interface PopupProps {
@@ -10,6 +10,7 @@ export interface PopupProps {
 
 function Popup(props: PopupProps): JSX.Element {
   const [show, setShow] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const handleClose = () => {
     setShow(false);
@@ -17,8 +18,26 @@ function Popup(props: PopupProps): JSX.Element {
   };
 
   useEffect(() => {
+    console.log('here');
     setShow(props.show);
   }, [props.show]);
+
+// Close the popup if click outside of popup
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        props.show == true &&
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Element)
+      ) {
+        handleClose();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside); // Bind the event listener
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside); // Unbind the event listener on clean up
+    };
+  }, [wrapperRef, props.show]);
 
   return (
     <div
@@ -28,7 +47,9 @@ function Popup(props: PopupProps): JSX.Element {
       }}
       className="overlay"
     >
-      <div className="popup">
+      <div className="popup"
+        ref={wrapperRef}
+      >
         <h2>{props.title}</h2>
         <div className="content">{props.children}</div>
         <button
