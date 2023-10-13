@@ -35,9 +35,10 @@ $sidebar-width: 357px;
 }
 
 .dropdown-header {
+  align-items: center;
   color: $text-color;
   cursor: pointer;
-  display: block;
+  display: flex;
   font-family: $play;
   font-size: 24px;
   height: 47px;

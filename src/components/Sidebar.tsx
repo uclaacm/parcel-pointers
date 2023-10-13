@@ -148,15 +148,16 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       <div className="dropdown-header">
         <a href={PageURLs.POINTER_MOTIVATION}>Why Pointers?</a>
       </div>
-      <Dropdown title="Lessons" list={lessonList} />
-      <Dropdown title="Exercises" list={exerciseList} />
       {/* TODO: delete Demo and Error links before production! */}
       <div className="dropdown-header">
         <a href={PageURLs.DEMO}>Demo</a>
       </div>
-      <div className="dropdown-header">
+      <Dropdown title="Lessons" list={lessonList} />
+      <Dropdown title="Exercises" list={exerciseList} />
+      {/* TODO: delete Demo and Error links before production! */}
+      {/* <div className="dropdown-header">
         <a href="/error">Error</a>
-      </div>
+      </div> */}
     </div>
   );
 }
