@@ -21,7 +21,7 @@ function Popup(props: PopupProps): JSX.Element {
     setShow(props.show);
   }, [props.show]);
 
-// Close the popup if click outside of popup
+  // Close the popup if click outside of popup
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -46,9 +46,7 @@ function Popup(props: PopupProps): JSX.Element {
       }}
       className="overlay"
     >
-      <div className="popup"
-        ref={wrapperRef}
-      >
+      <div className="popup" ref={wrapperRef}>
         <h2>{props.title}</h2>
         <div className="content">{props.children}</div>
         <button
