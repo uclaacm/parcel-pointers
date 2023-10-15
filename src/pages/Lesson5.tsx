@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import CodeDiagram from '../components/CodeDiagram';
 import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';
@@ -16,6 +17,25 @@ const Lesson5: FC = () => {
   int* myPointer = &myVariable;
   *myPointer = 5;
   `;
+
+  const diagram = [
+    {
+      code: 'int myVariable = 3;',
+      text1: 'myVariable',
+      text2: '3',
+    },
+    {
+      code: 'int* myPointer = &myVariable;',
+      text1: 'myPointer',
+      text2: 'myVariable',
+    },
+    {
+      code: '*myPointer = 5;',
+      text1: 'myPointer',
+      text2: '5',
+    },
+  ];
+
   return (
     <>
       <AppWrapper section={HeaderSections.LESSON_5}>
@@ -36,9 +56,10 @@ const Lesson5: FC = () => {
               caption2="Pointer Reassignment"
             />
           </div>
+          <CodeDiagram code={diagram} />
           <p>
             In the above code snippet, we start by creating a variable called
-            <strong>myVariable</strong>, and we give it a value of 3. In the
+            <strong> myVariable</strong>, and we give it a value of 3. In the
             next line, we create a pointer that stores the memory address of
             myVariable - <strong>myPointer</strong> now points to myVariable.
           </p>
