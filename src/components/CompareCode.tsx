@@ -15,7 +15,7 @@ SyntaxHighlighter.registerLanguage('cpp', cpp);
 export default function CompareCode(props: CompareCodeProps): JSX.Element {
   return (
     <div className="compare">
-      <div className="left">
+      <div className="left-code">
         <h1 className="caption">{props.caption1}</h1>
         <SyntaxHighlighter
           language="cpp"
@@ -24,7 +24,7 @@ export default function CompareCode(props: CompareCodeProps): JSX.Element {
           {props.code1}
         </SyntaxHighlighter>
       </div>
-      <div className="right">
+      <div className="right-code">
         <h1 className="caption">{props.caption2}</h1>
         <SyntaxHighlighter
           language="cpp"
