@@ -1,3 +1,5 @@
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FaRegCopy } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import cpp from 'react-syntax-highlighter/dist/esm/languages/hljs/cpp';
 import atomOneLightCustom from '../styles/Terminal/atom-one-light-custom';
@@ -12,6 +14,10 @@ SyntaxHighlighter.registerLanguage('cpp', cpp);
 export default function Terminal(props: TerminalProps): JSX.Element {
   return (
     <div className="terminal">
+      <CopyToClipboard text={props.code}>
+        <FaRegCopy className="copybutton" />
+      </CopyToClipboard>
+
       <SyntaxHighlighter
         language="cpp"
         style={atomOneLightCustom} // this error doesn't affect the custom theme, will fix later

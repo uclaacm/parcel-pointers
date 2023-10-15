@@ -1,5 +1,16 @@
 .terminal {
   justify-content: center;
   margin: auto;
+  position: relative;
   width: 80%;
+}
+
+.copybutton {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+
+  &:hover {
+    color: blue;
+  }
 }
