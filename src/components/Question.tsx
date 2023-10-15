@@ -52,7 +52,7 @@ function Question(props: QuestionProps): JSX.Element {
                 setExpand(true);
               }}
             >
-              <p className="check-button-text">check</p>
+              <p className="check-button-text">Check</p>
             </button>
           )}
         </div>
