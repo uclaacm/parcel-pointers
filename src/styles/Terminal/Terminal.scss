@@ -12,5 +12,52 @@
 
   &:hover {
     color: blue;
+    cursor: pointer;
   }
+}
+
+.hiddenalert {
+  visibility: hidden;
+}
+
+.copyalert {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background-color: rgba(133, 150, 190, 0.13);
+  border: 2px;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  left: 40vw;
+  padding: 1em;
+  position: fixed;
+  right: 40vw;
+  top: 7.5vh;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeout {
+  -webkit-animation-name: fadeout;
+  animation-name: fadeout;
 }
