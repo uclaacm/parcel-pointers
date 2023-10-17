@@ -68,7 +68,7 @@ const Lesson10: FC = () => {
           </div>
 
           <p>
-            Notice the <span className="code">{pointerArrow}</span>notation -
+            Notice the <span className="code">{pointerArrow}</span> notation -
             this is syntactic sugar for *(newNode).value. We use the{' '}
             <span className="code">{pointerArrow}</span> notation when we want
             to access an object’s members through a pointer.
