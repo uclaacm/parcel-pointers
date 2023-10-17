@@ -4,7 +4,7 @@
 */
 export enum HeaderSections {
   LANDING_SECTION = 'landingSection',
-  TITLE_SECTION = 'titleSection',
+  TITLE_SECTION = 'Parcel Pointers',
   LEARNING_SECTION = 'learningSection',
   CODE_SECTION = 'codeSection',
   DEMO_SECTION = 'Demo',
