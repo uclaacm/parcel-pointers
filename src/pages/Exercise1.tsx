@@ -16,7 +16,7 @@ const Exercise1: FC = () => {
           <h1>Memory Addresses</h1>
           <p>
             Pipi has forgotten the address of the boxes in the warehouse! Help
-            his find the correct addresses by answering the following questions.
+            them find the correct addresses by answering the following questions.
           </p>
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
@@ -30,7 +30,7 @@ const Exercise1: FC = () => {
           </h2>
           <div className="questions">
             <Question
-              correct="Correct! This is the first address for box b, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much he needs to move to get there."
+              correct="Correct! This is the first address for box b, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much they need to move to get there."
               incorrect="Not Quite. Remember that pointers start with the first address of a variable, so we want to start with the first adress of box b. Please try again."
               correct_answer={correctAnswer}
               index={0}
@@ -52,7 +52,7 @@ const Exercise1: FC = () => {
               </p>
             </Question>
             <Question
-              correct="Correct! Pipi needs to move from address 2 to address 11. Now Pipi needs to go to a different box."
+              correct="Correct! Pipi needs to move from address 2 to address 11. Now they need to go to a different box."
               incorrect="Not Quite. Pipi needs to move from address 2 to address 11. Please try again."
               correct_answer={correctAnswer}
               index={1}
@@ -72,17 +72,17 @@ const Exercise1: FC = () => {
                     />
                   </span>
                 </span>{' '}
-                addresses from his current position to get to Box b.
+                addresses from their current position to get to Box b.
               </p>
             </Question>
           </div>
           <h2>
             What if Pipi now wants to go to{' '}
-            <span className="highlight">Box e</span> from his current position?
+            <span className="highlight">Box e</span> from their current position?
           </h2>
           <div className="questions">
             <Question
-              correct="Correct! This is the first address for box e, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much he needs to move to get there."
+              correct="Correct! This is the first address for box e, which is what pointers use to find variables in memory. Now Pipi needs to calculate how much they need to move to get there."
               incorrect="Not Quite. Remember that pointers start with the first address of a variable, so we want to start with the first adress of box b. Please try again."
               correct_answer={correctAnswer}
               index={2}
@@ -124,7 +124,7 @@ const Exercise1: FC = () => {
                     />
                   </span>
                 </span>{' '}
-                addresses from his current position to get to Box e.
+                addresses from their current position to get to Box e.
               </p>
             </Question>
           </div>

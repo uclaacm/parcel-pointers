@@ -16,10 +16,10 @@ const Lesson1: FC = () => {
             As you can see from the example, our warehouse had a bunch of
             labeled shelves, and there were some boxes on each of the shelves.
             Our helpful little robot friend was tasked with finding a particular
-            box to visit. But how did he know where to find the box he needed?
-            Well luckily for him, he has you to count on! You could see the box
-            he needed to go to, and you told him the address he needed to visit
-            if he wanted to find his box. That&apos;s why it was really
+            box to visit. But how did they know where to find the box they needed?
+            Well luckily for them, they have you to count on! You could see the box
+            they needed to go to, and you told them the address they needed to visit
+            if they wanted to find their box. That&apos;s why it was really
             important to label our shelves with addresses - it made it much
             easier for PiPi to know where to go. It&apos;s the same reason why
             houses have addresses - an address gives you an easy way of
