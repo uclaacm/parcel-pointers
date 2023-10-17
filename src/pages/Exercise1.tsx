@@ -16,7 +16,8 @@ const Exercise1: FC = () => {
           <h1>Memory Addresses</h1>
           <p>
             Pipi has forgotten the address of the boxes in the warehouse! Help
-            them find the correct addresses by answering the following questions.
+            them find the correct addresses by answering the following
+            questions.
           </p>
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
@@ -78,7 +79,8 @@ const Exercise1: FC = () => {
           </div>
           <h2>
             What if Pipi now wants to go to{' '}
-            <span className="highlight">Box e</span> from their current position?
+            <span className="highlight">Box e</span> from their current
+            position?
           </h2>
           <div className="questions">
             <Question

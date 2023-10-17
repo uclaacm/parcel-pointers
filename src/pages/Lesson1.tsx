@@ -16,14 +16,14 @@ const Lesson1: FC = () => {
             As you can see from the example, our warehouse had a bunch of
             labeled shelves, and there were some boxes on each of the shelves.
             Our helpful little robot friend was tasked with finding a particular
-            box to visit. But how did they know where to find the box they needed?
-            Well luckily for them, they have you to count on! You could see the box
-            they needed to go to, and you told them the address they needed to visit
-            if they wanted to find their box. That&apos;s why it was really
-            important to label our shelves with addresses - it made it much
-            easier for PiPi to know where to go. It&apos;s the same reason why
-            houses have addresses - an address gives you an easy way of
-            describing where something is located, so you can find it more
+            box to visit. But how did they know where to find the box they
+            needed? Well luckily for them, they have you to count on! You could
+            see the box they needed to go to, and you told them the address they
+            needed to visit if they wanted to find their box. That&apos;s why it
+            was really important to label our shelves with addresses - it made
+            it much easier for PiPi to know where to go. It&apos;s the same
+            reason why houses have addresses - an address gives you an easy way
+            of describing where something is located, so you can find it more
             easily. It would be much harder to find your friend&apos;s house if
             you didn&apos;t know what their address was! For the same reasons,
             the memory in your computer is also labeled with addresses.
