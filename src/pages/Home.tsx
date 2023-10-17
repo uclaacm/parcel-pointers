@@ -17,10 +17,11 @@ const Home: FC = () => {
             <div id="col-1">
               <h1 id="title">Parcel Pointers</h1>
               <p id="description">
-                Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do
-                eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
-                enim ad minim vernian, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Welcome to Parcel Pointers! This learning lab is designed to
+                help you learn everything about pointers and how they are used
+                by following our robot Pipi through a warehouse. By the end of
+                the learning lab, hopefully you should know how and where to use
+                pointers in your own projects!
               </p>
               <button
                 id="start-button"
