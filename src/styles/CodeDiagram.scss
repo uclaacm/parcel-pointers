@@ -53,10 +53,15 @@
   margin: 0.5em;
   padding: 5px 10px;
   width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .arrow {
   position: relative;
+  width: 50%;
 }
 
 @media screen and (max-width: 1024px) {
