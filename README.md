@@ -82,14 +82,14 @@ Here's a quick guide on how to get started.
 2. Follow the instructions in "Development Setup" above. If you're on a fork, replace the URL with the fork's URL; if you're on a different branch, check it out using `git checkout -b {branch_name}`. <br />
    a. For branch naming, you can generally use `{issue number}_{change}` to keep track of which branch corresponds to which ticket! For example for implenting a slideshow, I would use `30_slideshow`. <br />
    b. For commit messages, it does not need to be detailed- a short, general description of changes made works!
-4. Beep boop away!
-5. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
-6. Once you're ready, stage and commit your changes with `git commit -am {commit_message}`.
-7. Push your changes with `git push --set-upstream origin {branch_name}` to push your branch to the repository, then make a [pull request](https://github.com/uclaacm/parcel-pointers/pulls) with your changes, and let someone on your project team know. <br />
+3. Beep boop away!
+4. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
+5. Once you're ready, stage and commit your changes with `git commit -am {commit_message}`.
+6. Push your changes with `git push --set-upstream origin {branch_name}` to push your branch to the repository, then make a [pull request](https://github.com/uclaacm/parcel-pointers/pulls) with your changes, and let someone on your project team know. <br />
    a. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info! <br />
    b. Link your pull request to its corresponding ticket by replacing the comment with the issue number after # sign at the top! <br />
    c. You can add someone as a reviewer to a pull request to let them know.
-9. If your code passes code review, then we can **squash and merge** it into `main`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
+7. If your code passes code review, then we can **squash and merge** it into `main`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
 ## Helpful Commands
 
