@@ -49,9 +49,9 @@ export enum PageOrder {
   '/lesson-3',
   '/lesson-4',
   '/lesson-5',
-  /*'/lesson-6',
+  '/lesson-6',
   '/lesson-7',
-  '/lesson-8', */
+  '/lesson-8',
   '/lesson-10',
   '/exercise-1',
 }
