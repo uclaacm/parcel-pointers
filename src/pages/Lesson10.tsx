@@ -15,8 +15,8 @@ const Lesson10: FC = () => {
     `;
 
   const code2 = `
-    Node* newNode = new Node(1); //make new node with
-    cout << newNode ->value << endl; //prints 1
+    Node* newNode = new Node(1); // make new node with value 1
+    cout << newNode->value << endl; // prints 1
     `;
 
   const code3 = `
