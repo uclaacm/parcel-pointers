@@ -1,3 +1,4 @@
+import { useRef, useEffect, useMemo, useState } from 'react';
 import '../styles/FillArrow.scss';
 
 interface FillArrowProps {
@@ -5,9 +6,35 @@ interface FillArrowProps {
   text2: string;
 }
 
+function useIsInViewport(ref) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIsIntersecting(entry.isIntersecting)
+      ),
+    []
+  );
+
+  useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref, observer]);
+
+  return isIntersecting;
+}
+
 function FillArrow(props: FillArrowProps): JSX.Element {
+  const ref = useRef(null);
+
+  const isInViewport = useIsInViewport(ref);
+
   return (
-    <>
+    <div ref={ref}>
       <span className="fill-arrow-container">
         <div className="fill-arrow">
           <div
@@ -20,12 +47,14 @@ function FillArrow(props: FillArrowProps): JSX.Element {
               viewBox="0 0 415 121"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className={isInViewport ? 'arrow-animation' : ''}
             >
               <clipPath id="arrow">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
                   d="M7 2C4.23858 2 2 4.23858 2 7V114C2 116.761 4.23857 119 7 119H247C249.761 119 252 116.761 252 114V75.5H344.885V98L410 60.5L344.885 23V44.5H252V7C252 4.23858 249.761 2 247 2H7Z"
+                  className="arrow-animation"
                 />
               </clipPath>
               <path
@@ -61,6 +90,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
               viewBox="0 0 250 117"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className={isInViewport ? 'box-animation' : ''}
             >
               <clipPath id="box">
                 <rect
@@ -108,7 +138,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
           <p id="arrow-text">{props.text2}</p>
         </div>
       </span>
-    </>
+    </div>
   );
 }
 
