@@ -1,5 +1,12 @@
 @import './global';
 
+.overall-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  justify-content: center;
+}
+
 .fill-arrow-container {
   display: flex;
   gap: 10px;
@@ -41,14 +48,14 @@
 
 .arrow-animation {
   animation: arrow-box 2s linear;
-  background: linear-gradient(to right, #fec900 50%, yellow 50%);
+  background: linear-gradient(to right, white 50%, #fec900 50%);
   background-position: left;
   background-size: 200% 100%;
 }
 
 .box-animation {
   animation: arrow-box 2s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 1.9s;
   background: linear-gradient(to right, white 50%, #fec900 50%);
   background-position: left;
   background-size: 200% 100%;
@@ -77,5 +84,15 @@
     );
     background-position: left;
     background-size: 200% 100%;
+  }
+}
+
+.reset {
+  position: relative;
+  // left: 5rem;
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
   }
 }

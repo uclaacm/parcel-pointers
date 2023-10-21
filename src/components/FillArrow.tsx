@@ -1,5 +1,6 @@
 import { useRef, useEffect, useMemo, useState } from 'react';
 import '../styles/FillArrow.scss';
+import { VscDebugRestart } from 'react-icons/vsc';
 
 interface FillArrowProps {
   text1: string;
@@ -33,8 +34,15 @@ function FillArrow(props: FillArrowProps): JSX.Element {
 
   const isInViewport = useIsInViewport(ref);
 
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (isInViewport && !animate) setAnimate(true);
+  }, [isInViewport, animate]);
+
   return (
-    <div ref={ref}>
+    <div ref={ref} className="overall-container">
+      <VscDebugRestart className="reset" onClick={() => setAnimate(false)} />
       <span className="fill-arrow-container">
         <div className="fill-arrow">
           <div
@@ -47,7 +55,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
               viewBox="0 0 415 121"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={isInViewport ? 'arrow-animation' : ''}
+              className={animate ? 'arrow-animation' : ''}
             >
               <clipPath id="arrow">
                 <path
@@ -90,7 +98,7 @@ function FillArrow(props: FillArrowProps): JSX.Element {
               viewBox="0 0 250 117"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={isInViewport ? 'box-animation' : ''}
+              className={animate ? 'box-animation' : ''}
             >
               <clipPath id="box">
                 <rect
