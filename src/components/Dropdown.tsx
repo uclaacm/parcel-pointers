@@ -34,17 +34,29 @@ const answer_key = [2, 3, 3, 2]; // will likely need to refactor this in the fut
  *
  */
 export default function Dropdown(props: DropdownProps): JSX.Element {
-  const [value, setValue] = useState({
+  
+  let cache = window.localStorage.getItem(props.index.toString())
+  let state = {
     id: -1,
     name: 'null',
-    displayName: 'Select',
-  });
+    displayName: 'Select'
+  }
+  if (cache != null) {
+    state = JSON.parse(cache);
+  }
+
+  const [value, setValue] = useState(state);
+
   const [showOptions, setShowOptions] = useState(false);
 
   const selectOption = (newValue: Value) => {
+    let dropDownIdentifier = props.index.toString();
+    let stringifyNewValue = JSON.stringify(newValue)
+    window.localStorage.setItem(dropDownIdentifier, stringifyNewValue)
     setValue(newValue);
     setShowOptions(false);
   };
+
   useEffect(() => {
     const checkAnswer = (id: number, index: number) => {
       if (id == answer_key[index]) {
