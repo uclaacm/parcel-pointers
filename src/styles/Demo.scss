@@ -48,3 +48,16 @@ $header-height: 8vh;
 p {
   margin: 0;
 }
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2.5em;
+  margin-top: 2.5em;
+}
+
+.demobox {
+  margin-left: -40px;
+  margin-right: -40px;
+}
