@@ -1,6 +1,5 @@
 import { useRef, useEffect, useMemo, useState } from 'react';
 import '../styles/FillArrow.scss';
-import { VscDebugRestart } from 'react-icons/vsc';
 
 interface FillArrowProps {
   text1: string;
