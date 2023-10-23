@@ -42,7 +42,6 @@ function FillArrow(props: FillArrowProps): JSX.Element {
 
   return (
     <div ref={ref} className="overall-container">
-      <VscDebugRestart className="reset" onClick={() => setAnimate(false)} />
       <span className="fill-arrow-container">
         <div className="fill-arrow">
           <div
