@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Pipi from '../../public/Pipi.png';
+import Pipi from '../../public/Pipi.svg';
 import Slideshow from '../../public/Slideshow.png';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
