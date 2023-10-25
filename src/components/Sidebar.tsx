@@ -91,6 +91,10 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       name: '8. References vs pointers',
       link: PageURLs.LESSON_8,
     },
+    {
+      name: '10. Dynamic Memory Allocation',
+      link: PageURLs.LESSON_10,
+    },
   ];
   const exerciseList = [
     {
