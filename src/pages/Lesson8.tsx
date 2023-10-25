@@ -3,6 +3,8 @@ import AppWrapper from '../components/AppWrapper';
 import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
+import '../styles/PageWrapper.scss';
+import '../styles/Lesson8.scss';
 
 const Lesson8: FC = () => {
   const code1 = `
@@ -49,17 +51,16 @@ const Lesson8: FC = () => {
     <>
       <AppWrapper section={HeaderSections.LESSON_8}>
         <div className="page-wrapper">
-          <h1>References vs. Pointers</h1>
-          <br />
+          <h1 className="title">References vs. Pointers</h1>
           <p>
             Now let&apos;s take a look at one way that pointers can be useful!
           </p>
           <div className="diagram">
             <CompareCode
               code1={code1}
-              caption1=""
+              caption1="Code"
               code2={code2}
-              caption2={''}
+              caption2={'Output'}
             />
           </div>
           <p>
