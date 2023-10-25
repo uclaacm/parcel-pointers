@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import AppWrapper from '../components/AppWrapper';
+import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
-import CompareCode from '../components/CompareCode';
 
-const Lesson8: FC = () => { 
+const Lesson8: FC = () => {
     const code1 = `
     #include <iostream>
 
@@ -58,7 +58,7 @@ const Lesson8: FC = () => {
                             caption1="" code2={code2} caption2={''}                    />
                     </div>
                     <p>
-                        The first function doesn’t work like we want, even though the other two do! This is because when we normally pass a variable into a function, the function will make a copy of that variable with the same value, which is called pass by value. This means that any changes to the value of that variable will not be reflected outside the function, also known as having side effects. 
+                        The first function doesn’t work like we want, even though the other two do! This is because when we normally pass a variable into a function, the function will make a copy of that variable with the same value, which is called pass by value. This means that any changes to the value of that variable will not be reflected outside the function, also known as having side effects.
                         <br/>
                         <br/>
                         Passing by pointer can be thought of as passing a pointer by value to the function, or simply passing in a copy of the pointer, creating a new pointer that points to the same variable. This is also equivalent to passing by object reference (this is the way that Python handles parameter passing!).  This means that any changes to the pointer will not create side effects, but changes made by dereferencing the pointer will. In this case, we dereference x and add 5 to the original variable, meaning that there is a side effect outside of the function and change the value to be 5.
@@ -71,6 +71,5 @@ const Lesson8: FC = () => {
             </AppWrapper>
         </>
     );
-
 };
 export default Lesson8;
