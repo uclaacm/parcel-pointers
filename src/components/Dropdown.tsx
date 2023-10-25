@@ -34,13 +34,12 @@ const answer_key = [2, 3, 3, 2]; // will likely need to refactor this in the fut
  *
  */
 export default function Dropdown(props: DropdownProps): JSX.Element {
-  
-  let cache = window.localStorage.getItem(props.index.toString())
+  const cache = window.localStorage.getItem(props.index.toString());
   let state = {
     id: -1,
     name: 'null',
-    displayName: 'Select'
-  }
+    displayName: 'Select',
+  };
   if (cache != null) {
     state = JSON.parse(cache);
   }
@@ -50,9 +49,9 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
   const [showOptions, setShowOptions] = useState(false);
 
   const selectOption = (newValue: Value) => {
-    let dropDownIdentifier = props.index.toString();
-    let stringifyNewValue = JSON.stringify(newValue)
-    window.localStorage.setItem(dropDownIdentifier, stringifyNewValue)
+    const dropDownIdentifier = props.index.toString();
+    const stringifyNewValue = JSON.stringify(newValue);
+    window.localStorage.setItem(dropDownIdentifier, stringifyNewValue);
     setValue(newValue);
     setShowOptions(false);
   };
