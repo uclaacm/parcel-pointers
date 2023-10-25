@@ -9,6 +9,7 @@ import Lesson2_2 from './pages/Lesson2_2';
 import Lesson3 from './pages/Lesson3';
 import Lesson4 from './pages/Lesson4';
 import Lesson5 from './pages/Lesson5';
+import Lesson8 from './pages/Lesson8';
 import PointerMotivation from './pages/PointerMotivation';
 
 function App(): JSX.Element {
@@ -26,6 +27,7 @@ function App(): JSX.Element {
           <Route path="/exercise-1" element={<Exercise1 />} />
           <Route path="/lesson-4" element={<Lesson4 />} />
           <Route path="/lesson-5" element={<Lesson5 />} />
+          <Route path="/lesson-8" element={<Lesson8 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
