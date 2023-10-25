@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import Arrow from '../../public/Arrow.png';
 import LeftLadder from '../../public/LeftLadder.png';
-import Pipi from '../../public/Pipi.png';
+import Pipi from '../../public/Pipi.svg';
 import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';

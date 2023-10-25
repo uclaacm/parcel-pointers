@@ -66,7 +66,7 @@ const Lesson3: FC = () => {
           <p>
             The <span className="code">&</span> operator gives you the address
             of any variable you&apos;ve created. In our warehouse, it&apos;s
-            like Pipi asking you for the address of the box he wants to go to.
+            like Pipi asking you for the address of the box they want to go to.
             Or it&apos;s like searching on Google for the address of a
             restaurant you want to go to.
           </p>

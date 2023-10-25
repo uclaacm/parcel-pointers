@@ -1,5 +1,12 @@
 @import './global';
 
+.overall-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  justify-content: center;
+}
+
 .fill-arrow-container {
   display: flex;
   gap: 10px;
@@ -37,4 +44,45 @@
   position: absolute;
   transform: translate(-80px);
   z-index: 2;
+}
+
+.arrow-animation {
+  animation: arrow-box 2s linear;
+  background: linear-gradient(to right, white 50%, #fec900 50%);
+  background-position: left;
+  background-size: 200% 100%;
+}
+
+.box-animation {
+  animation: arrow-box 2s linear forwards;
+  animation-delay: 1.9s;
+  background: linear-gradient(to right, white 50%, #fec900 50%);
+  background-position: left;
+  background-size: 200% 100%;
+}
+
+@keyframes arrow-box {
+  0% {
+    background: linear-gradient(
+      to right,
+      #fec900 0%,
+      #fec900 50%,
+      white 50%,
+      white 100%
+    );
+    background-position: right;
+    background-size: 200% 100%;
+  }
+
+  100% {
+    background: linear-gradient(
+      to right,
+      #fec900 0%,
+      #fec900 50%,
+      white 50%,
+      white 100%
+    );
+    background-position: left;
+    background-size: 200% 100%;
+  }
 }
