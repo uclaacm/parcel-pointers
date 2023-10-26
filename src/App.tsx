@@ -11,6 +11,8 @@ import Lesson3 from './pages/Lesson3';
 import Lesson4 from './pages/Lesson4';
 import Lesson5 from './pages/Lesson5';
 import Lesson7 from './pages/Lesson7';
+import Lesson8 from './pages/Lesson8';
+
 import PointerMotivation from './pages/PointerMotivation';
 
 function App(): JSX.Element {
@@ -29,6 +31,7 @@ function App(): JSX.Element {
           <Route path="/lesson-4" element={<Lesson4 />} />
           <Route path="/lesson-5" element={<Lesson5 />} />
           <Route path="/lesson-7" element={<Lesson7 />} />
+          <Route path="/lesson-8" element={<Lesson8 />} />
           <Route path="/lesson-10" element={<Lesson10 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

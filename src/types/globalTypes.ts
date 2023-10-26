@@ -17,6 +17,7 @@ export enum HeaderSections {
   LESSON_5 = 'Lesson 5',
   LESSON_6 = 'Lesson 6',
   LESSON_7 = 'Lesson 7',
+  LESSON_8 = 'Lesson 8',
   LESSON_10 = 'Lesson 10',
 }
 
