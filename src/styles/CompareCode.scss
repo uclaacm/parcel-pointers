@@ -10,16 +10,16 @@
     float: left;
     left: 10%;
     margin: auto;
+    max-width: 50%;
     position: relative;
-    width: 35%;
   }
 
   .right-code {
     float: right;
     margin: 10 0 10 50px;
+    max-width: 50%;
     position: relative;
     right: 10%;
-    width: 35%;
   }
 }
 
