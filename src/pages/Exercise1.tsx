@@ -8,7 +8,11 @@ import { HeaderSections } from '../types/globalTypes';
 import '../styles/Exercise1.scss';
 
 const Exercise1: FC = () => {
-  const [correctAnswer] = useState([false, false, false, false]);
+  let answers = [false, false, false, false];
+  const cachedAnswers = window.localStorage.getItem('isCorrect');
+  if (cachedAnswers !== null) answers = JSON.parse(cachedAnswers);
+
+  const [correctAnswer] = useState(answers);
   return (
     <>
       <AppWrapper section={HeaderSections.EXERCISE_1}>

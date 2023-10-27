@@ -34,14 +34,19 @@ const answer_key = [2, 3, 3, 2]; // will likely need to refactor this in the fut
  *
  */
 export default function Dropdown(props: DropdownProps): JSX.Element {
-  const cache = window.localStorage.getItem(props.index.toString());
+  const cache = window.localStorage.getItem('answers');
+
   let state = {
     id: -1,
     name: 'null',
     displayName: 'Select',
   };
-  if (cache != null) {
-    state = JSON.parse(cache);
+
+  let cachedAnswers = [state, state, state, state];
+
+  if (cache !== null) {
+    cachedAnswers = JSON.parse(cache);
+    state = cachedAnswers[props.index];
   }
 
   const [value, setValue] = useState(state);
@@ -49,9 +54,8 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
   const [showOptions, setShowOptions] = useState(false);
 
   const selectOption = (newValue: Value) => {
-    const dropDownIdentifier = props.index.toString();
-    const stringifyNewValue = JSON.stringify(newValue);
-    window.localStorage.setItem(dropDownIdentifier, stringifyNewValue);
+    cachedAnswers[props.index] = newValue;
+    window.localStorage.setItem('answers', JSON.stringify(cachedAnswers));
     setValue(newValue);
     setShowOptions(false);
   };

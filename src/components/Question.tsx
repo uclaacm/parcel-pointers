@@ -12,9 +12,49 @@ interface QuestionProps {
   index: number;
 }
 
+function setUpCache(
+  props: QuestionProps,
+  setCorrect: (isCorrect: boolean) => void,
+  setExpand: (isClicked: boolean) => void,
+  correct: boolean
+) {
+  const cachedIsCorrect = window.localStorage.getItem('isCorrect');
+  const cachedIsAnswered = window.localStorage.getItem('isAnswered');
+  let isCorrectArray = [false, false, false, false];
+  let isAnsweredArray = [false, false, false, false];
+
+  if (cachedIsCorrect !== null) {
+    isCorrectArray = JSON.parse(cachedIsCorrect);
+  }
+  if (cachedIsAnswered !== null) {
+    isAnsweredArray = JSON.parse(cachedIsAnswered);
+  }
+
+  if (props.correct_answer[props.index]) {
+    setCorrect(!correct);
+    isCorrectArray[props.index] = true;
+    window.localStorage.setItem('isCorrect', JSON.stringify(isCorrectArray));
+  }
+  setExpand(true);
+  isAnsweredArray[props.index] = true;
+  window.localStorage.setItem('isAnswered', JSON.stringify(isAnsweredArray));
+}
+
 function Question(props: QuestionProps): JSX.Element {
-  const [correct, setCorrect] = useState(false);
-  const [expand, setExpand] = useState(false);
+  const cachedIsCorrect = window.localStorage.getItem('isCorrect');
+  const cachedIsAnswered = window.localStorage.getItem('isAnswered');
+  let isCorrectArray = [false, false, false, false];
+  let isAnsweredArray = [false, false, false, false];
+
+  if (cachedIsCorrect !== null) {
+    isCorrectArray = JSON.parse(cachedIsCorrect);
+  }
+  if (cachedIsAnswered !== null) {
+    isAnsweredArray = JSON.parse(cachedIsAnswered);
+  }
+
+  const [correct, setCorrect] = useState(isCorrectArray[props.index]);
+  const [expand, setExpand] = useState(isAnsweredArray[props.index]);
 
   return (
     <div className="question">
@@ -47,10 +87,7 @@ function Question(props: QuestionProps): JSX.Element {
           ) : (
             <button
               className="check-button"
-              onClick={() => {
-                if (props.correct_answer[props.index]) setCorrect(!correct);
-                setExpand(true);
-              }}
+              onClick={() => setUpCache(props, setCorrect, setExpand, correct)}
             >
               <p className="check-button-text">Check</p>
             </button>
