@@ -19,15 +19,15 @@ function setUpCache(
   correct: boolean
 ) {
   const cachedIsCorrect = window.localStorage.getItem('isCorrect');
-  const cachedIsAnswered = window.localStorage.getItem('isAnswered');
+  const cachedWasChecked = window.localStorage.getItem('wasChecked');
   let isCorrectArray = [false, false, false, false];
-  let isAnsweredArray = [false, false, false, false];
+  let wasCheckedArray = [false, false, false, false];
 
   if (cachedIsCorrect !== null) {
     isCorrectArray = JSON.parse(cachedIsCorrect);
   }
-  if (cachedIsAnswered !== null) {
-    isAnsweredArray = JSON.parse(cachedIsAnswered);
+  if (cachedWasChecked !== null) {
+    wasCheckedArray = JSON.parse(cachedWasChecked);
   }
 
   if (props.correct_answer[props.index]) {
@@ -36,25 +36,25 @@ function setUpCache(
     window.localStorage.setItem('isCorrect', JSON.stringify(isCorrectArray));
   }
   setExpand(true);
-  isAnsweredArray[props.index] = true;
-  window.localStorage.setItem('isAnswered', JSON.stringify(isAnsweredArray));
+  wasCheckedArray[props.index] = true;
+  window.localStorage.setItem('wasChecked', JSON.stringify(wasCheckedArray));
 }
 
 function Question(props: QuestionProps): JSX.Element {
   const cachedIsCorrect = window.localStorage.getItem('isCorrect');
-  const cachedIsAnswered = window.localStorage.getItem('isAnswered');
+  const cachedWasChecked = window.localStorage.getItem('wasChecked');
   let isCorrectArray = [false, false, false, false];
-  let isAnsweredArray = [false, false, false, false];
+  let wasCheckedArray = [false, false, false, false];
 
   if (cachedIsCorrect !== null) {
     isCorrectArray = JSON.parse(cachedIsCorrect);
   }
-  if (cachedIsAnswered !== null) {
-    isAnsweredArray = JSON.parse(cachedIsAnswered);
+  if (cachedWasChecked !== null) {
+    wasCheckedArray = JSON.parse(cachedWasChecked);
   }
 
   const [correct, setCorrect] = useState(isCorrectArray[props.index]);
-  const [expand, setExpand] = useState(isAnsweredArray[props.index]);
+  const [expand, setExpand] = useState(wasCheckedArray[props.index]);
 
   return (
     <div className="question">
