@@ -42,7 +42,7 @@ const Lesson4: FC = () => {
             memory address, our computer will go to that address in memory and
             return to us the value stored there. This is known as{' '}
             <u>dereferencing</u>. In our example, this is like giving Pipi an
-            address, him going to the box at that address, and telling us
+            address, going to the box at that address, and telling us
             what&apos;s inside the box.
           </p>
           <div className="diagram">

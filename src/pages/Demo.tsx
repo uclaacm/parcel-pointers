@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import Arrow from '../../public/Arrow.png';
 import LeftLadder from '../../public/LeftLadder.png';
-import Pipi from '../../public/Pipi.png';
+import Pipi from '../../public/Pipi.svg';
 import RightLadder from '../../public/RightLadder.png';
 import AlertInbox from '../components/AlertInbox';
 import AppWrapper from '../components/AppWrapper';
@@ -323,59 +323,79 @@ const Demo: FC = () => {
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
         <div className="page-wrapper">
-          <HintBox text="Try counting the number of boxes PiPi has to visit." />
-          <HintBox text="This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol.This is my really long hint box text! You made a lot of mistakes lol." />
-          <Grid
-            addressNums={nums1}
-            itemSpaceArray={itemSpaceArray1}
-            size={40}
-            handleCorrect={setConfetti}
-          >
-            <img className="pipi" src={Pipi} alt="Pipi"></img>
-            <Box letter="a" num={3} conf={false}></Box>
-            <div></div>
-            <Box letter="b" num={2} conf={false}></Box>
-            <div></div>
-            <Box letter="c" num={3} conf={false}></Box>
-            <Box letter="d" num={4} conf={false}></Box>
-            <div></div>
-            <Box letter="e" num={2} conf={false}></Box>
-          </Grid>
-          <Grid
-            addressNums={nums2}
-            itemSpaceArray={itemSpaceArray2}
-            size={40}
-            handleCorrect={setConfetti}
-          >
-            <Box letter="f" num={5} conf={false}></Box>
-            <div></div>
-            <Box letter="g" num={6} conf={false}></Box>
-            <Box letter="h" num={2} conf={false}></Box>
-            <div></div>
-            <Box letter="i" num={4} conf={confetti}></Box>
-            <Box letter="j" num={1} conf={confetti}></Box>
-          </Grid>
-          <Grid
-            addressNums={nums3}
-            itemSpaceArray={itemSpaceArray3}
-            size={40}
-            handleCorrect={setConfetti}
-          >
-            <div></div>
-            <Box letter="k" num={5} conf={false}></Box>
-            <div></div>
-            <Box letter="l" num={4} conf={false}></Box>
-            <Box letter="m" num={1} conf={false}></Box>
-            <Box letter="n" num={3} conf={false}></Box>
-            <div></div>
-            <Box letter="o" num={4} conf={false}></Box>
-          </Grid>
-          <p className="description">
-            <br></br>
+          {/* This is the heading and hint section */}
+          <h1>Demo</h1>
+          <p>
+            Pipi wants to find a basketball. but does not know where to look!
+            The warehouse is full of many boxes full of all kinds of items at
+            different shelf address numbers. Pipi got a note saying the the
+            basketball in Box I but can only see the shelf addresses. Can you
+            help them find the basketball?
           </p>
-          <h1 className="header">Demo</h1>
-          <img className="ladder" src={LeftLadder} alt="LeftLadder"></img>
-          <img className="ladder" src={RightLadder} alt="RightLadder"></img>
+
+          <h3>Instructions</h3>
+          <p>
+            Take Pipi to <span className="highlight">Box i</span> by clicking on
+            the correct address.
+          </p>
+
+          <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
+
+          {/* THE DEMO BOX */}
+          <div className="wrap">
+            <img className="ladder" src={LeftLadder} alt="LeftLadder" />
+            <div className="demobox">
+              <Grid
+                addressNums={nums1}
+                itemSpaceArray={itemSpaceArray1}
+                size={40}
+                handleCorrect={setConfetti}
+              >
+                <img className="pipi" src={Pipi} alt="Pipi"></img>
+                <Box letter="a" num={3} conf={false}></Box>
+                <div></div>
+                <Box letter="b" num={2} conf={false}></Box>
+                <div></div>
+                <Box letter="c" num={3} conf={false}></Box>
+                <Box letter="d" num={4} conf={false}></Box>
+                <div></div>
+                <Box letter="e" num={2} conf={false}></Box>
+              </Grid>
+              <Grid
+                addressNums={nums2}
+                itemSpaceArray={itemSpaceArray2}
+                size={40}
+                handleCorrect={setConfetti}
+              >
+                <Box letter="f" num={5} conf={false}></Box>
+                <div></div>
+                <Box letter="g" num={6} conf={false}></Box>
+                <Box letter="h" num={2} conf={false}></Box>
+                <div></div>
+                <Box letter="i" num={4} conf={confetti}></Box>
+                <Box letter="j" num={1} conf={confetti}></Box>
+              </Grid>
+              <Grid
+                addressNums={nums3}
+                itemSpaceArray={itemSpaceArray3}
+                size={40}
+                handleCorrect={setConfetti}
+              >
+                <div></div>
+                <Box letter="k" num={5} conf={false}></Box>
+                <div></div>
+                <Box letter="l" num={4} conf={false}></Box>
+                <Box letter="m" num={1} conf={false}></Box>
+                <Box letter="n" num={3} conf={false}></Box>
+                <div></div>
+                <Box letter="o" num={4} conf={false}></Box>
+              </Grid>
+            </div>
+            <p className="description">
+              <br></br>
+            </p>
+            <img className="ladder" src={RightLadder} alt="RightLadder" />
+          </div>
           <div id="inbox-wrapper">
             <AlertInbox header="Hey Pipi, the Box is at address 12!">
               {Popup}

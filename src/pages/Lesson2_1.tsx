@@ -32,9 +32,9 @@ const Lesson2_1: FC = () => {
         <div className="page-wrapper">
           <h1>Introducing Pointers</h1>
           <p>
-            In our example, Pipi wanted to go to a box but he didn&apos;t know
+            In our example, Pipi wanted to go to a box but they didn&apos;t know
             where to find it. You passed along a piece of paper with a helpful
-            little note on it, telling Pipi the address of the box he was
+            little note on it, telling Pipi the address of the box they were
             looking for. This is basically what a pointer does! A pointer is a
             variable that stores a memory address.
           </p>
