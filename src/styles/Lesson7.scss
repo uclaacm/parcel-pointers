@@ -5,14 +5,10 @@
 
 .lesson7slides {
   width: 100%;
-  // height: 100%; /* Set both width and height to 'auto' to maintain aspect ratio */
-  // max-width: 100%; /* Limit the width to the container's width if needed */
-  // max-height: 100%; /* Limit the height to the container's height if needed */
 }
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   .lesson7slides {
-    /* Ensure the image width stays at 100% for screens meeting this criteria */
     width: 80%;
   }
 }
