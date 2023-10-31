@@ -4,5 +4,11 @@
 // =======================================
 
 .lesson7slides {
-  width: 55%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .lesson7slides {
+    width: 80%;
+  }
 }
