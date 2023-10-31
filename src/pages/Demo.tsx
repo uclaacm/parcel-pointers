@@ -327,8 +327,8 @@ const Demo: FC = () => {
           <h1>Demo</h1>
           <p>
             Pipi wants to find a basketball. but does not know where to look!
-            The warehouse is full of many boxes full of all kinds of items at
-            different shelf address numbers. Pipi got a note saying the the
+            The warehouse is full of various boxes full of all kinds of items at
+            different shelf address numbers. Pipi got a note saying that the
             basketball in Box I but can only see the shelf addresses. Can you
             help them find the basketball?
           </p>
