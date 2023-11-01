@@ -1,5 +1,6 @@
 import '../styles/Dropdown.scss';
 import { useState, useEffect } from 'react';
+import DropdownArrow from '../../public/DropdownArrow.svg';
 
 export interface Value {
   id: number;
@@ -78,21 +79,7 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
           {' '}
           {value.displayName}{' '}
         </li>
-      </div>
-      <div className="arrow">
-        <svg
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13 1L7 7L0.999999 1"
-            stroke="#868686"
-            strokeLinecap="round"
-          />
-        </svg>
+        <img className = "dropdown-arrow" src = {DropdownArrow} alt = 'dropdown-arrow'></img>
       </div>
       <div className={'options ' + (!showOptions ? 'hidden' : '')}>
         {props.options.map(({ id, name, displayName }, index) => (
