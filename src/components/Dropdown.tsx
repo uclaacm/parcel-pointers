@@ -79,7 +79,11 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
           {' '}
           {value.displayName}{' '}
         </li>
-        <img className = "dropdown-arrow" src = {DropdownArrow} alt = 'dropdown-arrow'></img>
+        <img
+          className="dropdown-arrow"
+          src={DropdownArrow}
+          alt="dropdown-arrow"
+        ></img>
       </div>
       <div className={'options ' + (!showOptions ? 'hidden' : '')}>
         {props.options.map(({ id, name, displayName }, index) => (
