@@ -20,6 +20,7 @@ export default function CompareCode(props: CompareCodeProps): JSX.Element {
         <SyntaxHighlighter
           language="cpp"
           style={atomOneLightCustom} // fix needed
+          customStyle={{ paddingRight: '65px' }}
         >
           {props.code1}
         </SyntaxHighlighter>
@@ -29,6 +30,7 @@ export default function CompareCode(props: CompareCodeProps): JSX.Element {
         <SyntaxHighlighter
           language="cpp"
           style={atomOneLightCustom} // fix needed
+          customStyle={{ paddingRight: '65px' }}
         >
           {props.code2}
         </SyntaxHighlighter>
