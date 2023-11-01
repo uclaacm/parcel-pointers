@@ -41,7 +41,7 @@ const Exercise1: FC = () => {
               index={0}
             >
               <p className="question-text">
-                The address of the Box b is{' '}
+                The address of the Box b is&nbsp;
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -94,7 +94,7 @@ const Exercise1: FC = () => {
               index={2}
             >
               <p className="question-text">
-                The address of the Box e is{' '}
+                The address of the Box e is&nbsp;
                 <span className="dropdown-wrapper">
                   <Dropdown
                     options={[
@@ -134,8 +134,7 @@ const Exercise1: FC = () => {
               </p>
             </Question>
           </div>
-          {/*TODO later: change index back to 12*/}
-          <NavButtons page={8}></NavButtons>
+          <NavButtons page={14}></NavButtons>
         </div>
       </AppWrapper>
     </>

@@ -33,7 +33,7 @@
 
     cursor: pointer;
 
-    display: block;
+    display: flex;
     float: right;
 
     font-family: $niramit;
@@ -97,16 +97,11 @@
   display: none;
 }
 
-.arrow {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 33px;
-  justify-content: center;
-  padding-right: 12px;
-  pointer-events: none;
+.dropdown-arrow {
   position: absolute;
-  right: 0;
+  right: 7px;
+  top: 10px;
+  width: 20%;
 }
 
 // animations
