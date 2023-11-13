@@ -17,9 +17,23 @@
     padding: 12px 20px;
   }
 
-  &-container {
+ &-container {
     display: flex;
     gap: 80px;
     justify-content: center;
+
+    /* sm */
+    @media (max-width: 375px) {
+      display: block;
+    }
+
+    /* md */
+    @media (max-width: 970px) {
+      display: block;
+
+    }
   }
+
+
+  
 }
