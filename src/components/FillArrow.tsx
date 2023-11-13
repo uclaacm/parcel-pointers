@@ -35,13 +35,17 @@ function FillArrow(props: FillArrowProps): JSX.Element {
   const isInViewport = useIsInViewport(ref);
 
   const [animate, setAnimate] = useState(false);
+  const [seen, setSeen] = useState(false);
 
   useEffect(() => {
-    if (isInViewport && !animate) {
+    if (isInViewport) {
+      setSeen(true);
+    }
+    if (seen && !animate) {
       setAnimate(true);
       setTimeout(() => setAnimate(false), 5000);
     }
-  }, [isInViewport, animate]);
+  }, [isInViewport, seen, animate]);
 
   return (
     <div ref={ref} className="overall-container">
