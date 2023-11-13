@@ -373,7 +373,7 @@ const Demo: FC = () => {
                 <Box letter="h" num={2} conf={false}></Box>
                 <div></div>
                 <Box letter="i" num={4} conf={confetti}></Box>
-                <Box letter="j" num={1} conf={confetti}></Box>
+                <Box letter="j" num={1} conf={false}></Box>
               </Grid>
               <Grid
                 addressNums={nums3}
