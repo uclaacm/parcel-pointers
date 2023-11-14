@@ -92,6 +92,10 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: PageURLs.LESSON_8,
     },
     {
+      name: '9. Pointers in Linked Lists',
+      link: PageURLs.LESSON_9,
+    },
+    {
       name: '10. Dynamic Memory Allocation',
       link: PageURLs.LESSON_10,
     },
