@@ -8,13 +8,17 @@ $bottom-padding: 10vh;
 $img-height: 400px;
 
 .slideshow {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: $top-padding 0 $bottom-padding;
   position: relative;
 
   img {
-    height: inherit;
+    height: auto;
+    //height: inherit;
+    max-width: 70%;
   }
 }
 
@@ -43,6 +47,5 @@ $img-height: 400px;
 }
 
 .indicator {
-  bottom: 7%;
-  position: absolute;
+  margin-top: 5%;
 }
