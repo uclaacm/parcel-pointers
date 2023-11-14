@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import Pipi from '../../public/Pipi.svg';
-import Slideshow from '../../public/Slideshow.png';
+import WhyPointer1 from '../../public/WhyPointer1.png';
+import WhyPointer2 from '../../public/WhyPointer2.png';
+import WhyPointer3 from '../../public/WhyPointer3.png';
+import WhyPointer4 from '../../public/WhyPointer4.png';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import SlideShow from '../components/SlideShow';
@@ -8,8 +10,10 @@ import { HeaderSections } from '../types/globalTypes';
 
 const PointerMotivation: FC = () => {
   const imageArray = [];
-  imageArray.push(<img src={Pipi} />);
-  imageArray.push(<img src={Slideshow} />);
+  imageArray.push(<img src={WhyPointer1} />);
+  imageArray.push(<img src={WhyPointer2} />);
+  imageArray.push(<img src={WhyPointer3} />);
+  imageArray.push(<img src={WhyPointer4} />);
   return (
     <div>
       <AppWrapper section={HeaderSections.POINTER_MOTIVATION}>
