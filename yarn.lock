@@ -5283,10 +5283,6 @@ kind-of@^6.0.2, kind-of@^6.0.3:
   version "6.0.3"
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
 
-klona@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.npmjs.org/klona/-/klona-2.0.6.tgz"
-
 known-css-properties@^0.26.0:
   version "0.26.0"
   resolved "https://registry.npmjs.org/known-css-properties/-/known-css-properties-0.26.0.tgz"
@@ -6579,11 +6575,11 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
 
-sass-loader@^13.3.1:
-  version "13.3.1"
-  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-13.3.1.tgz"
+sass-loader@^13.3.2:
+  version "13.3.2"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-13.3.2.tgz#460022de27aec772480f03de17f5ba88fa7e18c6"
+  integrity sha512-CQbKl57kdEv+KDLquhC+gE3pXt74LEAzm+tzywcA0/aHZuub8wTErbjAoNI57rPUWRYRNC5WUnNl8eGJNbDdwg==
   dependencies:
-    klona "^2.0.6"
     neo-async "^2.6.2"
 
 sass@^1.69.5:
