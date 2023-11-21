@@ -8,21 +8,28 @@
 
   .left-code {
     float: left;
-    left: 10%;
     margin: auto;
     max-width: 50%;
     position: relative;
+    @media screen and (min-width: 1400px) {
+      left: 12%;
+    }
   }
 
   .right-code {
     float: right;
-    margin: 10 0 10 50px;
+    margin: 10 0 10 0px;
     max-width: 50%;
     position: relative;
-    right: 10%;
+    @media screen and (min-width: 1400px) {
+      right: 12%;
+    }
   }
 }
 
 .caption {
   color: $primary-1-color;
+  @media screen and (max-width: 600px) {
+    font-size: 20px !important;
+  }
 }
