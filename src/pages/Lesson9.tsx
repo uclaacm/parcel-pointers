@@ -79,10 +79,10 @@ const Lesson9: FC = () => {
               <p>
                 <strong>nullptr</strong> in C++ is the{' '}
                 <strong>null pointer</strong>. In C++ it actually has a
-                different meaning from the NULL keyword (which is actually equal
-                to 0). It is a keyword that specifically means that a pointer
-                does not point to anything, so generally it is only used when
-                initializing new pointers. If a nullptr is{' '}
+                different meaning from the <strong>NULL </strong>keyword (which
+                is actually equal to 0). It is a keyword that specifically means
+                that a pointer does not point to anything, so generally it is
+                only used when initializing new pointers. If a nullptr is{' '}
                 <strong>dereferenced</strong>, it is{' '}
                 <strong>undefined behavior</strong> and most of the time your
                 program will hang (never finish execution). It is possible to
