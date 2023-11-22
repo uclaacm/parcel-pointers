@@ -6,6 +6,7 @@ interface FillArrowProps {
   text2: string;
 }
 
+// @ts-expect-error typing ref doesn't really work correctly
 function useIsInViewport(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -34,10 +35,17 @@ function FillArrow(props: FillArrowProps): JSX.Element {
   const isInViewport = useIsInViewport(ref);
 
   const [animate, setAnimate] = useState(false);
+  const [seen, setSeen] = useState(false);
 
   useEffect(() => {
-    if (isInViewport && !animate) setAnimate(true);
-  }, [isInViewport, animate]);
+    if (isInViewport) {
+      setSeen(true);
+    }
+    if (seen && !animate) {
+      setAnimate(true);
+      setTimeout(() => setAnimate(false), 5000);
+    }
+  }, [isInViewport, seen, animate]);
 
   return (
     <div ref={ref} className="overall-container">
