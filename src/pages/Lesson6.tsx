@@ -1,10 +1,74 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
+import JustX from '../../public/Lesson6/Lesson6_JustX.png';
+import X from '../../public/Lesson6/Lesson6_X_arrow.png';
+import XY from '../../public/Lesson6/Lesson6_XY_arrow.png';
+import YX from '../../public/Lesson6/Lesson6_YX_arrow.png';
 import AppWrapper from '../components/AppWrapper';
 import CompareCode from '../components/CompareCode';
 import NavButtons from '../components/NavButtons';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/PageWrapper.scss';
+import '../styles/CodeDiagram.scss';
+import '../styles/Terminal/Terminal.scss';
+
+export interface CodeDiagramProps {
+  code: {
+    code: string;
+  }[];
+}
+
+function CodeDiagram(props: CodeDiagramProps): JSX.Element {
+  const [clicked, setClick] = useState(Array(props.code.length).fill(false));
+  const [diagram, setDiagram] = useState(0);
+
+  useEffect(() => {
+    const newClicked = [...clicked]; // Create a shallow copy of the original array
+    newClicked[0] = true; // Modify the desired element
+    setClick(newClicked); // Update the state with the modified array
+  }, []);
+
+  return (
+    <div className="container">
+      <div className="codebox">
+        {props.code.map((code, index) => (
+          <div
+            className={clicked[index] ? 'clicked' : 'notclicked'}
+            onClick={() => {
+              const newClicked = [...clicked];
+              for (let i = 0; i < newClicked.length; i++) newClicked[i] = false;
+              newClicked[index] = true;
+              setClick(newClicked);
+              setDiagram(index);
+            }}
+            key={index}
+          >
+            <p>{code.code}</p>
+          </div>
+        ))}
+      </div>
+      <div style={{ height: '402px', paddingTop: '1.5em' }}>
+        {diagram == 0 ? (
+          <img src={JustX} alt={'Just X'} />
+        ) : (
+          <>
+            {diagram == 1 ? (
+              <img src={X} alt={'X box'} />
+            ) : (
+              <>
+                {diagram == 2 ? (
+                  <img src={XY} alt={'XY Box'} />
+                ) : (
+                  <> {diagram == 3 ? <img src={YX} alt={'YX Box'} /> : <></>}</>
+                )}
+              </>
+            )}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
 
 const Lesson6: FC = () => {
   const code1 = `
@@ -20,6 +84,21 @@ const Lesson6: FC = () => {
   int* myPointer2 = &y;
   myPointer = myPointer2;
   `;
+
+  const diagram = [
+    {
+      code: 'Int x;',
+    },
+    {
+      code: 'Int* myPointer = &x;',
+    },
+    {
+      code: 'Int y;',
+    },
+    {
+      code: 'myPointer = &y;',
+    },
+  ];
 
   return (
     <>
@@ -60,6 +139,8 @@ const Lesson6: FC = () => {
           {/**
            * THIS IS WHERE THE SLIDESHOW GOES
            */}
+
+          <CodeDiagram code={diagram} />
 
           <p>
             In this same way, we can reassign pointers to other pointers too!
