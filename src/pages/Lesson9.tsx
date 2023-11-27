@@ -11,12 +11,12 @@ import '../styles/Lesson9.scss';
 
 const Lesson9: FC = () => {
   const code1 = `
-  class Node
-{
-	int value;
-	Node* next;
-};
-    `;
+    class Node
+    {
+      int value;
+      Node* next;
+    };
+  `;
 
   return (
     <>
