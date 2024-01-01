@@ -43,6 +43,7 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-35px);
   }
@@ -53,9 +54,9 @@
 }
 
 .ball {
-  position: absolute;
   bottom: 100%;
   left: 24%;
+  position: absolute;
   transform: translateX(-50%);
   z-index: 1;
 }

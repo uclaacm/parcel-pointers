@@ -26,7 +26,6 @@ export default function Box(props: BoxProps): JSX.Element {
     // } else {
     //   setBoxImage(getClosedBoxImage(props.num));
     // }
-
   }, [props.num]);
 
   const animateBall = props.conf ? 'animate-ball' : '';
@@ -93,7 +92,6 @@ export default function Box(props: BoxProps): JSX.Element {
                 width={300}
               />
             </div>
-
           )}
         </div>
       );
@@ -361,9 +359,16 @@ export default function Box(props: BoxProps): JSX.Element {
         const shiftAmountY = 1;
 
         image = (
-          <svg width="170" height="64" viewBox="0 0 170 64" fill="none" xmlns="http://www.w3.org/2000/svg" transform={`translate(${shiftAmountX}, ${shiftAmountY})`}>
-             <g>
-             <rect
+          <svg
+            width="170"
+            height="64"
+            viewBox="0 0 170 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            transform={`translate(${shiftAmountX}, ${shiftAmountY})`}
+          >
+            <g>
+              <rect
                 x="15.5602"
                 y="18.0812"
                 width="137.4868"
@@ -371,35 +376,64 @@ export default function Box(props: BoxProps): JSX.Element {
                 fill="#E6A352"
               />
 
-                 <text
-                   x="50%"
-                  y="75%"
-                   fontFamily="Verdana"
-                   fontSize="20"
-                   fill="black"
-                   dominantBaseline="middle"
-                   textAnchor="middle"
-                 >
-                   {props.letter}
-                 </text>
-              </g>
-              <path d="M139.809 0.948647L156.995 9.48647L170 23.7162L156.066 19.9216L139.809 0.948647Z" fill="#EBC99C"/>
-              <path d="M32.0492 0L19.5082 6.12826L0 26.5621L17.6503 17.3697L32.0492 0Z" fill="#EBC99C"/>
-              <path d="M140.487 0.550215H30.8694V18.5745H140.487V0.550215Z" fill="#BC8239"/>
-              <path d="M15.5602 19.0299L30.8694 0.550215V19.0299H15.5602Z" fill="#936122"/>
-              <path d="M155.248 18.0812H15.7366L3.42783 33.0812H167.557L155.248 18.0812Z" fill="#ECC290"/>
-              <path d="M155.295 18.0812L139.985 0.550215V18.0812H155.295Z" fill="#AE752E"/>
-            </svg>
+              <text
+                x="50%"
+                y="75%"
+                fontFamily="Verdana"
+                fontSize="20"
+                fill="black"
+                dominantBaseline="middle"
+                textAnchor="middle"
+              >
+                {props.letter}
+              </text>
+            </g>
+            <path
+              d="M139.809 0.948647L156.995 9.48647L170 23.7162L156.066 19.9216L139.809 0.948647Z"
+              fill="#EBC99C"
+            />
+            <path
+              d="M32.0492 0L19.5082 6.12826L0 26.5621L17.6503 17.3697L32.0492 0Z"
+              fill="#EBC99C"
+            />
+            <path
+              d="M140.487 0.550215H30.8694V18.5745H140.487V0.550215Z"
+              fill="#BC8239"
+            />
+            <path
+              d="M15.5602 19.0299L30.8694 0.550215V19.0299H15.5602Z"
+              fill="#936122"
+            />
+            <path
+              d="M155.248 18.0812H15.7366L3.42783 33.0812H167.557L155.248 18.0812Z"
+              fill="#ECC290"
+            />
+            <path
+              d="M155.295 18.0812L139.985 0.550215V18.0812H155.295Z"
+              fill="#AE752E"
+            />
+          </svg>
         );
 
         basketball = (
-          <svg className={`ball ${animateBall}`} width="65" height="65" viewBox="0 0 65 65" fill="none"
-            xmlns="http://www.w3.org/2000/svg"  x="100"
-            y="20">
-            <path d="M0.0490153 34.2686C1.0257 52.1909 16.3463 65.9277 34.2684 64.951C52.1906 63.9748 65.9277
+          <svg
+            className={`ball ${animateBall}`}
+            width="65"
+            height="65"
+            viewBox="0 0 65 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            x="100"
+            y="20"
+          >
+            <path
+              d="M0.0490153 34.2686C1.0257 52.1909 16.3463 65.9277 34.2684 64.951C52.1906 63.9748 65.9277
             48.6539 64.951 30.7317C63.9742 12.8094 48.6537 -0.927677 30.7315 0.0490162C12.8094 1.0257 -0.927667
-            16.3463 0.0490153 34.2686Z" fill="#E57E25"/>
-            <path d="M0.988034 36.4034C4.98549 32.2078 11.8489 30.5755 16.9593 32.6012C12.82 39.1531 9.98913
+            16.3463 0.0490153 34.2686Z"
+              fill="#E57E25"
+            />
+            <path
+              d="M0.988034 36.4034C4.98549 32.2078 11.8489 30.5755 16.9593 32.6012C12.82 39.1531 9.98913
             46.4241 8.61866 54.0233C9.20337 54.6469 9.81675 55.2414 10.4491 55.8164C10.6126 55.6541 10.7217
             55.4461 10.7617 55.2206C12.0328 47.5837 14.8348 40.273 19.0042 33.7153C22.1058 35.8317 23.7736
             39.4998 23.7089 44.3246L23.7076 44.3868L23.7134 44.4499C24.3909 51.3934 28.8135 57.5429 35.5429
@@ -420,23 +454,24 @@ export default function Box(props: BoxProps): JSX.Element {
             10.3841 8.05757 10.9583 7.55592 11.5503L11.7889 14.5673C15.8859 17.4945 19.8933 20.5415 23.806
             23.7042C21.787 25.8838 19.9303 28.2042 18.2505 30.6474C18.1139 30.5879 17.975 30.5263 17.8447
             30.4746C12.1802 28.2217 4.97418 29.6802 0.221376 33.9256L0 33.9375C0.059063 35.005 0.173265
-            36.0557 0.333292 37.0901L0.988034 36.4034Z" fill="#38454F"/>
+            36.0557 0.333292 37.0901L0.988034 36.4034Z"
+              fill="#38454F"
+            />
           </svg>
         );
         confetti = (
           <div className="confetti d">
             {props.conf && (
-          <div>
-            <ConfettiExplosion
-              force={0.4}
-              duration={5000}
-              particleCount={40}
-              height={document.documentElement.offsetHeight}
-              width={300}
-            />
-          </div>
-
-        )}
+              <div>
+                <ConfettiExplosion
+                  force={0.4}
+                  duration={5000}
+                  particleCount={40}
+                  height={document.documentElement.offsetHeight}
+                  width={300}
+                />
+              </div>
+            )}
           </div>
         );
         break;
@@ -493,17 +528,16 @@ export default function Box(props: BoxProps): JSX.Element {
       confetti = (
         <div className="confetti d">
           {props.conf && (
-        <div>
-          <ConfettiExplosion
-            force={0.4}
-            duration={5000}
-            particleCount={40}
-            height={document.documentElement.offsetHeight}
-            width={300}
-          />
-        </div>
-
-      )}
+            <div>
+              <ConfettiExplosion
+                force={0.4}
+                duration={5000}
+                particleCount={40}
+                height={document.documentElement.offsetHeight}
+                width={300}
+              />
+            </div>
+          )}
         </div>
       );
       break;
@@ -688,9 +722,7 @@ export default function Box(props: BoxProps): JSX.Element {
     <div className="parent">
       {confetti}
       <div className="box">{image}</div>
-      <div className={`ball ${animateBall}`}>
-        {basketball}
-      </div>
+      <div className={`ball ${animateBall}`}>{basketball}</div>
     </div>
   );
 }
