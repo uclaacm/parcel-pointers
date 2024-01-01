@@ -15,6 +15,7 @@ import '../styles/Demo.scss';
 
 const Demo: FC = () => {
   const [confetti, setConfetti] = useState(false);
+  // const [basketball, setBasketball] = useState(false);
   const Popup = (
     <div>
       <div className="address-wrapper">
