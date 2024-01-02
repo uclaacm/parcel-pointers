@@ -16,16 +16,10 @@ export default function Box(props: BoxProps): JSX.Element {
   let confetti;
 
   const [randomIndex, setRandomIndex] = useState<number>(0);
-  // const [boxImage, setBoxImage] = useState<JSX.Element>(getClosedBoxImage(props.num));
 
   useEffect(() => {
     // Generate a random number to pick randomly from boxes with the same width
     setRandomIndex(Math.floor(Math.random() * 2));
-    // if (props.conf) {
-    //   setBoxImage(getOpenBoxImage());
-    // } else {
-    //   setBoxImage(getClosedBoxImage(props.num));
-    // }
   }, [props.num]);
 
   const animateBall = props.conf ? 'animate-ball' : '';
