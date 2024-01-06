@@ -21,5 +21,10 @@
     display: flex;
     gap: 80px;
     justify-content: center;
+
+    /* md */
+    @media (max-width: 970px) {
+      display: block;
+    }
   }
 }

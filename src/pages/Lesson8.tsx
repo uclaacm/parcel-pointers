@@ -89,7 +89,7 @@ const Lesson8: FC = () => {
             referring to the variable x normally in this case will cause a side
             effect outside the function and change the value to be 5.
           </p>
-          <NavButtons page={9}></NavButtons>
+          <NavButtons page={11}></NavButtons>
         </div>
       </AppWrapper>
     </>

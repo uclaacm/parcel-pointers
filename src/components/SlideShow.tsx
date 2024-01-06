@@ -12,16 +12,18 @@ export default function SlideShow(props: SlideShowProps): JSX.Element {
   const [imageNumber, setImageNumber] = useState(0);
   return (
     <div className="slideshow">
-      <button
-        onClick={() => {
-          if (imageNumber > 0) {
-            setImageNumber(imageNumber - 1);
-          }
-        }}
-        className="left"
-      >
-        <img src={LeftArrow} alt="Left Arrow" />
-      </button>
+      {imageNumber !== 0 && (
+        <button
+          onClick={() => {
+            if (imageNumber > 0) {
+              setImageNumber(imageNumber - 1);
+            }
+          }}
+          className="left"
+        >
+          <img src={LeftArrow} alt="Left Arrow" />
+        </button>
+      )}
       {props.images[imageNumber]}
       <button
         onClick={() => {
