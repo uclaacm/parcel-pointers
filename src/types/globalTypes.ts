@@ -18,6 +18,7 @@ export enum HeaderSections {
   LESSON_6 = 'Lesson 6',
   LESSON_7 = 'Lesson 7',
   LESSON_8 = 'Lesson 8',
+  LESSON_9 = 'Lesson 9',
   LESSON_10 = 'Lesson 10',
 }
 
@@ -55,6 +56,7 @@ export enum PageOrder {
   '/lesson-6',
   '/lesson-7',
   '/lesson-8',
+  '/lesson-9',
   '/lesson-10',
   '/exercise-1',
 }

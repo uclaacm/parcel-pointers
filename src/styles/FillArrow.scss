@@ -47,7 +47,7 @@
 }
 
 .arrow-animation {
-  animation: arrow-box 2s linear;
+  animation: arrow-box 2.5s linear;
   background: linear-gradient(to right, white 50%, #fec900 50%);
   background-position: left;
   background-size: 200% 100%;
@@ -55,7 +55,7 @@
 
 .box-animation {
   animation: arrow-box 2s linear forwards;
-  animation-delay: 1.9s;
+  animation-delay: 2.4s;
   background: linear-gradient(to right, white 50%, #fec900 50%);
   background-position: left;
   background-size: 200% 100%;
