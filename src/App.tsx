@@ -16,6 +16,7 @@ import Lesson8 from './pages/Lesson8';
 import Lesson9 from './pages/Lesson9';
 
 import PointerMotivation from './pages/PointerMotivation';
+import Exercise2 from './pages/Exercise2';
 
 function App(): JSX.Element {
   return (
@@ -30,6 +31,7 @@ function App(): JSX.Element {
           <Route path="/lesson-2-2" element={<Lesson2_2 />} />
           <Route path="/lesson-3" element={<Lesson3 />} />
           <Route path="/exercise-1" element={<Exercise1 />} />
+          <Route path="/exercise-2" element={<Exercise2 />} />
           <Route path="/lesson-4" element={<Lesson4 />} />
           <Route path="/lesson-5" element={<Lesson5 />} />
           <Route path="/lesson-6" element={<Lesson6 />} />
