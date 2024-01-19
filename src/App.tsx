@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Demo from './pages/Demo';
 import Error404 from './pages/Error404';
 import Exercise1 from './pages/Exercise1';
+import Exercise2 from './pages/Exercise2';
 import Home from './pages/Home';
 import Lesson1 from './pages/Lesson1';
 import Lesson10 from './pages/Lesson10';
@@ -16,7 +17,6 @@ import Lesson8 from './pages/Lesson8';
 import Lesson9 from './pages/Lesson9';
 
 import PointerMotivation from './pages/PointerMotivation';
-import Exercise2 from './pages/Exercise2';
 
 function App(): JSX.Element {
   return (
