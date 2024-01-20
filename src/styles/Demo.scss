@@ -57,23 +57,24 @@ p {
 }
 
 .pipi {
-  width: 110px;
   height: 140px;
+  width: 110px;
 }
 
 .pipi-animated {
   animation: pipi-animation 5s forwards;
-  position: absolute;
-  z-index: 3;
-  width: 110px;
   height: 140px;
   object-fit: fill;
+  position: absolute;
+  width: 110px;
+  z-index: 3;
 }
 
 @keyframes pipi-animation {
   0% {
     transform: translateX(0) translateY(0);
   }
+
   15% {
     transform: translateX(-95px);
   }

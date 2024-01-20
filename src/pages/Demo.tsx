@@ -13,6 +13,7 @@ import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
 
 const Demo: FC = () => {
+  const [animation, setAnimation] = useState(false);
   const [confetti, setConfetti] = useState(false);
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
@@ -25,16 +26,17 @@ const Demo: FC = () => {
   const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
   useEffect(() => {
-    if (confetti) {
+    if (animation) {
       const el = document.getElementsByClassName('pipi')[0];
       const rect = el.getBoundingClientRect();
       setLeftOffset(rect.left + window.scrollX);
-      setTopOffset(rect.top+ window.scrollY);
+      setTopOffset(rect.top + window.scrollY);
       setTimeout(() => {
         setAnimatedPipi(PipiPointRight);
+        setConfetti(true);
       }, 5000);
     }
-  }, [confetti]);
+  }, [animation]);
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
@@ -63,7 +65,7 @@ const Demo: FC = () => {
             src={animatedPipi}
             alt="Pipi"
             style={{
-              display: confetti ? 'flex' : 'none',
+              display: animation ? 'flex' : 'none',
               left: leftOffset,
               top: topOffset,
             }}
@@ -75,14 +77,14 @@ const Demo: FC = () => {
                 addressNums={nums1}
                 itemSpaceArray={itemSpaceArray1}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
               >
                 <div></div>
                 <img
                   className="pipi"
                   src={Pipi}
                   alt="Pipi"
-                  style={{ visibility: confetti ? 'hidden' : 'visible' }}
+                  style={{ visibility: animation ? 'hidden' : 'visible' }}
                 ></img>
                 <Box letter="a" num={3} conf={false}></Box>
                 <div></div>
@@ -97,7 +99,7 @@ const Demo: FC = () => {
                 addressNums={nums2}
                 itemSpaceArray={itemSpaceArray2}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
               >
                 <Box letter="f" num={5} conf={false}></Box>
                 <div></div>
@@ -111,7 +113,7 @@ const Demo: FC = () => {
                 addressNums={nums3}
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
               >
                 <div></div>
                 <Box letter="k" num={5} conf={false}></Box>
