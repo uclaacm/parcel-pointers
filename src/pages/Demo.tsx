@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import LeftLadder from '../../public/LeftLadder.png';
 import Pipi from '../../public/Pipi.svg';
+import PipiPointRight from '../../public/PipiPointRight.svg';
 import RightLadder from '../../public/RightLadder.png';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
@@ -13,13 +14,27 @@ import '../styles/Demo.scss';
 
 const Demo: FC = () => {
   const [confetti, setConfetti] = useState(false);
+  const [leftOffset, setLeftOffset] = useState(0);
+  const [topOffset, setTopOffset] = useState(0);
+  const [animatedPipi, setAnimatedPipi] = useState(Pipi);
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
   const nums3 = nums.slice(48, 72);
-  const itemSpaceArray1 = [6, 3, 2, 2, 2, 3, 4, 1, 3];
+  const itemSpaceArray1 = [2, 4, 3, 2, 2, 2, 3, 4, 1, 3];
   const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
+  useEffect(() => {
+    if (confetti) {
+      const el = document.getElementsByClassName('pipi')[0];
+      const rect = el.getBoundingClientRect();
+      setLeftOffset(rect.left + window.scrollX);
+      setTopOffset(rect.top+ window.scrollY);
+      setTimeout(() => {
+        setAnimatedPipi(PipiPointRight);
+      }, 5000);
+    }
+  }, [confetti]);
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
@@ -43,6 +58,16 @@ const Demo: FC = () => {
           <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
 
           {/* THE DEMO BOX */}
+          <img
+            className="pipi-animated"
+            src={animatedPipi}
+            alt="Pipi"
+            style={{
+              display: confetti ? 'flex' : 'none',
+              left: leftOffset,
+              top: topOffset,
+            }}
+          ></img>
           <div className="wrap">
             <img className="ladder" src={LeftLadder} alt="LeftLadder" />
             <div className="demobox">
@@ -52,7 +77,13 @@ const Demo: FC = () => {
                 size={40}
                 handleCorrect={setConfetti}
               >
-                <img className="pipi" src={Pipi} alt="Pipi"></img>
+                <div></div>
+                <img
+                  className="pipi"
+                  src={Pipi}
+                  alt="Pipi"
+                  style={{ visibility: confetti ? 'hidden' : 'visible' }}
+                ></img>
                 <Box letter="a" num={3} conf={false}></Box>
                 <div></div>
                 <Box letter="b" num={2} conf={false}></Box>
