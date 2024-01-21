@@ -1,12 +1,5 @@
 import RunCode from '../components/RunCode';
 
-// questions: Array<{
-//   options: string[];
-//   answer: string;
-//   correctText: string;
-//   wrongText: string;
-// }>;
-
 const questions = [
   {
     options: [
