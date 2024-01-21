@@ -20,7 +20,7 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
   };
 
   return (
-    <Box sx={{ width: '37.5vw', height: '5vh', fontFamily: 'monospace' }}>
+    <Box sx={{ width: 'fit-content', height: '5vh', fontFamily: 'monospace' }}>
       <FormControl fullWidth>
         <Select
           value={display}
