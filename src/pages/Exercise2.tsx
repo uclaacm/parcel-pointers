@@ -1,17 +1,20 @@
-import SelectCode from '../components/SelectCode';
+import RunCode from '../components/RunCode';
 
-const data = [
-  'Basketball **basketballPtrPtr = basketballPtr;',
-  'Basketball **basketballPtrPtr = &basketballPtr;',
-  'Basketball *basketballPtrPtr = *basketballPtr;',
-  'Basketball *basketballPtrPtr = basketballPtr;',
+const questions = [
+  {
+    options: [
+      'Basketball **basketballPtrPtr = basketballPtr;',
+      'Basketball **basketballPtrPtr = &basketballPtr;',
+      'Basketball *basketballPtrPtr = *basketballPtr;',
+      'Basketball *basketballPtrPtr = basketballPtr;',
+    ],
+    answer: 'Basketball **basketballPtrPtr = basketballPtr;',
+    correctText: 'Correct!',
+    wrongText: 'Not quite.',
+  },
 ];
 
 const Exercise2: React.FC = () => {
-  const handleClick = () => {
-    return;
-  };
-
   return (
     <div
       style={{
@@ -21,7 +24,10 @@ const Exercise2: React.FC = () => {
         minHeight: '100vh',
       }}
     >
-      <SelectCode choices={data} handleClick={handleClick} />
+      <RunCode
+        questions={questions}
+        displayText={'"string x = "basketball";'}
+      />
     </div>
   );
 };
