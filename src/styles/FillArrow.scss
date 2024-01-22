@@ -52,6 +52,7 @@
   .fill-arrow-container {
     transform: scale(0.7);
   }
+
   .fill-arrow {
     font-size: 32px;
   }
@@ -59,9 +60,10 @@
 // Portrait
 @media screen and (max-width: 478px) {
   .fill-arrow-container {
-    transform: scale(0.4);
     height: 10vh;
+    transform: scale(0.4);
   }
+
   .fill-arrow {
     font-size: 48px;
   }
