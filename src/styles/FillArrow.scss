@@ -46,6 +46,27 @@
   z-index: 2;
 }
 
+/* Mobile styles */
+// Landscape
+@media screen and (max-width: 769px) {
+  .fill-arrow-container {
+    transform: scale(0.7);
+  }
+  .fill-arrow {
+    font-size: 32px;
+  }
+}
+// Portrait
+@media screen and (max-width: 478px) {
+  .fill-arrow-container {
+    transform: scale(0.4);
+    height: 10vh;
+  }
+  .fill-arrow {
+    font-size: 48px;
+  }
+}
+
 .arrow-animation {
   animation: arrow-box 2.5s linear;
   background: linear-gradient(to right, white 50%, #fec900 50%);
