@@ -1,9 +1,9 @@
-import RunCode from '../components/RunCode';
 import { FC } from 'react';
 import Excrcise2Diagram1 from '../../public/Excrcise2Diagram1.svg';
 import Excrcise2Diagram2 from '../../public/Excrcise2Diagram2.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
+import RunCode from '../components/RunCode';
 import { HeaderSections } from '../types/globalTypes';
 import '../styles/Exercise2.scss';
 
