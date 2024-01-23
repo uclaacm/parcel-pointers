@@ -42,18 +42,21 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box b is&nbsp;
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '10', displayName: '10' },
-                      { id: 2, name: '11', displayName: '11' },
-                      { id: 3, name: '12', displayName: '12' },
-                      { id: 4, name: '13', displayName: '13' },
-                    ]}
-                    correctAnswer={correctAnswer}
-                    index={0}
-                  />
-                </span>
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '10', displayName: '10' },
+                        { id: 2, name: '11', displayName: '11' },
+                        { id: 3, name: '12', displayName: '12' },
+                        { id: 4, name: '13', displayName: '13' },
+                      ]}
+                      correctAnswer={correctAnswer}
+                      index={0}
+                    />
+                  </span>
+                </span>{' '}
+                .
               </p>
             </Question>
             <Question
@@ -95,18 +98,21 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box e is&nbsp;
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '20', displayName: '20' },
-                      { id: 2, name: '21', displayName: '21' },
-                      { id: 3, name: '22', displayName: '22' },
-                      { id: 4, name: '23', displayName: '23' },
-                    ]}
-                    correctAnswer={correctAnswer}
-                    index={2}
-                  />
-                </span>
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '20', displayName: '20' },
+                        { id: 2, name: '21', displayName: '21' },
+                        { id: 3, name: '22', displayName: '22' },
+                        { id: 4, name: '23', displayName: '23' },
+                      ]}
+                      correctAnswer={correctAnswer}
+                      index={2}
+                    />
+                  </span>
+                </span>{' '}
+                .
               </p>
             </Question>
             <Question
