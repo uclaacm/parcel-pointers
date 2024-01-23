@@ -67,7 +67,7 @@ function Question(props: QuestionProps): JSX.Element {
           />
           <div className="question-text-wrapper">{props.children}</div>
         </div>
-        <div className="question-wrapper">
+        <div className="button-wrapper">
           {correct ? (
             expand ? (
               <div onClick={() => setExpand(!expand)}>
