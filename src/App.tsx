@@ -30,8 +30,6 @@ function App(): JSX.Element {
           <Route path="/lesson-2-1" element={<Lesson2_1 />} />
           <Route path="/lesson-2-2" element={<Lesson2_2 />} />
           <Route path="/lesson-3" element={<Lesson3 />} />
-          <Route path="/exercise-1" element={<Exercise1 />} />
-          <Route path="/exercise-2" element={<Exercise2 />} />
           <Route path="/lesson-4" element={<Lesson4 />} />
           <Route path="/lesson-5" element={<Lesson5 />} />
           <Route path="/lesson-6" element={<Lesson6 />} />
@@ -39,6 +37,8 @@ function App(): JSX.Element {
           <Route path="/lesson-8" element={<Lesson8 />} />
           <Route path="/lesson-9" element={<Lesson9 />} />
           <Route path="/lesson-10" element={<Lesson10 />} />
+          <Route path="/exercise-1" element={<Exercise1 />} />
+          <Route path="/exercise-2" element={<Exercise2 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
