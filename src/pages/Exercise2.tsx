@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Excrcise2Diagram1 from '../../public/Excrcise2Diagram1.svg';
-import Excrcise2Diagram2 from '../../public/Excrcise2Diagram2.svg';
+import Exercise2Diagram1 from '../../public/Exercise2Diagram1.svg';
+import Exercise2Diagram2 from '../../public/Exercise2Diagram2.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import RunCode from '../components/RunCode';
@@ -66,7 +66,7 @@ const Exercise2: FC = () => {
             around everywhere!
           </p>
           <div className="exercise-2-diagram">
-            <img src={Excrcise2Diagram1} alt="Exercise 2 Diagram" />
+            <img src={Exercise2Diagram1} alt="Exercise 2 Diagram" />
           </div>
           <h2>How do we create a pointer to the basketball</h2>
           <div className="exercise2-div">
@@ -83,7 +83,7 @@ const Exercise2: FC = () => {
             label for the basketball in another box.
           </p>
           <div className="exercise-2-diagram">
-            <img src={Excrcise2Diagram2} alt="Exercise 2 Diagram" />
+            <img src={Exercise2Diagram2} alt="Exercise 2 Diagram" />
           </div>
           <h2>How do we create a pointer to the basketball string?</h2>
           <div className="exercise2-div">
@@ -102,7 +102,7 @@ const Exercise2: FC = () => {
           <div className="exercise2-div">
             <RunCode
               questions={questions3}
-              displayText={'string x = “basketball'}
+              displayText={'string x = “basketball";'}
             />
           </div>
 
