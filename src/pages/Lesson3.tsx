@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import FillArrowImage from '../../public/FillArrow.svg';
 import AppWrapper from '../components/AppWrapper';
-import FillArrow from '../components/FillArrow';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
+import '../styles/Lesson3.scss';
 
 const code1 = `
   & // = "get the address of"
@@ -60,8 +61,8 @@ const Lesson3: FC = () => {
             In the above code, <span className="code">myPointer</span> will now
             store the address of <span className="code">myVariable</span>:
           </p>
-          <div className="diagram">
-            <FillArrow text1="myPointer" text2="myVariable" />
+          <div className="lesson3-img">
+            <img src={FillArrowImage} alt="Fill Arrow" />
           </div>
           <p>
             The <span className="code">&</span> operator gives you the address
