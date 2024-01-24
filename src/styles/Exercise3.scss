@@ -1,45 +1,50 @@
 .wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2.5em;
+  margin-top: 2.5em;
+}
+
+.pipi{
+    position: absolute;
+    margin-top: -100px;
 }
 
 .frame {
-    background: #8596BE26;
-    border-radius: 5px;
-    height: 359px;
-    left: 161px;
-    position: absolute; /* This is crucial for top to work */
-    top: 900px; /* Adjust this value to move the frame */
-    width: 1118px;
-    z-index: 1;
+  background: #8596be26;
+  border-radius: 5px;
+  height: 359px;
+  left: 161px;
+  position: absolute; /* This is crucial for top to work */
+  top: 900px; /* Adjust this value to move the frame */
+  width: 1118px;
+  z-index: 1;
 }
 
-.text1{
-    height: 29px;
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 1021px;
+.text1 {
+  height: 29px;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 1021px;
 }
 
-.padding{
-    height: 10px;
-    margin-top: 400px;
-    z-index: 1;
+.padding {
+  height: 10px;
+  margin-top: 400px;
+  z-index: 1;
 }
 
 .button {
-	background: #EEE;
-	border: 2px solid #A0A3A3;
-	border-radius: 4px;
-	color: #14396A;
-	font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 22px;
-    height: 40px;
-    margin-left: 50px;
-	padding: 2px 40px;
-    text-align: left;
-    width: 501px;
+  background: #eee;
+  border: 2px solid #a0a3a3;
+  border-radius: 4px;
+  color: #14396a;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 22px;
+  height: 40px;
+  margin-left: 50px;
+  padding: 2px 40px;
+  text-align: left;
+  width: 501px;
 }
