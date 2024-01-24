@@ -6,19 +6,13 @@
     margin-top: 2.5em;
 }
 
-.Exercise-box {
-    margin-left: 40px;
-    margin-right: auto;
-    margin-top: 100px;  
-}
-
 .frame {
     background: #8596BE26;
     border-radius: 5px;
     height: 359px;
     left: 161px;
     position: absolute; /* This is crucial for top to work */
-    top: 1000px; /* Adjust this value to move the frame */
+    top: 900px; /* Adjust this value to move the frame */
     width: 1118px;
     z-index: 1;
 }
@@ -35,14 +29,12 @@
     margin-top: 400px;
     z-index: 1;
 }
-$color_1: #14396A;
-$font-family_1: IBM Plex Monol;
 
 .button {
 	background: #EEE;
 	border: 2px solid #A0A3A3;
 	border-radius: 4px;
-	color: $color_1 !important;
+	color: #14396A;
 	font-family: 'Niramit';
     font-size: 22px;
     height: 40px;
@@ -50,9 +42,4 @@ $font-family_1: IBM Plex Monol;
 	padding: 2px 40px;
     text-align: left;
     width: 501px;
-
-	&:hover {
-		background: #D5DAEB;
-		color: $color_1 !important;
-	}
 }
