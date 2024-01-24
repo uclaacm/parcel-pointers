@@ -6,23 +6,23 @@ import Box from '../components/Box';
 import Grid from '../components/Grid';
 import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
-import { HeaderSections } from '../types/globalTypes';
 import RunCode from '../components/RunCode';
+import { HeaderSections } from '../types/globalTypes';
 
 const question = [
-    {
-        options: [
-            '*basketballPtr = soccerBall;', 
-            'basketballPtr = soccerBall;',
-            'basketballPtr = &soccerBall;',
-            '&basketballPtr = soccerBall;'
-        ],
-        answer: '*basketballPtr = soccerBall;',
-        correctText:
-            'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
-        wrongText: 'Not quite',
-    }
-]
+  {
+    options: [
+      '*basketballPtr = soccerBall;',
+      'basketballPtr = soccerBall;',
+      'basketballPtr = &soccerBall;',
+      '&basketballPtr = soccerBall;',
+    ],
+    answer: '*basketballPtr = soccerBall;',
+    correctText:
+      'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
+    wrongText: 'Not quite',
+  },
+];
 
 const Exercise3: FC = () => {
   const [confetti, setConfetti] = useState(false);
@@ -65,7 +65,7 @@ const Exercise3: FC = () => {
                 <Box letter="m" num={3} conf={false}></Box>
               </Grid>
             </div>
-            <img className="pipi" src={Pipi} alt="Pipi"/>
+            <img className="pipi" src={Pipi} alt="Pipi" />
           </div>
           <h3>
             Pipi now wants to replace the basketball with a soccer ball. What is
@@ -73,10 +73,10 @@ const Exercise3: FC = () => {
           </h3>
           <div className="exercise3-div">
             <RunCode
-             questions={question}
-             displayText={
+              questions={question}
+              displayText={
                 'SoccerBall soccerBall; // ignore the type difference here'
-             }
+              }
             />
           </div>
         </div>
