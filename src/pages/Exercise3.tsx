@@ -4,26 +4,24 @@ import { HeaderSections } from '../types/globalTypes';
 import '../styles/Exercise3.scss';
 import Pipi from '../../public/Pipi.svg';
 import Box from '../components/Box';
-import HintBox from '../components/HintBox';
 import Grid from '../components/Grid';
+import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
-
-
 
 
 const Exercise3: FC = () => {
     const [confetti, setConfetti] = useState(false);
-    const nums = Array.from({length:24}, (_, index)=>index+1);
+    const nums = Array.from({length: 24}, (_, index)=>index+1);
     const itemSpace = [1, 3, 1, 3, 2, 4, 2, 1, 1, 2, 1, 2, 1];
-    const selectedValue = "";
+    const selectedValue = '';
     return(
         <>
             <AppWrapper section={HeaderSections.EXERCISE_3}>
                 <div className="page-wrapper">
                     <h1>Exercise 3</h1>
                     <p>
-                    For this exercise, you will be helping Pipi 
-                    find the basketball that was stored in the 
+                    For this exercise, you will be helping Pipi
+                    find the basketball that was stored in the
                     last lesson and replacing it with a soccer ball.
                     </p>
                     <h2>Instructions</h2>
@@ -33,9 +31,9 @@ const Exercise3: FC = () => {
                         {' '}by clicking on the correct address.
                     </p>
                     <HintBox text=""/>
-                    <div className="wrap">       
+                    <div className="wrap">
                         <div className="Exercise-box">
-                            <Grid 
+                            <Grid
                                 addressNums={nums}
                                 itemSpaceArray={itemSpace}
                                 size={40}
@@ -55,22 +53,22 @@ const Exercise3: FC = () => {
                                 <Box letter="o" num={3} conf={false}></Box>
                             </Grid>
                         </div>
-                        <img 
-                            className="pipi" 
-                            src={Pipi} 
-                            alt="Pipi" 
-                            style={{ 
-                                position: 'absolute', 
+                        <img
+                            className="pipi"
+                            src={Pipi}
+                            alt="Pipi"
+                            style={{
+                                position: 'absolute',
                                 top: '620px', // Adjust as needed
                                 left: '165px', // Adjust as needed
                                 height: '150px', // Set desired height
                                 width: 'auto', // Maintain aspect ratio
                                 zIndex: 2
-                            }} 
+                            }}
                         />
                     </div>
                     <h3>
-                    Pipi now wants to replace the basketball with a soccer ball. 
+                    Pipi now wants to replace the basketball with a soccer ball.
                     What is the corresponding code to do this?
                     </h3>
                     <div className="frame">
@@ -89,13 +87,13 @@ const Exercise3: FC = () => {
                             <option value="option4">basketballPtr = &soccerBall;</option>
                             <option value="option5">&basketballPtr = soccerBall;</option>
                         </select>
-                    </div>     
-                    <div className='padding'></div>           
+                    </div>
+                    <div className='padding'></div>
                 </div>
             </AppWrapper>
             <NavButtons page={15}></NavButtons>
         </>
-    )
-}
+    );
+};
 
 export default Exercise3;

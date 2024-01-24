@@ -11,44 +11,48 @@
     margin-right: auto;
     margin-top: 100px;  
 }
+
 .frame {
-    z-index: 1;
-    width: 1118px;
-    height: 359px;
-    top: 1000px; /* Adjust this value to move the frame */
-    left: 161px;
-    border-radius: 5px;
     background: #8596BE26;
+    border-radius: 5px;
+    height: 359px;
+    left: 161px;
     position: absolute; /* This is crucial for top to work */
+    top: 1000px; /* Adjust this value to move the frame */
+    width: 1118px;
+    z-index: 1;
 }
+
 .text1{
-    width: 1021px;
     height: 29px;
-    margin-top: 50px;
     margin-left: 50px;
+    margin-top: 50px;
+    width: 1021px;
 }
+
 .padding{
     height: 10px;
-    z-index: 1;
     margin-top: 400px;
+    z-index: 1;
 }
 $color_1: #14396A;
 $font-family_1: IBM Plex Monol;
 
 .button {
-	font-family: 'Niramit';
-	color: $color_1 !important;
-	padding: 2px 40px;
-    text-align: left;
-	border-radius: 4px;
+	background: #EEE;
 	border: 2px solid #A0A3A3;
-	background: #EEEEEE;
-    width: 501px;
+	border-radius: 4px;
+	color: $color_1 !important;
+	font-family: 'Niramit';
+    font-size: 22px;
     height: 40px;
     margin-left: 50px;
-    font-size: 22px;
+	padding: 2px 40px;
+    text-align: left;
+    width: 501px;
+
 	&:hover {
-		color: $color_1 !important;
 		background: #D5DAEB;
+		color: $color_1 !important;
 	}
 }
