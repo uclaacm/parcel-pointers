@@ -8,7 +8,6 @@ import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
 
-
 const Exercise3: FC = () => {
   const [confetti, setConfetti] = useState(false);
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);
