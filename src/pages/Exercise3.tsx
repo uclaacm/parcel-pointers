@@ -90,7 +90,7 @@ const Exercise3: FC = () => {
           <div className="padding"></div>
         </div>
       </AppWrapper>
-      <NavButtons page={15}></NavButtons>
+      <NavButtons page={16}></NavButtons>
     </>
   );
 };
