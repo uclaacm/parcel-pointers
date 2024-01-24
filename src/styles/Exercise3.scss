@@ -1,0 +1,54 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+}
+
+.Exercise-box {
+    margin-left: 40px;
+    margin-right: auto;
+    margin-top: 100px;  
+}
+.frame {
+    z-index: 1;
+    width: 1118px;
+    height: 359px;
+    top: 1000px; /* Adjust this value to move the frame */
+    left: 161px;
+    border-radius: 5px;
+    background: #8596BE26;
+    position: absolute; /* This is crucial for top to work */
+}
+.text1{
+    width: 1021px;
+    height: 29px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.padding{
+    height: 10px;
+    z-index: 1;
+    margin-top: 400px;
+}
+$color_1: #14396A;
+$font-family_1: IBM Plex Monol;
+
+.button {
+	font-family: 'Niramit';
+	color: $color_1 !important;
+	padding: 2px 40px;
+    text-align: left;
+	border-radius: 4px;
+	border: 2px solid #A0A3A3;
+	background: #EEEEEE;
+    width: 501px;
+    height: 40px;
+    margin-left: 50px;
+    font-size: 22px;
+	&:hover {
+		color: $color_1 !important;
+		background: #D5DAEB;
+	}
+}

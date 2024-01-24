@@ -107,7 +107,7 @@ const Lesson4: FC = () => {
               </p>
             </Note>
           </div>
-          <NavButtons page={7}></NavButtons>
+          <NavButtons page={8}></NavButtons>
         </div>
       </AppWrapper>
     </>
