@@ -1,12 +1,13 @@
 import { FC, useState } from 'react';
-import AppWrapper from '../components/AppWrapper';
-import { HeaderSections } from '../types/globalTypes';
 import '../styles/Exercise3.scss';
 import Pipi from '../../public/Pipi.svg';
+import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
 import Grid from '../components/Grid';
 import HintBox from '../components/HintBox';
 import NavButtons from '../components/NavButtons';
+import { HeaderSections } from '../types/globalTypes';
+
 
 const Exercise3: FC = () => {
   const [confetti, setConfetti] = useState(false);
