@@ -87,6 +87,10 @@ p {
   .pp-wrapper {
     margin-right: 3.024%;
   }
+
+  @media only screen and (max-width: 750px) {
+    display: none;
+  }
 }
 
 @keyframes scroll {

@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import Excercise1Diagram from '../../public/Excercise1Diagram.png';
+import Exercise1Diagram from '../../public/Exercise1Diagram.png';
 import AppWrapper from '../components/AppWrapper';
 import Dropdown from '../components/Dropdown';
 import NavButtons from '../components/NavButtons';
@@ -26,7 +26,7 @@ const Exercise1: FC = () => {
           <h2>Instructions</h2>
           <p>Use the diagram below to answer the following questions.</p>
           <div className="exercise-1-diagram diagram">
-            <img src={Excercise1Diagram} alt="Excercise 1 Diagram" />
+            <img src={Exercise1Diagram} alt="Excercise 1 Diagram" />
           </div>
           <h2>
             {' '}
@@ -42,18 +42,21 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box b is&nbsp;
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '10', displayName: '10' },
-                      { id: 2, name: '11', displayName: '11' },
-                      { id: 3, name: '12', displayName: '12' },
-                      { id: 4, name: '13', displayName: '13' },
-                    ]}
-                    correctAnswer={correctAnswer}
-                    index={0}
-                  />
-                </span>
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '10', displayName: '10' },
+                        { id: 2, name: '11', displayName: '11' },
+                        { id: 3, name: '12', displayName: '12' },
+                        { id: 4, name: '13', displayName: '13' },
+                      ]}
+                      correctAnswer={correctAnswer}
+                      index={0}
+                    />
+                  </span>
+                </span>{' '}
+                .
               </p>
             </Question>
             <Question
@@ -95,18 +98,21 @@ const Exercise1: FC = () => {
             >
               <p className="question-text">
                 The address of the Box e is&nbsp;
-                <span className="dropdown-wrapper">
-                  <Dropdown
-                    options={[
-                      { id: 1, name: '20', displayName: '20' },
-                      { id: 2, name: '21', displayName: '21' },
-                      { id: 3, name: '22', displayName: '22' },
-                      { id: 4, name: '23', displayName: '23' },
-                    ]}
-                    correctAnswer={correctAnswer}
-                    index={2}
-                  />
-                </span>
+                <span className="dropdown-between-text-wrapper">
+                  <span className="dropdown-wrapper">
+                    <Dropdown
+                      options={[
+                        { id: 1, name: '20', displayName: '20' },
+                        { id: 2, name: '21', displayName: '21' },
+                        { id: 3, name: '22', displayName: '22' },
+                        { id: 4, name: '23', displayName: '23' },
+                      ]}
+                      correctAnswer={correctAnswer}
+                      index={2}
+                    />
+                  </span>
+                </span>{' '}
+                .
               </p>
             </Question>
             <Question
