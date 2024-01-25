@@ -1,0 +1,37 @@
+.box-container {
+  background-color: rgba(133, 150, 190, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 4rem;
+  position: relative;
+  width: 75vw;
+}
+
+.code-select {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.run-button {
+  background-color: #fec900;
+  border-radius: 5px;
+  bottom: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+
+  &:hover {
+    color: #5d71a7;
+  }
+
+  .run-text {
+    font-weight: bolder;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+  }
+}

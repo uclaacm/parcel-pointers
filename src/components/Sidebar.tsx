@@ -106,11 +106,11 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: PageURLs.EXERCISE_1,
     },
     {
-      name: '2. Exercise 2',
+      name: '2. Creating Pointers',
       link: PageURLs.EXERCISE_2,
     },
     {
-      name: '3. Exercise 3',
+      name: '3. Dereferencing Pointers',
       link: PageURLs.EXERCISE_3,
     },
   ];
