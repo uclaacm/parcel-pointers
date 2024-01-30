@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import lesson7array from '../../public/lesson7array.png';
-import Slide1lesson7 from '../../public/Slide1lesson7.png';
-import Slide2lesson7 from '../../public/Slide2lesson7.png';
-import Slide3lesson7 from '../../public/Slide3lesson7.png';
-import Slide4lesson7 from '../../public/Slide4lesson7.png';
-import Slide5lesson7 from '../../public/Slide5lesson7.png';
-import Slide6lesson7 from '../../public/Slide6lesson7.png';
+import Slide1lesson7 from '../../public/Slide1lesson7.svg';
+import Slide2lesson7 from '../../public/Slide2lesson7.svg';
+import Slide3lesson7 from '../../public/Slide3lesson7.svg';
+import Slide4lesson7 from '../../public/Slide4lesson7.svg';
+import Slide5lesson7 from '../../public/Slide5lesson7.svg';
+import Slide6lesson7 from '../../public/Slide6lesson7.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import SlideShow from '../components/SlideShow';
@@ -32,7 +32,7 @@ const Lesson7: FC = () => {
             <b>Array:</b> a line of boxes that are the same size
           </p>
           <div className="diagram">
-            <img src={lesson7array} className="pipi"></img>
+            <img src={lesson7array} className="array"></img>
           </div>
           <p>
             Let&apos;s talk about arrays, since they are helpful for
