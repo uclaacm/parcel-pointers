@@ -25,6 +25,7 @@ export default function SlideShow(props: SlideShowProps): JSX.Element {
         </button>
       )}
       {props.images[imageNumber]}
+      {imageNumber < props.images.length - 1 && 
       <button
         onClick={() => {
           if (imageNumber < props.images.length - 1) {
@@ -34,7 +35,7 @@ export default function SlideShow(props: SlideShowProps): JSX.Element {
         className="right"
       >
         <img src={RightArrow} alt="Right Arrow" />
-      </button>
+      </button>}
       <div className="indicator">
         {props.images.map((_item, index) => {
           if (index == imageNumber) {
