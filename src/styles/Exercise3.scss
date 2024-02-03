@@ -1,0 +1,13 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2.5em;
+  margin-top: 2.5em;
+}
+
+.pipi {
+  position: absolute;
+  top: 515px;
+  z-index: 2;
+}
