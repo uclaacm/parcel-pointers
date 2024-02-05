@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
-import LeftLadder from '../../public/LeftLadder.png';
+import LeftLadder from '../../public/LeftLadder.svg';
 import Pipi from '../../public/Pipi.svg';
 import PipiPointRight from '../../public/PipiPointRight.svg';
-import RightLadder from '../../public/RightLadder.png';
+import RightLadder from '../../public/RightLadder.svg';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
 import Grid from '../components/Grid';
@@ -22,12 +22,12 @@ const Demo: FC = () => {
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
   const nums3 = nums.slice(48, 72);
-  const itemSpaceArray1 = [2, 4, 3, 2, 2, 2, 3, 4, 1, 3];
+  const itemSpaceArray1 = [2, 3, 3, 2, 2, 2, 3, 4, 2, 3];
   const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
   useEffect(() => {
     if (animation) {
-      const el = document.getElementsByClassName('pipi')[0];
+      const el = document.getElementsByClassName('demo-pipi')[0];
       const rect = el.getBoundingClientRect();
       setLeftOffset(rect.left + window.scrollX);
       setTopOffset(rect.top + window.scrollY);
@@ -70,7 +70,7 @@ const Demo: FC = () => {
               top: topOffset,
             }}
           ></img>
-          <div className="wrap">
+          <div className="demo-wrap">
             <img className="ladder" src={LeftLadder} alt="LeftLadder" />
             <div className="demobox">
               <Grid
@@ -79,20 +79,20 @@ const Demo: FC = () => {
                 size={40}
                 handleCorrect={setAnimation}
               >
-                <div></div>
+                <div />
                 <img
-                  className="pipi"
+                  className="demo-pipi"
                   src={Pipi}
                   alt="Pipi"
                   style={{ visibility: animation ? 'hidden' : 'visible' }}
                 ></img>
                 <Box letter="a" num={3} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="b" num={2} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="c" num={3} conf={false}></Box>
                 <Box letter="d" num={4} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="e" num={2} conf={false}></Box>
               </Grid>
               <Grid

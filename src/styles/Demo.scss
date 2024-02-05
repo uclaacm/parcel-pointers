@@ -7,48 +7,20 @@ $header-1: 50px;
 $description: 20px;
 $header-height: 8vh;
 
-// General Layout
-//=======================================
-#layout {
-  display: flex;
-  min-height: calc(100vh - 2 * #{$layout-wsize});
-  padding: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
-
-  .header {
-    font-size: $header-1;
-  }
-
-  .description {
-    font-size: $description;
-    width: 100%;
-  }
-
-  .address-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  #inbox-wrapper {
-    margin: 2rem;
-  }
-
-  .ladder {
-    height: 200px;
-    object-fit: cover;
-    width: 50px;
-  }
-}
-
 p {
   margin: 0;
 }
 
-.wrap {
+.demo-wrap {
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   margin-bottom: 2.5em;
-  margin-top: 2.5em;
+}
+.ladder {
+  margin-top: 50px;
+  height: 510px;
 }
 
 .demobox {
@@ -56,17 +28,9 @@ p {
   margin-right: -40px;
 }
 
-.pipi {
-  height: 140px;
-  width: 110px;
-}
-
 .pipi-animated {
   animation: pipi-animation 5s forwards;
-  height: 140px;
-  object-fit: fill;
   position: absolute;
-  width: 110px;
   z-index: 3;
 }
 
