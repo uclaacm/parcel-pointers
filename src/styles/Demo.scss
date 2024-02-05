@@ -31,7 +31,7 @@ p {
 }
 
 .pipi-animated {
-  animation: pipi-animation 5s forwards;
+  animation: pipi-animation 5s both;
   position: absolute;
   z-index: 3;
 }
