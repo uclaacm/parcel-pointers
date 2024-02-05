@@ -35,7 +35,7 @@ const Exercise3: FC = () => {
     const box = document.getElementsByClassName('exercise3-wrap')[0];
     const rect = box.getBoundingClientRect();
     setLeftOffset(rect.left + window.scrollX);
-    setTopOffset(rect.top + window.scrollY+15);
+    setTopOffset(rect.top + window.scrollY + 15);
   };
 
   useEffect(() => {
