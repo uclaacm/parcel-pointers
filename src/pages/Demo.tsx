@@ -25,12 +25,14 @@ const Demo: FC = () => {
   const itemSpaceArray1 = [2, 3, 3, 2, 2, 2, 3, 4, 2, 3];
   const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
+
   const fixPipiPosition = () => {
     const pipiEl = document.getElementsByClassName('demo-pipi')[0];
     const rect = pipiEl.getBoundingClientRect();
     setLeftOffset(rect.left + window.scrollX);
     setTopOffset(rect.top + window.scrollY);
   };
+
   useEffect(() => {
     window.addEventListener('resize', fixPipiPosition);
   }, []);
@@ -43,6 +45,7 @@ const Demo: FC = () => {
       }, 5000);
     }
   }, [animation]);
+
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
