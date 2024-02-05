@@ -59,7 +59,10 @@ const Lesson3: FC = () => {
           </div>
           <p>
             In the above code, <span className="code">myPointer</span> will now
-            store the address of <span className="code">myVariable</span>:
+            store the address of <span className="code">myVariable</span>.
+            You can think about using <span className="code">myPointer</span> as
+            simply selecting a separate object that points to
+             <span className="code">myPointer</span> as highlighted below:
           </p>
           <div className="lesson3-img">
             <img src={FillArrowImage} alt="Fill Arrow" />

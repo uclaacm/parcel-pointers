@@ -45,7 +45,8 @@ const Lesson4: FC = () => {
             return to us the value stored there. This is known as{' '}
             <u>dereferencing</u>. In our example, this is like giving Pipi an
             address, going to the box at that address, and telling us
-            what&apos;s inside the box.
+            what&apos;s inside the box. We have gone from selecting the pointer
+            to selecting the variable with this operator.
           </p>
           <div className="diagram">
             <FillArrow text1="myPointer" text2="myVariable" />
