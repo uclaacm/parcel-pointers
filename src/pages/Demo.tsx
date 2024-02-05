@@ -123,6 +123,7 @@ const Demo: FC = () => {
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
                 handleCorrect={setAnimation}
+                style={{ margin: '0px' }}
               >
                 <div></div>
                 <Box letter="k" num={5} conf={false}></Box>

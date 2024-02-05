@@ -65,6 +65,7 @@ const Exercise3: FC = () => {
                 itemSpaceArray={itemSpace}
                 size={40}
                 handleCorrect={setConfetti}
+                style={{ margin: '0px' }}
               >
                 <div></div>
                 <Box letter="h" num={3} conf={false}></Box>
