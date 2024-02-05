@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import LeftLadder from '../../public/LeftLadder.svg';
 import Pipi from '../../public/Pipi.svg';
+import PipiPointRight from '../../public/PipiPointRight.svg';
 import RightLadder from '../../public/RightLadder.svg';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
@@ -12,14 +13,39 @@ import '../assets/WestwoodSans-Regular.ttf';
 import '../styles/Demo.scss';
 
 const Demo: FC = () => {
+  const [animation, setAnimation] = useState(false);
   const [confetti, setConfetti] = useState(false);
+  const [leftOffset, setLeftOffset] = useState(0);
+  const [topOffset, setTopOffset] = useState(0);
+  const [animatedPipi, setAnimatedPipi] = useState(Pipi);
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
   const nums3 = nums.slice(48, 72);
-  const itemSpaceArray1 = [6, 3, 2, 2, 2, 3, 4, 1, 3];
+  const itemSpaceArray1 = [2, 3, 3, 2, 2, 2, 3, 4, 2, 3];
   const itemSpaceArray2 = [5, 1, 6, 2, 3, 4, 3];
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
+
+  const fixPipiPosition = () => {
+    const pipiEl = document.getElementsByClassName('demo-pipi')[0];
+    const rect = pipiEl.getBoundingClientRect();
+    setLeftOffset(rect.left + window.scrollX);
+    setTopOffset(rect.top + window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', fixPipiPosition);
+  }, []);
+  useEffect(() => {
+    if (animation) {
+      fixPipiPosition();
+      setTimeout(() => {
+        setAnimatedPipi(PipiPointRight);
+        setConfetti(true);
+      }, 5000);
+    }
+  }, [animation]);
+
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
@@ -43,30 +69,46 @@ const Demo: FC = () => {
           <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
 
           {/* THE DEMO BOX */}
-          <div className="wrap">
+          <img
+            className="pipi-animated"
+            src={animatedPipi}
+            alt="Pipi"
+            style={{
+              display: animation ? 'flex' : 'none',
+              left: leftOffset,
+              top: topOffset,
+            }}
+          ></img>
+          <div className="demo-wrap">
             <img className="ladder" src={LeftLadder} alt="LeftLadder" />
             <div className="demobox">
               <Grid
                 addressNums={nums1}
                 itemSpaceArray={itemSpaceArray1}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
               >
-                <img className="demo-pipi" src={Pipi} alt="Pipi"></img>
+                <div />
+                <img
+                  className="demo-pipi"
+                  src={Pipi}
+                  alt="Pipi"
+                  style={{ visibility: animation ? 'hidden' : 'visible' }}
+                ></img>
                 <Box letter="a" num={3} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="b" num={2} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="c" num={3} conf={false}></Box>
                 <Box letter="d" num={4} conf={false}></Box>
-                <div></div>
+                <div />
                 <Box letter="e" num={2} conf={false}></Box>
               </Grid>
               <Grid
                 addressNums={nums2}
                 itemSpaceArray={itemSpaceArray2}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
               >
                 <Box letter="f" num={5} conf={false}></Box>
                 <div></div>
@@ -80,7 +122,8 @@ const Demo: FC = () => {
                 addressNums={nums3}
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
-                handleCorrect={setConfetti}
+                handleCorrect={setAnimation}
+                style={{ margin: '0px' }}
               >
                 <div></div>
                 <Box letter="k" num={5} conf={false}></Box>
