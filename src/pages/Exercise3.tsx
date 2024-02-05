@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import '../styles/Exercise3.scss';
 import Pipi from '../../public/Pipi.svg';
 import AppWrapper from '../components/AppWrapper';
@@ -26,8 +26,23 @@ const question = [
 
 const Exercise3: FC = () => {
   const [confetti, setConfetti] = useState(false);
+  const [leftOffset, setLeftOffset] = useState(0);
+  const [topOffset, setTopOffset] = useState(0);
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);
   const itemSpace = [1, 3, 1, 3, 2, 4, 2, 1, 1, 2, 1, 2, 1];
+
+  const fixPipiPosition = () => {
+    const box = document.getElementsByClassName('exercise3-wrap')[0];
+    const rect = box.getBoundingClientRect();
+    setLeftOffset(rect.left + window.scrollX);
+    setTopOffset(rect.top + window.scrollY+15);
+  };
+
+  useEffect(() => {
+    fixPipiPosition();
+    window.addEventListener('resize', fixPipiPosition);
+  }, []);
+
   return (
     <>
       <AppWrapper section={HeaderSections.EXERCISE_3}>
@@ -43,8 +58,8 @@ const Exercise3: FC = () => {
             the correct address.
           </p>
           <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
-          <div className="wrap">
-            <div className="Exercise-box">
+          <div className="exercise3-wrap">
+            <div className="exercise3-box">
               <Grid
                 addressNums={nums}
                 itemSpaceArray={itemSpace}
@@ -65,7 +80,15 @@ const Exercise3: FC = () => {
                 <Box letter="m" num={3} conf={false}></Box>
               </Grid>
             </div>
-            <img className="exercise-3-pipi" src={Pipi} alt="Pipi" />
+            <img
+              className="exercise3-pipi"
+              src={Pipi}
+              alt="Pipi"
+              style={{
+                left: leftOffset,
+                top: topOffset,
+              }}
+            />
           </div>
           <h3>
             Pipi now wants to replace the basketball with a soccer ball. What is
