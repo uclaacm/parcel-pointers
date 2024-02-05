@@ -29,7 +29,7 @@ const Lesson1: FC = () => {
             the memory in your computer is also labeled with addresses.
           </p>
           <div className="diagram">
-            <img src={PipiBox} className="pipi"></img>
+            <img src={PipiBox} className="lesson-1-pipi"></img>
           </div>
           <p>
             Every time your program creates a variable, it places the variable

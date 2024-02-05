@@ -52,7 +52,7 @@ const Demo: FC = () => {
                 size={40}
                 handleCorrect={setConfetti}
               >
-                <img className="pipi" src={Pipi} alt="Pipi"></img>
+                <img className="demo-pipi" src={Pipi} alt="Pipi"></img>
                 <Box letter="a" num={3} conf={false}></Box>
                 <div></div>
                 <Box letter="b" num={2} conf={false}></Box>

@@ -65,7 +65,7 @@ const Exercise3: FC = () => {
                 <Box letter="m" num={3} conf={false}></Box>
               </Grid>
             </div>
-            <img className="pipi" src={Pipi} alt="Pipi" />
+            <img className="exercise-3-pipi" src={Pipi} alt="Pipi" />
           </div>
           <h3>
             Pipi now wants to replace the basketball with a soccer ball. What is
