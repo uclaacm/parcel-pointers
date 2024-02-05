@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
-import LeftLadder from '../../public/LeftLadder.png';
+import LeftLadder from '../../public/LeftLadder.svg';
 import Pipi from '../../public/Pipi.svg';
-import RightLadder from '../../public/RightLadder.png';
+import RightLadder from '../../public/RightLadder.svg';
 import AppWrapper from '../components/AppWrapper';
 import Box from '../components/Box';
 import Grid from '../components/Grid';
