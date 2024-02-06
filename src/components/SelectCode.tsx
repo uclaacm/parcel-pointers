@@ -3,8 +3,8 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import * as React from 'react';
-
 import { useState } from 'react';
+import '../styles/SelectCode.scss'; // Import the SCSS file for styles
 
 interface SelectCodeProps {
   choices: string[];
@@ -20,24 +20,21 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
   };
 
   return (
-    <Box sx={{ width: 'fit-content', height: '5vh', fontFamily: 'monospace' }}>
-      <FormControl fullWidth>
+    <Box className="select-box" sx={{ fontFamily: 'monospace' }}>
+      <FormControl fullWidth className="form-control">
         <Select
           value={display}
           onChange={handleChange}
           displayEmpty
           inputProps={{ 'aria-label': 'Without label' }}
-          sx={{
-            fontFamily: 'monospace',
-            borderColor: '#CFCFCF',
-            border: '12px',
-          }}
+          className="select-input"
         >
           {choices.map((choice, index) => (
             <MenuItem
               value={choice}
               key={index}
-              sx={{ fontFamily: 'monospace' }}
+              className="menu-item"
+              sx={{ whiteSpace: 'normal', wordWrap: 'break-word' }}
             >
               {choice}
             </MenuItem>
