@@ -41,7 +41,7 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
           ))}
         </Select>
       </FormControl>
-    </"Box>
+    </Box>
   );
 };
 
