@@ -6,13 +6,23 @@
   padding: 4rem;
   position: relative;
   width: 75vw;
+
+  @media only screen and (max-width: 850px) {
+    width: 90vw; // Increase width for small screens
+    padding: 2rem; // Reduce padding for small screens
+  }
 }
 
 .code-select {
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 5rem; // This controls the horizontal spacing on larger screens
+
+  @media only screen and (max-width: 850px) {
+    flex-direction: column; // Stacks elements vertically for small screens
+    gap: 1rem; // Adjusts vertical spacing for small screens, but you might want to reduce or remove this for horizontal spacing
+  }
 }
 
 .run-button {
@@ -33,5 +43,14 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
+    text-align: center;
+
+    @media only screen and (max-width: 850px) {
+      padding-top: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    position: static; // Make button static for small screens
   }
 }

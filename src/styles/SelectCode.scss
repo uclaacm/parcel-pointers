@@ -1,0 +1,35 @@
+.selectBox {
+    width: fit-content;
+    height: 5vh;
+    border-color: #CFCFCF;
+    border: 1px;
+    font-size: 1.6vw; // Use vw unit for responsive font size
+  
+    // Responsive adjustments
+    @media (max-width: 600px) { // For mobile devices
+      width: 100%; // Take full width on smaller screens
+      height: auto; // Adjust height automatically
+      font-size: 4vw; // Increase font size for better readability on mobile
+    }
+  }
+  
+  .selectInput {
+    // Apply responsive styles to the Select component
+    @media (max-width: 600px) {
+      // Adjust the size of the Select component for mobile screens
+      font-size: 3.5vw;
+    }
+  }
+  
+  .menuItem {
+    // Apply responsive styles to the MenuItem components
+    @media (max-width: 600px) {
+      // Adjust the size of the MenuItem components for mobile screens
+      font-size: 3.5vw;
+        white-space: normal;
+        word-wrap: break-word;
+
+    }
+  }
+
+  

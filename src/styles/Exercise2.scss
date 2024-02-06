@@ -9,11 +9,25 @@
   img {
     width: 65vw;
   }
+
+  @media only screen and (max-width: 850px) {
+    
+    margin: 0 0;
+    align-items: center;
+    display: grid;
+    justify-items: center;
+  }
 }
 
+
+.page-wrapper{
+
+
+}
 .exercise2-div {
   align-items: center;
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
+
 }
