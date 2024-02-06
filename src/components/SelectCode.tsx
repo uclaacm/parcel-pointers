@@ -20,28 +20,28 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
   };
 
   return (
-    <Box className="selectBox" sx={{ fontFamily: 'monospace' }}> {/* Use className for targeting in SCSS */}
-      <FormControl fullWidth className='formControl'>
+    <Box className="select-box" sx={{ fontFamily: 'monospace' }}>
+      <FormControl fullWidth className="form-control">
         <Select
           value={display}
           onChange={handleChange}
           displayEmpty
           inputProps={{ 'aria-label': 'Without label' }}
-          className="selectInput" // Added className for targeting the Select component in SCSS
+          className="select-input"
         >
           {choices.map((choice, index) => (
             <MenuItem
               value={choice}
               key={index}
-              className="menuItem" // Added className for targeting the MenuItem component in SCSS
-              sx={{ whiteSpace: 'normal', wordWrap: 'break-word' }} // Added styles for text wrapping
+              className="menu-item"
+              sx={{ whiteSpace: 'normal', wordWrap: 'break-word' }}
             >
               {choice}
             </MenuItem>
           ))}
         </Select>
       </FormControl>
-    </Box>
+    </"Box>
   );
 };
 

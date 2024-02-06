@@ -8,8 +8,8 @@
   width: 75vw;
 
   @media only screen and (max-width: 850px) {
-    width: 90vw; // Increase width for small screens
     padding: 2rem; // Reduce padding for small screens
+    width: 90vw; // Increase width for small screens
   }
 }
 
@@ -46,7 +46,7 @@
     text-align: center;
 
     @media only screen and (max-width: 850px) {
-      padding-top: 0px;
+      padding-top: 0;
     }
   }
 
