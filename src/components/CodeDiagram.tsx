@@ -1,11 +1,11 @@
 import '../styles/CodeDiagram.scss';
-import { useState, useEffect } from 'react';
+import {useState} from 'react';
 import '../styles/Terminal/Terminal.scss';
 import FilledDot from '../../public/FilledDot.png';
+import lesson4pic1 from '../../public/lesson4pic1.svg';
+import lesson4pic2 from '../../public/lesson4pic2.svg';
+import lesson4pic3 from '../../public/lesson4pic3.svg';
 import RegDot from '../../public/RegDot.png';
-import lesson4pic1 from '../../public/lesson4pic1.svg'
-import lesson4pic2 from '../../public/lesson4pic2.svg'
-import lesson4pic3 from '../../public/lesson4pic3.svg'
 
 export interface CodeDiagramProps {
   code: {
@@ -16,7 +16,7 @@ export interface CodeDiagramProps {
 }
 
 export default function CodeDiagram(props: CodeDiagramProps): JSX.Element {
-  const [clicked, setClicked] = useState<number | null>(null); 
+  const [clicked, setClicked] = useState<number | null>(null);
   const [diagram, setDiagram] = useState<number | null>(null);
 
   return (
