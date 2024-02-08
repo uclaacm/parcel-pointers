@@ -8,10 +8,10 @@
 }
 
 .diagramwrapper {
+  align-items: center;
   display: flex;
   flex-direction: row;
   gap: 3em;
-  align-items: center;
   justify-content: center;
   margin-top: 10%;
 }
@@ -73,20 +73,20 @@
 }
 
 .indicators {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  margin-top: 1%;
   margin-bottom: 5%;
+  margin-top: 1%;
 }
 
 .resizedimage {
-  width: 16vw;
   height: 30vh;
+  width: 16vw;
 }
 
 .resizedimage1 {
-  width: 100vw;
   height: 30vh;
+  width: 100vw;
 }
