@@ -1,7 +1,11 @@
 import '../styles/CodeDiagram.scss';
 import { useState, useEffect } from 'react';
 import '../styles/Terminal/Terminal.scss';
-import FillArrow from './FillArrow';
+import FilledDot from '../../public/FilledDot.png';
+import RegDot from '../../public/RegDot.png';
+import lesson4pic1 from '../../public/lesson4pic1.svg'
+import lesson4pic2 from '../../public/lesson4pic2.svg'
+import lesson4pic3 from '../../public/lesson4pic3.svg'
 
 export interface CodeDiagramProps {
   code: {
@@ -12,39 +16,52 @@ export interface CodeDiagramProps {
 }
 
 export default function CodeDiagram(props: CodeDiagramProps): JSX.Element {
-  const [clicked, setClick] = useState(Array(props.code.length).fill(false));
-  const [diagram, setDiagram] = useState(0);
-
-  useEffect(() => {
-    const newClicked = [...clicked]; // Create a shallow copy of the original array
-    newClicked[0] = true; // Modify the desired element
-    setClick(newClicked); // Update the state with the modified array
-  }, []);
+  const [clicked, setClicked] = useState<number | null>(null); 
+  const [diagram, setDiagram] = useState<number | null>(null);
 
   return (
     <div className="container">
-      <div className="codebox">
-        {props.code.map((code, index) => (
-          <div
-            className={clicked[index] ? 'clicked' : 'notclicked'}
-            onClick={() => {
-              const newClicked = [...clicked];
-              for (let i = 0; i < newClicked.length; i++) newClicked[i] = false;
-              newClicked[index] = true;
-              setClick(newClicked);
-              setDiagram(index);
-            }}
-            key={index}
-          >
-            <p>{code.code}</p>
-          </div>
-        ))}
+      <div className="diagramwrapper">
+        <div className="codebox">
+          {props.code.map((code, index) => (
+            <div
+              className={clicked === index ? 'clicked' : 'notclicked'}
+              onClick={() => {
+                setClicked(index);
+                setDiagram(index);
+              }}
+              key={index}
+            >
+              <p>{code.code}</p>
+            </div>
+          ))}
+        </div>
+        <div className="arrow">
+          {diagram === 0 && (
+            <div className="resizedimage">
+              <img src={lesson4pic1} alt="Lesson 4 Pic1"/>
+            </div>
+          )}
+          {diagram === 1 && (
+            <div className="resizedimage1">
+              <img src={lesson4pic2} alt="Lesson 4 Pic2"/>
+            </div>
+          )}
+          {diagram == 2 && (
+            <div className="resizedimage1">
+              <img src={lesson4pic3} alt="Lesson 4 Pic3"/>
+            </div>
+          )}
+        </div>
       </div>
-      <div className="arrow">
-        <FillArrow
-          text1={props.code[diagram].text1}
-          text2={props.code[diagram].text2}
-        />
+      <div className="indicators">
+          {props.code.map((_, index) => (
+            <img
+              key={index}
+              src={clicked === index ? FilledDot : RegDot}
+              alt={`Indicator ${index + 1}`}
+            />
+          ))}
       </div>
     </div>
   );
