@@ -1,0 +1,27 @@
+.select-box {
+  border: 1px;
+  border-color: #cfcfcf;
+  font-size: 1.6vw;
+  height: 5vh;
+  width: fit-content;
+
+  @media (max-width: 600px) {
+    font-size: 4vw;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.select-input {
+  @media (max-width: 600px) {
+    font-size: 3.5vw;
+  }
+}
+
+.menu-item {
+  @media (max-width: 600px) {
+    font-size: 3.5vw;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
