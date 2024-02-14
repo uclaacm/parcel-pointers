@@ -4,6 +4,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { PageOrder } from '../types/globalTypes';
 export interface NavProps {
   page: number;
+  next: boolean;
+  prev: boolean;
 }
 
 export default function NavButtons(props: NavProps): JSX.Element {
@@ -11,6 +13,7 @@ export default function NavButtons(props: NavProps): JSX.Element {
   return (
     <div>
       <button
+        style={{ display: props.prev ? '' : 'none' }}
         onClick={() => (window.location.href = pageSelect[props.page - 1])}
         className="previous"
       >
@@ -18,6 +21,7 @@ export default function NavButtons(props: NavProps): JSX.Element {
         <span className="previous-text">Previous</span>
       </button>
       <button
+        style={{ display: props.next ? '' : 'none' }}
         onClick={() => (window.location.href = pageSelect[props.page + 1])}
         className="next"
       >

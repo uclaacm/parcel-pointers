@@ -60,7 +60,7 @@ const Lesson2_2: FC = () => {
           <div className="diagram">
             <Terminal code={code2} />
           </div>
-          <NavButtons page={5}></NavButtons>
+          <NavButtons page={5} prev={true} next={true}></NavButtons>
         </div>
       </AppWrapper>
     </>

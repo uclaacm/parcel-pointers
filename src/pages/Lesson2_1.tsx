@@ -71,7 +71,7 @@ const Lesson2_1: FC = () => {
             is - and so to keep track of this address, we can just get this
             address and store it in our pointer variable!
           </p>
-          <NavButtons page={4}></NavButtons>
+          <NavButtons page={4} prev={true} next={true}></NavButtons>
         </div>
       </AppWrapper>
     </>

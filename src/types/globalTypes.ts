@@ -43,7 +43,7 @@ export enum PageURLs {
   EXERCISE_1 = '/exercise-1',
   EXERCISE_2 = '/exercise-2',
   EXERCISE_3 = '/exercise-3',
-  CONCLUSION_1 = '/conclusion',
+  CONCLUSION = '/conclusion',
 }
 
 // order navigated by NavButtons component

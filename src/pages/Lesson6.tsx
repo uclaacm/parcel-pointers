@@ -96,7 +96,7 @@ const Lesson6: FC = () => {
             different variable.
           </p>
 
-          <NavButtons page={9}></NavButtons>
+          <NavButtons page={9} prev={true} next={true}></NavButtons>
         </div>
       </AppWrapper>
     </>

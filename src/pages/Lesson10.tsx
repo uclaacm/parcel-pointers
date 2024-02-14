@@ -85,7 +85,7 @@ const Lesson10: FC = () => {
             this in your own applications! Now, you know everything you need to
             complete the exercises!
           </p>
-          <NavButtons page={13}></NavButtons>
+          <NavButtons page={13} prev={true} next={false}></NavButtons>
         </div>
       </AppWrapper>
     </>

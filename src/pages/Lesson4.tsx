@@ -110,7 +110,7 @@ const Lesson4: FC = () => {
               </p>
             </Note>
           </div>
-          <NavButtons page={7}></NavButtons>
+          <NavButtons page={7} prev={true} next={true}></NavButtons>
         </div>
       </AppWrapper>
     </>
