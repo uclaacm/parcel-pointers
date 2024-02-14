@@ -6,6 +6,7 @@ export interface NavProps {
   page: number;
 }
 
+
 export default function NavButtons(props: NavProps): JSX.Element {
   const pageSelect = PageOrder;
   return (
