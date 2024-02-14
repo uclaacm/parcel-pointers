@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Conclusion from './pages/Conclusion';
 import Demo from './pages/Demo';
 import Error404 from './pages/Error404';
 import Exercise1 from './pages/Exercise1';
@@ -16,7 +17,6 @@ import Lesson6 from './pages/Lesson6';
 import Lesson7 from './pages/Lesson7';
 import Lesson8 from './pages/Lesson8';
 import Lesson9 from './pages/Lesson9';
-import Conclusion from './pages/Conclusion';
 
 import PointerMotivation from './pages/PointerMotivation';
 
