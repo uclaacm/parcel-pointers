@@ -2,11 +2,18 @@
 //=======================================
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.diagramwrapper {
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 3em;
   justify-content: center;
+  margin-top: 10%;
 }
 
 .codebox {
@@ -60,16 +67,26 @@
 }
 
 .arrow {
-  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
   width: 50%;
 }
 
-@media screen and (max-width: 1024px) {
-  .container {
-    flex-wrap: wrap;
-  }
+.indicators {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 1%;
+}
 
-  .arrow {
-    margin-bottom: 3em;
-  }
+.resizedimage {
+  height: 30vh;
+  width: 16vw;
+}
+
+.resizedimage1 {
+  height: 30vh;
+  width: 100vw;
 }
