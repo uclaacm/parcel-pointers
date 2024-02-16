@@ -110,7 +110,7 @@ const Exercise2: FC = () => {
             Double pointers are not very common, but they can be used in certain
             situations, such as with accessing multidimensional arrays!
           </p>
-          <NavButtons page={15} prev={true} next={true}></NavButtons>
+          <NavButtons page={15}></NavButtons>
         </div>
       </AppWrapper>
     </>

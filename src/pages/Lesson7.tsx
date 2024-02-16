@@ -43,7 +43,7 @@ const Lesson7: FC = () => {
             pointer to move the pointer to.
           </p>
           <SlideShow images={imageArray} />
-          <NavButtons page={10} prev={true} next={true} />
+          <NavButtons page={10} />
         </div>
       </AppWrapper>
     </div>

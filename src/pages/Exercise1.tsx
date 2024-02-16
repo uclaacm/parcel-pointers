@@ -140,7 +140,7 @@ const Exercise1: FC = () => {
               </p>
             </Question>
           </div>
-          <NavButtons page={14} prev={false} next={true}></NavButtons>
+          <NavButtons page={14}></NavButtons>
         </div>
       </AppWrapper>
     </>

@@ -105,7 +105,7 @@ const Exercise3: FC = () => {
           </div>
         </div>
       </AppWrapper>
-      <NavButtons page={16} prev={true} next={true}></NavButtons>
+      <NavButtons page={16}></NavButtons>
     </>
   );
 };
