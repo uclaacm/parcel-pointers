@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FaRegCopy } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -8,6 +8,7 @@ import '../styles/Terminal/Terminal.scss';
 
 export interface TerminalProps {
   code: string;
+  styles?: CSSProperties;
 }
 
 SyntaxHighlighter.registerLanguage('cpp', cpp);
@@ -32,7 +33,7 @@ export default function Terminal(props: TerminalProps): JSX.Element {
         <></>
       )}
 
-      <div className="terminal">
+      <div className="terminal" style={props.styles}>
         <CopyToClipboard
           text={props.code}
           onCopy={() => {

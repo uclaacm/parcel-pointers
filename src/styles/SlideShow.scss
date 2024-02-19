@@ -1,8 +1,8 @@
 @import './global';
 // Variables
 //=======================================
-$side-margins: 0%;
-$bottom-margin: 35%;
+$side-margins: -10%;
+$bottom-margin: 45%;
 $top-padding: 7vh;
 $bottom-padding: 10vh;
 $img-height: 400px;
@@ -22,24 +22,26 @@ $img-height: 400px;
   }
 }
 
-.left {
+.slideshow-left {
   background: none;
   border: 0;
   bottom: $bottom-margin;
   left: $side-margins;
   position: absolute;
+  z-index: 1;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-.right {
+.slideshow-right {
   background: none;
   border: 0;
   bottom: $bottom-margin;
   position: absolute;
   right: $side-margins;
+  z-index: 1;
 
   &:hover {
     cursor: pointer;

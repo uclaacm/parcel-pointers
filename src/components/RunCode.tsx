@@ -3,18 +3,25 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import React, { useEffect, useState } from 'react';
 import SelectCode from './SelectCode';
 import '../styles/RunCode.scss';
+import Terminal from './Terminal';
 
 interface RunCodeProps {
   displayText: string;
   questions: Array<{
+    question?: string;
     options: string[];
     answer: string;
     correctText: string;
     wrongText: string;
   }>;
+  check?: boolean;
 }
 
-const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
+const RunCode: React.FC<RunCodeProps> = ({
+  displayText,
+  questions,
+  check = false,
+}) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
 
@@ -41,14 +48,12 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
 
   return (
     <div className="box-container">
-      <p className="code">{displayText}</p>
+      <Terminal styles={{ width: '100%' }} code={displayText}></Terminal>
 
       {questions.map((question, index) => {
         return (
-          <div
-            style={{ display: 'flex', flexDirection: 'column', gap: '1.5em' }}
-            key={index}
-          >
+          <div className="code-select-container" key={index}>
+            {question.question && <h3>{question.question}</h3>}
             <div className="code-select" key={index}>
               <SelectCode
                 choices={question.options}
@@ -97,7 +102,7 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
       })}
 
       <div className="run-button" onClick={() => handleClick()}>
-        <p className="run-text">Run</p>
+        <p className="run-text">{check ? 'Check' : 'Run'}</p>
       </div>
     </div>
   );

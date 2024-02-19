@@ -1,9 +1,9 @@
 import '../styles/SlideShow.scss';
 import { useState } from 'react';
 import FilledDot from '../../public/FilledDot.png';
-import LeftArrow from '../../public/LeftArrow.png';
+import LeftArrow from '../../public/LeftArrow.svg';
 import RegDot from '../../public/RegDot.png';
-import RightArrow from '../../public/RightArrow.png';
+import RightArrow from '../../public/RightArrow.svg';
 export interface SlideShowProps {
   images: JSX.Element[];
 }
@@ -19,7 +19,7 @@ export default function SlideShow(props: SlideShowProps): JSX.Element {
               setImageNumber(imageNumber - 1);
             }
           }}
-          className="left"
+          className="slideshow-left"
         >
           <img src={LeftArrow} alt="Left Arrow" />
         </button>
@@ -32,7 +32,7 @@ export default function SlideShow(props: SlideShowProps): JSX.Element {
               setImageNumber(imageNumber + 1);
             }
           }}
-          className="right"
+          className="slideshow-right"
         >
           <img src={RightArrow} alt="Right Arrow" />
         </button>

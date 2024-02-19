@@ -13,6 +13,12 @@
   }
 }
 
+.code-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
 .code-select {
   align-items: center;
   display: flex;
