@@ -8,7 +8,49 @@ import NavButtons from '../components/NavButtons';
 import RunCode from '../components/RunCode';
 import { HeaderSections } from '../types/globalTypes';
 
-const question = [
+const question1 = [
+  {
+    options: [
+      '*basketballPtr = soccerBall;',
+      'basketballPtr = soccerBall;',
+      'basketballPtr = &soccerBall;',
+      '&basketballPtr = soccerBall;',
+    ],
+    answer: '*basketballPtr = soccerBall;',
+    correctText:
+      'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
+    wrongText: 'Not quite',
+  },
+  {
+    options: [
+      '*basketballPtr = soccerBall;',
+      'basketballPtr = soccerBall;',
+      'basketballPtr = &soccerBall;',
+      '&basketballPtr = soccerBall;',
+    ],
+    answer: '*basketballPtr = soccerBall;',
+    correctText:
+      'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
+    wrongText: 'Not quite',
+  },
+];
+
+const question2 = [
+  {
+    options: [
+      '*basketballPtr = soccerBall;',
+      'basketballPtr = soccerBall;',
+      'basketballPtr = &soccerBall;',
+      '&basketballPtr = soccerBall;',
+    ],
+    answer: '*basketballPtr = soccerBall;',
+    correctText:
+      'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
+    wrongText: 'Not quite',
+  },
+];
+
+const question3 = [
   {
     options: [
       '*basketballPtr = soccerBall;',
@@ -36,7 +78,7 @@ const Exercise4: FC = () => {
             when not to! Help Pipi figure out the correct way to do pointer
             arithmetic!
           </p>
-          <p>Let’s take our example from Exercise 1 here:</p>
+          <p>Let&apos;s take our example from Exercise 1 here:</p>
           <div className="exercise-4-diagram">
             <img src={Exercise4Diagram1} alt="Exercise 4 Diagram" />
           </div>
@@ -51,9 +93,13 @@ const Exercise4: FC = () => {
             it?
           </h2>
 
-          <div className="exercise3-wrap">
-            <div className="exercise3-box"></div>
+          <div className="exercise4-div">
+            <RunCode
+              questions={question1}
+              displayText={'Box *ptr; // initialized to point to address 3'}
+            />
           </div>
+
           <p>
             Now that Pipi is at box b, they want to continue searching boxes,
             but does not know which address to go to! Luckily, the number of
@@ -64,19 +110,14 @@ const Exercise4: FC = () => {
           <h2>
             How can we move the pointer to the address that box b contains?
           </h2>
-          <div className="exercise3-div">
-            <RunCode
-              questions={question}
-              displayText={
-                'SoccerBall soccerBall; // ignore the type difference here'
-              }
-            />
+          <div className="exercise4-div">
+            <RunCode questions={question2} displayText={''} />
           </div>
 
           <p>
             By going from box to box, we can see how it is not too hard to
-            access these boxes in one dimension, but let’s see now how we can
-            access them in multiple dimensions!
+            access these boxes in one dimension, but let&apos;s see now how we
+            can access them in multiple dimensions!
           </p>
 
           <p>
@@ -99,7 +140,14 @@ const Exercise4: FC = () => {
             How can we move the pointer to the address of box m and dereference
             it?
           </h2>
-
+          <div className="exercise4-div">
+            <RunCode
+              questions={question3}
+              displayText={
+                '{\nconst int ROW_WIDTH = 24;  // common constant declaration of the row width\nfor a multi-dimensional array\nBox *ptr = 1; // the pointer starts at address 1'
+              }
+            />
+          </div>
           <p>
             Note that with multi-dimensional arrays, we can only use the bracket
             syntax multiple times if the array was declared as a
@@ -108,7 +156,7 @@ const Exercise4: FC = () => {
           </p>
         </div>
       </AppWrapper>
-      <NavButtons page={16}></NavButtons>
+      <NavButtons page={17}></NavButtons>
     </>
   );
 };

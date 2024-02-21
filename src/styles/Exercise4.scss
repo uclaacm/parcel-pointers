@@ -1,17 +1,5 @@
-.exercise3-wrap {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-top: 2.5em;
-}
-
-.exercise3-pipi {
-  position: absolute;
-  z-index: 2;
-}
-
-.exercise3-box {
-  margin-top: 150px;
+.terminal {
+  width: 95%;
 }
 
 .exercise-4-diagram {
@@ -29,4 +17,41 @@
 
     margin: 0;
   }
+}
+
+.exercise4-div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  .exercise4-wrap,
+  .exercise4-pipi,
+  .exercise4-box {
+    flex-direction: column;
+  }
+
+  .exercise4-div {
+    flex-direction: column;
+    margin-bottom: 30px; /* Adjusted for better spacing on smaller screens */
+  }
+}
+
+/* Ensuring terminal and other components are responsive */
+@media (max-width: 850px) {
+  .terminal,
+  .exercise-4-diagram img,
+  .exercise4-div {
+    margin: 0 auto; /* Center align for better aesthetics */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Justifying paragraph text across all screens */
+p {
+  text-align: justify;
+  text-align-last: left; /* Adjusts the alignment of the last line in a justified text block */
 }
