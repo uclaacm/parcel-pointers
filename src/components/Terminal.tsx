@@ -24,7 +24,7 @@ export default function Terminal(props: TerminalProps): JSX.Element {
   };
 
   return (
-    <div>
+    <div className="terminal-container">
       {alert ? (
         <div className={alert ? 'copyalert fadeout' : 'hiddenalert'}>
           <p>Copied to Clipboard</p>

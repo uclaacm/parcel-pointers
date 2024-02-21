@@ -1,6 +1,6 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-import React, { useEffect, useState } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import SelectCode from './SelectCode';
 import '../styles/RunCode.scss';
 import Terminal from './Terminal';
@@ -15,12 +15,14 @@ interface RunCodeProps {
     wrongText: string;
   }>;
   check?: boolean;
+  styles?: CSSProperties
 }
 
 const RunCode: React.FC<RunCodeProps> = ({
   displayText,
   questions,
   check = false,
+  styles,
 }) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
@@ -47,8 +49,8 @@ const RunCode: React.FC<RunCodeProps> = ({
   };
 
   return (
-    <div className="box-container">
-      <Terminal styles={{ width: '100%' }} code={displayText}></Terminal>
+    <div className="box-container" style = {styles}>
+      {displayText && <Terminal styles={{ width: '100%' }} code={displayText}></Terminal>}
 
       {questions.map((question, index) => {
         return (
