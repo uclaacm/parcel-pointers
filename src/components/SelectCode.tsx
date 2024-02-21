@@ -36,7 +36,9 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
               className="menu-item"
               sx={{ whiteSpace: 'normal', wordWrap: 'break-word' }}
             >
-              {choice}
+              <pre>
+                <code>{choice}</code>
+              </pre>
             </MenuItem>
           ))}
         </Select>
