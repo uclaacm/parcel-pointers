@@ -1,11 +1,11 @@
 .exercise5-div {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: center;
-  align-items: center;
-  
-  @media screen and (max-width: 850px){
+  width: 100%;
+
+  @media screen and (max-width: 850px) {
     flex-direction: column;
   }
 }

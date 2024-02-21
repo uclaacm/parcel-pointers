@@ -36,8 +36,7 @@ const questions1 = [
       'When we call the function dream1 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'No',
-    correctText:
-      'Correct! The function will only change the copy of num.',
+    correctText: 'Correct! The function will only change the copy of num.',
     wrongText:
       'Not quite! When a variable is passed by value, the function does not affect the variable.',
   },
@@ -96,50 +95,42 @@ const questions4 = [
       'When we call the function dream4 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'No',
-    correctText:
-      `Correct!  When “a” is dereferenced, it points to b instead of “num”,
+    correctText: `Correct!  When “a” is dereferenced, it points to b instead of “num”,
       so the change of value has nothing to do with num.`,
     wrongText:
       'Not quite! Although “a” is dereferenced, it does not point to “num” anymore.',
   },
 ];
-const questions5 =[
+const questions5 = [
   {
     question: 'After Pipi runs the main function, what is the value of a?',
-    options: ['20','80'],
+    options: ['20', '80'],
     answer: '80',
-    correctText:
-      `Correct! The "&" before the "num" variable in the "quadruple" function 
+    correctText: `Correct! The "&" before the "num" variable in the "quadruple" function 
       definition shows that the argument is passed by reference.
       The change made to num inside the function is reflected in the variable a.`,
     wrongText: `Not quite! The "&" before the "num" variable in the "quadruple"
      function definition shows that the argument is passed by reference.`,
   },
   {
-    question:
-      'After Pipi runs the main function, what is the value of b?',
+    question: 'After Pipi runs the main function, what is the value of b?',
     options: ['20', '40'],
     answer: '20',
-    correctText:
-      `Correct! The function double takes its parameter by value, 
+    correctText: `Correct! The function double takes its parameter by value, 
       meaning it operates on a copy of b. Changes within the double 
       function do not affect the original value of b.`,
-    wrongText:
-      `Not quite! Note that this is not pass by reference or pass by pointer.
+    wrongText: `Not quite! Note that this is not pass by reference or pass by pointer.
       We are passing b normally, the function makes a copy of b, and the copy 
       is being modified.`,
   },
   {
-    question:
-      'After Pipi runs the main function, what is the value of b?',
+    question: 'After Pipi runs the main function, what is the value of b?',
     options: ['20', '60'],
     answer: '60',
-    correctText:
-      `Correct! We pass a pointer to the triple function.
+    correctText: `Correct! We pass a pointer to the triple function.
       The function makes a copy of that pointer, dereferences it,
        and modifies the value it points to.`,
-    wrongText:
-      `Not Quite! The function takes a pointer and modifies the value the
+    wrongText: `Not Quite! The function takes a pointer and modifies the value the
       pointer points to by dereferencing it.`,
   },
 ];
@@ -203,7 +194,12 @@ const Exercise5: FC = () => {
           <SlideShow images={passingCode}></SlideShow>
           <div className="exercise5-div">
             <Terminal code={codeblock}></Terminal>
-            <RunCode questions={questions5} check={true} displayText={''} styles={{background: 'none'}}></RunCode>
+            <RunCode
+              questions={questions5}
+              check={true}
+              displayText={''}
+              styles={{ background: 'none' }}
+            ></RunCode>
           </div>
         </div>
       </AppWrapper>

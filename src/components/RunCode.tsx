@@ -15,7 +15,7 @@ interface RunCodeProps {
     wrongText: string;
   }>;
   check?: boolean;
-  styles?: CSSProperties
+  styles?: CSSProperties;
 }
 
 const RunCode: React.FC<RunCodeProps> = ({
@@ -49,8 +49,10 @@ const RunCode: React.FC<RunCodeProps> = ({
   };
 
   return (
-    <div className="box-container" style = {styles}>
-      {displayText && <Terminal styles={{ width: '100%' }} code={displayText}></Terminal>}
+    <div className="box-container" style={styles}>
+      {displayText && (
+        <Terminal styles={{ width: '100%' }} code={displayText}></Terminal>
+      )}
 
       {questions.map((question, index) => {
         return (
