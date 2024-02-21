@@ -13,6 +13,7 @@ export enum HeaderSections {
   LESSON_2 = 'Lesson 2',
   LESSON_3 = 'Lesson 3',
   EXERCISE_1 = 'Exercise 1',
+  EXERCISE_3 = 'Exercise 3',
   LESSON_4 = 'Lesson 4',
   LESSON_5 = 'Lesson 5',
   LESSON_6 = 'Lesson 6',
@@ -20,6 +21,8 @@ export enum HeaderSections {
   LESSON_8 = 'Lesson 8',
   LESSON_9 = 'Lesson 9',
   LESSON_10 = 'Lesson 10',
+  EXERCISE_2 = 'Exercise 2',
+  CONCLUSION = 'Conclusion',
 }
 
 // lessons and exercises may have multiple pages, this is their starting URL
@@ -40,6 +43,7 @@ export enum PageURLs {
   EXERCISE_1 = '/exercise-1',
   EXERCISE_2 = '/exercise-2',
   EXERCISE_3 = '/exercise-3',
+  CONCLUSION = '/conclusion',
 }
 
 // order navigated by NavButtons component
@@ -59,4 +63,7 @@ export enum PageOrder {
   '/lesson-9',
   '/lesson-10',
   '/exercise-1',
+  '/exercise-2',
+  '/exercise-3',
+  '/conclusion',
 }

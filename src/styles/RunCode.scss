@@ -1,0 +1,56 @@
+.box-container {
+  background-color: rgba(133, 150, 190, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 4rem;
+  position: relative;
+  width: 75vw;
+
+  @media only screen and (max-width: 850px) {
+    padding: 2rem; // Reduce padding for small screens
+    width: 90vw; // Increase width for small screens
+  }
+}
+
+.code-select {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem; // This controls the horizontal spacing on larger screens
+
+  @media only screen and (max-width: 850px) {
+    flex-direction: column; // Stacks elements vertically for small screens
+    gap: 1rem; // Adjusts vertical spacing for small screens, but you might want to reduce or remove this for horizontal spacing
+  }
+}
+
+.run-button {
+  background-color: #fec900;
+  border-radius: 5px;
+  bottom: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+
+  &:hover {
+    color: #5d71a7;
+  }
+
+  .run-text {
+    font-weight: bolder;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    text-align: center;
+
+    @media only screen and (max-width: 850px) {
+      padding-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    position: static; // Make button static for small screens
+  }
+}

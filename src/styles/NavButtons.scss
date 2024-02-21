@@ -26,6 +26,9 @@ $header-height: 8vh;
     left: 10px;
     position: relative;
     top: 2px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &:hover {
@@ -51,6 +54,10 @@ $header-height: 8vh;
     position: relative;
     right: 10px;
     top: 2px;
+    // Hide buttons on mobile screens
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &:hover {

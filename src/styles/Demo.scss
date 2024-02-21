@@ -7,49 +7,12 @@ $header-1: 50px;
 $description: 20px;
 $header-height: 8vh;
 
-// General Layout
-//=======================================
-#layout {
-  display: flex;
-  min-height: calc(100vh - 2 * #{$layout-wsize});
-  padding: $layout-htsize $layout-wsize $layout-hbsize $layout-wsize;
-
-  .header {
-    font-size: $header-1;
-  }
-
-  .description {
-    font-size: $description;
-    width: 100%;
-  }
-
-  .address-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  #inbox-wrapper {
-    margin: 2rem;
-  }
-
-  .pipi {
-    height: 70px;
-    object-fit: cover;
-    width: 50px;
-  }
-
-  .ladder {
-    height: 200px;
-    object-fit: cover;
-    width: 50px;
-  }
-}
-
 p {
   margin: 0;
 }
 
-.wrap {
+.demo-wrap {
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -57,7 +20,36 @@ p {
   margin-top: 2.5em;
 }
 
+.ladder {
+  height: 510px;
+  margin-top: 50px;
+}
+
 .demobox {
   margin-left: -40px;
   margin-right: -40px;
+}
+
+.pipi-animated {
+  animation: pipi-animation 5s both;
+  position: absolute;
+  z-index: 3;
+}
+
+@keyframes pipi-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  15% {
+    transform: translateX(-95px);
+  }
+
+  45% {
+    transform: translateY(192px) translateX(-95px);
+  }
+
+  100% {
+    transform: translateY(192px) translateX(550px);
+  }
 }

@@ -1,0 +1,27 @@
+.terminal {
+  width: 95%;
+}
+
+.exercise-2-diagram {
+  margin: 7vh 0;
+  text-align: center;
+
+  img {
+    width: 65vw;
+  }
+
+  @media only screen and (max-width: 850px) {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+
+    margin: 0;
+  }
+}
+
+.exercise2-div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}

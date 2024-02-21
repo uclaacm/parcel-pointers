@@ -1,0 +1,15 @@
+.exercise3-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 2.5em;
+}
+
+.exercise3-pipi {
+  position: absolute;
+  z-index: 2;
+}
+
+.exercise3-box {
+  margin-top: 150px;
+}
