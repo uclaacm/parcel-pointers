@@ -1,10 +1,12 @@
 import { FC } from 'react';
+import FillArrowImage from '../../public/FillArrow.svg';
 import AppWrapper from '../components/AppWrapper';
 import FillArrow from '../components/FillArrow';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
+import '../styles/Lesson4.scss';
 
 const code1 = `
   * // = "get the value stored at this address" AKA dereferencing
@@ -23,8 +25,8 @@ const Lesson4: FC = () => {
       <AppWrapper section={HeaderSections.LESSON_4}>
         <div className="page-wrapper">
           <h1>Dereferencing Pointers</h1>
-          <div className="diagram">
-            <FillArrow text1="myPointer" text2="myVariable" />
+          <div className="lesson4-img">
+            <img src={FillArrowImage} alt="Fill Arrow" />
           </div>
           <p>
             Now you might be wondering, what good will knowing an address do?
@@ -43,7 +45,8 @@ const Lesson4: FC = () => {
             return to us the value stored there. This is known as{' '}
             <u>dereferencing</u>. In our example, this is like giving Pipi an
             address, going to the box at that address, and telling us
-            what&apos;s inside the box.
+            what&apos;s inside the box. We have gone from selecting the pointer
+            to selecting the variable with this operator.
           </p>
           <div className="diagram">
             <FillArrow text1="myPointer" text2="myVariable" />

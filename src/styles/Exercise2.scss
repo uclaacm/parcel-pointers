@@ -9,6 +9,14 @@
   img {
     width: 65vw;
   }
+
+  @media only screen and (max-width: 850px) {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+
+    margin: 0;
+  }
 }
 
 .exercise2-div {

@@ -110,7 +110,7 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: PageURLs.EXERCISE_2,
     },
     {
-      name: '3. Exercise 3',
+      name: '3. Dereferencing Pointers',
       link: PageURLs.EXERCISE_3,
     },
   ];
@@ -156,16 +156,14 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       <div className="dropdown-header">
         <a href={PageURLs.POINTER_MOTIVATION}>Why Pointers?</a>
       </div>
-      {/* TODO: delete Demo and Error links before production! */}
       <div className="dropdown-header">
         <a href={PageURLs.DEMO}>Demo</a>
       </div>
       <Dropdown title="Lessons" list={lessonList} />
       <Dropdown title="Exercises" list={exerciseList} />
-      {/* TODO: delete Demo and Error links before production! */}
-      {/* <div className="dropdown-header">
-        <a href="/error">Error</a>
-      </div> */}
+      <div className="dropdown-header">
+        <a href={PageURLs.CONCLUSION}>Conclusion</a>
+      </div>
     </div>
   );
 }

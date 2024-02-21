@@ -56,7 +56,6 @@ const Lesson5: FC = () => {
               caption2="Pointer Reassignment"
             />
           </div>
-          <CodeDiagram code={diagram} />
           <p>
             In the above code snippet, we start by creating a variable called
             <strong> myVariable</strong>, and we give it a value of 3. In the
@@ -78,7 +77,7 @@ const Lesson5: FC = () => {
               Click through each line of code to see how the diagram changes
             </em>
           </p>
-
+          <CodeDiagram code={diagram} />
           <p>
             This has an interesting implication - we directly overwrote the
             value that was stored at the address in myPointer. But we know that

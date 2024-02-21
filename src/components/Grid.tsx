@@ -1,5 +1,5 @@
 import '../styles/Grid.scss';
-import { Dispatch, SetStateAction } from 'react';
+import { CSSProperties, Dispatch, SetStateAction } from 'react';
 import ShelfAddress from './ShelfAddress';
 
 export interface GridProps {
@@ -7,6 +7,7 @@ export interface GridProps {
   addressNums: number[];
   itemSpaceArray: number[];
   handleCorrect: Dispatch<SetStateAction<boolean>>;
+  style?: CSSProperties;
   children?: JSX.Element[];
 }
 
@@ -20,7 +21,7 @@ export default function Grid(props: GridProps): JSX.Element {
     gridTemplateColumns: shelfArray.join(' '),
   };
   return (
-    <div className="grid-container">
+    <div className="grid-container" style={{ ...props.style }}>
       <div className="item-container" style={{ ...itemStyles }}>
         {props.children}
       </div>
