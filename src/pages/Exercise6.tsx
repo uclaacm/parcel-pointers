@@ -23,7 +23,9 @@ const Exercise6: FC = () => {
     <div className="exercise6-div">
       <RunCode
         questions={question}
-        displayText={'Which code segment correctly starts the linked list?\n Node* head; // head Node, assume Node class is defined\nNode* tail; // tail Node'}
+        displayText={
+          'Which code segment correctly starts the linked list?\n Node* head; // head Node, assume Node class is defined\nNode* tail; // tail Node'
+        }
       />
     </div>
   );
