@@ -1,10 +1,11 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
 import React, { useEffect, useState } from 'react';
+import { FaRegCopy } from 'react-icons/fa';
+import CopyToClipboard from 'react-copy-to-clipboard';
+
 import SelectCode from './SelectCode';
 import '../styles/RunCode.scss';
-import CopyToClipboard from 'react-copy-to-clipboard';
-import { FaRegCopy } from 'react-icons/fa';
+
 
 interface RunCodeProps {
   displayText: string;
