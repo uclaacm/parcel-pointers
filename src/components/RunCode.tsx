@@ -10,9 +10,9 @@ interface RunCodeProps {
   questions: Array<{
     question?: string;
     options: string[];
-    answer: string;
-    correctText: string;
-    wrongText: string;
+    answer?: string;
+    answers?: string[];
+    answerText: Map<string, string>;
   }>;
   check?: boolean;
   styles?: CSSProperties;
@@ -43,7 +43,11 @@ const RunCode: React.FC<RunCodeProps> = ({
   const handleClick = () => {
     const temp = answers;
     questions.forEach((question, index) => {
-      temp[index] = selections[index] == question.answer;
+      if (question.answer !== undefined) {
+        temp[index] = selections[index] == question.answer;
+      } else if (question.answers !== undefined) {
+        temp[index] = question.answers.includes(selections[index]);
+      }
     });
     setAnswers([...temp]);
   };
@@ -99,7 +103,7 @@ const RunCode: React.FC<RunCodeProps> = ({
                 />
               </svg>
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
-                {answers[index] ? question.correctText : question.wrongText}
+                {question.answerText.get(selections[index])}
               </p>
             </div>
           </div>
