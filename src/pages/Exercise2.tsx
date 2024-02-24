@@ -47,11 +47,23 @@ const questions2 = [
     ],
     answer: 'string *ptr = &x;',
     answerText: new Map([
-      ['char &ptr = *x;', 'Not quite. Remember that the & operator is used to declare a reference before the equal sign and that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!'],
-      ['string *ptr = &x;', 'Correct! You can actually declare it as either a char or string pointer.'],
-      ['string *ptr = *x;', 'Not quite. Remember that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!'],
-      ['char *ptr = &x;', 'Correct! You can actually declare it as either a char or string pointer.']
-    ])
+      [
+        'char &ptr = *x;',
+        'Not quite. Remember that the & operator is used to declare a reference before the equal sign and that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'string *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+      [
+        'string *ptr = *x;',
+        'Not quite. Remember that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'char *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+    ]),
   },
 ];
 
@@ -65,11 +77,23 @@ const questions3 = [
     ],
     answer: 'Basketball **basketballPtrPtr = &basketballPtr;',
     answerText: new Map([
-      ['Basketball **basketballPtrPtr = basketballPtr;', 'Not quite, this tries to assign a single pointer to a double pointer, which will result in a type error'],
-      ['Basketball **basketballPtrPtr = &basketballPtr;', 'Correct! You want to take the address of the pointer itself and assign that to a double pointer. Note the double * notation here indicating a double pointer.'],
-      ['Basketball  *basketballPtrPtr = *basketballPtr;', 'Not quite, this is actually invalid because it tries to assign a basketball to a basketball pointer. Remember that the * operator dereferences the pointer on the right hand side of the equal sign.'],
-      ['Basketball *basketballPtrPtr = basketballPtr;', 'Not quite, this ends up creating another pointer that just points directly to the basketball, since it copies the pointer']
-    ])
+      [
+        'Basketball **basketballPtrPtr = basketballPtr;',
+        'Not quite, this tries to assign a single pointer to a double pointer, which will result in a type error',
+      ],
+      [
+        'Basketball **basketballPtrPtr = &basketballPtr;',
+        'Correct! You want to take the address of the pointer itself and assign that to a double pointer. Note the double * notation here indicating a double pointer.',
+      ],
+      [
+        'Basketball  *basketballPtrPtr = *basketballPtr;',
+        'Not quite, this is actually invalid because it tries to assign a basketball to a basketball pointer. Remember that the * operator dereferences the pointer on the right hand side of the equal sign.',
+      ],
+      [
+        'Basketball *basketballPtrPtr = basketballPtr;',
+        'Not quite, this ends up creating another pointer that just points directly to the basketball, since it copies the pointer',
+      ],
+    ]),
   },
 ];
 
