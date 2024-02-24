@@ -77,7 +77,7 @@ const question3 = [
       'nodeToDelete->next->prev=nodeToDelete->next;\nnodeToDelete->prev->next = nodeToDelete->prev;\ndelete nodeToDelete;',
     ],
     answer:
-      'Node* temp = head->next;\nhead ->next = newNode;\nnewNode->next = temp;\nnewNode->prev = head;\ntemp->prev = newNode;',
+      'nodeToDelete->next->prev=nodeToDelete->prev;\nnodeToDelete->prev->next = nodeToDelete->next;\ndelete nodeToDelete;',
     answerText: new Map([
       [
         'delete nodeToDelete;',
