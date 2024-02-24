@@ -159,7 +159,9 @@ const Exercise6: FC = () => {
             <img src={exercise6diagram1} alt="Exercise 6 Diagram 1" />
           </div>
           <h2>Which code segment correctly starts the linked list?</h2>
-          <RunCode questions={question1} displayText={code1} />
+          <div className="exercise6-div">
+            <RunCode questions={question1} displayText={code1} />
+          </div>
           <p>
             Pipi now understands how to create a linked list, but they want to
             insert a new box into the middle of the linked list between the 2
@@ -171,7 +173,9 @@ const Exercise6: FC = () => {
           <h2>
             Which code segment correctly inserts a box into the linked list?
           </h2>
-          <RunCode questions={question2} displayText={code2} />
+          <div className="exercise6-div">
+            <RunCode questions={question2} displayText={code2} />
+          </div>
           <p>Oh no, the box that Pipi added was actually a dud!</p>
           <div className="exercise6-diagram">
             <img src={exercise6diagram3} alt="Exercise 6 Diagram 3" />
@@ -179,7 +183,9 @@ const Exercise6: FC = () => {
           <h2>
             How can we undo this insertion and delete this newly added box?
           </h2>
-          <RunCode questions={question3} displayText={code3} />
+          <div className="exercise6-div">
+            <RunCode questions={question3} displayText={code3} />
+          </div>
           <p>
             We are all done now! Pipi is done playing with these linked boxes
             and wants to clean them up! How can we iteratively go through all
@@ -188,7 +194,9 @@ const Exercise6: FC = () => {
             after we delete the current box!)
           </p>
           <h2>Which code segment correctly deletes the entire linked list?</h2>
-          <RunCode questions={question4} displayText={''} />
+          <div className="exercise6-div">
+            <RunCode questions={question4} displayText={''} />
+          </div>
           <p>
             It is important to note that the exercise of creation, insertion,
             and deletion of the linked list that we did here will have very

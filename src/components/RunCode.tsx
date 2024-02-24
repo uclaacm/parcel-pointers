@@ -112,7 +112,7 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
                 {question.answerText.get(selections[index])}
               </p>
-              <div style = {{display: answers[index] ? 'flex' : 'none'}}>
+              <div style={{ display: answers[index] ? 'flex' : 'none' }}>
                 <CopyToClipboard
                   text={question.answer}
                   onCopy={() => {
