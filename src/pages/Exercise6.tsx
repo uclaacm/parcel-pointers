@@ -50,10 +50,7 @@ const Exercise6: FC = () => {
             <img src={exercise6diagram1} alt="Exercise 6 Diagram 1" />
           </div>
           <h2>Which code segment correctly starts the linked list?</h2>
-          <RunCode
-            questions={question}
-            displayText={code1}
-          />
+          <RunCode questions={question} displayText={code1} />
           <p>
             Pipi now understands how to create a linked list, but they want to
             insert a new box into the middle of the linked list between the 2
