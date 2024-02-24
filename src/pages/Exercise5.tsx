@@ -27,19 +27,27 @@ const questions1 = [
     question: 'The input is passed by?',
     options: ['value', 'reference', 'pointer'],
     answer: 'value',
-    answerText: new Map([['value', 'Correct! Nothing special is happening, so it is pass by value.'],
+    answerText: new Map([
+      [
+        'value',
+        'Correct! Nothing special is happening, so it is pass by value.',
+      ],
       ['reference', 'Not quite! There is no & sign before the variable a.'],
-      ['pointer', 'There is no * sign before the variable a.']
-    ])
+      ['pointer', 'There is no * sign before the variable a.'],
+    ]),
   },
   {
     question:
       'When we call the function dream1 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'No',
-    answerText: new Map([['Yes', 'Correct! The function will only change the copy of num.'],
-      ['No', 'Not quite! When a variable is passed by value, the function does not affect the variable.']
-    ])
+    answerText: new Map([
+      ['Yes', 'Correct! The function will only change the copy of num.'],
+      [
+        'No',
+        'Not quite! When a variable is passed by value, the function does not affect the variable.',
+      ],
+    ]),
   },
 ];
 const questions2 = [
@@ -47,19 +55,30 @@ const questions2 = [
     question: 'The input is passed by?',
     options: ['value', 'reference', 'pointer'],
     answer: 'reference',
-    answerText: new Map([['value', 'Correct! The & in the function parameter signals pass by reference.'],
+    answerText: new Map([
+      [
+        'value',
+        'Correct! The & in the function parameter signals pass by reference.',
+      ],
       ['reference', 'Not quite! There is an & sign before the variable a.'],
-      ['pointer', 'Not quite! There is an & sign before the variable a.']
-    ])
+      ['pointer', 'Not quite! There is an & sign before the variable a.'],
+    ]),
   },
   {
     question:
       'When we call the function dream2 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'Yes',
-    answerText: new Map([['Yes', 'Correct! The change made to "a" inside the function is reflected in the variable num.'],
-      ['No', 'Not quite!  The variable is passed by reference, so the function can modify it.']
-    ])
+    answerText: new Map([
+      [
+        'Yes',
+        'Correct! The change made to "a" inside the function is reflected in the variable num.',
+      ],
+      [
+        'No',
+        'Not quite!  The variable is passed by reference, so the function can modify it.',
+      ],
+    ]),
   },
 ];
 const questions3 = [
@@ -67,19 +86,30 @@ const questions3 = [
     question: 'The input is passed by?',
     options: ['value', 'reference', 'pointer'],
     answer: 'pointer',
-    answerText: new Map([['value', 'Not quite! There is * in the function parameter.'],
+    answerText: new Map([
+      ['value', 'Not quite! There is * in the function parameter.'],
       ['reference', 'Not quite! There is * in the function parameter.'],
-      ['pointer', 'Correct! The * in the function parameter signals pass by pointer.']
-    ])
+      [
+        'pointer',
+        'Correct! The * in the function parameter signals pass by pointer.',
+      ],
+    ]),
   },
   {
     question:
       'When we call the function dream1 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'Yes',
-    answerText: new Map([['No', 'Not quite! What pointer “a”  points to, which is num, is being changed.'],
-      ['Yes', 'Correct! What pointer “a”  points to, which is num, is being changed.'],
-    ])
+    answerText: new Map([
+      [
+        'No',
+        'Not quite! What pointer “a”  points to, which is num, is being changed.',
+      ],
+      [
+        'Yes',
+        'Correct! What pointer “a”  points to, which is num, is being changed.',
+      ],
+    ]),
   },
 ];
 const questions4 = [
@@ -87,19 +117,30 @@ const questions4 = [
     question: 'The input is passed by?',
     options: ['value', 'reference', 'pointer'],
     answer: 'pointer',
-    answerText: new Map([['value', 'Not quite! There is * in the function parameter.'],
+    answerText: new Map([
+      ['value', 'Not quite! There is * in the function parameter.'],
       ['reference', 'Not quite! There is * in the function parameter.'],
-      ['pointer', 'Correct! The * in the function parameter signals pass by pointer.']
-    ])
+      [
+        'pointer',
+        'Correct! The * in the function parameter signals pass by pointer.',
+      ],
+    ]),
   },
   {
     question:
       'When we call the function dream4 with variable num, will num be changed?',
     options: ['No', 'Yes'],
     answer: 'No',
-    answerText: new Map([['No', 'Correct!  When “a” is dereferenced, it points to b instead of “num”, so the change of value has nothing to do with num.'],
-      ['Yes', 'Not quite! Although “a” is dereferenced, it does not point to “num” anymore.'],
-    ])
+    answerText: new Map([
+      [
+        'No',
+        'Correct!  When “a” is dereferenced, it points to b instead of “num”, so the change of value has nothing to do with num.',
+      ],
+      [
+        'Yes',
+        'Not quite! Although “a” is dereferenced, it does not point to “num” anymore.',
+      ],
+    ]),
   },
 ];
 const questions5 = [
@@ -107,32 +148,56 @@ const questions5 = [
     question: 'After Pipi runs the main function, what is the value of a?',
     options: ['20', '80'],
     answer: '80',
-    answerText: new Map([['80',`Correct! The "&" before the "num" variable in the "quadruple" function 
+    answerText: new Map([
+      [
+        '80',
+        `Correct! The "&" before the "num" variable in the "quadruple" function 
       definition shows that the argument is passed by reference.
-      The change made to num inside the function is reflected in the variable a.`],
-    ['20', `Not quite! The "&" before the "num" variable in the "quadruple"
-     function definition shows that the argument is passed by reference.`],])
+      The change made to num inside the function is reflected in the variable a.`,
+      ],
+      [
+        '20',
+        `Not quite! The "&" before the "num" variable in the "quadruple"
+     function definition shows that the argument is passed by reference.`,
+      ],
+    ]),
   },
   {
     question: 'After Pipi runs the main function, what is the value of b?',
     options: ['20', '40'],
     answer: '20',
-    answerText: new Map([['20', `Correct! The function double takes its parameter by value, 
+    answerText: new Map([
+      [
+        '20',
+        `Correct! The function double takes its parameter by value, 
       meaning it operates on a copy of b. Changes within the double 
-      function do not affect the original value of b.`],
-    ['40', `Not quite! Note that this is not pass by reference or pass by pointer.
+      function do not affect the original value of b.`,
+      ],
+      [
+        '40',
+        `Not quite! Note that this is not pass by reference or pass by pointer.
       We are passing b normally, the function makes a copy of b, and the copy 
-      is being modified.`]])
+      is being modified.`,
+      ],
+    ]),
   },
   {
     question: 'After Pipi runs the main function, what is the value of b?',
     options: ['20', '60'],
     answer: '60',
-    answerText: new Map([['60',`Correct! We pass a pointer to the triple function.
+    answerText: new Map([
+      [
+        '60',
+        `Correct! We pass a pointer to the triple function.
       The function makes a copy of that pointer, dereferences it,
-       and modifies the value it points to.`],
-    ['20', `Not Quite! The function takes a pointer and modifies the value the
-      pointer points to by dereferencing it.`]])
+       and modifies the value it points to.`,
+      ],
+      [
+        '20',
+        `Not Quite! The function takes a pointer and modifies the value the
+      pointer points to by dereferencing it.`,
+      ],
+    ]),
   },
 ];
 
