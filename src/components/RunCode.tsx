@@ -3,20 +3,30 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import React, { useEffect, useState } from 'react';
 import SelectCode from './SelectCode';
 import '../styles/RunCode.scss';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import { FaRegCopy } from 'react-icons/fa';
 
 interface RunCodeProps {
   displayText: string;
   questions: Array<{
     options: string[];
-    answer: string;
-    correctText: string;
-    wrongText: string;
+    answer?: string;
+    answers?: string[];
+    answerText: Map<string, string>;
   }>;
 }
 
 const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
+  const [alert, setAlert] = useState(false);
+
+  const alertFunction = () => {
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 1500);
+  };
 
   useEffect(() => {
     if (selections.length == 0) {
@@ -34,13 +44,24 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
   const handleClick = () => {
     const temp = answers;
     questions.forEach((question, index) => {
-      temp[index] = selections[index] == question.answer;
+      if (question.answer !== undefined) {
+        temp[index] = selections[index] == question.answer;
+      } else if (question.answers !== undefined) {
+        temp[index] = question.answers.includes(selections[index]);
+      }
     });
     setAnswers([...temp]);
   };
 
   return (
     <div className="box-container">
+      {alert ? (
+        <div className={alert ? 'copyalert fadeout' : 'hiddenalert'}>
+          <p>Copied to Clipboard</p>
+        </div>
+      ) : (
+        <></>
+      )}
       <p className="code">{displayText}</p>
 
       {questions.map((question, index) => {
@@ -89,8 +110,18 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
                 />
               </svg>
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
-                {answers[index] ? question.correctText : question.wrongText}
+                {question.answerText.get(selections[index])}
               </p>
+              <div style = {{display: answers[index] ? 'flex' : 'none'}}>
+                <CopyToClipboard
+                  text={question.answer}
+                  onCopy={() => {
+                    alertFunction();
+                  }}
+                >
+                  <FaRegCopy className="copybutton" />
+                </CopyToClipboard>
+              </div>
             </div>
           </div>
         );
