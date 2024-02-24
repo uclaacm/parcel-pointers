@@ -45,7 +45,7 @@ const questions2 = [
       'string *ptr = *x;',
       'char *ptr = &x;',
     ],
-    answer: 'string *ptr = &x;',
+    answers: ['string *ptr = &x;', 'char *ptr = &x;'],
     answerText: new Map([
       [
         'char &ptr = *x;',
