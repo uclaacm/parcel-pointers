@@ -37,7 +37,7 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
       if (question.answer !== undefined) {
         temp[index] = selections[index] == question.answer;
       } else if (question.answers !== undefined) {
-        temp[index] = selections[index] in question.answers;
+        temp[index] = question.answers.includes(selections[index]);
       }
     });
     setAnswers([...temp]);
