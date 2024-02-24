@@ -114,7 +114,7 @@ const question4 = [
         'Not quite, if we just take the first two iterations, we delete the head node, then we dereference the head pointer to the head node to get the next pointer and then delete that. This is a problem because we access the deleted head node, which is undefined behavior.',
       ],
       [
-        'delete head;\n\nfor(Node* ptr = head->next; ptr != nullptr; ptr = ptr->next)\n{\n  delete ptr;\n}',
+        'delete head;\nfor(Node* ptr = head->next; ptr != nullptr; ptr = ptr->next)\n{\n  delete ptr;\n}',
         'Not quite, since we deleted the head node already, referencing head->next dereferences the head pointer to the head node and is undefined behavior.',
       ],
       [
