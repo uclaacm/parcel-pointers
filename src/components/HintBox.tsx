@@ -11,7 +11,6 @@ function HintBox(props: HintBoxProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
   const [selectionMade] = useState(false);
 
-
   const handleToggle = () => {
     if (!props.noClose || !expanded) {
       setExpanded(!expanded);
@@ -30,8 +29,10 @@ function HintBox(props: HintBoxProps): JSX.Element {
 
   return (
     <div className="hintbox-container">
-
-    <div className={`hintbox${expanded ? ' expanded' : ''}`} onClick={handleToggle}>
+      <div
+        className={`hintbox${expanded ? ' expanded' : ''}`}
+        onClick={handleToggle}
+      >
         <div className="hintbox-title">
           <svg
             width="26"
@@ -45,14 +46,17 @@ function HintBox(props: HintBoxProps): JSX.Element {
               fill="#5d71a7"
             />
           </svg>
-          <div className="hintbox-title-text">{props.correct ? 'CORRECT!' : 'HINTS'}</div>
+          <div className="hintbox-title-text">
+            {props.correct ? 'CORRECT!' : 'HINTS'}
+          </div>
         </div>
         <div className={`hintbox-text ${expanded ? 'show' : ''}`}>
           <div>&nbsp;</div>
-          <div className={props.correct ? 'correct-text' : ''}>{props.text}</div>
+          <div className={props.correct ? 'correct-text' : ''}>
+            {props.text}
+          </div>
         </div>
       </div>
-
     </div>
   );
 }

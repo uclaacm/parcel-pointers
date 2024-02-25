@@ -43,7 +43,6 @@ const Exercise3: FC = () => {
     setTopOffset(rect.top + window.scrollY + 15);
   };
 
-
   useEffect(() => {
     fixPipiPosition();
     window.addEventListener('resize', fixPipiPosition);
@@ -78,16 +77,20 @@ const Exercise3: FC = () => {
           </p>
           <>
             {clickedCorrectAddress && (
-              <HintBox text="You clicked the correct address! Pipi found the basketball." correct noClose={true} />
+              <HintBox
+                text="You clicked the correct address! Pipi found the basketball."
+                correct
+                noClose={true}
+              />
             )}
             {clickedIncorrectAddress && (
-              <HintBox text="Click on the first address occupied by the box (the leftmost one)." noClose={true}/>
+              <HintBox
+                text="Click on the first address occupied by the box (the leftmost one)."
+                noClose={true}
+              />
             )}
-            {!selectionMade && (
-              <HintBox text=''/>
-
-            )}
-            </>
+            {!selectionMade && <HintBox text="" />}
+          </>
           <div className="exercise3-wrap">
             <div className="exercise3-box">
               <Grid

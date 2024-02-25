@@ -51,7 +51,6 @@ const Demo: FC = () => {
     }
   }, [animation]);
 
-
   const handleCorrectAddressClick = () => {
     setClickedCorrectAddress(true);
     setClickedIncorrectAddress(false);
@@ -64,7 +63,6 @@ const Demo: FC = () => {
     setClickedCorrectAddress(false);
     setSelectionMade(true);
   };
-
 
   return (
     <div>
@@ -86,19 +84,22 @@ const Demo: FC = () => {
             the correct address.
           </p>
 
-
-            <>
+          <>
             {clickedCorrectAddress && (
-              <HintBox text="You clicked the correct address! Pipi found the basketball." correct noClose={true} />
+              <HintBox
+                text="You clicked the correct address! Pipi found the basketball."
+                correct
+                noClose={true}
+              />
             )}
             {clickedIncorrectAddress && (
-              <HintBox text="Click on the first address occupied by the box (the leftmost one)." noClose={true}/>
+              <HintBox
+                text="Click on the first address occupied by the box (the leftmost one)."
+                noClose={true}
+              />
             )}
-            {!selectionMade && (
-              <HintBox text=''/>
-
-            )}
-            </>
+            {!selectionMade && <HintBox text="" />}
+          </>
 
           {/* THE DEMO BOX */}
           <img
@@ -121,7 +122,6 @@ const Demo: FC = () => {
                 //handleCorrect={setAnimation}
                 handleCorrect={() => handleCorrectAddressClick()}
                 handleIncorrect={() => handleIncorrectAddressClick()}
-
               >
                 <div />
                 <img
