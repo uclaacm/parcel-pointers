@@ -9,7 +9,7 @@ interface HintBoxProps {
 
 function HintBox(props: HintBoxProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
-  const [selectionMade, setSelectionMade] = useState(false);
+  const [selectionMade] = useState(false);
 
 
   const handleToggle = () => {
