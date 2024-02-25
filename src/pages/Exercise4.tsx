@@ -17,18 +17,30 @@ const question1 = [
       'int b = ptr[8];',
       'int b = *ptr[8];',
     ],
-    answers: [
-      'int b = *(ptr + 8);',
-      'int b = ptr[8];',
-    ],
+    answers: ['int b = *(ptr + 8);', 'int b = ptr[8];'],
     answerText: new Map([
-      ['int b = ptr + 8;', 'Not quite, this would set b equal to the pointer address of 3+8=11.'],
-      ['int b = *ptr + 8;', 'Not quite, this would set b equal to the value of the pointer at the current location, which would be garbage since there is no box there, plus 8.'],
-      ['int b = *(ptr + 8);', 'Correct! This will move the pointer to address 11 and then dereference it to access box b.'],
-      ['int b = ptr[8];', 'Correct! This will move the pointer to address 11 and then dereference it to access box b. Note how the bracket syntax will implicitly dereference the pointer.'],
-      ['int b = *ptr[8];', 'Not quite, remember the bracket syntax implicitly dereferences the pointer.']
+      [
+        'int b = ptr + 8;',
+        'Not quite, this would set b equal to the pointer address of 3+8=11.',
+      ],
+      [
+        'int b = *ptr + 8;',
+        'Not quite, this would set b equal to the value of the pointer at the current location, which would be garbage since there is no box there, plus 8.',
+      ],
+      [
+        'int b = *(ptr + 8);',
+        'Correct! This will move the pointer to address 11 and then dereference it to access box b.',
+      ],
+      [
+        'int b = ptr[8];',
+        'Correct! This will move the pointer to address 11 and then dereference it to access box b. Note how the bracket syntax will implicitly dereference the pointer.',
+      ],
+      [
+        'int b = *ptr[8];',
+        'Not quite, remember the bracket syntax implicitly dereferences the pointer.',
+      ],
     ]),
-  },  
+  },
   {
     options: [
       'int b = ptr + 8;',
@@ -37,39 +49,56 @@ const question1 = [
       'int b = ptr[8];',
       'int b = *ptr[8];',
     ],
-    answers: [
-      'int b = *(ptr + 8);',
-      'int b = ptr[8];',
-    ],
+    answers: ['int b = *(ptr + 8);', 'int b = ptr[8];'],
     answerText: new Map([
-      ['int b = ptr + 8;', 'Not quite, this would set b equal to the pointer address of 3+8=11.'],
-      ['int b = *ptr + 8;', 'Not quite, this would set b equal to the value of the pointer at the current location, which would be garbage since there is no box there, plus 8.'],
-      ['int b = *(ptr + 8);', 'Correct! This will move the pointer to address 11 and then dereference it to access box b.'],
-      ['int b = ptr[8];', 'Correct! This will move the pointer to address 11 and then dereference it to access box b. Note how the bracket syntax will implicitly dereference the pointer.'],
-      ['int b = *ptr[8];', 'Not quite, remember the bracket syntax implicitly dereferences the pointer.']
+      [
+        'int b = ptr + 8;',
+        'Not quite, this would set b equal to the pointer address of 3+8=11.',
+      ],
+      [
+        'int b = *ptr + 8;',
+        'Not quite, this would set b equal to the value of the pointer at the current location, which would be garbage since there is no box there, plus 8.',
+      ],
+      [
+        'int b = *(ptr + 8);',
+        'Correct! This will move the pointer to address 11 and then dereference it to access box b.',
+      ],
+      [
+        'int b = ptr[8];',
+        'Correct! This will move the pointer to address 11 and then dereference it to access box b. Note how the bracket syntax will implicitly dereference the pointer.',
+      ],
+      [
+        'int b = *ptr[8];',
+        'Not quite, remember the bracket syntax implicitly dereferences the pointer.',
+      ],
     ]),
   },
 ];
 
-  const question2 = [
-    {
-      options: [
+const question2 = [
+  {
+    options: ['ptr= *ptr;', 'ptr+= *ptr;', '*ptr = ptr;', '*ptr += ptr;'],
+    answers: ['ptr+= *ptr;'],
+    answerText: new Map([
+      [
         'ptr= *ptr;',
+        'Not quite, this will set the pointer to the offset between box b and the next box.',
+      ],
+      [
         'ptr+= *ptr;',
+        'Correct! This will allow Pipi to move the correct amount to the next box.',
+      ],
+      [
         '*ptr = ptr;',
+        'Not quite, this ends up actually assigning box b to hold the pointer to box b!',
+      ],
+      [
         '*ptr += ptr;',
+        'Not quite, this will actually set the address inside box b to the address of the next box!',
       ],
-      answers: [
-        'ptr+= *ptr;',
-      ],
-      answerText: new Map([
-        ['ptr= *ptr;', 'Not quite, this will set the pointer to the offset between box b and the next box.'],
-        ['ptr+= *ptr;', 'Correct! This will allow Pipi to move the correct amount to the next box.'],
-        ['*ptr = ptr;', 'Not quite, this ends up actually assigning box b to hold the pointer to box b!'],
-        ['*ptr += ptr;', 'Not quite, this will actually set the address inside box b to the address of the next box!'],
-      ]),
-    }
-  ];
+    ]),
+  },
+];
 
 const question3 = [
   {
@@ -80,16 +109,28 @@ const question3 = [
       'int b = ptr[2][5];',
       'int b = ptr[3][6];',
     ],
-    answers: [
-      'int b = *(ptr + 2*ROW_WIDTH+5);',
-      'int b = ptr[2][5];',
-    ],
+    answers: ['int b = *(ptr + 2*ROW_WIDTH+5);', 'int b = ptr[2][5];'],
     answerText: new Map([
-      ['int m = *(ptr + 2 + 5);', 'Not quite, this would set m equal to the box at address 9, at which there is no box and there would instead be garbage.'],
-      ['int b = *(ptr + 2*ROW_WIDTH+5);', 'Correct! This will correctly move the pointer down 2 rows and over 6 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.'],
-      ['int b = *(ptr + 2+ 5*ROW_WIDTH);', 'Not quite, this would move the pointer 6 rows down, which is out of bounds. Note that out of bounds errors are particularly bad with C and C++ because they can cause undefined behavior.'],
-      ['int b = ptr[2][5];', 'Correct! This will correctly move the pointer down 2 rows and over 5 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.'],
-      ['int b = ptr[3][6];', 'Not quite, remember that C++ indexes array starting at 0!']
+      [
+        'int m = *(ptr + 2 + 5);',
+        'Not quite, this would set m equal to the box at address 9, at which there is no box and there would instead be garbage.',
+      ],
+      [
+        'int b = *(ptr + 2*ROW_WIDTH+5);',
+        'Correct! This will correctly move the pointer down 2 rows and over 6 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.',
+      ],
+      [
+        'int b = *(ptr + 2+ 5*ROW_WIDTH);',
+        'Not quite, this would move the pointer 6 rows down, which is out of bounds. Note that out of bounds errors are particularly bad with C and C++ because they can cause undefined behavior.',
+      ],
+      [
+        'int b = ptr[2][5];',
+        'Correct! This will correctly move the pointer down 2 rows and over 5 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.',
+      ],
+      [
+        'int b = ptr[3][6];',
+        'Not quite, remember that C++ indexes array starting at 0!',
+      ],
     ]),
   },
   {
@@ -100,18 +141,30 @@ const question3 = [
       'int b = ptr[2][5];',
       'int b = ptr[3][6];',
     ],
-    answers: [
-      'int b = *(ptr + 2*ROW_WIDTH+5);',
-      'int b = ptr[2][5];',
-    ],
+    answers: ['int b = *(ptr + 2*ROW_WIDTH+5);', 'int b = ptr[2][5];'],
     answerText: new Map([
-      ['int m = *(ptr + 2 + 5);', 'Not quite, this would set m equal to the box at address 9, at which there is no box and there would instead be garbage.'],
-      ['int b = *(ptr + 2*ROW_WIDTH+5);', 'Correct! This will correctly move the pointer down 2 rows and over 6 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.'],
-      ['int b = *(ptr + 2+ 5*ROW_WIDTH);', 'Not quite, this would move the pointer 6 rows down, which is out of bounds. Note that out of bounds errors are particularly bad with C and C++ because they can cause undefined behavior.'],
-      ['int b = ptr[2][5];', 'Correct! This will correctly move the pointer down 2 rows and over 5 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.'],
-      ['int b = ptr[3][6];', 'Not quite, remember that C++ indexes array starting at 0!']
+      [
+        'int m = *(ptr + 2 + 5);',
+        'Not quite, this would set m equal to the box at address 9, at which there is no box and there would instead be garbage.',
+      ],
+      [
+        'int b = *(ptr + 2*ROW_WIDTH+5);',
+        'Correct! This will correctly move the pointer down 2 rows and over 6 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.',
+      ],
+      [
+        'int b = *(ptr + 2+ 5*ROW_WIDTH);',
+        'Not quite, this would move the pointer 6 rows down, which is out of bounds. Note that out of bounds errors are particularly bad with C and C++ because they can cause undefined behavior.',
+      ],
+      [
+        'int b = ptr[2][5];',
+        'Correct! This will correctly move the pointer down 2 rows and over 5 columns to get to address 54. An easy way to check here is to plug in the numbers, where you get 1 + 2*24 + 5 = 54, which is the correct address.',
+      ],
+      [
+        'int b = ptr[3][6];',
+        'Not quite, remember that C++ indexes array starting at 0!',
+      ],
     ]),
-  }
+  },
 ];
 
 const Exercise4: FC = () => {
