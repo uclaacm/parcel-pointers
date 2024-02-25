@@ -51,21 +51,17 @@ const Exercise3: FC = () => {
   }, []);
 
   const handleCorrectAddressClick = () => {
-    console.log("Correct address clicked");
     setClickedCorrectAddress(true);
     setClickedIncorrectAddress(false);
     setConfetti(true);
-    setNoClose(true);
     setSelectionMade(true);
-  }
+  };
 
   const handleIncorrectAddressClick = () => {
-    console.log("Incorrect address clicked");
     setClickedIncorrectAddress(true);
     setClickedCorrectAddress(false);
-    setNoClose(true);
     setSelectionMade(true);
-  }
+  };
 
   return (
     <>

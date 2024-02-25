@@ -54,22 +54,19 @@ const Demo: FC = () => {
 
 
   const handleCorrectAddressClick = () => {
-    console.log("Correct address clicked");
     setClickedCorrectAddress(true);
     setClickedIncorrectAddress(false);
     setAnimation(true);
-    setNoClose(true);
+   // setNoClose(true);
     setSelectionMade(true);
-  }
+  };
 
   const handleIncorrectAddressClick = () => {
-    console.log("Incorrect address clicked");
     setClickedIncorrectAddress(true);
     setClickedCorrectAddress(false);
-    setNoClose(true);
+   // setNoClose(true);
     setSelectionMade(true);
-  }
-
+  };
 
 
   return (
@@ -92,7 +89,7 @@ const Demo: FC = () => {
             the correct address.
           </p>
 
-  
+
             <>
             {clickedCorrectAddress && (
               <HintBox text="You clicked the correct address! Pipi found the basketball." correct noClose={true} />
