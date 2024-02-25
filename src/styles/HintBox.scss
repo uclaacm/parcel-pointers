@@ -15,6 +15,17 @@
   flex-direction: row-reverse;
   padding: 17px;
   z-index: 2;
+
+      // Highlighting for correct answers
+      &.correct {
+        border: 2px solid green;
+      }
+    
+      // Highlighting for incorrect answers
+      &.incorrect {
+        border: 2px solid red;
+      }
+
 }
 
 .hintbox-title-text {

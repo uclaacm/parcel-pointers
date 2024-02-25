@@ -18,6 +18,12 @@ const Demo: FC = () => {
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
   const [animatedPipi, setAnimatedPipi] = useState(Pipi);
+
+  const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
+  const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
+  const [noClose, setNoClose] = useState(false);
+  const [selectionMade, setSelectionMade] = useState(false);
+
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
@@ -46,6 +52,26 @@ const Demo: FC = () => {
     }
   }, [animation]);
 
+
+  const handleCorrectAddressClick = () => {
+    console.log("Correct address clicked");
+    setClickedCorrectAddress(true);
+    setClickedIncorrectAddress(false);
+    setAnimation(true);
+    setNoClose(true);
+    setSelectionMade(true);
+  }
+
+  const handleIncorrectAddressClick = () => {
+    console.log("Incorrect address clicked");
+    setClickedIncorrectAddress(true);
+    setClickedCorrectAddress(false);
+    setNoClose(true);
+    setSelectionMade(true);
+  }
+
+
+
   return (
     <div>
       <AppWrapper section={HeaderSections.DEMO_SECTION}>
@@ -66,7 +92,19 @@ const Demo: FC = () => {
             the correct address.
           </p>
 
-          <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
+  
+            <>
+            {clickedCorrectAddress && (
+              <HintBox text="You clicked the correct address! Pipi found the basketball." correct noClose={true} />
+            )}
+            {clickedIncorrectAddress && (
+              <HintBox text="Click on the first address occupied by the box (the leftmost one)." noClose={true}/>
+            )}
+            {!selectionMade && (
+              <HintBox text=''/>
+
+            )}
+            </>
 
           {/* THE DEMO BOX */}
           <img
@@ -86,7 +124,10 @@ const Demo: FC = () => {
                 addressNums={nums1}
                 itemSpaceArray={itemSpaceArray1}
                 size={40}
-                handleCorrect={setAnimation}
+                //handleCorrect={setAnimation}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
+
               >
                 <div />
                 <img
@@ -108,7 +149,9 @@ const Demo: FC = () => {
                 addressNums={nums2}
                 itemSpaceArray={itemSpaceArray2}
                 size={40}
-                handleCorrect={setAnimation}
+                //handleCorrect={setAnimation}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
               >
                 <Box letter="f" num={5} conf={false}></Box>
                 <div></div>
@@ -122,7 +165,9 @@ const Demo: FC = () => {
                 addressNums={nums3}
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
-                handleCorrect={setAnimation}
+                //handleCorrect={setAnimation}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
                 style={{ margin: '0px' }}
               >
                 <div></div>

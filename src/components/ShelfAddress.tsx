@@ -4,6 +4,7 @@ import '../styles/ShelfAddress.scss';
 interface ShelfAddressProps {
   num: number;
   handleCorrect: Dispatch<SetStateAction<boolean>>;
+  handleIncorrect: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
@@ -14,6 +15,7 @@ export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
       props.handleCorrect(true);
       setColor('green');
     } else {
+      props.handleIncorrect(true);
       setColor('red');
     }
   };
