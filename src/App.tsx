@@ -44,6 +44,8 @@ function App(): JSX.Element {
           <Route path="/exercise-1" element={<Exercise1 />} />
           <Route path="/exercise-2" element={<Exercise2 />} />
           <Route path="/exercise-3" element={<Exercise3 />} />
+          <Route path="/exercise-4" element={<Exercise4 />} />
+          <Route path="/exercise-6" element={<Exercise6 />} />
           <Route path="/conclusion" element={<Conclusion />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
