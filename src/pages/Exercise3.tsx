@@ -31,7 +31,6 @@ const Exercise3: FC = () => {
 
   const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
   const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
-  const [noClose, setNoClose] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false);
 
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);

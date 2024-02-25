@@ -21,7 +21,6 @@ const Demo: FC = () => {
 
   const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
   const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
-  const [noClose, setNoClose] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false);
 
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
@@ -57,14 +56,12 @@ const Demo: FC = () => {
     setClickedCorrectAddress(true);
     setClickedIncorrectAddress(false);
     setAnimation(true);
-   // setNoClose(true);
     setSelectionMade(true);
   };
 
   const handleIncorrectAddressClick = () => {
     setClickedIncorrectAddress(true);
     setClickedCorrectAddress(false);
-   // setNoClose(true);
     setSelectionMade(true);
   };
 

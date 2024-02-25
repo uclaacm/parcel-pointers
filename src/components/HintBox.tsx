@@ -12,12 +12,11 @@ function HintBox(props: HintBoxProps): JSX.Element {
   const [selectionMade, setSelectionMade] = useState(false);
 
 
-
   const handleToggle = () => {
     if (!props.noClose || !expanded) {
       setExpanded(!expanded);
     }
-  }
+  };
 
   useEffect(() => {
     if (selectionMade) {
