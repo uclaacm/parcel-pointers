@@ -1,4 +1,12 @@
+.exercise6-diagram {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
 .exercise6-div {
-  white-space: pre-wrap;
-  word-break: break-all;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
