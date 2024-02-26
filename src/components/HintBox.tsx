@@ -9,19 +9,12 @@ interface HintBoxProps {
 
 function HintBox(props: HintBoxProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
-  const [selectionMade] = useState(false);
 
   const handleToggle = () => {
-    if (!props.noClose || !expanded) {
+    if (props.noClose && !expanded) {
       setExpanded(!expanded);
     }
   };
-
-  useEffect(() => {
-    if (selectionMade) {
-      setExpanded(true);
-    }
-  }, [selectionMade]);
 
   useEffect(() => {
     setExpanded(props.correct || false);
@@ -30,7 +23,13 @@ function HintBox(props: HintBoxProps): JSX.Element {
   return (
     <div className="hintbox-container">
       <div
-        className={`hintbox${expanded ? ' expanded' : ''}`}
+        className={`hintbox${expanded ? ' expanded' : ''} ${
+          props.correct === undefined
+            ? ''
+            : props.correct
+            ? 'correct'
+            : 'incorrect'
+        }`}
         onClick={handleToggle}
       >
         <div className="hintbox-title">

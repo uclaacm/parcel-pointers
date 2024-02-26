@@ -60,7 +60,6 @@ const Demo: FC = () => {
 
   const handleIncorrectAddressClick = () => {
     setClickedIncorrectAddress(true);
-    setClickedCorrectAddress(false);
     setSelectionMade(true);
   };
 
@@ -95,6 +94,7 @@ const Demo: FC = () => {
             {clickedIncorrectAddress && (
               <HintBox
                 text="Click on the first address occupied by the box (the leftmost one)."
+                correct={false}
                 noClose={true}
               />
             )}
@@ -119,7 +119,7 @@ const Demo: FC = () => {
                 addressNums={nums1}
                 itemSpaceArray={itemSpaceArray1}
                 size={40}
-                //handleCorrect={setAnimation}
+                disabled={clickedCorrectAddress}
                 handleCorrect={() => handleCorrectAddressClick()}
                 handleIncorrect={() => handleIncorrectAddressClick()}
               >
@@ -143,7 +143,8 @@ const Demo: FC = () => {
                 addressNums={nums2}
                 itemSpaceArray={itemSpaceArray2}
                 size={40}
-                //handleCorrect={setAnimation}
+                correctAddress={42}
+                disabled={clickedCorrectAddress}
                 handleCorrect={() => handleCorrectAddressClick()}
                 handleIncorrect={() => handleIncorrectAddressClick()}
               >
@@ -159,7 +160,7 @@ const Demo: FC = () => {
                 addressNums={nums3}
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
-                //handleCorrect={setAnimation}
+                disabled={clickedCorrectAddress}
                 handleCorrect={() => handleCorrectAddressClick()}
                 handleIncorrect={() => handleIncorrectAddressClick()}
                 style={{ margin: '0px' }}

@@ -101,6 +101,7 @@ const Exercise3: FC = () => {
             {clickedIncorrectAddress && (
               <HintBox
                 text="Click on the first address occupied by the box (the leftmost one)."
+                correct={false}
                 noClose={true}
               />
             )}
@@ -112,7 +113,8 @@ const Exercise3: FC = () => {
                 addressNums={nums}
                 itemSpaceArray={itemSpace}
                 size={40}
-                //handleCorrect={setConfetti}
+                correctAddress={11}
+                disabled={clickedCorrectAddress}
                 handleCorrect={() => handleCorrectAddressClick()}
                 handleIncorrect={() => handleIncorrectAddressClick()}
                 style={{ margin: '0px' }}
