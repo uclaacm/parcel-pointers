@@ -113,6 +113,10 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       name: '3. Dereferencing Pointers',
       link: PageURLs.EXERCISE_3,
     },
+    {
+      name: '4. Creating Pointers',
+      link: PageURLs.EXERCISE_4,
+    },
   ];
   const hiddenX = -357;
   const showX = 0;

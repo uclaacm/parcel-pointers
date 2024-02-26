@@ -22,6 +22,7 @@ export enum HeaderSections {
   LESSON_9 = 'Lesson 9',
   LESSON_10 = 'Lesson 10',
   EXERCISE_2 = 'Exercise 2',
+  EXERCISE_4 = 'Exercise 4',
   CONCLUSION = 'Conclusion',
 }
 
@@ -43,6 +44,7 @@ export enum PageURLs {
   EXERCISE_1 = '/exercise-1',
   EXERCISE_2 = '/exercise-2',
   EXERCISE_3 = '/exercise-3',
+  EXERCISE_4 = '/exercise-4',
   CONCLUSION = '/conclusion',
 }
 
@@ -65,5 +67,6 @@ export enum PageOrder {
   '/exercise-1',
   '/exercise-2',
   '/exercise-3',
+  '/exercise-4',
   '/conclusion',
 }
