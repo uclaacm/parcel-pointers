@@ -1,6 +1,8 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 import React, { CSSProperties, useEffect, useState } from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import { FaRegCopy } from 'react-icons/fa';
 import SelectCode from './SelectCode';
 import '../styles/RunCode.scss';
 
@@ -25,6 +27,14 @@ const RunCode: React.FC<RunCodeProps> = ({
 }) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
+  const [alert, setAlert] = useState(false);
+
+  const alertFunction = () => {
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 1500);
+  };
 
   useEffect(() => {
     if (selections.length == 0) {
@@ -53,6 +63,13 @@ const RunCode: React.FC<RunCodeProps> = ({
 
   return (
     <div className="box-container" style={styles}>
+      {alert ? (
+        <div className={alert ? 'copyalert fadeout' : 'hiddenalert'}>
+          <p>Copied to Clipboard</p>
+        </div>
+      ) : (
+        <></>
+      )}
       {displayText != '' && (
         <p className="code">
           <pre>
@@ -108,6 +125,16 @@ const RunCode: React.FC<RunCodeProps> = ({
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
                 {question.answerText.get(selections[index])}
               </p>
+              <div style={{ display: answers[index] ? 'flex' : 'none' }}>
+                <CopyToClipboard
+                  text={question.answer}
+                  onCopy={() => {
+                    alertFunction();
+                  }}
+                >
+                  <FaRegCopy className="copybutton" />
+                </CopyToClipboard>
+              </div>
             </div>
           </div>
         );
