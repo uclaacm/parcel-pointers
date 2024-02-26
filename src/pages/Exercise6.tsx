@@ -204,7 +204,7 @@ const Exercise6: FC = () => {
           </p>
         </div>
       </AppWrapper>
-      <NavButtons page={17}></NavButtons>
+      <NavButtons page={19}></NavButtons>
     </>
   );
 };
