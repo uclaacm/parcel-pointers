@@ -41,7 +41,7 @@ const Lesson10: FC = () => {
           <h1>Dynamic Memory Allocation</h1>
           <p>
             Let’s take a look at another common application of pointers: dynamic
-            memory allocation
+            memory allocation.
           </p>
           <p>
             Allocating memory is just saying to the computer that you want to

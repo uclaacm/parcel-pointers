@@ -37,7 +37,7 @@ const Conclusion: FC = () => {
           </div>
         </div>
       </AppWrapper>
-      <NavButtons page={16} noNext={true}></NavButtons>
+      <NavButtons page={20} noNext={true}></NavButtons>
     </>
   );
 };
