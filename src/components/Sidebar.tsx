@@ -120,7 +120,7 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
     {
       name: '5. Passing Confusion',
       link: PageURLs.EXERCISE_5,
-    }
+    },
   ];
   const hiddenX = -357;
   const showX = 0;

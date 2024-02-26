@@ -21,6 +21,7 @@ const RunCode: React.FC<RunCodeProps> = ({
   displayText,
   questions,
   check = false,
+  styles
 }) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
@@ -51,7 +52,7 @@ const RunCode: React.FC<RunCodeProps> = ({
   };
 
   return (
-    <div className="box-container">
+    <div className="box-container" style={styles}>
       {displayText != '' && (
         <p className="code">
           <pre>
