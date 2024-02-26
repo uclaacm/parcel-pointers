@@ -21,7 +21,7 @@ const RunCode: React.FC<RunCodeProps> = ({
   displayText,
   questions,
   check = false,
-  styles
+  styles,
 }) => {
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
