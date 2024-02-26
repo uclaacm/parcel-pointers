@@ -6,7 +6,10 @@ export interface GridProps {
   size: number;
   addressNums: number[];
   itemSpaceArray: number[];
+  correctAddress?: number;
+  disabled: boolean;
   handleCorrect: Dispatch<SetStateAction<boolean>>;
+  handleIncorrect: Dispatch<SetStateAction<boolean>>;
   style?: CSSProperties;
   children?: JSX.Element[];
 }
@@ -30,7 +33,10 @@ export default function Grid(props: GridProps): JSX.Element {
           <ShelfAddress
             key={null}
             num={num}
+            correctAddress={num == props.correctAddress}
+            disabled={props.disabled}
             handleCorrect={props.handleCorrect}
+            handleIncorrect={props.handleIncorrect}
           ></ShelfAddress>
         ))}
       </div>

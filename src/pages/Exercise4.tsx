@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import '../styles/Exercise4.scss';
-import Exercise4Diagram2 from '../../public/Exercise4Diagram2.svg';
 import Exercise4Diagram1 from '../../public/Exercise4Diagram1.svg';
+import Exercise4Diagram2 from '../../public/Exercise4Diagram2.svg';
 import AppWrapper from '../components/AppWrapper';
 
 import NavButtons from '../components/NavButtons';
