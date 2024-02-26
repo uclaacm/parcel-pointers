@@ -43,6 +43,11 @@ const Exercise3: FC = () => {
   const [confetti, setConfetti] = useState(false);
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
+
+  const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
+  const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
+  const [selectionMade, setSelectionMade] = useState(false);
+
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);
   const itemSpace = [1, 3, 1, 3, 2, 4, 2, 1, 1, 2, 1, 2, 1];
 
@@ -58,6 +63,19 @@ const Exercise3: FC = () => {
     window.addEventListener('resize', fixPipiPosition);
   }, []);
 
+  const handleCorrectAddressClick = () => {
+    setClickedCorrectAddress(true);
+    setClickedIncorrectAddress(false);
+    setConfetti(true);
+    setSelectionMade(true);
+  };
+
+  const handleIncorrectAddressClick = () => {
+    setClickedIncorrectAddress(true);
+    setClickedCorrectAddress(false);
+    setSelectionMade(true);
+  };
+
   return (
     <>
       <AppWrapper section={HeaderSections.EXERCISE_3}>
@@ -72,14 +90,33 @@ const Exercise3: FC = () => {
             Take PiPi to <span className="highlight">Box j</span> by clicking on
             the correct address.
           </p>
-          <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
+          <>
+            {clickedCorrectAddress && (
+              <HintBox
+                text="You clicked the correct address! Pipi found the basketball."
+                correct
+                noClose={true}
+              />
+            )}
+            {clickedIncorrectAddress && (
+              <HintBox
+                text="Click on the first address occupied by the box (the leftmost one)."
+                correct={false}
+                noClose={true}
+              />
+            )}
+            {!selectionMade && <HintBox text="" />}
+          </>
           <div className="exercise3-wrap">
             <div className="exercise3-box">
               <Grid
                 addressNums={nums}
                 itemSpaceArray={itemSpace}
                 size={40}
-                handleCorrect={setConfetti}
+                correctAddress={11}
+                disabled={clickedCorrectAddress}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
                 style={{ margin: '0px' }}
               >
                 <div></div>

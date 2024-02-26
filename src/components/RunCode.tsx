@@ -61,7 +61,13 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
       ) : (
         <></>
       )}
-      <p className="code">{displayText}</p>
+      {displayText != '' && (
+        <p className="code">
+          <pre>
+            <code>{displayText}</code>
+          </pre>
+        </p>
+      )}
 
       {questions.map((question, index) => {
         return (
