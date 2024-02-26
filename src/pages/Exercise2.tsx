@@ -134,7 +134,7 @@ const Exercise2: FC = () => {
           <div className="exercise2-div">
             <RunCode
               questions={questions2}
-              displayText={'string x = “basketball";'}
+              displayText={'string x = "basketball";'}
             />
           </div>
           <p>
@@ -147,7 +147,7 @@ const Exercise2: FC = () => {
           <div className="exercise2-div">
             <RunCode
               questions={questions3}
-              displayText={'string x = “basketball";'}
+              displayText={'string x = "basketball";'}
             />
           </div>
 

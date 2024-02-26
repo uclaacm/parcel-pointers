@@ -118,6 +118,10 @@ export default function Sidebar(props: sidebarProps): JSX.Element {
       link: PageURLs.EXERCISE_4,
     },
     {
+      name: '5. Passing Confusion',
+      link: PageURLs.EXERCISE_5,
+    },
+    {
       name: '6. Linking Objects with Pointers',
       link: PageURLs.EXERCISE_6,
     },

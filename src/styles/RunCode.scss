@@ -13,6 +13,12 @@
   }
 }
 
+.code-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
 .code-select {
   align-items: center;
   display: flex;
@@ -53,4 +59,10 @@
   @media only screen and (max-width: 850px) {
     position: static; // Make button static for small screens
   }
+}
+
+// fix size of svg to be min of 20 px
+.lightbulb-icon {
+  height: auto;
+  min-width: 20px;
 }
