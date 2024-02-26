@@ -8,9 +8,9 @@ interface RunCodeProps {
   displayText: string;
   questions: Array<{
     options: string[];
-    answer: string;
-    correctText: string;
-    wrongText: string;
+    answer?: string;
+    answers?: string[];
+    answerText: Map<string, string>;
   }>;
 }
 
@@ -34,14 +34,24 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
   const handleClick = () => {
     const temp = answers;
     questions.forEach((question, index) => {
-      temp[index] = selections[index] == question.answer;
+      if (question.answer !== undefined) {
+        temp[index] = selections[index] == question.answer;
+      } else if (question.answers !== undefined) {
+        temp[index] = question.answers.includes(selections[index]);
+      }
     });
     setAnswers([...temp]);
   };
 
   return (
     <div className="box-container">
-      <p className="code">{displayText}</p>
+      {displayText != '' && (
+        <p className="code">
+          <pre>
+            <code>{displayText}</code>
+          </pre>
+        </p>
+      )}
 
       {questions.map((question, index) => {
         return (
@@ -89,7 +99,7 @@ const RunCode: React.FC<RunCodeProps> = ({ displayText, questions }) => {
                 />
               </svg>
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
-                {answers[index] ? question.correctText : question.wrongText}
+                {question.answerText.get(selections[index])}
               </p>
             </div>
           </div>

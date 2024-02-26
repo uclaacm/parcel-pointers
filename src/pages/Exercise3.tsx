@@ -18,9 +18,24 @@ const question = [
       '&basketballPtr = soccerBall;',
     ],
     answer: '*basketballPtr = soccerBall;',
-    correctText:
-      'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
-    wrongText: 'Not quite',
+    answerText: new Map([
+      [
+        '*basketballPtr = soccerBall;',
+        'Correct! This correctly dereferences the pointer and sets the basketball to a soccer ball.',
+      ],
+      [
+        'basketballPtr = soccerBall;',
+        'Not quite, this is invalid and makes the pointer equal the soccer ball, instead of the basketball. We need to dereference the pointer.',
+      ],
+      [
+        'basketballPtr = &soccerBall;',
+        'Not quite, although this is valid, this makes the pointer just point at the soccer ball instead of replacing the basketball with the soccer ball',
+      ],
+      [
+        '&basketballPtr = soccerBall;',
+        'Not quite, this is invalid and makes the address of the pointer the soccer ball instead',
+      ],
+    ]),
   },
 ];
 
