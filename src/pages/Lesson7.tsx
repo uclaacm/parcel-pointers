@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import lesson7array from '../../public/lesson7array.png';
+import lesson7array from '../../public/lesson7array.svg';
 import Slide1lesson7 from '../../public/Slide1lesson7.svg';
 import Slide2lesson7 from '../../public/Slide2lesson7.svg';
 import Slide3lesson7 from '../../public/Slide3lesson7.svg';

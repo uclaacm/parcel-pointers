@@ -1,8 +1,8 @@
 import '../styles/SlideShow.scss';
 import { useState } from 'react';
-import FilledDot from '../../public/FilledDot.png';
+import FilledDot from '../../public/FilledDot.svg';
 import LeftArrow from '../../public/LeftArrow.svg';
-import RegDot from '../../public/RegDot.png';
+import RegDot from '../../public/RegDot.svg';
 import RightArrow from '../../public/RightArrow.svg';
 export interface SlideShowProps {
   images: JSX.Element[];

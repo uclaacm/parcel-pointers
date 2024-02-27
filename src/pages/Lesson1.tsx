@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import PipiBox from '../../public/PipiBox.png';
+import PipiBox from '../../public/PipiBox.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';

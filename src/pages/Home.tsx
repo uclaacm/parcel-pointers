@@ -38,6 +38,7 @@ const Home: FC = () => {
                   viewBox="0 0 418 587"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  style={{ maxWidth: 'none' }}
                 >
                   <rect
                     x="77.6523"
