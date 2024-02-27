@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import lesson9pic1 from '../../public/lesson9pic1.png';
-import lesson9pic2 from '../../public/lesson9pic2.png';
-import lesson9pic3 from '../../public/lesson9pic3.png';
+import lesson9pic1 from '../../public/Lesson9Diagram1.svg';
+import lesson9pic2 from '../../public/Lesson9Diagram2.svg';
+import lesson9pic3 from '../../public/Lesson9Diagram3.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import Note from '../components/Note';

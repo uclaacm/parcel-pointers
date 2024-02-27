@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import WhyPointer1 from '../../public/WhyPointer1.png';
-import WhyPointer2 from '../../public/WhyPointer2.png';
-import WhyPointer3 from '../../public/WhyPointer3.png';
-import WhyPointer4 from '../../public/WhyPointer4.png';
+import WhyPointer1 from '../../public/WhyPointer1.svg';
+import WhyPointer2 from '../../public/WhyPointer2.svg';
+import WhyPointer3 from '../../public/WhyPointer3.svg';
+import WhyPointer4 from '../../public/WhyPointer4.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import SlideShow from '../components/SlideShow';

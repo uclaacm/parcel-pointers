@@ -1,16 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/HintBox.scss';
 
 interface HintBoxProps {
   text: string;
+  correct?: boolean;
+  noClose?: boolean;
 }
 
 function HintBox(props: HintBoxProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
 
+  const handleToggle = () => {
+    if (props.noClose && !expanded) {
+      setExpanded(!expanded);
+    }
+  };
+
+  useEffect(() => {
+    setExpanded(props.correct || false);
+  }, [props.correct]);
+
   return (
     <div className="hintbox-container">
-      <div className="hintbox" onClick={() => setExpanded((prev) => !prev)}>
+      <div
+        className={`hintbox${expanded ? ' expanded' : ''} ${
+          props.correct === undefined
+            ? ''
+            : props.correct
+            ? 'correct'
+            : 'incorrect'
+        }`}
+        onClick={handleToggle}
+      >
         <div className="hintbox-title">
           <svg
             width="26"
@@ -24,11 +45,15 @@ function HintBox(props: HintBoxProps): JSX.Element {
               fill="#5d71a7"
             />
           </svg>
-          <div className="hintbox-title-text">HINTS</div>
+          <div className="hintbox-title-text">
+            {props.correct ? 'CORRECT!' : 'HINTS'}
+          </div>
         </div>
-        <div className={expanded ? 'hintbox-text show' : 'hintbox-text'}>
+        <div className={`hintbox-text ${expanded ? 'show' : ''}`}>
           <div>&nbsp;</div>
-          <div>{props.text}</div>
+          <div className={props.correct ? 'correct-text' : ''}>
+            {props.text}
+          </div>
         </div>
       </div>
     </div>

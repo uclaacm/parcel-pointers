@@ -25,7 +25,14 @@ const Lesson10: FC = () => {
     cout << nodes[0]->value; // prints 1
     `;
 
+  const code4 = `
+    vector<Node*> nodes; // vector of node pointers from above
+    delete nodes[0]; // delete the created node
+    cout << nodes[0]->value; // undefined behavior!
+    `;
+
   const pointerArrow = '->';
+  const del = 'delete';
 
   return (
     <>
@@ -34,9 +41,14 @@ const Lesson10: FC = () => {
           <h1>Dynamic Memory Allocation</h1>
           <p>
             Let’s take a look at another common application of pointers: dynamic
-            memory allocation
+            memory allocation.
           </p>
           <p>
+            Allocating memory is just saying to the computer that you want to
+            use a chunk of memory and that nothing should touch it, just like
+            reserving storage space in a warehouse! Deallocating memory is the
+            opposite of that- it once again allows the computer to use that
+            chunk of memory, like giving storage space back to the warehouse.
             Dynamic memory allocation is the process of creating new objects on
             the heap dynamically based on the needs of the application instead
             of on the stack like normal objects. The difference between stack
@@ -78,6 +90,36 @@ const Lesson10: FC = () => {
 
           <div className="diagram">
             <Terminal code={code3} />
+          </div>
+
+          <p>
+            We have seen how to create dynamically allocated objects, but
+            importantly, we need to clean them up manually because they are
+            created on the heap instead of the stack (Programs automatically
+            deallocate memory on the stack). Otherwise, we would have a memory
+            leak due to the program allocating memory without doing any
+            corresponding deallocation. Memory leaks are problematic because
+            they can allow programs to continuously allocate memory, taking up
+            all of the storage space! Just like it would be a problemfor a
+            warehouse to be full due to one person taking all the space, it
+            would be a problem for the computer if a single program takes up all
+            the space!
+          </p>
+          <p>
+            So to prevent memory leaks, we need to deallocate memory, and the
+            way to do this easily in C++ is by using the{' '}
+            <span className="code">{del}</span> keyword on the pointer that
+            points to a dynamically pointed object. It is the inverse of the new
+            keyword. It is important to remember to not use pointers that have
+            had their corresponding object deleted because there could be
+            anything there now. This is commonly called a use after free bug and
+            is undefined behavior! It is equally important not to delete objects
+            again once they have already been deleted, this is called a double
+            free bug and is also undefined behavior!
+          </p>
+
+          <div className="diagram">
+            <Terminal code={code4} />
           </div>
 
           <p>

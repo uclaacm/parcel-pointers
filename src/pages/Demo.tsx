@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import LeftLadder from '../../public/LeftLadder.svg';
 import Pipi from '../../public/Pipi.svg';
 import PipiPointRight from '../../public/PipiPointRight.svg';
@@ -18,6 +18,12 @@ const Demo: FC = () => {
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
   const [animatedPipi, setAnimatedPipi] = useState(Pipi);
+
+  const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
+  const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
+  const [selectionMade, setSelectionMade] = useState(false);
+  const pipiRef = useRef<HTMLImageElement>(null);
+
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
   const nums1 = nums.slice(0, 24);
   const nums2 = nums.slice(24, 48);
@@ -27,10 +33,11 @@ const Demo: FC = () => {
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
 
   const fixPipiPosition = () => {
-    const pipiEl = document.getElementsByClassName('demo-pipi')[0];
-    const rect = pipiEl.getBoundingClientRect();
-    setLeftOffset(rect.left + window.scrollX);
-    setTopOffset(rect.top + window.scrollY);
+    if (pipiRef.current) {
+      const rect = pipiRef.current.getBoundingClientRect();
+      setLeftOffset(rect.left + window.scrollX);
+      setTopOffset(rect.top + window.scrollY);
+    }
   };
 
   useEffect(() => {
@@ -45,6 +52,18 @@ const Demo: FC = () => {
       }, 5000);
     }
   }, [animation]);
+
+  const handleCorrectAddressClick = () => {
+    setClickedCorrectAddress(true);
+    setClickedIncorrectAddress(false);
+    setAnimation(true);
+    setSelectionMade(true);
+  };
+
+  const handleIncorrectAddressClick = () => {
+    setClickedIncorrectAddress(true);
+    setSelectionMade(true);
+  };
 
   return (
     <div>
@@ -66,7 +85,23 @@ const Demo: FC = () => {
             the correct address.
           </p>
 
-          <HintBox text="Click on the first address occupied by the box (the leftmost one)." />
+          <>
+            {clickedCorrectAddress && (
+              <HintBox
+                text="You clicked the correct address! Pipi found the basketball."
+                correct
+                noClose={true}
+              />
+            )}
+            {clickedIncorrectAddress && (
+              <HintBox
+                text="Click on the first address occupied by the box (the leftmost one)."
+                correct={false}
+                noClose={true}
+              />
+            )}
+            {!selectionMade && <HintBox text="" />}
+          </>
 
           {/* THE DEMO BOX */}
           <img
@@ -86,12 +121,15 @@ const Demo: FC = () => {
                 addressNums={nums1}
                 itemSpaceArray={itemSpaceArray1}
                 size={40}
-                handleCorrect={setAnimation}
+                disabled={clickedCorrectAddress}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
               >
                 <div />
                 <img
                   className="demo-pipi"
                   src={Pipi}
+                  ref={pipiRef}
                   alt="Pipi"
                   style={{ visibility: animation ? 'hidden' : 'visible' }}
                 ></img>
@@ -108,7 +146,10 @@ const Demo: FC = () => {
                 addressNums={nums2}
                 itemSpaceArray={itemSpaceArray2}
                 size={40}
-                handleCorrect={setAnimation}
+                correctAddress={42}
+                disabled={clickedCorrectAddress}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
               >
                 <Box letter="f" num={5} conf={false}></Box>
                 <div></div>
@@ -122,7 +163,9 @@ const Demo: FC = () => {
                 addressNums={nums3}
                 itemSpaceArray={itemSpaceArray3}
                 size={40}
-                handleCorrect={setAnimation}
+                disabled={clickedCorrectAddress}
+                handleCorrect={() => handleCorrectAddressClick()}
+                handleIncorrect={() => handleIncorrectAddressClick()}
                 style={{ margin: '0px' }}
               >
                 <div></div>

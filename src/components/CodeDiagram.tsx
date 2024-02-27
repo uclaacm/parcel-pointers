@@ -1,8 +1,11 @@
 import '../styles/CodeDiagram.scss';
 import { useState } from 'react';
 import '../styles/Terminal/Terminal.scss';
-import FilledDot from '../../public/FilledDot.png';
-import RegDot from '../../public/RegDot.png';
+import FilledDot from '../../public/FilledDot.svg';
+import lesson5pic1 from '../../public/lesson5pic1.svg';
+import lesson5pic2 from '../../public/lesson5pic2.svg';
+import lesson5pic3 from '../../public/lesson5pic3.svg';
+import RegDot from '../../public/RegDot.svg';
 
 export interface CodeDiagramProps {
   code: {

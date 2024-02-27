@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import '../styles/Conclusion.scss';
 import { Link } from 'react-router-dom';
-import Group228 from '../../public/Group 228.svg';
+import ConclusionDiagram from '../../public/ConclusionDiagram.svg';
 import AppWrapper from '../components/AppWrapper';
 import NavButtons from '../components/NavButtons';
 import { HeaderSections } from '../types/globalTypes';
@@ -27,7 +27,7 @@ const Conclusion: FC = () => {
           </p>
 
           <div className="exercise-1-diagram diagram">
-            <img src={Group228} alt="Diagram" />
+            <img src={ConclusionDiagram} alt="Diagram" />
           </div>
 
           <div className="conclusion-footer ">
@@ -37,7 +37,7 @@ const Conclusion: FC = () => {
           </div>
         </div>
       </AppWrapper>
-      <NavButtons page={16} noNext={true}></NavButtons>
+      <NavButtons page={20} noNext={true}></NavButtons>
     </>
   );
 };

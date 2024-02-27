@@ -3,22 +3,33 @@ import '../styles/ShelfAddress.scss';
 
 interface ShelfAddressProps {
   num: number;
+  correctAddress: boolean;
+  disabled: boolean;
   handleCorrect: Dispatch<SetStateAction<boolean>>;
+  handleIncorrect: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function ShelfAddress(props: ShelfAddressProps): JSX.Element {
   const [color, setColor] = useState('#C4C4C4');
+  const [hover, setHover] = useState(false);
   const handleClick = async () => {
     if (color != '#C4C4C4') return;
-    if (props.num == 42) {
+    if (props.correctAddress) {
       props.handleCorrect(true);
-      setColor('green');
+      setColor('#31A74B');
     } else {
+      props.handleIncorrect(true);
       setColor('red');
     }
   };
   return (
-    <button className={'address'} onClick={handleClick}>
+    <button
+      disabled={props.disabled}
+      className={`address${hover ? ' hover' : ''}`}
+      onClick={handleClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
       <svg
         width="40"
         height="40"

@@ -1,9 +1,12 @@
+@import './global';
+
 .select-box {
   border: 1px;
   border-color: #cfcfcf;
+  font-family: $niramit;
   font-size: 1.6vw;
-  height: 5vh;
-  width: fit-content;
+  height: fit-content;
+  width: 70%;
 
   @media (max-width: 600px) {
     font-size: 4vw;
