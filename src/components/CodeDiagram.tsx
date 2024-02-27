@@ -2,22 +2,17 @@ import '../styles/CodeDiagram.scss';
 import { useState } from 'react';
 import '../styles/Terminal/Terminal.scss';
 import FilledDot from '../../public/FilledDot.svg';
-import lesson5pic1 from '../../public/lesson5pic1.svg';
-import lesson5pic2 from '../../public/lesson5pic2.svg';
-import lesson5pic3 from '../../public/lesson5pic3.svg';
 import RegDot from '../../public/RegDot.svg';
 
 export interface CodeDiagramProps {
   code: {
     code: string;
-    text1: string;
-    text2: string;
   }[];
+  images: { src: string; alt: string; className: string }[];
 }
 
 export default function CodeDiagram(props: CodeDiagramProps): JSX.Element {
   const [clicked, setClicked] = useState<number | null>(null);
-  const [diagram, setDiagram] = useState<number | null>(null);
 
   return (
     <div className="container">
@@ -28,7 +23,6 @@ export default function CodeDiagram(props: CodeDiagramProps): JSX.Element {
               className={clicked === index ? 'clicked' : 'notclicked'}
               onClick={() => {
                 setClicked(index);
-                setDiagram(index);
               }}
               key={index}
             >
@@ -37,19 +31,12 @@ export default function CodeDiagram(props: CodeDiagramProps): JSX.Element {
           ))}
         </div>
         <div className="arrow">
-          {diagram === 0 && (
-            <div className="resizedimage">
-              <img src={lesson5pic1} alt="Lesson 5 Pic1" />
-            </div>
-          )}
-          {diagram === 1 && (
-            <div className="resizedimage1">
-              <img src={lesson5pic2} alt="Lesson 5 Pic2" />
-            </div>
-          )}
-          {diagram == 2 && (
-            <div className="resizedimage1">
-              <img src={lesson5pic3} alt="Lesson 5 Pic3" />
+          {clicked !== null && (
+            <div className={props.images[clicked].className}>
+              <img
+                src={props.images[clicked].src}
+                alt={props.images[clicked].alt}
+              />
             </div>
           )}
         </div>

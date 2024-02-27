@@ -43,10 +43,7 @@ export default function Terminal(props: TerminalProps): JSX.Element {
           <FaRegCopy className="copybutton" />
         </CopyToClipboard>
 
-        <SyntaxHighlighter
-          language="cpp"
-          style={atomOneLightCustom} // this error doesn't affect the custom theme, will fix later
-        >
+        <SyntaxHighlighter language="cpp" style={atomOneLightCustom}>
           {props.code}
         </SyntaxHighlighter>
       </div>

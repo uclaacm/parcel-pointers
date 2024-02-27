@@ -68,7 +68,7 @@
 
 .arrow {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 50%;
 }
 
@@ -89,4 +89,14 @@
 .resizedimage1 {
   height: 30vh;
   width: 100vw;
+}
+
+.resizedimage2 {
+  height: 45vh;
+  width: 37vw;
+}
+
+.resizedimage3 {
+  height: auto;
+  width: auto;
 }
