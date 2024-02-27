@@ -85,9 +85,6 @@ const Lesson6: FC = () => {
             instead.
           </p>
 
-          {/* *
-           * THIS IS WHERE THE SLIDESHOW GOES
-           */}
           <CodeDiagram code={diagram} images={imageArray} />
 
           <p>

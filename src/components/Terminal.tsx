@@ -45,7 +45,7 @@ export default function Terminal(props: TerminalProps): JSX.Element {
 
         <SyntaxHighlighter
           language="cpp"
-          style={atomOneLightCustom} // this error doesn't affect the custom theme, will fix later
+          style={atomOneLightCustom}
         >
           {props.code}
         </SyntaxHighlighter>

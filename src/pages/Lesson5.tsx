@@ -30,18 +30,12 @@ const Lesson5: FC = () => {
   const diagram = [
     {
       code: 'int myVariable = 3;',
-      // text1: 'myVariable',
-      // text2: '3',
     },
     {
       code: 'int* myPointer = &myVariable;',
-      // text1: 'myPointer',
-      // text2: 'myVariable',
     },
     {
       code: '*myPointer = 5;',
-      // text1: 'myPointer',
-      // text2: '5',
     },
   ];
 
