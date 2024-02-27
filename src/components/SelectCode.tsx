@@ -29,7 +29,7 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
           inputProps={{ 'aria-label': 'Without label' }}
           className="select-input"
         >
-          <MenuItem value=''>
+          <MenuItem value="">
             <pre>
               <code>Select</code>
             </pre>

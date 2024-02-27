@@ -91,7 +91,7 @@ const questions2 = [
         'Correct! You can actually declare it as either a char or string pointer.',
       ],
     ]),
-  }
+  },
 ];
 
 const questions3 = [

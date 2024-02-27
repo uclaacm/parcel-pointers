@@ -124,7 +124,9 @@ const RunCode: React.FC<RunCodeProps> = ({
                 />
               </svg>
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
-                {selections[index] == '' ? unanswered : question.answerText.get(selections[index])}
+                {selections[index] == ''
+                  ? unanswered
+                  : question.answerText.get(selections[index])}
               </p>
               <div style={{ display: answers[index] ? 'flex' : 'none' }}>
                 <CopyToClipboard
