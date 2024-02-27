@@ -28,6 +28,7 @@ const RunCode: React.FC<RunCodeProps> = ({
   const [selections, setSelections] = useState<string[]>([]);
   const [answers, setAnswers] = useState<Array<boolean | null>>([]);
   const [alert, setAlert] = useState(false);
+  const unanswered = 'Please select an answer';
 
   const alertFunction = () => {
     setAlert(true);
@@ -40,8 +41,8 @@ const RunCode: React.FC<RunCodeProps> = ({
     if (selections.length == 0) {
       const tempArr: string[] = [];
       const ansArr: Array<boolean | null> = [];
-      questions.forEach((question) => {
-        tempArr.push(question.options[0]);
+      questions.forEach(() => {
+        tempArr.push('');
         ansArr.push(null);
       });
       setSelections(tempArr);
@@ -123,7 +124,7 @@ const RunCode: React.FC<RunCodeProps> = ({
                 />
               </svg>
               <p style={{ color: answers[index] ? '#31A74B' : '#a80000' }}>
-                {question.answerText.get(selections[index])}
+                {selections[index] == '' ? unanswered : question.answerText.get(selections[index])}
               </p>
               <div style={{ display: answers[index] ? 'flex' : 'none' }}>
                 <CopyToClipboard

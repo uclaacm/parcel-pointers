@@ -65,6 +65,33 @@ const questions2 = [
       ],
     ]),
   },
+  {
+    options: [
+      'char &ptr = *x;',
+      'string *ptr = &x;',
+      'string *ptr = *x;',
+      'char *ptr = &x;',
+    ],
+    answers: ['string *ptr = &x;', 'char *ptr = &x;'],
+    answerText: new Map([
+      [
+        'char &ptr = *x;',
+        'Not quite. Remember that the & operator is used to declare a reference before the equal sign and that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'string *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+      [
+        'string *ptr = *x;',
+        'Not quite. Remember that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'char *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+    ]),
+  }
 ];
 
 const questions3 = [
