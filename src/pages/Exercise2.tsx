@@ -65,6 +65,33 @@ const questions2 = [
       ],
     ]),
   },
+  {
+    options: [
+      'char &ptr = *x;',
+      'string *ptr = &x;',
+      'string *ptr = *x;',
+      'char *ptr = &x;',
+    ],
+    answers: ['string *ptr = &x;', 'char *ptr = &x;'],
+    answerText: new Map([
+      [
+        'char &ptr = *x;',
+        'Not quite. Remember that the & operator is used to declare a reference before the equal sign and that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'string *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+      [
+        'string *ptr = *x;',
+        'Not quite. Remember that the * operator after the equal sign dereferences a variable, meaning that you would try to find the value at memory address 3!',
+      ],
+      [
+        'char *ptr = &x;',
+        'Correct! You can actually declare it as either a char or string pointer.',
+      ],
+    ]),
+  },
 ];
 
 const questions3 = [
@@ -130,7 +157,10 @@ const Exercise2: FC = () => {
           <div className="exercise-2-diagram">
             <img src={Exercise2Diagram2} alt="Exercise 2 Diagram" />
           </div>
-          <h2>How do we create a pointer to the basketball string?</h2>
+          <h2>
+            How do we create a pointer to the basketball string? (Hint: there
+            are 2 answers here!)
+          </h2>
           <div className="exercise2-div">
             <RunCode
               questions={questions2}

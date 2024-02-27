@@ -12,7 +12,7 @@ interface SelectCodeProps {
 }
 
 const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
-  const [display, setDisplay] = useState(choices[0] || '');
+  const [display, setDisplay] = useState('');
 
   const handleChange = (e: SelectChangeEvent) => {
     setDisplay(e.target.value);
@@ -29,6 +29,11 @@ const SelectCode: React.FC<SelectCodeProps> = ({ choices, handleClick }) => {
           inputProps={{ 'aria-label': 'Without label' }}
           className="select-input"
         >
+          <MenuItem value="">
+            <pre>
+              <code>Select</code>
+            </pre>
+          </MenuItem>
           {choices.map((choice, index) => (
             <MenuItem
               value={choice}
