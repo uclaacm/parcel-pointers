@@ -40,25 +40,21 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      favicon: './public/favicon.svg',
+      favicon: './public/PipiWave.svg',
       filename: './index.html',
     }),
-    // TODO: Update configurable info for ManifestPlugin
     // Serves the manifest.json file
     new PwaManifestPlugin({
       filename: 'manifest.json',
-      name: 'Your App Name Here',
-      short_name: 'App Name',
-      description: 'An amazing TeachLA React Website :D',
+      name: 'Parcel Pointers',
+      short_name: 'Parcel Pointers',
+      description:
+        'A Teach LA learning lab about C++ pointers! Made for students taking CS31/CS32',
       background_color: '#ffffff',
       theme_color: '#000000',
       icons: [
         {
-          src: path.resolve('./public/favicon512.png'),
-          sizes: [192, 512], // multiple sizes
-        },
-        {
-          src: path.resolve('./public/favicon.svg'),
+          src: path.resolve('./public/PipiWave.svg'),
           size: '1024x1024',
           purpose: 'maskable',
         },
