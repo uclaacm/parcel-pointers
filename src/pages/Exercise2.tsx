@@ -157,7 +157,10 @@ const Exercise2: FC = () => {
           <div className="exercise-2-diagram">
             <img src={Exercise2Diagram2} alt="Exercise 2 Diagram" />
           </div>
-          <h2>How do we create a pointer to the basketball string?</h2>
+          <h2>
+            How do we create a pointer to the basketball string? (Hint: there
+            are 2 answers here!)
+          </h2>
           <div className="exercise2-div">
             <RunCode
               questions={questions2}
