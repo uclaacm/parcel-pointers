@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import LeftLadder from '../../public/LeftLadder.svg';
 import Pipi from '../../public/Pipi.svg';
 import PipiPointRight from '../../public/PipiPointRight.svg';
@@ -22,6 +22,7 @@ const Demo: FC = () => {
   const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
   const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false);
+  const pipiRef = useRef<HTMLImageElement>(null);
 
   const nums = Array.from({ length: 72 }, (_, index) => index + 1);
   const nums1 = nums.slice(0, 24);
@@ -32,10 +33,11 @@ const Demo: FC = () => {
   const itemSpaceArray3 = [2, 5, 2, 4, 1, 3, 1, 4];
 
   const fixPipiPosition = () => {
-    const pipiEl = document.getElementsByClassName('demo-pipi')[0];
-    const rect = pipiEl.getBoundingClientRect();
-    setLeftOffset(rect.left + window.scrollX);
-    setTopOffset(rect.top + window.scrollY);
+    if (pipiRef.current) {
+      const rect = pipiRef.current.getBoundingClientRect();
+      setLeftOffset(rect.left + window.scrollX);
+      setTopOffset(rect.top + window.scrollY);
+    }
   };
 
   useEffect(() => {
@@ -127,6 +129,7 @@ const Demo: FC = () => {
                 <img
                   className="demo-pipi"
                   src={Pipi}
+                  ref={pipiRef}
                   alt="Pipi"
                   style={{ visibility: animation ? 'hidden' : 'visible' }}
                 ></img>

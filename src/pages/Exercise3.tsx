@@ -52,27 +52,38 @@ const Exercise3: FC = () => {
   const [selectionMade, setSelectionMade] = useState(false);
 
   const timeForTransition = useRef(false);
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);
   const itemSpace = [1, 3, 1, 3, 2, 4, 2, 1, 1, 2, 1, 2, 1];
 
-  const fixPipiPosition = () => {
-    const box = document.getElementsByClassName('exercise3-wrap')[0];
-    const rect = box.getBoundingClientRect();
-    setLeftOffset(rect.left + window.scrollX);
-    setTopOffset(rect.top + window.scrollY + 15);
+  // for calculating new offset
+  const addressWidth = 40; // Replace with actual width if different
+
+
+  function fixPipiPosition(){
+    if(wrapRef.current){
+      const rect = wrapRef.current.getBoundingClientRect();
+      setLeftOffset(rect.left + window.scrollX);
+      setTopOffset(rect.top + window.scrollY + 15);
+      if(clickedCorrectAddress) {
+        const newLeftOffset = addressWidth * (9 - 1) + rect.left + window.scrollX;
+        setLeftOffset(newLeftOffset);
+      }
+    }
   };
 
   useEffect(() => {
     fixPipiPosition();
     window.addEventListener('resize', fixPipiPosition);
-  }, []);
+  }, [clickedCorrectAddress]);
 
   useEffect(() => {
     if (enableTransition) {
       setTimeout(() => {
         setAnimatedPipi(PipiPointRight);
         setConfetti(true);
+        setEnableTransition(false);
       }, 1500);
     }
   }, [enableTransition]);
@@ -82,17 +93,10 @@ const Exercise3: FC = () => {
     setClickedIncorrectAddress(false);
     setConfetti(true);
     setSelectionMade(true);
-    const addressWidth = 40; // Replace with actual width if different
-    const newLeftOffset = addressWidth * (9 - 1) + leftOffset;
-    setLeftOffset(newLeftOffset);
+    setEnableTransition(true);
+    fixPipiPosition();
     timeForTransition.current = true;
   };
-
-  useEffect(() => {
-    if (timeForTransition.current) {
-      setEnableTransition(true);
-    }
-  }, [leftOffset]); // Depend on `state1` to trigger this effect
 
   const handleIncorrectAddressClick = () => {
     setClickedIncorrectAddress(true);
@@ -131,7 +135,7 @@ const Exercise3: FC = () => {
             )}
             {!selectionMade && <HintBox text="" />}
           </>
-          <div className="exercise3-wrap">
+          <div className="exercise3-wrap" ref={wrapRef}>
             <div className="exercise3-box">
               <Grid
                 addressNums={nums}
@@ -164,7 +168,7 @@ const Exercise3: FC = () => {
               style={{
                 left: leftOffset,
                 top: topOffset,
-                transition: clickedCorrectAddress ? 'left 1.3s' : 'none',
+                transition: enableTransition ? 'left 1.3s' : 'none',
               }}
             />
           </div>
