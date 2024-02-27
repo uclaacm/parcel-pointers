@@ -1,4 +1,7 @@
 import { FC } from 'react';
+import lesson5pic1 from '../../public/lesson5pic1.svg';
+import lesson5pic2 from '../../public/lesson5pic2.svg';
+import lesson5pic3 from '../../public/lesson5pic3.svg';
 import AppWrapper from '../components/AppWrapper';
 import CodeDiagram from '../components/CodeDiagram';
 import CompareCode from '../components/CompareCode';
@@ -18,21 +21,27 @@ const Lesson5: FC = () => {
   *myPointer = 5;
   `;
 
+  const imageArray = [
+    { src: lesson5pic1, alt: 'Lesson 5 Pic1', className: 'resizedimage' },
+    { src: lesson5pic2, alt: 'Lesson 5 Pic2', className: 'resizedimage1' },
+    { src: lesson5pic3, alt: 'Lesson 5 Pic3', className: 'resizedimage1' },
+  ];
+
   const diagram = [
     {
       code: 'int myVariable = 3;',
-      text1: 'myVariable',
-      text2: '3',
+      // text1: 'myVariable',
+      // text2: '3',
     },
     {
       code: 'int* myPointer = &myVariable;',
-      text1: 'myPointer',
-      text2: 'myVariable',
+      // text1: 'myPointer',
+      // text2: 'myVariable',
     },
     {
       code: '*myPointer = 5;',
-      text1: 'myPointer',
-      text2: '5',
+      // text1: 'myPointer',
+      // text2: '5',
     },
   ];
 
@@ -77,7 +86,7 @@ const Lesson5: FC = () => {
               Click through each line of code to see how the diagram changes
             </em>
           </p>
-          <CodeDiagram code={diagram} />
+          <CodeDiagram code={diagram} images={imageArray} />
           <p>
             This has an interesting implication - we directly overwrote the
             value that was stored at the address in myPointer. But we know that

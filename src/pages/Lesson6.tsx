@@ -1,6 +1,12 @@
 import { FC } from 'react';
+import lesson6pic1 from '../../public/lesson6pic1.svg';
+import lesson6pic2 from '../../public/lesson6pic2.svg';
+import lesson6pic3 from '../../public/lesson6pic3.svg';
+import lesson6pic4 from '../../public/lesson6pic4.svg';
 import AppWrapper from '../components/AppWrapper';
+import CodeDiagram from '../components/CodeDiagram';
 import CompareCode from '../components/CompareCode';
+
 import NavButtons from '../components/NavButtons';
 import Terminal from '../components/Terminal';
 import { HeaderSections } from '../types/globalTypes';
@@ -20,6 +26,28 @@ const Lesson6: FC = () => {
   int* myPointer2 = &y;
   myPointer = myPointer2;
   `;
+
+  const diagram = [
+    {
+      code: 'Int x;',
+    },
+    {
+      code: 'Int* myPointer = &x;',
+    },
+    {
+      code: 'Int y;',
+    },
+    {
+      code: 'myPointer = &y;',
+    },
+  ];
+
+  const imageArray = [
+    { src: lesson6pic1, alt: 'Lesson 6 Pic1', className: 'resizedimage3' },
+    { src: lesson6pic2, alt: 'Lesson 6 Pic2', className: 'resizedimage3' },
+    { src: lesson6pic3, alt: 'Lesson 6 Pic3', className: 'resizedimage3' },
+    { src: lesson6pic4, alt: 'Lesson 6 Pic4', className: 'resizedimage3' },
+  ];
 
   return (
     <>
@@ -57,9 +85,10 @@ const Lesson6: FC = () => {
             instead.
           </p>
 
-          {/**
+          {/* *
            * THIS IS WHERE THE SLIDESHOW GOES
            */}
+          <CodeDiagram code={diagram} images={imageArray} />
 
           <p>
             In this same way, we can reassign pointers to other pointers too!
