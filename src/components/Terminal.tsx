@@ -43,10 +43,7 @@ export default function Terminal(props: TerminalProps): JSX.Element {
           <FaRegCopy className="copybutton" />
         </CopyToClipboard>
 
-        <SyntaxHighlighter
-          language="cpp"
-          style={atomOneLightCustom}
-        >
+        <SyntaxHighlighter language="cpp" style={atomOneLightCustom}>
           {props.code}
         </SyntaxHighlighter>
       </div>
