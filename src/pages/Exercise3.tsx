@@ -60,18 +60,18 @@ const Exercise3: FC = () => {
   // for calculating new offset
   const addressWidth = 40; // Replace with actual width if different
 
-
-  function fixPipiPosition(){
-    if(wrapRef.current){
+  function fixPipiPosition() {
+    if (wrapRef.current) {
       const rect = wrapRef.current.getBoundingClientRect();
       setLeftOffset(rect.left + window.scrollX);
       setTopOffset(rect.top + window.scrollY + 15);
-      if(clickedCorrectAddress) {
-        const newLeftOffset = addressWidth * (9 - 1) + rect.left + window.scrollX;
+      if (clickedCorrectAddress) {
+        const newLeftOffset =
+          addressWidth * (9 - 1) + rect.left + window.scrollX;
         setLeftOffset(newLeftOffset);
       }
     }
-  };
+  }
 
   useEffect(() => {
     fixPipiPosition();
