@@ -1,4 +1,4 @@
-import { FC, useState, useEffect,useRef } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import '../styles/Exercise3.scss';
 import Pipi from '../../public/Pipi.svg';
 import PipiPointRight from '../../public/PipiPointRight.svg';
@@ -41,18 +41,18 @@ const question = [
 ];
 
 const Exercise3: FC = () => {
-  const [enableTransition, setEnableTransition] = useState(false)
-  const [animatedPipi, setAnimatedPipi] = useState(Pipi)
+  const [enableTransition, setEnableTransition] = useState(false);
+  const [animatedPipi, setAnimatedPipi] = useState(Pipi);
   const [confetti, setConfetti] = useState(false);
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
-  
+
   const [clickedCorrectAddress, setClickedCorrectAddress] = useState(false);
   const [clickedIncorrectAddress, setClickedIncorrectAddress] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false);
 
   const timeForTransition = useRef(false);
-  
+
   const nums = Array.from({ length: 24 }, (_, index) => index + 1);
   const itemSpace = [1, 3, 1, 3, 2, 4, 2, 1, 1, 2, 1, 2, 1];
 
@@ -69,15 +69,13 @@ const Exercise3: FC = () => {
   }, []);
 
   useEffect(() => {
-    if (enableTransition){
-    setTimeout(() => {
-      setAnimatedPipi(PipiPointRight);
-      setConfetti(true);
-    }, 1500);
-  }
-}, [enableTransition])
-
-
+    if (enableTransition) {
+      setTimeout(() => {
+        setAnimatedPipi(PipiPointRight);
+        setConfetti(true);
+      }, 1500);
+    }
+  }, [enableTransition]);
 
   const handleCorrectAddressClick = () => {
     setClickedCorrectAddress(true);
@@ -85,15 +83,15 @@ const Exercise3: FC = () => {
     setConfetti(true);
     setSelectionMade(true);
     const addressWidth = 40; // Replace with actual width if different
-    const newLeftOffset = addressWidth * (9- 1) + leftOffset;
+    const newLeftOffset = addressWidth * (9 - 1) + leftOffset;
     setLeftOffset(newLeftOffset);
-    timeForTransition.current=true;
-    }
+    timeForTransition.current = true;
+  };
 
-    useEffect(() => {
-      if (timeForTransition.current) {
-          setEnableTransition(true); 
-      }
+  useEffect(() => {
+    if (timeForTransition.current) {
+      setEnableTransition(true);
+    }
   }, [leftOffset]); // Depend on `state1` to trigger this effect
 
   const handleIncorrectAddressClick = () => {
@@ -159,14 +157,14 @@ const Exercise3: FC = () => {
                 <Box letter="m" num={3} conf={false}></Box>
               </Grid>
             </div>
-             <img
+            <img
               className="exercise3-pipi"
               src={animatedPipi}
               alt="Pipi"
               style={{
                 left: leftOffset,
                 top: topOffset,
-                transition: clickedCorrectAddress?  'left 1.3s' :'none',
+                transition: clickedCorrectAddress ? 'left 1.3s' : 'none',
               }}
             />
           </div>
