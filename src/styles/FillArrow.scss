@@ -26,11 +26,19 @@
 .fill-arrow-border {
   position: relative;
   z-index: 1;
+
+  svg {
+    max-width: none;
+  }
 }
 
 .fill-arrow-background {
   background-color: $accent-1-color;
   position: absolute;
+
+  svg {
+    max-width: none;
+  }
 }
 
 #arrow-text {
