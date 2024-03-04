@@ -51,7 +51,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
-    "husky": "^8.0.1",
+    "husky": "^9.0.11",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.31",
     "react-icons": "^5.0.1",
