@@ -72,7 +72,7 @@ const RunCode: React.FC<RunCodeProps> = ({
         <></>
       )}
       {displayText != '' && (
-        <p className="code" style={{overflow: 'scroll'}}>
+        <p className="code" style={{ overflow: 'scroll' }}>
           <pre>
             <code>{displayText}</code>
           </pre>
